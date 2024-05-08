@@ -22,7 +22,9 @@ export default function OnclickGetRowDataTable({ getOnclickRowData, tableData, t
     if (Array.isArray(tableData) && tableData.length > 0 && typeof tableData[0] === 'object' && tableData[0] !== null) {
       const keys = Object.keys(tableData[0]);
       const columns = keys.map((key) => ({ field: key }));
+      // @ts-ignore
       setColumnDefs(columns);
+      // @ts-ignore
       setRowData(tableData);
     }
     setTableConfig({ ...defaultTableConfig, ...tableOption });
