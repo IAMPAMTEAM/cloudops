@@ -14,39 +14,14 @@ import b from '@/assets/icons/b.svg';
 const EntryMenu = () => {
   const menuList = [
     {
-      logo: IconUsers,
-      menu: 'IAM Users',
-      path: '/users/hr',
-    },
-    {
       logo: IconAssets,
-      menu: 'IAM Assets',
-      path: '/assets/server-aws',
+      menu: 'Topology',
+      path: '/topology',
     },
     {
       logo: IconIAMPolicy,
-      menu: 'IAM Policy',
-      path: '/policy/portal',
-    },
-    {
-      logo: IconIAMMonitor,
-      menu: 'IAM Monitor',
-      path: '/monitor',
-    },
-    {
-      logo: IconIAMAudit,
-      menu: 'IAM Audit',
-      path: '/audit',
-    },
-    {
-      logo: IconCompliance,
-      menu: 'Compliance',
-      path: '/compliance',
-    },
-    {
-      logo: IconAdmin,
-      menu: 'Admin',
-      path: '/admin',
+      menu: 'Security Group',
+      path: '/sg',
     },
   ];
 
@@ -58,7 +33,7 @@ const EntryMenu = () => {
     <div className='relative  panel flex flex-col gap-16 h-full w-full bg-[#F6F5F2] rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border border-gray-100 p-12 border-none'>
       <div className='flex gap-8 justify-center items-center relative'>
         <img className='w-16 p-2 bg-[#6667AB] rounded-xl' src={LogoZeroTrust} alt='' />
-        <p className='text-6xl font-semibold font-mono tracking-tighter'>ZeroTrust Portal</p>
+        <p className='text-6xl font-semibold font-mono tracking-tighter'>CloudOps Portal</p>
       </div>
 
       <div className='flex gap-16 p-8 items-center justify-center'>

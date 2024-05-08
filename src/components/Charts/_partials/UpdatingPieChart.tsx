@@ -67,6 +67,7 @@ export const UpdatingPieChart = (props: Props) => {
       ...chartData,
       series: lastWeekData,
       options: {
+        // @ts-ignore
         subtitle: {
           text: LAST_WEEK_SUB,
         },
@@ -79,6 +80,7 @@ export const UpdatingPieChart = (props: Props) => {
       ...chartData,
       series: thisWeekData,
       options: {
+        // @ts-ignore
         subtitle: {
           text: THIS_WEEK_SUB,
         },
@@ -88,7 +90,13 @@ export const UpdatingPieChart = (props: Props) => {
 
   return (
     <section>
-      <ReactApexChart options={chartData.options} series={chartData.series} type='pie' height={350} />
+      <ReactApexChart
+        // @ts-ignore
+        options={chartData.options}
+        series={chartData.series}
+        type='pie'
+        height={350}
+      />
       <div className='flex justify-center mt-[81px] join'>
         <button className='btn join-item bg-[#A79277] border-none text-white' onClick={updateThisWeek}>
           {THIS_WEEK_SUB}

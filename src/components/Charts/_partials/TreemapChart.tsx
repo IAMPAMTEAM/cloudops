@@ -34,7 +34,12 @@ export const TreemapChart = (props: Props) => {
 
   return (
     <div>
-      <ReactApexChart options={chartData.options} series={chartData.series} type='treemap' />
+      <ReactApexChart
+        // @ts-ignore
+        options={chartData.options}
+        series={chartData.series}
+        type='treemap'
+      />
     </div>
   );
 };

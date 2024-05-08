@@ -21,6 +21,7 @@ const AssetsServerAccessControl = lazy(() => import('@/pages/Assets/ServerAccess
 const AssetsDBAccessControl = lazy(() => import('@/pages/Assets/DBAccessControl'));
 const AssetsDBAWSRDS = lazy(() => import('@/pages/Assets/DBAWSRDS'));
 const AssetsDBOnpremise = lazy(() => import('@/pages/Assets/DBOnpremise'));
+const SecurityGroup = lazy(() => import('@/pages/SecurityGroup/SecurityGroup'));
 
 const PolicyPortal = lazy(() => import('@/pages/Policy/Portal'));
 const PolicyDevops = lazy(() => import('@/pages/Policy/PolicyDevops'));
@@ -176,6 +177,11 @@ const routes = [
     path: '/workflow/main',
     layout: 'default',
     element: <WorkflowMain />,
+  },
+  {
+    path: '/sg',
+    layout: 'default',
+    element: <SecurityGroup />,
   },
 ];
 

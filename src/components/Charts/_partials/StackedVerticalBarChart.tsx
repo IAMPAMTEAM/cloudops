@@ -77,7 +77,13 @@ export const StackedVerticalBarChart = (props: Props) => {
 
   return (
     <div>
-      <ReactApexChart options={chartData.options} series={chartData.series} type='bar' height={350} />
+      <ReactApexChart
+        // @ts-ignore
+        options={chartData.options}
+        series={chartData.series}
+        type='bar'
+        height={350}
+      />
     </div>
   );
 };

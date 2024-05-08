@@ -31,6 +31,12 @@ import IconMenuUsers from '../Icon/Menu/IconMenuUsers';
 import IconMenuPages from '../Icon/Menu/IconMenuPages';
 import IconMenuAuthentication from '../Icon/Menu/IconMenuAuthentication';
 import IconMenuDocumentation from '../Icon/Menu/IconMenuDocumentation';
+import IconUserPlus from '../Icon/IconUserPlus';
+import IconBox from '../Icon/IconBox';
+import IconBookmark from '../Icon/IconBookmark';
+import IconCloudDownload from '../Icon/IconCloudDownload';
+import IconLock from '../Icon/IconLock';
+import IconNotes from '../Icon/IconNotes';
 
 const Sidebar = () => {
   const [currentMenu, setCurrentMenu] = useState<string>('');
@@ -83,7 +89,7 @@ const Sidebar = () => {
           <div className='flex justify-between items-center px-4 py-3'>
             <NavLink to='/' className='main-logo flex items-center shrink-0'>
               <img className='w-8 ml-[5px] flex-none' src='/assets/images/logo.svg' alt='logo' />
-              <span className='text-2xl ltr:ml-1.5 rtl:mr-1.5 font-semibold align-middle lg:inline dark:text-white-light'>ZeroTrust</span>
+              <span className='text-2xl ltr:ml-1.5 rtl:mr-1.5 font-semibold align-middle lg:inline dark:text-white-light'>CloudOps</span>
             </NavLink>
 
             <button
@@ -97,191 +103,55 @@ const Sidebar = () => {
           <PerfectScrollbar className='h-[calc(100vh-80px)] relative'>
             <ul className='relative font-semibold space-y-0.5 p-4 py-0'>
               <li className='menu nav-item'>
-                <button type='button' className={`${currentMenu === 'iamUsers' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('iamUsers')}>
+                <NavLink to='/' className='group'>
                   <div className='flex items-center'>
-                    <IconMenuDashboard className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('iamUsers')}</span>
-                  </div>
-
-                  <div className={currentMenu !== 'iamUsers' ? 'rtl:rotate-90 -rotate-90' : ''}>
-                    <IconCaretDown />
-                  </div>
-                </button>
-
-                <AnimateHeight duration={300} height={currentMenu === 'iamUsers' ? 'auto' : 0}>
-                  <ul className='sub-menu text-gray-500'>
-                    <li>
-                      <NavLink to='/users/hr'>{t('usersHr')}</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to='/users/dev-ops'>{t('usersDevops')}</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to='/users/app'>{t('usersApp')}</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to='/users/saas'>{t('usersSaaS')}</NavLink>
-                    </li>
-                  </ul>
-                </AnimateHeight>
-              </li>
-
-              <li className='menu nav-item'>
-                <button type='button' className={`${currentMenu === 'iamAssets' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('iamAssets')}>
-                  <div className='flex items-center'>
-                    <IconMenuDashboard className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('iamAssets')}</span>
-                  </div>
-
-                  <div className={currentMenu !== 'iamAssets' ? 'rtl:rotate-90 -rotate-90' : ''}>
-                    <IconCaretDown />
-                  </div>
-                </button>
-
-                <AnimateHeight duration={300} height={currentMenu === 'iamAssets' ? 'auto' : 0}>
-                  <ul className='sub-menu text-gray-500'>
-                    <li>
-                      <NavLink to='/assets/server-aws'>{t('assetsServerAWS')}</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to='/assets/server-onpremise'>{t('assetsServerOnpremise')}</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to='/assets/server-access-control'>{t('assetsServerAccessControl')}</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to='/assets/db-aws-rds'>{t('assetsDBAWSRDS')}</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to='/assets/db-onpremise'>{t('assetsDBOnpremise')}</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to='/assets/db-access-control'>{t('assetsDBAccessControl')}</NavLink>
-                    </li>
-                  </ul>
-                </AnimateHeight>
-              </li>
-
-              <li className='menu nav-item'>
-                <button type='button' className={`${currentMenu === 'iamPolicy' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('iamPolicy')}>
-                  <div className='flex items-center'>
-                    <IconMenuDashboard className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('iamPolicy')}</span>
-                  </div>
-
-                  <div className={currentMenu !== 'iamPolicy' ? 'rtl:rotate-90 -rotate-90' : ''}>
-                    <IconCaretDown />
-                  </div>
-                </button>
-
-                <AnimateHeight duration={300} height={currentMenu === 'iamPolicy' ? 'auto' : 0}>
-                  <ul className='sub-menu text-gray-500'>
-                    <li>
-                      <NavLink to='/policy/portal'>{t('policyPortal')}</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to='/policy/dev-ops'>{t('policyDevops')}</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to='/policy/app'>{t('policyApp')}</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to='/policy/saas'>{t('policySaaS')}</NavLink>
-                    </li>
-                  </ul>
-                </AnimateHeight>
-              </li>
-
-              <li className='menu nav-item'>
-                <button type='button' className={`${currentMenu === 'iamWorkflow' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('iamWorkflow')}>
-                  <div className='flex items-center'>
-                    <IconMenuDashboard className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('iamWorkflow')}</span>
-                  </div>
-
-                  <div className={currentMenu !== 'iamWorkflow' ? 'rtl:rotate-90 -rotate-90' : ''}>
-                    <IconCaretDown />
-                  </div>
-                </button>
-
-                <AnimateHeight duration={300} height={currentMenu === 'iamWorkflow' ? 'auto' : 0}>
-                  <ul className='sub-menu text-gray-500'>
-                    <li>
-                      <NavLink to='/workflow/main'>{t('workflowMain')}</NavLink>
-                    </li>
-                  </ul>
-                </AnimateHeight>
-              </li>
-
-              <li className='menu nav-item'>
-                <NavLink
-                  to='/monitor'
-                  className='group hover:cursor-default'
-                  onMouseOver={handleMouseOver}
-                  onClick={(e) => {
-                    if (isDisabled) e.preventDefault();
-                  }}
-                >
-                  <div className='flex items-center'>
-                    <IconMenuDragAndDrop className={`group-hover:${isDisabled ? '!text-primary' : 'text-primary'} shrink-0`} />
-                    <span className={`ltr:pl-3 rtl:pr-3 ${isDisabled ? 'text-gray-400 dark:text-gray-600' : 'text-black dark:text-[#506690] dark:group-hover:text-white-dark'}`}>
-                      {t('iamMonitor')}
-                    </span>
+                    <IconNotes className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('governance')}</span>
                   </div>
                 </NavLink>
               </li>
 
               <li className='menu nav-item'>
-                <NavLink
-                  to='/audit'
-                  className='group hover:cursor-default'
-                  onMouseOver={handleMouseOver}
-                  onClick={(e) => {
-                    if (isDisabled) e.preventDefault();
-                  }}
-                >
+                <NavLink to='/' className='group'>
                   <div className='flex items-center'>
-                    <IconMenuDragAndDrop className={`group-hover:${isDisabled ? '!text-primary' : 'text-primary'} shrink-0`} />
-                    <span className={`ltr:pl-3 rtl:pr-3 ${isDisabled ? 'text-gray-400 dark:text-gray-600' : 'text-black dark:text-[#506690] dark:group-hover:text-white-dark'}`}>{t('iamAudit')}</span>
+                    <IconNotes className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('resources')}</span>
                   </div>
                 </NavLink>
               </li>
 
               <li className='menu nav-item'>
-                <NavLink to='/compliance' className='group'>
+                <NavLink to='/' className='group'>
                   <div className='flex items-center'>
-                    <IconMenuDragAndDrop className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('compliance')}</span>
+                    <IconNotes className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('cost')}</span>
                   </div>
                 </NavLink>
               </li>
 
               <li className='menu nav-item'>
-                <NavLink
-                  to='/admin'
-                  className='group hover:cursor-default'
-                  onMouseOver={handleMouseOver}
-                  onClick={(e) => {
-                    if (isDisabled) e.preventDefault();
-                  }}
-                >
+                <NavLink to='/topology' className='group'>
                   <div className='flex items-center'>
-                    <IconMenuDragAndDrop className={`group-hover:${isDisabled ? '!text-primary' : 'text-primary'} shrink-0`} />
-                    <span className={`ltr:pl-3 rtl:pr-3 ${isDisabled ? 'text-gray-400 dark:text-gray-600' : 'text-black dark:text-[#506690] dark:group-hover:text-white-dark'}`}>{t('admin')}</span>
+                    <IconNotes className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('topology')}</span>
                   </div>
                 </NavLink>
               </li>
 
-              <h2 className='py-3 px-7 flex items-center uppercase font-extrabold bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08] -mx-4 mb-1'>
-                <IconMinus className='w-4 h-5 flex-none hidden' />
-                <span>{t('user_interface')}</span>
-              </h2>
+              <li className='menu nav-item'>
+                <NavLink to='/netflow' className='group'>
+                  <div className='flex items-center'>
+                    <IconNotes className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('netflow')}</span>
+                  </div>
+                </NavLink>
+              </li>
 
               <li className='menu nav-item'>
-                <NavLink to='/chat' className='group'>
+                <NavLink to='/sg' className='group'>
                   <div className='flex items-center'>
-                    <IconMenuDragAndDrop className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('chat')}</span>
+                    <IconNotes className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('securitygroup')}</span>
                   </div>
                 </NavLink>
               </li>
