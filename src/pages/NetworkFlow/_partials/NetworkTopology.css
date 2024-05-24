@@ -1,0 +1,32 @@
+.top-box,
+.bottom-box {
+  fill: none;
+  stroke-width: 2;
+  stroke: #000;
+  rx: 10;
+}
+
+.top-box {
+  stroke: #007bff; /* Custom border color for top box */
+}
+
+.bottom-box {
+  stroke: #28a745; /* Custom border color for bottom box */
+}
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}

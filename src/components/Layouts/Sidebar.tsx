@@ -158,7 +158,7 @@ const Sidebar = () => {
                 <AnimateHeight duration={300} height={currentMenu === 'networkflow' ? 'auto' : 0}>
                   <ul className='sub-menu text-gray-500'>
                     <li>
-                      <NavLink to='/subnet'>{t('networkFlowSubnet')}</NavLink>
+                      <NavLink to='/network-flow/subnet'>{t('networkFlowSubnet')}</NavLink>
                     </li>
                   </ul>
                 </AnimateHeight>

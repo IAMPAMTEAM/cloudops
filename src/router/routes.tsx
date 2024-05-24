@@ -186,7 +186,7 @@ const routes = [
     element: <SecurityGroup />,
   },
   {
-    path: '/subnet',
+    path: '/network-flow/subnet',
     layout: 'default',
     element: <SubnetFlow />,
   },
