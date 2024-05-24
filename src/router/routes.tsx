@@ -32,6 +32,8 @@ const Compliance = lazy(() => import('@/pages/Compliance'));
 
 const WorkflowMain = lazy(() => import('@/pages/Workflow/WorkflowMain'));
 
+const SubnetFlow = lazy(() => import('@/pages/NetworkFlow/SubnetFlow'));
+
 const routes = [
   {
     path: '/',
@@ -182,6 +184,11 @@ const routes = [
     path: '/sg',
     layout: 'default',
     element: <SecurityGroup />,
+  },
+  {
+    path: '/network-flow/subnet',
+    layout: 'default',
+    element: <SubnetFlow />,
   },
 ];
 

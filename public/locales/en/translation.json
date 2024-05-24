@@ -15,6 +15,7 @@
   "usersDevops": "DevOps",
   "usersApp": "App",
   "usersSaaS": "SaaS",
+  "networkFlowSubnet": "Subnet Flow",
   "assetsServerAWS": "Server AWS",
   "assetsServerOnpremise": "Server Onpremise",
   "assetsServerAccessControl": "Server Access Control",
