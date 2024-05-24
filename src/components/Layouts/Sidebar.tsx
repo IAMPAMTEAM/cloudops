@@ -8,38 +8,12 @@ import { IRootState } from '../../store';
 import { useState, useEffect } from 'react';
 import IconCaretsDown from '../Icon/IconCaretsDown';
 import IconCaretDown from '../Icon/IconCaretDown';
-import IconMenuDashboard from '../Icon/Menu/IconMenuDashboard';
-import IconMinus from '../Icon/IconMinus';
-import IconMenuChat from '../Icon/Menu/IconMenuChat';
-import IconMenuMailbox from '../Icon/Menu/IconMenuMailbox';
-import IconMenuTodo from '../Icon/Menu/IconMenuTodo';
-import IconMenuNotes from '../Icon/Menu/IconMenuNotes';
-import IconMenuScrumboard from '../Icon/Menu/IconMenuScrumboard';
-import IconMenuContacts from '../Icon/Menu/IconMenuContacts';
-import IconMenuInvoice from '../Icon/Menu/IconMenuInvoice';
-import IconMenuCalendar from '../Icon/Menu/IconMenuCalendar';
-import IconMenuComponents from '../Icon/Menu/IconMenuComponents';
-import IconMenuElements from '../Icon/Menu/IconMenuElements';
-import IconMenuCharts from '../Icon/Menu/IconMenuCharts';
-import IconMenuWidgets from '../Icon/Menu/IconMenuWidgets';
-import IconMenuFontIcons from '../Icon/Menu/IconMenuFontIcons';
-import IconMenuDragAndDrop from '../Icon/Menu/IconMenuDragAndDrop';
-import IconMenuTables from '../Icon/Menu/IconMenuTables';
-import IconMenuDatatables from '../Icon/Menu/IconMenuDatatables';
-import IconMenuForms from '../Icon/Menu/IconMenuForms';
 import IconMenuUsers from '../Icon/Menu/IconMenuUsers';
-import IconMenuPages from '../Icon/Menu/IconMenuPages';
-import IconMenuAuthentication from '../Icon/Menu/IconMenuAuthentication';
-import IconMenuDocumentation from '../Icon/Menu/IconMenuDocumentation';
-import IconUserPlus from '../Icon/IconUserPlus';
-import IconLink from '../Icon/IconLink';
 import IconCashBanknotes from '../Icon/IconCashBanknotes';
 import IconBarChart from '../Icon/IconBarChart';
-import IconBox from '../Icon/IconBox';
-import IconBookmark from '../Icon/IconBookmark';
-import IconCloudDownload from '../Icon/IconCloudDownload';
 import IconLock from '../Icon/IconLock';
 import IconNotes from '../Icon/IconNotes';
+import IconChartSquare from '../Icon/IconChartSquare';
 import LogoHybrix from '@/assets/icons/LogoHybrix.svg';
 
 const Sidebar = () => {
@@ -170,12 +144,24 @@ const Sidebar = () => {
               </li>
 
               <li className='menu nav-item'>
-                <NavLink to='/' className='group' onClick={(e) => e.preventDefault()}>
+                <button type='button' className={`${currentMenu === 'networkflow' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('networkflow')}>
                   <div className='flex items-center'>
-                    <IconLink className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-gray-400 dark:text-gray-600 dark:group-hover:text-white-dark'>{t('networkflow')}</span>
+                    <IconChartSquare className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('networkflow')}</span>
                   </div>
-                </NavLink>
+
+                  <div className={currentMenu !== 'networkflow' ? 'rtl:rotate-90 -rotate-90' : ''}>
+                    <IconCaretDown />
+                  </div>
+                </button>
+
+                <AnimateHeight duration={300} height={currentMenu === 'networkflow' ? 'auto' : 0}>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/subnet'>{t('networkFlowSubnet')}</NavLink>
+                    </li>
+                  </ul>
+                </AnimateHeight>
               </li>
 
               <li className='menu nav-item'>
