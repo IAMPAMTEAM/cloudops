@@ -57,10 +57,6 @@
     @apply w-full;
   }
 
-  .sidebar .nav-item div div {
-    @apply min-w-[135%] max-w-min !important;
-  }
-
   .sidebar ul {
     @apply min-w-full;
   }

@@ -3,6 +3,9 @@ import SubnetTopology from './_partials/SubnetTopology';
 const SubnetFlow = () => {
   return (
     <>
+      {/* <div className='panel'>
+        
+      </div> */}
       <div className='grid grid-cols-5 grid-rows-3 gap-8'>
         <div className='panel col-span-2 row-span-3 '>
           <SubnetTopology />
