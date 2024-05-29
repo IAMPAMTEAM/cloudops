@@ -2,9 +2,6 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
-  daisyui: {
-    themes: ['light'],
-  },
   theme: {
     container: {
       center: true,
@@ -87,6 +84,9 @@ module.exports = {
         // TODO: animation func add
       },
     },
+  },
+  daisyui: {
+    theme: ['light'],
   },
   plugins: [
     require('@tailwindcss/forms')({
