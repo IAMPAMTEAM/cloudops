@@ -24,12 +24,12 @@ const SubnetFlow = () => {
       {/* <div className='panel'>
         
       </div> */}
-      <div className='grid grid-cols-5 grid-rows-3 gap-8'>
-        <div className='panel col-span-2 row-span-3 '>
+      <div className='grid grid-cols-5 grid-rows-2 gap-8'>
+        <div className='panel col-span-2 row-span-2 '>
           <SubnetTopology onVpcChange={handleVpcFromTopology} onFromSubnetChange={handleSubnetFromTopology} onToSubnetChange={handleSubnetToTopology} />
         </div>
         <div className='panel col-span-3 row-span-1'></div>
-        <div className='panel col-span-3 row-span-2 overflow-x-auto'>
+        <div className='panel col-span-3 row-span-1 overflow-x-auto'>
           <SubnetChart selectedVpc={selectedVpc} fromSubnet={selectedFromSubnet} toSubnet={selectedToSubnet} />
         </div>
       </div>

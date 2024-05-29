@@ -161,6 +161,11 @@ const Sidebar = () => {
                       <NavLink to='/network-flow/subnet'>{t('networkFlowSubnet')}</NavLink>
                     </li>
                   </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/network-flow/vpc'>{t('networkFlowVpc')}</NavLink>
+                    </li>
+                  </ul>
                 </AnimateHeight>
               </li>
 

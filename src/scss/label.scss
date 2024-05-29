@@ -1,0 +1,84 @@
+@import './app.scss';
+@import './mixin.scss';
+
+$colors-selected: (
+  '1': #ed8c00,
+  '2': #6667ab,
+  '3': #78969f,
+  '4': #272829,
+);
+$colors-unselected: (
+  '1': #f8f1e6,
+  '2': #eeeef5,
+  '3': #eef1f2,
+  '4': #d8d9da,
+);
+
+.label {
+  &__services {
+    opacity: 0;
+    transition: all 0.3s ease-in;
+
+    &-labels {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      width: 72rem;
+      height: 8rem;
+      padding-right: var(--gap-1);
+      border-radius: 0 8px 8px 0;
+      font-weight: bold;
+      font-size: 2.4rem;
+      transition: all 0.5s ease-in;
+
+      @each $i, $color-u in $colors-unselected {
+        &:nth-child(#{$i}) {
+          background: $color-u;
+        }
+      }
+      @each $i, $color-u in $colors-selected {
+        &:nth-child(#{$i}) {
+          color: $color-u;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: var(--gap-sm-2);
+      }
+    }
+
+    &--0 {
+      & > *:nth-child(1) {
+        width: 82rem;
+        background: #ed8c00;
+        color: var(--color-white);
+      }
+    }
+    &--1 {
+      & > *:nth-child(2) {
+        width: 82rem;
+        background: #6667ab;
+        color: var(--color-white);
+      }
+    }
+    &--2 {
+      & > *:nth-child(3) {
+        width: 82rem;
+        background: #78969f;
+        color: var(--color-white);
+      }
+    }
+    &--3 {
+      & > *:nth-child(4) {
+        width: 82rem;
+        background: #272829;
+        color: var(--color-white);
+      }
+    }
+
+    &--visible {
+      opacity: 1;
+      transform: translateX(-300px);
+    }
+  }
+}

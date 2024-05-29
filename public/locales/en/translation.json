@@ -16,6 +16,7 @@
   "usersApp": "App",
   "usersSaaS": "SaaS",
   "networkFlowSubnet": "Subnet Flow",
+  "networkFlowVpc": "VPC Flow",
   "assetsServerAWS": "Server AWS",
   "assetsServerOnpremise": "Server Onpremise",
   "assetsServerAccessControl": "Server Access Control",

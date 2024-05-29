@@ -1,4 +1,5 @@
 import { lazy } from 'react';
+import { useSelector } from 'react-redux';
 const Chart = lazy(() => import('@/pages/Chart'));
 const Test = lazy(() => import('@/pages/Test'));
 const UserTest = lazy(() => import('@/pages/UserTest'));
@@ -33,12 +34,19 @@ const Compliance = lazy(() => import('@/pages/Compliance'));
 const WorkflowMain = lazy(() => import('@/pages/Workflow/WorkflowMain'));
 
 const SubnetFlow = lazy(() => import('@/pages/NetworkFlow/SubnetFlow'));
+const VPCFlow = lazy(() => import('@/pages/NetworkFlow/VPCFlow'));
+
+const Landing = lazy(() => import('@/pages/Landing/LandingContainer'));
 
 const routes = [
   {
     path: '/',
     layout: 'blank',
-    // element: <EntryContainer />,
+  },
+  {
+    path: '/landing',
+    element: <Landing />,
+    layout: 'blank',
   },
   {
     path: '/entry',
@@ -189,6 +197,11 @@ const routes = [
     path: '/network-flow/subnet',
     layout: 'default',
     element: <SubnetFlow />,
+  },
+  {
+    path: '/network-flow/vpc',
+    layout: 'default',
+    element: <VPCFlow />,
   },
 ];
 

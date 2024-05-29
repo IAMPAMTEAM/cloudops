@@ -1,0 +1,122 @@
+@import './app.scss';
+@import './mixin.scss';
+
+$colors: (
+  '1': #ed8c00,
+  '2': #6667ab,
+  '3': #78969f,
+  '4': #272829,
+);
+$underline-colors: (
+  '1': #f5e2c6,
+  '2': #dbdcea,
+  '3': #e0e6e9,
+  '4': #d8d9da,
+);
+$each-margin: (
+  '1': 20.5rem,
+  '2': 27rem,
+  '3': 27rem,
+  '4': 27rem,
+);
+$each-width: (
+  '1': 6rem,
+  '2': 12.5rem,
+  '3': 9rem,
+  '4': 23rem,
+);
+
+.checkups-cont {
+  overflow: hidden;
+  display: flex;
+
+  @each $i, $color in $colors {
+    &:nth-child(#{$i}) .checkups-cont__sub-title > span:first-child {
+      color: $color;
+    }
+  }
+
+  @each $i, $color in $underline-colors {
+    &:nth-child(#{$i}) .checkups-cont__sub-line {
+      position: absolute;
+      z-index: -1;
+      border-radius: 4px;
+      top: 25px;
+      left: -1px;
+      height: 0.8rem;
+      background: $color;
+    }
+  }
+
+  @each $i, $width in $each-width {
+    &:nth-child(#{$i}) .checkups-cont__sub-line {
+      width: $width;
+    }
+  }
+
+  @each $i, $color-s in $colors {
+    &:nth-child(#{$i}) :deep(.q-btn) {
+      color: $color-s;
+    }
+  }
+
+  &__labels {
+    margin-bottom: 34.4rem;
+  }
+  &__contents {
+    display: flex;
+  }
+  &__labels {
+    &-category {
+      &__text {
+        font-size: 2.4rem;
+        text-align: end;
+      }
+    }
+  }
+  &__sub {
+    &-title {
+      position: relative;
+      z-index: 2;
+      font-size: 2.4rem;
+      font-weight: bold;
+      text-align: left;
+    }
+    &-explain {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #999999;
+      margin-bottom: 2.6rem;
+    }
+    &-list {
+      font-size: 1.8rem;
+
+      &__each {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-bottom: 2.4rem;
+
+        &::before {
+          content: '\A';
+          display: inline-block;
+          width: 4px;
+          height: 4px;
+          margin-right: 1rem;
+          border-radius: 999px;
+          background: var(--color-gray-60);
+        }
+      }
+    }
+    &-each {
+      opacity: 0;
+      transform: translateX(300px);
+      transition: all 0.3s ease-in;
+
+      &--visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+}
