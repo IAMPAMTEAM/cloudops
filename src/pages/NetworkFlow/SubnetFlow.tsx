@@ -1,3 +1,4 @@
+import SubnetChart from '../../components/Charts/SubnetChart';
 import SubnetTopology from './_partials/SubnetTopology';
 import { useState } from 'react';
 
@@ -28,7 +29,9 @@ const SubnetFlow = () => {
           <SubnetTopology onVpcChange={handleVpcFromTopology} onFromSubnetChange={handleSubnetFromTopology} onToSubnetChange={handleSubnetToTopology} />
         </div>
         <div className='panel col-span-3 row-span-1'></div>
-        <div className='panel col-span-3 row-span-2'></div>
+        <div className='panel col-span-3 row-span-2 overflow-x-auto'>
+          <SubnetChart selectedVpc={selectedVpc} fromSubnet={selectedFromSubnet} toSubnet={selectedToSubnet} />
+        </div>
       </div>
     </>
   );

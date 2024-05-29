@@ -75,10 +75,12 @@ const SecurityGroup = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch('https://ub-sg-demodata.s3.ap-northeast-2.amazonaws.com/sg.json');
+      const res = await fetch('https://ub-sg-demodata.s3.ap-northeast-2.amazonaws.com/sgTransform.json');
       const data = (await res.json()) as RowData[];
+      const [firstData] = data;
 
       setRowData(data);
+      setCurrentRowData(firstData);
     };
 
     fetchData();
