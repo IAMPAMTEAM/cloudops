@@ -1,1 +1,50 @@
-{}
+[
+  {
+    "fromSubnet": "subnet-1a2b3c4d",
+    "fromEc2": "i-0123456789abcdef0",
+    "toSubnet": "subnet-5e6f7g8h",
+    "toEc2": "i-0abcdef1234567890",
+    "packets": 250,
+    "bytes": 50000
+  },
+  {
+    "fromSubnet": "subnet-1a2b3c4d",
+    "fromEc2": "i-0123456789abcdef1",
+    "toSubnet": "subnet-5e6f7g8h",
+    "toEc2": "i-1abcdef2345678901",
+    "packets": 150,
+    "bytes": 30000
+  },
+  {
+    "fromSubnet": "subnet-1a2b3c4d",
+    "fromEc2": "i-23456789abcdef012",
+    "toSubnet": "subnet-5e6f7g8h",
+    "toEc2": "i-3456789abcdef0123",
+    "packets": 300,
+    "bytes": 60000
+  },
+  {
+    "fromSubnet": "subnet-1a2b3c4d",
+    "fromEc2": "i-456789abcdef01234",
+    "toSubnet": "subnet-5e6f7g8h",
+    "toEc2": "i-56789abcdef012345",
+    "packets": 400,
+    "bytes": 80000
+  },
+  {
+    "fromSubnet": "subnet-1a2b3c4d",
+    "fromEc2": "i-6789abcdef0123456",
+    "toSubnet": "subnet-5e6f7g8h",
+    "toEc2": "i-789abcdef01234567",
+    "packets": 200,
+    "bytes": 40000
+  },
+  {
+    "fromSubnet": "subnet-1a2b3c4d",
+    "fromEc2": "i-89abcdef012345678",
+    "toSubnet": "subnet-5e6f7g8h",
+    "toEc2": "i-90abcdef012345679",
+    "packets": 350,
+    "bytes": 70000
+  }
+]

@@ -27,13 +27,13 @@ interface Subnet {
   bytes: number;
 }
 
-const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetChange }) => {
+const SubnetTopology: React.FC = () => {
   const [data, setData] = useState<NetworkData>({ nodes: [], links: [] });
   const [fetchData, setFetchData] = useState<Subnet[]>([]);
   const [subnetCnt, setSubnetCnt] = useState(0);
 
   const [vpcFilteredList, setVpcFilteredList] = useState([]);
-  const [fromSubnetFilteredList, setFromSubnetFilteredList] = useState([]);
+  const [fromSubnetFilteredList, setfromSubnetFilteredList] = useState([]);
   const [toSubnetFilteredList, setToSubnetFilteredList] = useState([]);
   const [vpcList, setVpcList] = useState<[]>([]);
   const [fromSubnetList, setFromSubnetList] = useState<[]>([]);
@@ -95,7 +95,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         uniqueVpcList.push(vpcItem.vpc);
       }
     });
-    // @ts-ignore
+
     setVpcList(uniqueVpcList);
   }, [vpcFilteredList]);
 
@@ -106,21 +106,18 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
           const data = vpcItem.subnetInfo;
           const groupedData = data.reduce((acc, item) => {
             const { fromSubnet } = item;
-            // @ts-ignore
             if (selectedVpc.slice(0, selectedVpc.lastIndexOf('.') - 1) === fromSubnet.slice(0, fromSubnet.lastIndexOf('.') - 1)) {
               if (!acc[fromSubnet]) {
-                // @ts-ignore
                 acc[fromSubnet] = {
                   fromSubnet,
                   subnetInfo: [],
                 };
               }
-              // @ts-ignore
               acc[fromSubnet].subnetInfo.push(item);
             }
             return acc;
           }, {});
-          setFromSubnetFilteredList(Object.values(groupedData));
+          setfromSubnetFilteredList(Object.values(groupedData));
         }
       });
     };
@@ -128,33 +125,29 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
     subnetFilter();
   }, [fetchData, selectedVpc]);
 
+  console.log(fromSubnetFilteredList);
+
   useEffect(() => {
     const subnetFilter = async () => {
-      fromSubnetFilteredList.forEach((subnetItem: { fromSubnet: string; subnetInfo: [] }) => {
-        if (subnetItem.fromSubnet === selectedFromSubnet) {
-          const data = subnetItem.subnetInfo;
-          const groupedData = data.reduce((acc, item) => {
-            const { toSubnet } = item;
-
-            if (selectedFromSubnet.slice(0, selectedFromSubnet.lastIndexOf('.') - 1) === toSubnet.slice(0, toSubnet.lastIndexOf('.') - 1) && selectedFromSubnet !== toSubnet) {
-              if (!acc[toSubnet]) {
-                acc[toSubnet] = {
-                  fromSubnet: selectedFromSubnet,
-                  toSubnet,
-                  subnetInfo: [],
-                };
-              }
-              acc[toSubnet].subnetInfo.push(item);
-            }
-            return acc;
-          }, {});
-          setToSubnetFilteredList(Object.values(groupedData));
+      const groupedData = fetchData.reduce((acc, item) => {
+        const { toSubnet } = item;
+        if (selectedFromSubnet.slice(0, selectedFromSubnet.lastIndexOf('.') - 1) === toSubnet.slice(0, toSubnet.lastIndexOf('.') - 1)) {
+          if (!acc[toSubnet]) {
+            acc[toSubnet] = {
+              toSubnet,
+              subnetInfo: [],
+            };
+          }
+          acc[toSubnet].subnetInfo.push(item);
         }
-      });
+        return acc;
+      }, {});
+
+      setToSubnetFilteredList(Object.values(groupedData));
     };
 
     subnetFilter();
-  }, [selectedFromSubnet, fromSubnetFilteredList]);
+  }, [fetchData, selectedFromSubnet, selectedFromSubnet]);
 
   useEffect(() => {
     const uniqueFromSubnetSet = new Set<string>();
@@ -187,18 +180,15 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
   const handleSelectVpc = (event) => {
     setSelectedVpc(event.target.value);
     setIsSelectedVpc(true);
-    onVpcChange(event.target.value);
   };
 
   const handleSelectedFromSubnet = (event) => {
     setSelectedFromSubnet(event.target.value);
     setIsSelectedFromSubnet(true);
-    onFromSubnetChange(event.target.value);
   };
 
   const handleSelectedToSubnet = (event) => {
     setSelectedToSubnet(event.target.value);
-    onToSubnetChange(event.target.value);
   };
 
   // TODO: selectedVpc에 따라 subnetInfo를 가져와서 subnetInfo에 있는 데이터로 다시 setData
@@ -257,11 +247,11 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .append('marker')
         .attr('id', 'arrowhead')
         .attr('viewBox', '-0 -5 10 10')
-        .attr('refX', 27)
+        .attr('refX', 13)
         .attr('refY', 0)
         .attr('orient', 'auto')
-        .attr('markerWidth', 7)
-        .attr('markerHeight', 7)
+        .attr('markerWidth', 13)
+        .attr('markerHeight', 13)
         .attr('xoverflow', 'visible')
         .append('svg:path')
         .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
@@ -329,7 +319,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .data(data.links)
         .enter()
         .append('line')
-        .attr('class', 'link animated-link')
+        // .attr('class', 'link animated-link')
         .attr('stroke', 'steelblue')
         .attr('stroke-width', 2)
         .attr('marker-end', 'url(#arrowhead)');
@@ -342,7 +332,6 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .enter()
         .append('image')
         // .attr('class', (d) => `node ${['A', 'F', 'P'].includes(d.id) ? 'blink' : ''}`)
-        .attr('class', 'node')
         .attr('xlink:href', (d) => d.img)
         .attr('width', nodeWidth)
         .attr('height', nodeHeight)
@@ -379,9 +368,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
           connectedNodes.add(link.target.toString());
         });
 
-        svg.selectAll('.node').classed('blur', (d: any) => {
-          return !connectedNodes.has(d.id);
-        });
+        svg.selectAll('.node').classed('blur', (d: any) => !connectedNodes.has(d.id));
         svg.selectAll('.link').style('visibility', (d: any) => {
           return !(connectedNodes.has(d.source.id) && connectedNodes.has(d.target.id)) ? 'hidden' : 'visible';
         });
@@ -427,7 +414,9 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         <div className='flex flex-col'>
           <p className='text-[0.8rem] font-semibold mb-[0.5rem]'>Source Subnet</p>
           <select className='select select-success max-w-xs' onChange={handleSelectedFromSubnet} value={selectedFromSubnet} disabled={!isSelectedVpc}>
-            <option selected>Choose fromSubnet</option>
+            <option disabled selected>
+              Choose fromSubnet
+            </option>
             {fromSubnetList.map((subnet, idx) => {
               return (
                 <option key={idx} value={subnet}>
@@ -441,7 +430,9 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         <div className='flex flex-col'>
           <p className='text-[0.8rem] font-semibold mb-[0.5rem]'>Target Subnet</p>
           <select className='select select-warning max-w-xs' onChange={handleSelectedToSubnet} value={selectedToSubnet} disabled={!isSelectedFromSubnet}>
-            <option selected>Choose toSubnet</option>
+            <option disabled selected>
+              Choose toSubnet
+            </option>
             {toSubnetList.map((subnet, idx) => {
               return (
                 <option key={idx} value={subnet}>
