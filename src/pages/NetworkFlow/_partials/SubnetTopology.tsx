@@ -50,7 +50,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
   const d3Container = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
-    fetch('https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/ec2ToEc2BeforeUpdate.json')
+    fetch('https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/ec2ToEc2.json')
       .then(async (res) => await res.json())
       .then((data) => {
         if (data.length && subnetCnt < 1) {
@@ -189,13 +189,13 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
   const handleSelectVpc = (event) => {
     setSelectedVpc(event.target.value);
     setIsSelectedVpc(true);
-    onVpcChange(event.target.value);
+    onVpcChange(selectedVpc);
   };
 
   const handleSelectedFromSubnet = (event) => {
     setSelectedFromSubnet(event.target.value);
     setIsSelectedFromSubnet(true);
-    onFromSubnetChange(event.target.value);
+    onFromSubnetChange(selectedFromSubnet);
   };
 
   const handleSelectedToSubnet = (event) => {
@@ -240,33 +240,16 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
   useEffect(() => {
     if (d3Container.current && data.nodes.length && data.links.length && selectedToSubnet) {
       const margin = { top: 30, right: 30, bottom: 20, left: 30 };
-      const width = data.nodes.length * 75 + margin.left + margin.right;
-      const height = 900;
+      const width = data.nodes.length * 45 + margin.left + margin.right;
+      const height = 600;
 
       const boxPadding = 30;
       let nodeWidth = 48;
       let nodeHeight = 48;
 
-      const svg = d3.select(d3Container.current).attr('viewBox', `0 0 ${width} ${height}`).attr('width', '100%').attr('height', '80%');
+      const svg = d3.select(d3Container.current).attr('viewBox', `0 0 ${width} ${height}`).attr('width', '100%').attr('height', '60%');
 
       svg.selectAll('*').remove();
-
-      // 화살표
-      svg
-        .append('defs')
-        .append('marker')
-        .attr('id', 'arrowhead')
-        .attr('viewBox', '-0 -5 10 10')
-        .attr('refX', 7)
-        .attr('refY', 0)
-        .attr('orient', 'auto')
-        .attr('markerWidth', 7)
-        .attr('markerHeight', 7)
-        .attr('xoverflow', 'visible')
-        .append('svg:path')
-        .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
-        .attr('fill', '#000')
-        .style('stroke', 'none');
 
       // 배경 클릭 시 이벤트
       svg.append('rect').attr('width', width).attr('height', height).attr('fill', 'none').attr('pointer-events', 'all').on('click', handleBackgroundClick);
@@ -282,15 +265,17 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
 
       const topBoxWidth = topNodes.length * (nodeWidth + boxPadding) + boxPadding;
       const bottomBoxWidth = bottomNodes.length * (nodeWidth + boxPadding) + boxPadding;
-      const boxHeight = nodeHeight + 2 * boxPadding;
+      const boxHeight = nodeHeight + 3 * boxPadding;
 
       svg
         .append('rect')
         .attr('x', (width - topBoxWidth) / 2)
-        .attr('y', 100)
+        .attr('y', boxHeight - boxHeight / 3.3)
         .attr('width', topBoxWidth)
         .attr('height', boxHeight)
-        .attr('class', 'top-box');
+        .attr('class', 'top-box')
+        .style('fill', '#eee')
+        .style('stroke', 'none');
 
       svg
         .append('text')
@@ -312,15 +297,17 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
       svg
         .append('rect')
         .attr('x', (width - bottomBoxWidth) / 2)
-        .attr('y', height - boxHeight - 100)
+        .attr('y', height - boxHeight - 80)
         .attr('width', bottomBoxWidth)
         .attr('height', boxHeight)
-        .attr('class', 'bottom-box');
+        .attr('class', 'bottom-box')
+        .style('fill', '#eee')
+        .style('stroke', 'none');
 
       svg
         .append('text')
         .attr('x', (width - bottomBoxWidth) / 2 + 10)
-        .attr('y', height - boxHeight + 30)
+        .attr('y', height - boxHeight / 2.5)
         .attr('fill', 'black')
         .text(selectedToSubnet)
         .style('font-size', '1.4rem')
@@ -344,7 +331,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
           d3
             .forceLink(data.links)
             .id((d: any) => d.id)
-            .distance(200)
+            .distance(100)
         )
         .force('charge', d3.forceManyBody().strength(-300))
         .on('tick', ticked);
@@ -357,16 +344,38 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .enter()
         .append('line')
         .attr('class', 'link animated-link')
-        .attr('stroke', 'steelblue')
+        .attr('stroke', '#333')
         .attr('stroke-width', 2)
         .attr('marker-end', 'url(#arrowhead)');
 
-      const node = svg
+      // const node = svg
+      //   .append('g')
+      //   .attr('class', 'nodes')
+      //   .selectAll('image')
+      //   .data(data.nodes)
+      //   .enter()
+      //   .append('image')
+      //   .attr('class', 'node')
+      //   .attr('xlink:href', (d) => d.img)
+      //   .attr('width', nodeWidth)
+      //   .attr('height', nodeHeight)
+      //   .on('click', handleNodeClick);
+
+      const nodeGroup = svg
         .append('g')
         .attr('class', 'nodes')
-        .selectAll('image')
+        .selectAll('g')
         .data(data.nodes)
         .enter()
+        .append('g')
+        .attr('class', 'node-group')
+        .attr('transform', (d) => `translate(${d.x - nodeWidth / 2}, ${d.y - nodeHeight / 2})`); // 각 노드의 위치를 데이터에 따라 설정
+
+      // 배경 사각형을 추가합니다.
+      nodeGroup.append('rect').attr('class', 'node-background').attr('width', nodeWidth).attr('height', nodeHeight).attr('fill', '#eee');
+
+      // 이미지를 추가합니다.
+      nodeGroup
         .append('image')
         .attr('class', 'node')
         .attr('xlink:href', (d) => d.img)
@@ -381,7 +390,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .data(data.nodes)
         .enter()
         .append('text')
-        .attr('dy', nodeHeight / 1.5)
+        .attr('dy', nodeHeight)
         .attr('dx', nodeWidth / 8)
         .attr('text-anchor', 'middle')
         .style('font-size', '1rem')
@@ -427,9 +436,13 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
           .attr('x2', (d) => (d.target as any).fx as number)
           .attr('y2', (d) => (d.target as any).fy as number);
 
-        node.attr('x', (d) => ((d as any).fx as number) - nodeWidth / 2).attr('y', (d) => ((d as any).fy as number) - nodeHeight / 2);
+        nodeGroup.attr('x', (d) => ((d as any).fx as number) - nodeWidth / 2).attr('y', (d) => ((d as any).fy as number) - nodeHeight / 2);
 
-        label.attr('x', (d) => (d as any).fx as number).attr('y', (d) => (d as any).fy as number);
+        label
+          .attr('x', (d) => ((d as any).fx as number) - 5)
+          .attr('y', (d) => {
+            return d.group === 'top' ? ((d as any).fy as number) - nodeHeight * 1.6 : ((d as any).fy as number);
+          });
       }
       return () => {
         setData({ nodes: [], links: [] });
@@ -484,6 +497,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         </div>
       </div>
       <div style={{ overflowX: 'auto', width: '100%', height: '100%' }}>
+        {!(selectedVpc && selectedFromSubnet && selectedToSubnet) ? <p className='mt-8 text-center text-lg'>Please select VPC and Subnet</p> : null}
         <svg ref={d3Container}></svg>
       </div>
     </>

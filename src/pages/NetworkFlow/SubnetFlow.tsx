@@ -51,9 +51,11 @@ const SubnetFlow = () => {
         
       </div> */}
       <div className='grid grid-cols-5 grid-rows-2 gap-8'>
-        <div className='panel col-span-2 row-span-3 '>
+        <div className='col-span-2 row-span-3'>
           {/* @ts-ignore */}
-          <SubnetTopology onVpcChange={handleVpcFromTopology} onFromSubnetChange={handleSubnetFromTopology} onToSubnetChange={handleSubnetToTopology} filteredData={handleFilteredData} />
+          <div className='panel'>
+            <SubnetTopology onVpcChange={handleVpcFromTopology} onFromSubnetChange={handleSubnetFromTopology} onToSubnetChange={handleSubnetToTopology} filteredData={handleFilteredData} />
+          </div>
         </div>
         <div className='panel col-span-3 row-span-1'>
           <DataTable
@@ -66,8 +68,9 @@ const SubnetFlow = () => {
             paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
           />
         </div>
-        <div className='panel col-span-3 row-span-2 overflow-x-auto'>
+        <div className='panel col-span-3 row-span-1 overflow-x-auto'>
           {/* @ts-ignore */}
+          {!(selectedVpc && selectedFromSubnet && selectedToSubnet) ? <p className='text-lg text-center'>Please select vpc and subnet</p> : null}
           <SubnetChart selectedVpc={selectedVpc} fromSubnet={selectedFromSubnet} toSubnet={selectedToSubnet} />
         </div>
       </div>

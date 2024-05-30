@@ -1,7 +1,7 @@
 .editable-header,
 .tag-header {
-  background-color: #fffd82;
-  --ag-header-cell-hover-background-color: #fffd82;
+  background-color: #eee;
+  --ag-header-cell-hover-background-color: #eee;
 }
 .color-red {
   background-color: #f1c0e8;
@@ -27,4 +27,5 @@
 }
 .ag-theme-quartz {
   font-size: 15px;
+  --ag-row-hover-color: #eee;
 }

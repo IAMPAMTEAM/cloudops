@@ -4,8 +4,8 @@ import './NetworkTopology.css';
 
 interface Node {
   id: string;
-  group: string; // "top" or "bottom"
-  img: string; // Image path
+  group: string;
+  img: string;
 }
 
 interface Link {
@@ -19,10 +19,10 @@ interface NetworkData {
 }
 
 interface Subnet {
+  fromVPC: string;
   fromSubnet: string;
-  fromEc2: string;
+  toVPC: string;
   toSubnet: string;
-  toEc2: string;
   packets: number;
   bytes: number;
 }
@@ -49,7 +49,7 @@ const VPCTopology: React.FC = () => {
   const d3Container = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
-    fetch('https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/ec2ToEc2BeforeUpdate.json')
+    fetch('https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/subnetToSubnet.json')
       .then(async (res) => await res.json())
       .then((data) => {
         if (data.length && vpcCnt < 1) {
@@ -80,20 +80,9 @@ const VPCTopology: React.FC = () => {
   const [selectedFromVpc, setSelectedFromVpc] = useState('');
   const [selectedToVpc, setSelectedToVpc] = useState('');
 
-  const demoData = [
-    {
-      fromVPC: '10.1.0.0',
-      fromSubnet: '10.1.1.2',
-      toVPC: '10.2.0.0',
-      toSubnet: '10.2.2.0',
-      packets: 1000,
-      bytes: 1000,
-    },
-  ];
-
   useEffect(() => {
     const fromVpcFilter = async () => {
-      const groupedData = demoData.reduce((acc, item) => {
+      const groupedData = fetchData.reduce((acc, item) => {
         const { fromVPC } = item;
         if (!acc[fromVPC]) {
           acc[fromVPC] = {

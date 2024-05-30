@@ -1,4 +1,5 @@
 import VPCTopology from './_partials/VpcTopology';
+import VpcChart from '@/components/Charts/VpcChart';
 
 const VPCFlow = () => {
   return (
@@ -8,7 +9,9 @@ const VPCFlow = () => {
           <VPCTopology />
         </div>
         <div className='panel col-span-3 row-span-1'></div>
-        <div className='panel col-span-3 row-span-2 overflow-x-auto'></div>
+        <div className='panel col-span-3 row-span-2 overflow-x-auto'>
+          <VpcChart fromVpc='10.1.0.0' toVpc='10.2.0.0' />
+        </div>
       </div>
     </>
   );

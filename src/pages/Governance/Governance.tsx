@@ -26,7 +26,7 @@ const Governance = () => {
 
   return (
     <>
-      <div>
+      <div className='panel'>
         <p className='text-lg pb-4'>Governance</p>
         <DataTable
           datas={mergedTableData}

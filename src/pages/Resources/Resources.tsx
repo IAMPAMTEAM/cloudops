@@ -34,7 +34,7 @@ const Resources = () => {
 
   return (
     <>
-      <div className='pb-4'>
+      <div className='pb-4 panel'>
         <p className='text-lg pb-4'>Resources</p>
         <DataTable
           datas={mergedTableData}
@@ -47,8 +47,8 @@ const Resources = () => {
         />
       </div>
       <div className='flex flex-col gap-6'>
-        <div className='flex gap-6'>
-          <div className='w-[50%]'>
+        <div className='flex gap-6 mt-6'>
+          <div className='w-[50%] panel'>
             <MultiPieChart
               data={chartData1}
               labels={[
@@ -60,7 +60,7 @@ const Resources = () => {
               SUB={['Service', 'Detail']}
             />
           </div>
-          <div className='w-[50%]'>
+          <div className='w-[50%] panel'>
             <PieChart data={chartData2} labels={['Seoul', 'Singapore', 'Virginia']} colors={[]} title='AWS Resources - Region Category' SUB='Region' />
           </div>
         </div>
