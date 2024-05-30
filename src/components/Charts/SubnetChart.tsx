@@ -25,6 +25,9 @@ function SubnetChart({ selectedVpc, fromSubnet, toSubnet }: { selectedVpc: strin
   const fromSubnetRef = useRef<HTMLSelectElement>(null);
   const toSubnetRef = useRef<HTMLSelectElement>(null);
 
+  console.log(selectedVpc);
+  console.log(fromSubnet);
+  console.log(toSubnet);
   const { vpcs } = useVpcs();
   const { subnets } = useSubnets({ selectedVpc });
   const { packetInfos: ec2PacketInfos, byteInfos: ec2ByteInfos } = useOpenSearchBySubnet({

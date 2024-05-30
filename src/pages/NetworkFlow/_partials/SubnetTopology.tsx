@@ -189,13 +189,13 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
   const handleSelectVpc = (event) => {
     setSelectedVpc(event.target.value);
     setIsSelectedVpc(true);
-    onVpcChange(selectedVpc);
+    onVpcChange(event.target.value);
   };
 
   const handleSelectedFromSubnet = (event) => {
     setSelectedFromSubnet(event.target.value);
     setIsSelectedFromSubnet(true);
-    onFromSubnetChange(selectedFromSubnet);
+    onFromSubnetChange(event.target.value);
   };
 
   const handleSelectedToSubnet = (event) => {
