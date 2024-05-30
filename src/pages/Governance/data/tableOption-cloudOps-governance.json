@@ -22,10 +22,24 @@
       ]
     }
   ],
-  "columnWidth": [{ "governanceTypes": 200 }],
-  "columnMaxWidth": [{ "companyName": 170 }, { "awsAccountSetName": 350 }, { "governanceName": 200 }, { "governanceTypes": 200 }],
-  "defaultColDef": { "filter": true, "minWidth": 130 },
-  "autoSizeStrategy": { "type": "fitCellContents" },
+  "columnWidth": [
+    { "companyName": 165 },
+    { "awsAccountSetName": 250 },
+    { "governanceName": 140 },
+    { "governanceTypes": 140 },
+    { "complianceAssets": 140 },
+    { "complianceCost": 140 },
+    { "complianceIdentity": 140 },
+    { "complianceAccessControl": 165 },
+    { "complianceEncryption": 140 },
+    { "complianceHA": 140 },
+    { "complianceDR": 140 },
+    { "complianceBackup": 140 },
+    { "complianceLog": 140 }
+  ],
+  "columnMaxWidth": [],
+  "defaultColDef": { "filter": true, "minWidth": 130, "autoHeaderHeight": true, "wrapHeaderText": true },
+  "autoSizeStrategy": {},
   "editableColumn": [],
   "tableHeight": 550,
   "pagination": true,
@@ -44,16 +58,6 @@
         "High": "#FF0000",
         "Medium": "#00FF00",
         "Low": "#FFF000"
-      }
-    },
-    {
-      "type": "FontColor",
-      "columns": ["companyName"],
-      "value": {
-        "삼성생명": "#FF0000",
-        "메가존클라우드": "#00FF00",
-        "삼성전자": "#000FFF",
-        "LG CNS": "#FFF000"
       }
     }
   ]

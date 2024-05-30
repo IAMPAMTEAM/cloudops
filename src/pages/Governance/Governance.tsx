@@ -26,15 +26,18 @@ const Governance = () => {
 
   return (
     <>
-      <DataTable
-        datas={mergedTableData}
-        columnDefs={columnDefs}
-        defaultTableSetting={setDefaultTableSetting}
-        tableHeight={tableOption.tableHeight}
-        pagination={tableOption.pagination}
-        paginationPageSize={tableOption.paginationPageSize}
-        paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
-      />
+      <div>
+        <p className='text-lg pb-4'>Governance</p>
+        <DataTable
+          datas={mergedTableData}
+          columnDefs={columnDefs}
+          defaultTableSetting={setDefaultTableSetting}
+          tableHeight={tableOption.tableHeight}
+          pagination={tableOption.pagination}
+          paginationPageSize={tableOption.paginationPageSize}
+          paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
+        />
+      </div>
     </>
   );
 };

@@ -39,24 +39,30 @@ const Cost = () => {
 
   return (
     <>
-      <DataTable
-        datas={mergedServiceTableData}
-        columnDefs={serviceColumnDefs}
-        defaultTableSetting={setDefaultServiceTableSetting}
-        tableHeight={serviceTableOption.tableHeight}
-        pagination={serviceTableOption.pagination}
-        paginationPageSize={serviceTableOption.paginationPageSize}
-        paginationPageSizeSelector={serviceTableOption.paginationPageSizeSelector}
-      />
-      <DataTable
-        datas={mergedRegionTableData}
-        columnDefs={regionColumnDefs}
-        defaultTableSetting={setDefaultRegionTableSetting}
-        tableHeight={regionTableOption.tableHeight}
-        pagination={regionTableOption.pagination}
-        paginationPageSize={regionTableOption.paginationPageSize}
-        paginationPageSizeSelector={regionTableOption.paginationPageSizeSelector}
-      />
+      <div>
+        <p className='text-lg pb-4'>Service Daily Cost</p>
+        <DataTable
+          datas={mergedServiceTableData}
+          columnDefs={serviceColumnDefs}
+          defaultTableSetting={setDefaultServiceTableSetting}
+          tableHeight={serviceTableOption.tableHeight}
+          pagination={serviceTableOption.pagination}
+          paginationPageSize={serviceTableOption.paginationPageSize}
+          paginationPageSizeSelector={serviceTableOption.paginationPageSizeSelector}
+        />
+      </div>
+      <div>
+        <p className='text-lg pt-4 pb-4'>Region Daily Cost</p>
+        <DataTable
+          datas={mergedRegionTableData}
+          columnDefs={regionColumnDefs}
+          defaultTableSetting={setDefaultRegionTableSetting}
+          tableHeight={regionTableOption.tableHeight}
+          pagination={regionTableOption.pagination}
+          paginationPageSize={regionTableOption.paginationPageSize}
+          paginationPageSizeSelector={regionTableOption.paginationPageSizeSelector}
+        />
+      </div>
     </>
   );
 };

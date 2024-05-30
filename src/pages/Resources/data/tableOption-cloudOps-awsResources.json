@@ -14,10 +14,18 @@
       "children": [{ "field": "awsServiceCategory" }, { "field": "awsServiceName" }, { "field": "awsResourceTypeName" }]
     }
   ],
-  "columnWidth": [],
+  "columnWidth": [
+    { "awsResourceName": 220 },
+    { "awsResourceId": 220 },
+    { "awsAccoutName": 220 },
+    { "awsRegionName": 130 },
+    { "awsServiceCategory": 140 },
+    { "awsServiceName": 140 },
+    { "awsResourceTypeName": 160 }
+  ],
   "columnMaxWidth": [],
-  "defaultColDef": { "filter": true, "minWidth": 130 },
-  "autoSizeStrategy": { "type": "fitCellContents" },
+  "defaultColDef": { "filter": true, "minWidth": 130, "autoHeaderHeight": true, "wrapHeaderText": true },
+  "autoSizeStrategy": {},
   "editableColumn": [],
   "tableHeight": 550,
   "pagination": true,

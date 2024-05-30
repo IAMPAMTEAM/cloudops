@@ -1,5 +1,6 @@
 [
   {
+    "month": "2024.1",
     "date": "2024.1.1",
     "totalCost": 0.76,
     "awsConfig": 0.07,
@@ -34,6 +35,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.2",
     "totalCost": 0.07,
     "awsConfig": 0.07,
@@ -68,6 +70,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.3",
     "totalCost": 0.08,
     "awsConfig": 0.08,
@@ -102,6 +105,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.4",
     "totalCost": 0.07,
     "awsConfig": 0.07,
@@ -136,6 +140,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.5",
     "totalCost": 0.07,
     "awsConfig": 0.07,
@@ -170,6 +175,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.6",
     "totalCost": 0.07,
     "awsConfig": 0.07,
@@ -204,6 +210,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.7",
     "totalCost": 0.07,
     "awsConfig": 0.07,
@@ -238,6 +245,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.8",
     "totalCost": 0.26,
     "awsConfig": 0.07,
@@ -272,6 +280,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.9",
     "totalCost": 0.35,
     "awsConfig": 0.07,
@@ -306,6 +315,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.10",
     "totalCost": 0.35,
     "awsConfig": 0.07,
@@ -340,6 +350,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.11",
     "totalCost": 0.35,
     "awsConfig": 0.07,
@@ -374,6 +385,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.12",
     "totalCost": 0.35,
     "awsConfig": 0.07,
@@ -408,6 +420,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.13",
     "totalCost": 0.35,
     "awsConfig": 0.07,
@@ -442,6 +455,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.14",
     "totalCost": 0.34,
     "awsConfig": 0.06,
@@ -476,6 +490,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.15",
     "totalCost": 0.34,
     "awsConfig": 0.06,
@@ -510,6 +525,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.16",
     "totalCost": 0.35,
     "awsConfig": 0.07,
@@ -544,6 +560,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.17",
     "totalCost": 0.35,
     "awsConfig": 0.07,
@@ -578,6 +595,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.18",
     "totalCost": 0.35,
     "awsConfig": 0.07,
@@ -612,6 +630,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.19",
     "totalCost": 0.33,
     "awsConfig": 0.06,
@@ -646,6 +665,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.20",
     "totalCost": 0.07,
     "awsConfig": 0.07,
@@ -680,6 +700,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.21",
     "totalCost": 0.07,
     "awsConfig": 0.07,
@@ -714,6 +735,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.22",
     "totalCost": 0.07,
     "awsConfig": 0.07,
@@ -748,6 +770,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.23",
     "totalCost": 0.28,
     "awsConfig": 0.07,
@@ -782,6 +805,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.24",
     "totalCost": 0.07,
     "awsConfig": 0.07,
@@ -816,6 +840,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.25",
     "totalCost": 0.07,
     "awsConfig": 0.07,
@@ -850,6 +875,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.26",
     "totalCost": 0.07,
     "awsConfig": 0.07,
@@ -884,6 +910,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.27",
     "totalCost": 0.06,
     "awsConfig": 0.06,
@@ -918,6 +945,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.28",
     "totalCost": 0.06,
     "awsConfig": 0.06,
@@ -952,6 +980,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.29",
     "totalCost": 0.06,
     "awsConfig": 0.06,
@@ -986,6 +1015,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.30",
     "totalCost": 0.06,
     "awsConfig": 0.06,
@@ -1020,6 +1050,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.1",
     "date": "2024.1.31",
     "totalCost": 1.52,
     "awsConfig": 1.52,
@@ -1054,6 +1085,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.1",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1088,6 +1120,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.2",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1122,6 +1155,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.3",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1156,6 +1190,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.4",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1190,6 +1225,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.5",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1224,6 +1260,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.6",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1258,6 +1295,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.7",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1292,6 +1330,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.8",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1326,6 +1365,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.9",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1360,6 +1400,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.10",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1394,6 +1435,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.11",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1428,6 +1470,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.12",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1462,6 +1505,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.13",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1496,6 +1540,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.14",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1530,6 +1575,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.15",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1564,6 +1610,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.16",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1598,6 +1645,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.17",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1632,6 +1680,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.18",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1666,6 +1715,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.19",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1700,6 +1750,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.20",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1734,6 +1785,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.21",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1768,6 +1820,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.22",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1802,6 +1855,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.23",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1836,6 +1890,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.24",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1870,6 +1925,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.25",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1904,6 +1960,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.26",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1938,6 +1995,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.27",
     "totalCost": 0,
     "awsConfig": 0,
@@ -1972,6 +2030,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.28",
     "totalCost": 0,
     "awsConfig": 0,
@@ -2006,6 +2065,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.2",
     "date": "2024.2.29",
     "totalCost": 0,
     "awsConfig": 0,
@@ -2040,6 +2100,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.1",
     "totalCost": 9.74,
     "awsConfig": 0,
@@ -2074,6 +2135,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.2",
     "totalCost": 0.01,
     "awsConfig": 0,
@@ -2108,6 +2170,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.3",
     "totalCost": 0.01,
     "awsConfig": 0,
@@ -2142,6 +2205,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.4",
     "totalCost": 0.01,
     "awsConfig": 0,
@@ -2176,6 +2240,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.5",
     "totalCost": 0.02,
     "awsConfig": 0,
@@ -2210,6 +2275,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.6",
     "totalCost": 0.01,
     "awsConfig": 0,
@@ -2244,6 +2310,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.7",
     "totalCost": 0.01,
     "awsConfig": 0,
@@ -2278,6 +2345,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.8",
     "totalCost": 0.01,
     "awsConfig": 0,
@@ -2312,6 +2380,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.9",
     "totalCost": 0.02,
     "awsConfig": 0,
@@ -2346,6 +2415,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.10",
     "totalCost": 0.02,
     "awsConfig": 0,
@@ -2380,6 +2450,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.11",
     "totalCost": 0.03,
     "awsConfig": 0,
@@ -2414,6 +2485,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.12",
     "totalCost": 0.03,
     "awsConfig": 0,
@@ -2448,6 +2520,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.13",
     "totalCost": 14.47,
     "awsConfig": 0,
@@ -2482,6 +2555,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.14",
     "totalCost": 50.45,
     "awsConfig": 0,
@@ -2516,6 +2590,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.15",
     "totalCost": 1.54,
     "awsConfig": 0,
@@ -2550,6 +2625,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.16",
     "totalCost": 1.35,
     "awsConfig": 0,
@@ -2584,6 +2660,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.17",
     "totalCost": 1.34,
     "awsConfig": 0,
@@ -2618,6 +2695,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.18",
     "totalCost": 1.4,
     "awsConfig": 0,
@@ -2652,6 +2730,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.19",
     "totalCost": 1.34,
     "awsConfig": 0,
@@ -2686,6 +2765,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.20",
     "totalCost": 1.48,
     "awsConfig": 0.14,
@@ -2720,6 +2800,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.21",
     "totalCost": 0.97,
     "awsConfig": 0.1,
@@ -2754,6 +2835,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.22",
     "totalCost": 2.94,
     "awsConfig": 0.21,
@@ -2788,6 +2870,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.23",
     "totalCost": 2.84,
     "awsConfig": 0.01,
@@ -2822,6 +2905,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.24",
     "totalCost": 2.86,
     "awsConfig": 0.01,
@@ -2856,6 +2940,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.25",
     "totalCost": 2.02,
     "awsConfig": 0.69,
@@ -2890,6 +2975,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.26",
     "totalCost": 1.04,
     "awsConfig": 0.38,
@@ -2924,6 +3010,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.27",
     "totalCost": 2.4,
     "awsConfig": 1.05,
@@ -2958,6 +3045,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.28",
     "totalCost": 2.52,
     "awsConfig": 0.2,
@@ -2992,6 +3080,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.29",
     "totalCost": 5.76,
     "awsConfig": 3.24,
@@ -3026,6 +3115,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.30",
     "totalCost": 0.02,
     "awsConfig": 0,
@@ -3060,6 +3150,7 @@
     "amazonElasticLoadBalancing": 0
   },
   {
+    "month": "2024.3",
     "date": "2024.3.31",
     "totalCost": 0.07,
     "awsConfig": 0.05,
