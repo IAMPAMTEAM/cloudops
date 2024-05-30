@@ -1,0 +1,290 @@
+[
+  {
+    "awsResourceName": "acl-001a6ba178304339a",
+    "awsResourceId": "acl-001a6ba178304339a",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-NetworkAcl"
+  },
+  {
+    "awsResourceName": "acl-0360c5de75614a1b9",
+    "awsResourceId": "acl-0360c5de75614a1b9",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-NetworkAcl"
+  },
+  {
+    "awsResourceName": "acl-0c9958352e3ec0998",
+    "awsResourceId": "acl-0c9958352e3ec0998",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-NetworkAcl"
+  },
+  {
+    "awsResourceName": "dopt-0cd1ec29308105641",
+    "awsResourceId": "dopt-0cd1ec29308105641",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-DHCPOptions"
+  },
+  {
+    "awsResourceName": "ec2nic-172.31.13.131",
+    "awsResourceId": "eni-0aa1b72e32d88d904",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-NetworkInterface"
+  },
+  {
+    "awsResourceName": "ec2nic-172.31.1.220",
+    "awsResourceId": "eni-0ea18fe85468a2970",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-NetworkInterface"
+  },
+  {
+    "awsResourceName": "ec2-172.31.13.131",
+    "awsResourceId": "i-082f9abbfb66e80ac",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-Instance"
+  },
+  {
+    "awsResourceName": "ec2-172.31.1.220",
+    "awsResourceId": "i-0a41b43fbec1d0d94",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-Instance"
+  },
+  {
+    "awsResourceName": "igw-vpc-seoul",
+    "awsResourceId": "igw-0b3f7ef7b7860559a",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-InternetGateway"
+  },
+  {
+    "awsResourceName": "lt-0c6a6588e291ab8a1",
+    "awsResourceId": "lt-0c6a6588e291ab8a1",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-LaunchTemplate"
+  },
+  {
+    "awsResourceName": "lt-0efe5411481eeaed2",
+    "awsResourceId": "lt-0efe5411481eeaed2",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-LaunchTemplate"
+  },
+  {
+    "awsResourceName": "sjh",
+    "awsResourceId": "pcx-01798e6462ad7ac2e",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-VPCPeeringConnection"
+  },
+  {
+    "awsResourceName": "routetable-seoul-vpc",
+    "awsResourceId": "rtb-04dbda5a021e8beac",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-RouteTable"
+  },
+  {
+    "awsResourceName": "routetable-10.2.0.0/16",
+    "awsResourceId": "rtb-0892f56dc528cdedd",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-RouteTable"
+  },
+  {
+    "awsResourceName": "routetable-10.1.0.0/16",
+    "awsResourceId": "rtb-0e25dda1a4e3c5b48",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-RouteTable"
+  },
+  {
+    "awsResourceName": "rtbassoc-05ba743465d234d58",
+    "awsResourceId": "rtbassoc-05ba743465d234d58",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-SubnetRouteTableAssociation"
+  },
+  {
+    "awsResourceName": "rtbassoc-05f99dab58ce5286e",
+    "awsResourceId": "rtbassoc-05f99dab58ce5286e",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-SubnetRouteTableAssociation"
+  },
+  {
+    "awsResourceName": "rtbassoc-09a0f562fcd773878",
+    "awsResourceId": "rtbassoc-09a0f562fcd773878",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-SubnetRouteTableAssociation"
+  },
+  {
+    "awsResourceName": "rtbassoc-0bf9627a04610bc01",
+    "awsResourceId": "rtbassoc-0bf9627a04610bc01",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-SubnetRouteTableAssociation"
+  },
+  {
+    "awsResourceName": "rtbassoc-0f2ea49d9ef58e6f4",
+    "awsResourceId": "rtbassoc-0f2ea49d9ef58e6f4",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-SubnetRouteTableAssociation"
+  },
+  {
+    "awsResourceName": "sgrule-10.1.0.0/16",
+    "awsResourceId": "sg-016b8bad0b737690d",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-SecurityGroup"
+  },
+  {
+    "awsResourceName": "sgrule-172.31.0.0/16",
+    "awsResourceId": "sg-03b9cad8282d73175",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-SecurityGroup"
+  },
+  {
+    "awsResourceName": "sgrule-10.2.0.0/16",
+    "awsResourceId": "sg-0ce621388e4d5f573",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-SecurityGroup"
+  },
+  {
+    "awsResourceName": "subnet1",
+    "awsResourceId": "subnet-0b370bd2c6245d501",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-Subnet"
+  },
+  {
+    "awsResourceName": "subnet4",
+    "awsResourceId": "subnet-0bf446ffcbf3da956",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-Subnet"
+  },
+  {
+    "awsResourceName": "subnet3",
+    "awsResourceId": "subnet-0cc7d5683b64dfa8a",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-Subnet"
+  },
+  {
+    "awsResourceName": "subnet2",
+    "awsResourceId": "subnet-0e08946fc8bcd7caf",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-Subnet"
+  },
+  {
+    "awsResourceName": "vol-04f7b3e842eb34c31",
+    "awsResourceId": "vol-04f7b3e842eb34c31",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-Volume"
+  },
+  {
+    "awsResourceName": "vol-06ec438dfb9f65a7b",
+    "awsResourceId": "vol-06ec438dfb9f65a7b",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-Volume"
+  },
+  {
+    "awsResourceName": "ThirdVpcStack1",
+    "awsResourceId": "vpc-05b09297c0800d9e6",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-VPC"
+  },
+  {
+    "awsResourceName": "ThirdVpcStack1",
+    "awsResourceId": "vpc-0999dcfb5637e65d3",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-VPC"
+  },
+  {
+    "awsResourceName": "vpc-seoul",
+    "awsResourceId": "vpc-0a212fc78a2d76c3c",
+    "awsAccoutName": "345619123311(hybrix-dev)",
+    "awsRegionName": "Seoul",
+    "awsServiceCategory": "Compute",
+    "awsServiceName": "EC2",
+    "awsResourceTypeName": "EC2-VPC"
+  }
+]

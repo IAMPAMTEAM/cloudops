@@ -38,6 +38,10 @@ const VPCFlow = lazy(() => import('@/pages/NetworkFlow/VPCFlow'));
 
 const Landing = lazy(() => import('@/pages/Landing/LandingContainer'));
 
+const Governance = lazy(() => import('@/pages/Governance/Governance'));
+const Resources = lazy(() => import('@/pages/Resources/Resources'));
+const Cost = lazy(() => import('@/pages/Cost/Cost'));
+
 const routes = [
   {
     path: '/',
@@ -202,6 +206,21 @@ const routes = [
     path: '/network-flow/vpc',
     layout: 'default',
     element: <VPCFlow />,
+  },
+  {
+    path: '/governance',
+    layout: 'default',
+    element: <Governance />,
+  },
+  {
+    path: '/resources',
+    layout: 'default',
+    element: <Resources />,
+  },
+  {
+    path: '/cost',
+    layout: 'default',
+    element: <Cost />,
   },
 ];
 

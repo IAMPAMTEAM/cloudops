@@ -8,7 +8,7 @@ const finalRoutes = routes.map((route) => {
   if (route.path === '/') {
     return {
       ...route,
-      element: <Navigate to='/landing' />,
+      element: <Navigate to='/entry' />,
     };
   }
   return {

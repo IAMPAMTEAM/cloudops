@@ -30,12 +30,6 @@ const Sidebar = () => {
     });
   };
 
-  const [isDisabled, setIsDisabled] = useState(false);
-
-  const handleMouseOver = () => {
-    setIsDisabled(true);
-  };
-
   useEffect(() => {
     const selector = document.querySelector('.sidebar ul a[href="' + window.location.pathname + '"]');
     if (selector) {
@@ -45,6 +39,7 @@ const Sidebar = () => {
         let ele: any = ul.closest('li.menu').querySelectorAll('.nav-link') || [];
         if (ele.length) {
           ele = ele[0];
+          console.log(ele);
           setTimeout(() => {
             ele.click();
           });
@@ -81,28 +76,28 @@ const Sidebar = () => {
           <PerfectScrollbar className='h-[calc(100vh-80px)] relative'>
             <ul className='relative font-semibold space-y-0.5 p-4 py-0'>
               <li className='menu nav-item'>
-                <NavLink to='/' className='group' onClick={(e) => e.preventDefault()}>
+                <NavLink to='/governance' className='group'>
                   <div className='flex items-center'>
                     <IconMenuUsers className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-gray-400 dark:text-gray-600 dark:group-hover:text-white-dark'>{t('governance')}</span>
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('governance')}</span>
                   </div>
                 </NavLink>
               </li>
 
               <li className='menu nav-item'>
-                <NavLink to='/' className='group' onClick={(e) => e.preventDefault()}>
+                <NavLink to='/resources' className='group'>
                   <div className='flex items-center'>
                     <IconNotes className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-gray-400 dark:text-gray-600 dark:group-hover:text-white-dark'>{t('resources')}</span>
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('resources')}</span>
                   </div>
                 </NavLink>
               </li>
 
               <li className='menu nav-item'>
-                <NavLink to='/' className='group' onClick={(e) => e.preventDefault()}>
+                <NavLink to='/cost' className='group'>
                   <div className='flex items-center'>
                     <IconCashBanknotes className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-gray-400 dark:text-gray-600 dark:group-hover:text-white-dark'>{t('cost')}</span>
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('cost')}</span>
                   </div>
                 </NavLink>
               </li>

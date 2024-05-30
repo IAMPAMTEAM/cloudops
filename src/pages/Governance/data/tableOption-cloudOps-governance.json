@@ -1,0 +1,60 @@
+{
+  "name": "cloudOps-governance",
+  "columnDefs": [
+    {
+      "field": "companyName"
+    },
+    { "field": "awsAccountSetName" },
+    {
+      "headerName": "Governance",
+      "children": [
+        { "field": "governanceName" },
+        { "field": "governanceTypes" },
+        { "field": "complianceAssets" },
+        { "field": "complianceCost" },
+        { "field": "complianceIdentity" },
+        { "field": "complianceAccessControl" },
+        { "field": "complianceEncryption" },
+        { "field": "complianceHA" },
+        { "field": "complianceDR" },
+        { "field": "complianceBackup" },
+        { "field": "complianceLog" }
+      ]
+    }
+  ],
+  "columnWidth": [{ "governanceTypes": 200 }],
+  "columnMaxWidth": [{ "companyName": 170 }, { "awsAccountSetName": 350 }, { "governanceName": 200 }, { "governanceTypes": 200 }],
+  "defaultColDef": { "filter": true, "minWidth": 130 },
+  "autoSizeStrategy": { "type": "fitCellContents" },
+  "editableColumn": [],
+  "tableHeight": 550,
+  "pagination": true,
+  "paginationPageSize": 10,
+  "paginationPageSizeSelector": [10, 20, 50, 100],
+  "columnFontSize": [],
+  "columnFontColor": [],
+  "fontStyles": [],
+  "columnHeaderBackgroundColor": [],
+  "columnBackgroundColor": [],
+  "cellValueColor": [
+    {
+      "type": "Background",
+      "columns": ["complianceAssets", "complianceCost", "complianceIdentity", "complianceAccessControl", "complianceEncryption", "complianceHA", "complianceDR", "complianceBackup", "complianceLog"],
+      "value": {
+        "High": "#FF0000",
+        "Medium": "#00FF00",
+        "Low": "#FFF000"
+      }
+    },
+    {
+      "type": "FontColor",
+      "columns": ["companyName"],
+      "value": {
+        "삼성생명": "#FF0000",
+        "메가존클라우드": "#00FF00",
+        "삼성전자": "#000FFF",
+        "LG CNS": "#FFF000"
+      }
+    }
+  ]
+}

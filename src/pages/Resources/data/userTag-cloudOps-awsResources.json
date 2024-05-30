@@ -1,0 +1,147 @@
+{
+  "name": "cloudOps-awsResource",
+  "keyColumn": "awsResourceId",
+  "tagColumnDefs": [
+    {
+      "headerName": "tagsUser",
+      "children": [
+        { "field": "comment", "headerClass": "tag-header", "editable": true },
+        {
+          "field": "lastUpdated",
+          "headerClass": "tag-header",
+          "editable": true
+        }
+      ]
+    }
+  ],
+  "tagData": {
+    "acl-001a6ba178304339a": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "acl-0360c5de75614a1b9": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "acl-0c9958352e3ec0998": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "dopt-0cd1ec29308105641": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "eni-0aa1b72e32d88d904": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "eni-0ea18fe85468a2970": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "i-082f9abbfb66e80ac": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "i-0a41b43fbec1d0d94": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "igw-0b3f7ef7b7860559a": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "lt-0c6a6588e291ab8a1": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "lt-0efe5411481eeaed2": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "pcx-01798e6462ad7ac2e": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "rtb-04dbda5a021e8beac": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "rtb-0892f56dc528cdedd": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "rtb-0e25dda1a4e3c5b48": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "rtbassoc-05ba743465d234d58": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "rtbassoc-05f99dab58ce5286e": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "rtbassoc-09a0f562fcd773878": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "rtbassoc-0bf9627a04610bc01": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "rtbassoc-0f2ea49d9ef58e6f4": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "sg-016b8bad0b737690d": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "sg-03b9cad8282d73175": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "sg-0ce621388e4d5f573": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "subnet-0b370bd2c6245d501": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "subnet-0bf446ffcbf3da956": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "subnet-0cc7d5683b64dfa8a": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "subnet-0e08946fc8bcd7caf": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "vol-04f7b3e842eb34c31": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "vol-06ec438dfb9f65a7b": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "vpc-05b09297c0800d9e6": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "vpc-0999dcfb5637e65d3": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    },
+    "vpc-0a212fc78a2d76c3c": {
+      "comment": "auto scanned",
+      "lastUpdated": "24/05/2024"
+    }
+  }
+}

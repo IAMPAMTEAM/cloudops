@@ -10,9 +10,12 @@ const LandingContainer = () => {
   return (
     <div>
       <Header />
+      {/* @ts-ignore */}
       <Banner />
       <Billboard />
+      {/* @ts-ignore */}
       <LandingContents />
+      {/* @ts-ignore */}
       <Footer />
     </div>
   );

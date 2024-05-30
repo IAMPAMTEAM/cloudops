@@ -1,0 +1,108 @@
+{
+  "name": "cloudOps-awsResources",
+  "keyColumn": "awsResourceId",
+  "tagColumnDefs": [
+    {
+      "headerName": "tagsAWS",
+      "children": [{ "field": "name", "headerClass": "tag-header", "editable": true }]
+    }
+  ],
+  "tagData": {
+    "acl-001a6ba178304339a": {
+      "name": ""
+    },
+    "acl-0360c5de75614a1b9": {
+      "name": ""
+    },
+    "acl-0c9958352e3ec0998": {
+      "name": ""
+    },
+    "dopt-0cd1ec29308105641": {
+      "name": ""
+    },
+    "eni-0aa1b72e32d88d904": {
+      "name": ""
+    },
+    "eni-0ea18fe85468a2970": {
+      "name": ""
+    },
+    "i-082f9abbfb66e80ac": {
+      "name": "yubeom-test-instance"
+    },
+    "i-0a41b43fbec1d0d94": {
+      "name": "ec2-172.31.1.220"
+    },
+    "igw-0b3f7ef7b7860559a": {
+      "name": "igw-vpc-seoul"
+    },
+    "lt-0c6a6588e291ab8a1": {
+      "name": ""
+    },
+    "lt-0efe5411481eeaed2": {
+      "name": ""
+    },
+    "pcx-01798e6462ad7ac2e": {
+      "name": "peer-seoul-2-1"
+    },
+    "rtb-04dbda5a021e8beac": {
+      "name": "routetable-seoul-vpc"
+    },
+    "rtb-0892f56dc528cdedd": {
+      "name": "routetable-seoul-vpc"
+    },
+    "rtb-0e25dda1a4e3c5b48": {
+      "name": "routetable-10.2.0.0/16"
+    },
+    "rtbassoc-05ba743465d234d58": {
+      "name": "routetable-10.1.0.0/16"
+    },
+    "rtbassoc-05f99dab58ce5286e": {
+      "name": ""
+    },
+    "rtbassoc-09a0f562fcd773878": {
+      "name": ""
+    },
+    "rtbassoc-0bf9627a04610bc01": {
+      "name": ""
+    },
+    "rtbassoc-0f2ea49d9ef58e6f4": {
+      "name": ""
+    },
+    "sg-016b8bad0b737690d": {
+      "name": "sgrule-10.1.0.0/16"
+    },
+    "sg-03b9cad8282d73175": {
+      "name": "sgrule-172.31.0.0/16"
+    },
+    "sg-0ce621388e4d5f573": {
+      "name": "sgrule-10.2.0.0/16"
+    },
+    "subnet-0b370bd2c6245d501": {
+      "name": "subnet1"
+    },
+    "subnet-0bf446ffcbf3da956": {
+      "name": "subnet4"
+    },
+    "subnet-0cc7d5683b64dfa8a": {
+      "name": "subnet3"
+    },
+    "subnet-0e08946fc8bcd7caf": {
+      "name": "subnet2"
+    },
+    "vol-04f7b3e842eb34c31": {
+      "name": ""
+    },
+    "vol-06ec438dfb9f65a7b": {
+      "name": ""
+    },
+    "vpc-05b09297c0800d9e6": {
+      "name": "ThirdVpcStack1"
+    },
+    "vpc-0999dcfb5637e65d3": {
+      "name": "ThirdVpcStack1"
+    },
+    "vpc-0a212fc78a2d76c3c": {
+      "name": "ThirdVpcStack1"
+    }
+  }
+}

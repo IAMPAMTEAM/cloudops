@@ -60,30 +60,66 @@ const VPCTopology: React.FC = () => {
       .catch((err) => console.error(err));
   }, [vpcCnt]);
 
-  console.log(data);
+  // TODO: Logic
+  /**
+   * 1. fromVPC 목록들 가져와서 x.x.0.0으로 fromVPC 기준 목록 만들기
+   * 2. 위에서 filter한 데이터를 기반으로 같은방식의 toVPC 목록 만들기
+   * 3. 여기서부터는 subnet에서 했던 방식대로 subnet 목록 만들기
+   */
+
+  // filtering from fetch Data
+  const [fromVpcFilteredList, setFromVpcFilteredList] = useState([]);
+  const [toVpcFilteredList, setToVpcFilteredList] = useState([]);
+
+  // Select - option list
+  const [fromVpcList, setFromVpcList] = useState([]);
+  const [toVpcList, setToVpcList] = useState([]);
+
+  const [isSelectedFromVpc, setIsSelectedFromVpc] = useState(false);
+
+  const [selectedFromVpc, setSelectedFromVpc] = useState('');
+  const [selectedToVpc, setSelectedToVpc] = useState('');
+
+  const demoData = [
+    {
+      fromVPC: '10.1.0.0',
+      fromSubnet: '10.1.1.2',
+      toVPC: '10.2.0.0',
+      toSubnet: '10.2.2.0',
+      packets: 1000,
+      bytes: 1000,
+    },
+  ];
 
   useEffect(() => {
-    const vpcFilter = async () => {
-      const groupedData = fetchData.reduce((acc, item) => {
-        const { fromSubnet } = item;
-        const vpc = fromSubnet.slice(0, fromSubnet.lastIndexOf('.') - 1) + '0.0';
-        if (!acc[vpc]) {
-          acc[vpc] = {
-            vpc,
-            subnetInfo: [],
+    const fromVpcFilter = async () => {
+      const groupedData = demoData.reduce((acc, item) => {
+        const { fromVPC } = item;
+        if (!acc[fromVPC]) {
+          acc[fromVPC] = {
+            ...item,
           };
         }
-        acc[vpc].subnetInfo.push(item);
+        acc[fromVPC] = { ...item };
         return acc;
       }, {});
 
-      setVpcFilteredList(Object.values(groupedData));
+      // setFromVpcFilteredList(Object.values(groupedData));
     };
 
-    vpcFilter();
-  }, [fetchData]);
+    fromVpcFilter();
+  }, [demoData, fromVpcFilteredList]);
 
-  console.log(vpcFilteredList);
+  useEffect(() => {
+    const toVpcFilter = async () => {
+      const groupedData = fromVpcFilteredList.reduce((acc, item) => {
+        // TODO: 여기서 무한루프가 도는 이유를 찾아야함
+        return acc;
+      }, {});
+    };
+  });
+
+  // console.log(fromVpcFilteredList);
 
   useEffect(() => {
     if (d3Container.current && data.nodes.length && data.links.length && selectedToSubnet) {

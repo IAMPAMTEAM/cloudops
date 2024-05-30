@@ -27,7 +27,8 @@ interface Subnet {
   bytes: number;
 }
 
-const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetChange }) => {
+// @ts-ignore
+const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetChange, filteredData }) => {
   const [data, setData] = useState<NetworkData>({ nodes: [], links: [] });
   const [fetchData, setFetchData] = useState<Subnet[]>([]);
   const [subnetCnt, setSubnetCnt] = useState(0);
@@ -132,14 +133,17 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
           const groupedData = data.reduce((acc, item) => {
             const { toSubnet } = item;
 
+            // @ts-ignore
             if (selectedFromSubnet.slice(0, selectedFromSubnet.lastIndexOf('.') - 1) === toSubnet.slice(0, toSubnet.lastIndexOf('.') - 1) && selectedFromSubnet !== toSubnet) {
               if (!acc[toSubnet]) {
+                // @ts-ignore
                 acc[toSubnet] = {
                   fromSubnet: selectedFromSubnet,
                   toSubnet,
                   subnetInfo: [],
                 };
               }
+              // @ts-ignore
               acc[toSubnet].subnetInfo.push(item);
             }
             return acc;
@@ -163,6 +167,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
       }
     });
 
+    // @ts-ignore
     setFromSubnetList(uniqueFromSubnetList);
   }, [fromSubnetFilteredList]);
 
@@ -177,6 +182,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
       }
     });
 
+    // @ts-ignore
     setToSubnetList(uniqueToSubnetList);
   }, [toSubnetFilteredList]);
 
@@ -195,6 +201,9 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
   const handleSelectedToSubnet = (event) => {
     setSelectedToSubnet(event.target.value);
     onToSubnetChange(event.target.value);
+
+    // filteredData(toSubnetFilteredList)
+    filteredData(toSubnetFilteredList[0]['subnetInfo']);
   };
 
   useEffect(() => {
@@ -248,7 +257,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .append('marker')
         .attr('id', 'arrowhead')
         .attr('viewBox', '-0 -5 10 10')
-        .attr('refX', 27)
+        .attr('refX', 7)
         .attr('refY', 0)
         .attr('orient', 'auto')
         .attr('markerWidth', 7)
