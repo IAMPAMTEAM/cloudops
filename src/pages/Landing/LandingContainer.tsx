@@ -1,5 +1,4 @@
 import { Header } from './_partials/Header';
-// import { Banner } from './_partials/Banner';
 import { Banner } from './_partials/Banner';
 import { Billboard } from './_partials/Billboard';
 import { LandingContents } from './_partials/LandingContents';

@@ -23,8 +23,8 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 
 // style
-// import '@/styles/reset.css';
-// import '@/styles/variables.css';
+import '@/styles/main-reset.css';
+import '@/styles/variables.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
