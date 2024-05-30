@@ -1,0 +1,7 @@
+@import './app.scss';
+
+@mixin container {
+  position: relative;
+  max-width: var(--width-container);
+  margin: 0 auto;
+}

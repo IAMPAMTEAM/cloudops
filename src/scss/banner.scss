@@ -1,0 +1,161 @@
+@import './app.scss';
+@import './mixin.scss';
+
+.header {
+  overflow: hidden;
+  position: relative;
+  background: url(../assets/images/bg-wave.png) no-repeat top center/cover;
+  color: white;
+  text-align: center;
+  &-cont {
+    @include container;
+  }
+  &-img {
+    margin-left: 100px;
+  }
+}
+.pre-web {
+  width: 52rem;
+}
+.astronaut {
+  position: absolute;
+  top: 256px;
+  left: 1050px;
+  width: 26.1rem;
+  margin-top: 0;
+  animation: updown 1s linear 0s infinite alternate;
+}
+.inner-header {
+  width: 100%;
+  padding: 124px 48px;
+}
+.button {
+  display: flex;
+  gap: 3.2rem;
+  & > p {
+    color: var(--color-white);
+    margin-top: 0.8rem;
+  }
+}
+
+.btn {
+  padding: 0.6rem 16rem;
+}
+
+.arrow {
+  width: 2.4rem;
+  &-free {
+    margin-left: 1.35rem;
+    font-size: 1.6rem;
+  }
+}
+.text {
+  text-align: left;
+  margin-bottom: 4.8rem;
+}
+.title {
+  position: relative;
+  color: var(--color-white);
+  font-size: 5rem;
+  font-weight: 500;
+  &-sub {
+    margin-top: 2.4rem;
+    color: var(--color-white);
+    font-size: 1.6rem;
+  }
+  &-free {
+    position: relative;
+    z-index: 2;
+  }
+  &-line {
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    top: 45px;
+    left: -1px;
+    width: 10rem;
+    height: 0.8rem;
+    background-color: #6667ac;
+  }
+}
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+  display: none;
+}
+.unlock-btn {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+}
+
+/* Animation */
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes updown {
+  0% {
+    margin-top: 0px;
+  }
+  50% {
+    margin-top: 6px;
+    margin-left: 13px;
+  }
+  100% {
+    margin-top: 12px;
+    margin-left: 26px;
+  }
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+
+:deep(.q-banner__content) {
+  font-size: 1.4rem;
+}

@@ -1,0 +1,11 @@
+:root {
+  --height-header: 70px;
+  --width-container: calc(1600px - 15px); // 15px = 스크롤바
+  --width-sidebar-opened: 320px;
+  --width-sidebar-closed: 70px;
+}
+@media (max-width: 1440px) {
+  :root {
+    --width-container: calc(1120px - 15px); // 15px = 스크롤바
+  }
+}

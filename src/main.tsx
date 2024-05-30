@@ -22,12 +22,16 @@ import store from './store/index';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 
+// style
+import '@/styles/main-reset.css';
+import '@/styles/variables.css';
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-    <React.StrictMode>
-        <Suspense>
-            <Provider store={store}>
-                <RouterProvider router={router} />
-            </Provider>
-        </Suspense>
-    </React.StrictMode>
+  <React.StrictMode>
+    <Suspense>
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
+    </Suspense>
+  </React.StrictMode>
 );

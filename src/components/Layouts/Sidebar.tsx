@@ -30,12 +30,6 @@ const Sidebar = () => {
     });
   };
 
-  const [isDisabled, setIsDisabled] = useState(false);
-
-  const handleMouseOver = () => {
-    setIsDisabled(true);
-  };
-
   useEffect(() => {
     const selector = document.querySelector('.sidebar ul a[href="' + window.location.pathname + '"]');
     if (selector) {
@@ -45,6 +39,7 @@ const Sidebar = () => {
         let ele: any = ul.closest('li.menu').querySelectorAll('.nav-link') || [];
         if (ele.length) {
           ele = ele[0];
+          console.log(ele);
           setTimeout(() => {
             ele.click();
           });
@@ -159,6 +154,11 @@ const Sidebar = () => {
                   <ul className='sub-menu text-gray-500'>
                     <li>
                       <NavLink to='/network-flow/subnet'>{t('networkFlowSubnet')}</NavLink>
+                    </li>
+                  </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/network-flow/vpc'>{t('networkFlowVpc')}</NavLink>
                     </li>
                   </ul>
                 </AnimateHeight>

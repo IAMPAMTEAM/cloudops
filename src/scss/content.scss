@@ -1,0 +1,92 @@
+@import './app.scss';
+@import './mixin.scss';
+
+$color-unselected: (
+  '1': #f8f1e6,
+  '2': #eeeef5,
+  '3': #eef1f2,
+);
+
+.content {
+  &-wrap {
+    overflow-x: hidden;
+    min-height: inherit;
+  }
+  &-cont {
+    position: relative;
+    margin-top: 9.6rem;
+    background: #f8f8f9;
+  }
+  &__title {
+    @include container;
+    padding: 9.6rem 0;
+    & > * {
+      position: relative;
+      display: inline-block;
+    }
+    & p {
+      text-align: left;
+      &:nth-child(1) {
+        font-weight: bold;
+        font-size: 3.2rem;
+      }
+      &:nth-child(2) {
+        color: #666666;
+        font-size: 1.8rem;
+      }
+    }
+  }
+  &__astronaut {
+    z-index: 10;
+    position: absolute;
+    top: -180px;
+    right: -420px;
+    width: 30rem;
+    animation: updown 1s linear 0s infinite alternate;
+  }
+  &__sat {
+    position: absolute;
+    top: 720px;
+    right: 100px;
+    width: 14.6rem;
+    animation: vibration 4s infinite alternate;
+  }
+  &__rocket {
+    position: absolute;
+    top: 1120px;
+    left: 500px;
+    width: 21rem;
+    animation: launch 1.5s infinite alternate;
+  }
+}
+@keyframes updown {
+  0% {
+    margin: 0;
+  }
+  50% {
+    margin-left: 6px;
+    margin-top: 13px;
+  }
+  100% {
+    margin-left: 12px;
+    margin-top: 26px;
+  }
+}
+@keyframes vibration {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes launch {
+  from {
+    margin: 0;
+  }
+  to {
+    margin-left: 64px;
+    margin-top: -50px;
+  }
+}
