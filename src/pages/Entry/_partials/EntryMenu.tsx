@@ -13,17 +13,17 @@ const EntryMenu = () => {
     {
       logo: IconUser,
       menu: 'Governance',
-      path: '/',
+      path: '/governance',
     },
     {
       logo: IconResources,
       menu: 'Resources',
-      path: '/',
+      path: '/resources',
     },
     {
       logo: IconCost,
       menu: 'Cost',
-      path: '/',
+      path: '/cost',
     },
     {
       logo: IconTopology,
@@ -55,21 +55,12 @@ const EntryMenu = () => {
 
       <div className='grid lg:grid-cols-3 gap-4 p-8 items-center'>
         {menuList.map((menu, idx) => {
-          if (menu.menu === 'Topology' || menu.menu === 'Security Group' || menu.menu === 'Network Flow') {
-            return (
-              <button className='lg:col-span-1 flex flex-col items-center rounded hover:text-[#6667AB] hover:cursor-pointer p-8 fill-[#000]' onClick={() => navigateMenu(menu['path'])}>
-                <img className='w-12 fill-[#000]' src={menu['logo']} alt={menu['menu']} />
-                <p className='font-extrabold text-xl tracking-tighter mt-8'>{menu['menu']}</p>
-              </button>
-            );
-          } else {
-            return (
-              <button className='lg:col-span-1 flex flex-col items-center rounded hover:cursor-not-allowed p-8 fill-[#000]' onClick={() => navigateMenu(menu['path'])}>
-                <img className='w-12 fill-[#000]' src={menu['logo']} alt={menu['menu']} />
-                <p className='font-extrabold text-xl tracking-tighter mt-8'>{menu['menu']}</p>
-              </button>
-            );
-          }
+          return (
+            <button className='lg:col-span-1 flex flex-col items-center rounded hover:text-[#6667AB] hover:cursor-pointer p-8 fill-[#000]' onClick={() => navigateMenu(menu['path'])}>
+              <img className='w-12 fill-[#000]' src={menu['logo']} alt={menu['menu']} />
+              <p className='font-extrabold text-xl tracking-tighter mt-8'>{menu['menu']}</p>
+            </button>
+          );
         })}
       </div>
 
