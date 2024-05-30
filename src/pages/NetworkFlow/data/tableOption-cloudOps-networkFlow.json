@@ -1,6 +1,6 @@
 {
   "name": "cloudOps-networkFlow",
-  "columnDefs": [{ "field": "fromSubnet" }, { "field": "toSubnet" }, { "field": "fromEc2" }, { "field": "toEc2" }, { "field": "pockets" }, { "field": "bytes" }],
+  "columnDefs": [{ "field": "fromSubnet" }, { "field": "toSubnet" }, { "field": "fromEc2" }, { "field": "toEc2" }, { "field": "packets" }, { "field": "bytes" }],
   "columnWidth": [],
   "columnMaxWidth": [],
   "defaultColDef": { "filter": true },

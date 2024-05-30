@@ -85,6 +85,15 @@ const Sidebar = () => {
               </li>
 
               <li className='menu nav-item'>
+                <NavLink to='/dashboard-overview' className='group'>
+                  <div className='flex items-center'>
+                    <IconMenuUsers className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('dashboardOverview')}</span>
+                  </div>
+                </NavLink>
+              </li>
+
+              <li className='menu nav-item'>
                 <NavLink to='/resources' className='group'>
                   <div className='flex items-center'>
                     <IconNotes className='group-hover:!text-primary shrink-0' />

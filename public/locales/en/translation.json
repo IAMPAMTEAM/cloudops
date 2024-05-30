@@ -1,5 +1,6 @@
 {
   "dashboard": "Dashboard",
+  "dashboardOverview": "Dashboard Overview",
   "topology": "Topology",
   "approval": "Approval",
   "iamWorkflow": "IAM Workflow",

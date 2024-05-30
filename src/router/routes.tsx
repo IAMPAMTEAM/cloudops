@@ -36,22 +36,24 @@ const WorkflowMain = lazy(() => import('@/pages/Workflow/WorkflowMain'));
 const SubnetFlow = lazy(() => import('@/pages/NetworkFlow/SubnetFlow'));
 const VPCFlow = lazy(() => import('@/pages/NetworkFlow/VPCFlow'));
 
-const Landing = lazy(() => import('@/pages/Landing/LandingContainer'));
+// const Landing = lazy(() => import('@/pages/Landing/LandingContainer'));
 
 const Governance = lazy(() => import('@/pages/Governance/Governance'));
 const Resources = lazy(() => import('@/pages/Resources/Resources'));
 const Cost = lazy(() => import('@/pages/Cost/Cost'));
+
+const DashboardOverview = lazy(() => import('@/pages/DashboardOverview/DashboardOverviewContainer'));
 
 const routes = [
   {
     path: '/',
     layout: 'blank',
   },
-  {
-    path: '/landing',
-    element: <Landing />,
-    layout: 'blank',
-  },
+  // {
+  //   path: '/landing',
+  //   element: <Landing />,
+  //   layout: 'blank',
+  // },
   {
     path: '/entry',
     element: <EntryContainer />,
@@ -221,6 +223,11 @@ const routes = [
     path: '/cost',
     layout: 'default',
     element: <Cost />,
+  },
+  {
+    path: '/dashboard-overview',
+    layout: 'default',
+    element: <DashboardOverview />,
   },
 ];
 

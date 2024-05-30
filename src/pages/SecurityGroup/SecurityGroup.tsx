@@ -4,6 +4,7 @@ import { SizeColumnsToContentStrategy, SizeColumnsToFitGridStrategy, SizeColumns
 
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
+import './SeucurityGroup.css';
 
 interface SgInboundUri {
   sgName: string;

@@ -7,6 +7,7 @@ import IconCost from '@/assets/icons/IconCost.svg';
 import IconUser from '@/assets/icons/IconUser.svg';
 import IconResources from '@/assets/icons/IconResources.svg';
 import LogoCloudOps from '@/assets/icons/LogoCloudOps.svg';
+import { useEffect, useLayoutEffect } from 'react';
 
 const EntryMenu = () => {
   const menuList = [
@@ -47,20 +48,32 @@ const EntryMenu = () => {
   const navigateMenu = (path: string) => navigate(path);
 
   return (
-    <div className='relative panel flex flex-col gap-4 w-[1000px] bg-[#F6F5F2] rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border border-gray-100 p-14 border-none'>
-      <div className='flex gap-8 justify-center items-center relative'>
-        <img className='w-16 p-2 bg-[#6667AB] rounded-xl' src={LogoCloudOps} alt='' />
-        <p className='text-6xl font-semibold tracking-tighter'>CloudOps Portal</p>
+    <div className='relative'>
+      <div className='flex gap-4 justify-center items-center'>
+        <img className='w-16 p-2 bg-[#6667AB] rounded-xl ' src={LogoCloudOps} alt='' />
+        <p className='text-6xl font-bold uppercase tracking-tighter text-[#fff]'>CloudOps Portal</p>
       </div>
 
-      <div className='grid lg:grid-cols-3 gap-4 p-8 items-center'>
+      <div className='flex m-[2.4rem]'>
         {menuList.map((menu, idx) => {
           return (
-            <button className='lg:col-span-1 flex flex-col items-center rounded hover:text-[#6667AB] hover:cursor-pointer p-8 fill-[#000]' onClick={() => navigateMenu(menu['path'])}>
+            <button
+              className='w-[12.5rem] flex flex-col items-center rounded hover:text-[#6667AB] hover:cursor-pointer p-8 fill-[#000] opacity-80 hover:opacity-100 hover:mt-[-8px] delay-50 duration-500'
+              onClick={() => navigateMenu(menu['path'])}
+            >
               <img className='w-12 fill-[#000]' src={menu['logo']} alt={menu['menu']} />
-              <p className='font-extrabold text-xl tracking-tighter mt-8'>{menu['menu']}</p>
+              <p className='font-extrabold uppercase text-[1rem] tracking-tighter mt-8 text-[#fff]  '>{menu['menu']}</p>
             </button>
           );
+          // if (menu.menu === 'Topology' || menu.menu === 'Security Group' || menu.menu === 'Network Flow') {
+          // } else {
+          //   return (
+          //     <button className='lg:col-span-1 flex flex-col items-center rounded hover:cursor-not-allowed p-8 fill-[#000]' onClick={() => navigateMenu(menu['path'])}>
+          //       <img className='w-12 fill-[#000]' src={menu['logo']} alt={menu['menu']} />
+          //       <p className='font-extrabold text-xl tracking-tighter mt-8'>{menu['menu']}</p>
+          //     </button>
+          //   );
+          // }
         })}
       </div>
 

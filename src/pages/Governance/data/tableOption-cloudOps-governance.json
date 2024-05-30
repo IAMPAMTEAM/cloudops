@@ -55,9 +55,9 @@
       "type": "Background",
       "columns": ["complianceAssets", "complianceCost", "complianceIdentity", "complianceAccessControl", "complianceEncryption", "complianceHA", "complianceDR", "complianceBackup", "complianceLog"],
       "value": {
-        "High": "#FF0000",
-        "Medium": "#00FF00",
-        "Low": "#FFF000"
+        "High": "rgba(229, 57, 53, 0.2)",
+        "Low": "rgba(71, 153, 107, 0.2)",
+        "Medium": "rgba(251, 246, 101, 0.2)"
       }
     }
   ]
