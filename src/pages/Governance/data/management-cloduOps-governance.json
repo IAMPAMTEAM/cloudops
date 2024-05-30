@@ -1,0 +1,11 @@
+{
+  "name": "cloudOps-governance",
+  "category": "static",
+  "type": "basic",
+  "version": "1.0",
+  "dataURL": "URL",
+  "tableOptionURL": "URL",
+  "tagURL": "URL",
+  "policyURL": "URL",
+  "savePolicy": "standard"
+}

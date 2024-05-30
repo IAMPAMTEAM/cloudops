@@ -81,28 +81,28 @@ const Sidebar = () => {
           <PerfectScrollbar className='h-[calc(100vh-80px)] relative'>
             <ul className='relative font-semibold space-y-0.5 p-4 py-0'>
               <li className='menu nav-item'>
-                <NavLink to='/' className='group' onClick={(e) => e.preventDefault()}>
+                <NavLink to='/governance' className='group'>
                   <div className='flex items-center'>
                     <IconMenuUsers className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-gray-400 dark:text-gray-600 dark:group-hover:text-white-dark'>{t('governance')}</span>
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('governance')}</span>
                   </div>
                 </NavLink>
               </li>
 
               <li className='menu nav-item'>
-                <NavLink to='/' className='group' onClick={(e) => e.preventDefault()}>
+                <NavLink to='/resources' className='group'>
                   <div className='flex items-center'>
                     <IconNotes className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-gray-400 dark:text-gray-600 dark:group-hover:text-white-dark'>{t('resources')}</span>
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('resources')}</span>
                   </div>
                 </NavLink>
               </li>
 
               <li className='menu nav-item'>
-                <NavLink to='/' className='group' onClick={(e) => e.preventDefault()}>
+                <NavLink to='/cost' className='group'>
                   <div className='flex items-center'>
                     <IconCashBanknotes className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-gray-400 dark:text-gray-600 dark:group-hover:text-white-dark'>{t('cost')}</span>
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('cost')}</span>
                   </div>
                 </NavLink>
               </li>

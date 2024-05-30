@@ -34,6 +34,10 @@ const WorkflowMain = lazy(() => import('@/pages/Workflow/WorkflowMain'));
 
 const SubnetFlow = lazy(() => import('@/pages/NetworkFlow/SubnetFlow'));
 
+const Governance = lazy(() => import('@/pages/Governance/Governance'));
+const Resources = lazy(() => import('@/pages/Resources/Resources'));
+const Cost = lazy(() => import('@/pages/Cost/Cost'));
+
 const routes = [
   {
     path: '/',
@@ -189,6 +193,21 @@ const routes = [
     path: '/network-flow/subnet',
     layout: 'default',
     element: <SubnetFlow />,
+  },
+  {
+    path: '/governance',
+    layout: 'default',
+    element: <Governance />,
+  },
+  {
+    path: '/resources',
+    layout: 'default',
+    element: <Resources />,
+  },
+  {
+    path: '/cost',
+    layout: 'default',
+    element: <Cost />,
   },
 ];
 

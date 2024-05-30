@@ -1,0 +1,32 @@
+{
+  "name": "cloudOps-awsResource",
+  "columnDefs": [
+    {
+      "headerName": "Resource",
+      "children": [{ "field": "awsResourceName" }, { "field": "awsResourceId" }]
+    },
+    {
+      "headerName": "Location",
+      "children": [{ "field": "awsAccoutName" }, { "field": "awsRegionName" }]
+    },
+    {
+      "headerName": "Service",
+      "children": [{ "field": "awsServiceCategory" }, { "field": "awsServiceName" }, { "field": "awsResourceTypeName" }]
+    }
+  ],
+  "columnWidth": [],
+  "columnMaxWidth": [],
+  "defaultColDef": { "filter": true, "minWidth": 130 },
+  "autoSizeStrategy": { "type": "fitCellContents" },
+  "editableColumn": [],
+  "tableHeight": 550,
+  "pagination": true,
+  "paginationPageSize": 10,
+  "paginationPageSizeSelector": [10, 20, 50, 100],
+  "columnFontSize": [],
+  "columnFontColor": [],
+  "fontStyles": [],
+  "columnHeaderBackgroundColor": [],
+  "columnBackgroundColor": [],
+  "cellValueColor": []
+}
