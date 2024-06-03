@@ -97,7 +97,7 @@ const VPCTopology: React.FC = () => {
     };
 
     fromVpcFilter();
-  }, [demoData, fromVpcFilteredList]);
+  }, [fromVpcFilteredList]);
 
   useEffect(() => {
     const toVpcFilter = async () => {

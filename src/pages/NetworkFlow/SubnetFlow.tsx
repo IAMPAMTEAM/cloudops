@@ -54,6 +54,7 @@ const SubnetFlow = () => {
         <div className='col-span-2 row-span-3'>
           {/* @ts-ignore */}
           <div className='panel'>
+            {/* @ts-ignore */}
             <SubnetTopology onVpcChange={handleVpcFromTopology} onFromSubnetChange={handleSubnetFromTopology} onToSubnetChange={handleSubnetToTopology} filteredData={handleFilteredData} />
           </div>
         </div>
@@ -71,6 +72,7 @@ const SubnetFlow = () => {
         <div className='panel col-span-3 row-span-1 overflow-x-auto'>
           {/* @ts-ignore */}
           {!(selectedVpc && selectedFromSubnet && selectedToSubnet) ? <p className='text-lg text-center'>Please select vpc and subnet</p> : null}
+          {/* @ts-ignore */}
           <SubnetChart selectedVpc={selectedVpc} fromSubnet={selectedFromSubnet} toSubnet={selectedToSubnet} />
         </div>
       </div>
