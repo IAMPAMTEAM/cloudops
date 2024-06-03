@@ -27,7 +27,6 @@ const Governance = () => {
   return (
     <>
       <div className='panel'>
-        <p className='text-lg pb-4'>Governance</p>
         <DataTable
           datas={mergedTableData}
           columnDefs={columnDefs}
@@ -36,7 +35,9 @@ const Governance = () => {
           pagination={tableOption.pagination}
           paginationPageSize={tableOption.paginationPageSize}
           paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
-        />
+        >
+          <p className='text-lg pb-4'>Governance</p>
+        </DataTable>
       </div>
     </>
   );

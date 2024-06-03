@@ -17,7 +17,7 @@ interface IDataTable {
   paginationPageSizeSelector: number[];
 }
 
-export default function DataTable({ children, datas, columnDefs, defaultTableSetting, tableHeight, pagination, paginationPageSize, paginationPageSizeSelector }: IDataTable) {
+export default function EventViewer({ children, datas, columnDefs, defaultTableSetting, tableHeight, pagination, paginationPageSize, paginationPageSizeSelector }: IDataTable) {
   const autoSizeStrategy = useMemo<SizeColumnsToFitGridStrategy | SizeColumnsToFitProvidedWidthStrategy | SizeColumnsToContentStrategy>(() => {
     return defaultTableSetting.autoSizeStrategy;
   }, [defaultTableSetting.autoSizeStrategy]);

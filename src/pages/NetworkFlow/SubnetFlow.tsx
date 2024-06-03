@@ -67,7 +67,9 @@ const SubnetFlow = () => {
             pagination={tableOption.pagination}
             paginationPageSize={tableOption.paginationPageSize}
             paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
-          />
+          >
+            <p></p>
+          </DataTable>
         </div>
         <div className='panel col-span-3 row-span-1 overflow-x-auto'>
           {/* @ts-ignore */}

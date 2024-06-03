@@ -35,7 +35,6 @@ const Resources = () => {
   return (
     <>
       <div className='pb-4 panel'>
-        <p className='text-lg pb-4'>Resources</p>
         <DataTable
           datas={mergedTableData}
           columnDefs={columnDefs}
@@ -44,7 +43,9 @@ const Resources = () => {
           pagination={tableOption.pagination}
           paginationPageSize={tableOption.paginationPageSize}
           paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
-        />
+        >
+          <p className='text-lg pb-4'>Resources</p>
+        </DataTable>
       </div>
       <div className='flex flex-col gap-6'>
         <div className='flex gap-6 mt-6'>

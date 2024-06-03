@@ -39,8 +39,7 @@ const Cost = () => {
 
   return (
     <>
-      <div>
-        <p className='text-lg pb-4'>Service Daily Cost</p>
+      <div className='pb-4 panel'>
         <DataTable
           datas={mergedServiceTableData}
           columnDefs={serviceColumnDefs}
@@ -49,10 +48,11 @@ const Cost = () => {
           pagination={serviceTableOption.pagination}
           paginationPageSize={serviceTableOption.paginationPageSize}
           paginationPageSizeSelector={serviceTableOption.paginationPageSizeSelector}
-        />
+        >
+          <p className='text-lg pb-4'>Service Daily Cost</p>
+        </DataTable>
       </div>
-      <div>
-        <p className='text-lg pt-4 pb-4'>Region Daily Cost</p>
+      <div className='pb-4 panel mt-6'>
         <DataTable
           datas={mergedRegionTableData}
           columnDefs={regionColumnDefs}
@@ -61,7 +61,9 @@ const Cost = () => {
           pagination={regionTableOption.pagination}
           paginationPageSize={regionTableOption.paginationPageSize}
           paginationPageSizeSelector={regionTableOption.paginationPageSizeSelector}
-        />
+        >
+          <p className='text-lg pt-4 pb-4'>Region Daily Cost</p>
+        </DataTable>
       </div>
     </>
   );
