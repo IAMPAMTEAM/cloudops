@@ -1,0 +1,32 @@
+{
+  "name": "EvnetViewer",
+  "columnDefs": [
+    {
+      "field": "status",
+      "headerCheckboxSelection": true,
+      "checkboxSelection": true
+    },
+    { "field": "date" },
+    { "field": "time" },
+    { "field": "where" },
+    { "field": "who" },
+    { "field": "what" },
+    { "field": "counts" },
+    { "field": "details" }
+  ],
+  "columnWidth": [],
+  "columnMaxWidth": [],
+  "defaultColDef": { "filter": true },
+  "autoSizeStrategy": { "type": "fitCellContents" },
+  "editableColumn": [],
+  "tableHeight": 550,
+  "pagination": true,
+  "paginationPageSize": 10,
+  "paginationPageSizeSelector": [10, 20, 50, 100],
+  "columnFontSize": [],
+  "columnFontColor": [],
+  "fontStyles": [],
+  "columnHeaderBackgroundColor": [],
+  "columnBackgroundColor": [],
+  "cellValueColor": []
+}

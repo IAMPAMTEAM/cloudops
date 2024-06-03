@@ -1,5 +1,5 @@
 {
-  "name": "cloudOps-governance",
+  "name": "cloudOps-eventViewer",
   "columnDefs": [
     {
       "field": "companyName"
