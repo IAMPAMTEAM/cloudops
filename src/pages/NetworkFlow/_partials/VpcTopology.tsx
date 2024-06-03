@@ -19,32 +19,32 @@ interface NetworkData {
 }
 
 interface Subnet {
-  fromVPC: string;
+  fromVpc: string;
   fromSubnet: string;
-  toVPC: string;
+  toVpc: string;
   toSubnet: string;
-  packets: number;
-  bytes: number;
+  packetsSum: number;
+  bytesSum: number;
 }
 
-const VPCTopology: React.FC = () => {
+const VPCTopology: React.FC = ({ onFromVpcChange, onToVpcChange, filteredData }) => {
   const [data, setData] = useState<NetworkData>({ nodes: [], links: [] });
   const [fetchData, setFetchData] = useState<Subnet[]>([]);
   const [vpcCnt, setVPCCnt] = useState(0);
 
-  const [selectedFromVPC, setSelectedFromVPC] = useState('');
-  const [selectedToVPC, setSelectedToVPC] = useState('');
+  // filtering from fetch Data
+  const [fromVpcFilteredList, setFromVpcFilteredList] = useState([]);
+  const [toVpcFilteredList, setToVpcFilteredList] = useState([]);
+  const [finalData, setFinalData] = useState([]);
 
-  const [vpcFilteredList, setVpcFilteredList] = useState([]);
-  const [fromSubnetFilteredList, setFromSubnetFilteredList] = useState([]);
-  const [toSubnetFilteredList, setToSubnetFilteredList] = useState([]);
+  // Select - option list
+  const [fromVpcList, setFromVpcList] = useState([]);
+  const [toVpcList, setToVpcList] = useState([]);
 
-  const [isSelectedVpc, setIsSelectedVpc] = useState(false);
-  const [isSelectedFromSubnet, setIsSelectedFromSubnet] = useState(false);
+  const [isSelectedFromVpc, setIsSelectedFromVpc] = useState(false);
 
-  const [selectedVpc, setSelectedVpc] = useState('');
-  const [selectedFromSubnet, setSelectedFromSubnet] = useState('');
-  const [selectedToSubnet, setSelectedToSubnet] = useState('');
+  const [selectedFromVpc, setSelectedFromVpc] = useState('');
+  const [selectedToVpc, setSelectedToVpc] = useState('');
 
   const d3Container = useRef<SVGSVGElement | null>(null);
 
@@ -67,79 +67,166 @@ const VPCTopology: React.FC = () => {
    * 3. 여기서부터는 subnet에서 했던 방식대로 subnet 목록 만들기
    */
 
-  // filtering from fetch Data
-  const [fromVpcFilteredList, setFromVpcFilteredList] = useState([]);
-  const [toVpcFilteredList, setToVpcFilteredList] = useState([]);
-
-  // Select - option list
-  const [fromVpcList, setFromVpcList] = useState([]);
-  const [toVpcList, setToVpcList] = useState([]);
-
-  const [isSelectedFromVpc, setIsSelectedFromVpc] = useState(false);
-
-  const [selectedFromVpc, setSelectedFromVpc] = useState('');
-  const [selectedToVpc, setSelectedToVpc] = useState('');
-
   useEffect(() => {
     const fromVpcFilter = async () => {
       const groupedData = fetchData.reduce((acc, item) => {
-        const { fromVPC } = item;
-        if (!acc[fromVPC]) {
-          acc[fromVPC] = {
-            ...item,
+        const { fromVpc } = item;
+
+        if (!acc[fromVpc]) {
+          acc[fromVpc] = {
+            fromVpc,
+            vpcInfo: [],
           };
         }
-        acc[fromVPC] = { ...item };
+        acc[fromVpc].vpcInfo.push(item);
         return acc;
       }, {});
 
-      // setFromVpcFilteredList(Object.values(groupedData));
+      setFromVpcFilteredList(Object.values(groupedData));
     };
 
     fromVpcFilter();
+  }, [fetchData]);
+
+  useEffect(() => {
+    const uniqueFromVpcSet = new Set<string>();
+    const uniqueFromVpcList: string[] = [];
+
+    fromVpcFilteredList.forEach((vpcItem: { fromVpc: string; vpcInfo: [] }) => {
+      uniqueFromVpcSet.add(vpcItem.fromVpc);
+      uniqueFromVpcList.push(vpcItem.fromVpc);
+    });
+
+    // @ts-ignore
+    setFromVpcList(uniqueFromVpcList);
   }, [fromVpcFilteredList]);
 
   useEffect(() => {
     const toVpcFilter = async () => {
-      const groupedData = fromVpcFilteredList.reduce((acc, item) => {
-        // TODO: 여기서 무한루프가 도는 이유를 찾아야함
-        return acc;
-      }, {});
-    };
-  });
+      fromVpcFilteredList.forEach(
+        (vpcItem: {
+          fromVpc: string;
+          vpcInfo: [
+            {
+              fromVpc: string;
+              fromSubnet: string;
+              toVpc: string;
+              toSubnet: string;
+              packetsSum: number;
+              bytesSum: number;
+            }
+          ];
+        }) => {
+          if (vpcItem.fromVpc === selectedFromVpc) {
+            const data = vpcItem.vpcInfo;
+            const groupedData = data.reduce((acc, item) => {
+              const { toVpc } = item;
 
-  // console.log(fromVpcFilteredList);
+              if (selectedFromVpc !== toVpc) {
+                if (!acc[toVpc]) {
+                  acc[toVpc] = {
+                    fromVpc: selectedFromVpc,
+                    toVpc,
+                    vpcInfo: [],
+                  };
+                }
+                acc[toVpc].vpcInfo.push(item);
+              }
+
+              return acc;
+            }, {});
+
+            setToVpcFilteredList(Object.values(groupedData));
+          }
+        }
+      );
+    };
+
+    toVpcFilter();
+  }, [selectedFromVpc, fromVpcFilteredList]);
 
   useEffect(() => {
-    if (d3Container.current && data.nodes.length && data.links.length && selectedToSubnet) {
+    const uniqueToVpcSet = new Set<string>();
+    const uniqueToVpcList: string[] = [];
+
+    toVpcFilteredList.forEach((vpcItem: { toVpc: string; vpcInfo: [] }) => {
+      if (!uniqueToVpcSet.has(vpcItem.toVpc)) {
+        uniqueToVpcSet.add(vpcItem.toVpc);
+        uniqueToVpcList.push(vpcItem.toVpc);
+      }
+    });
+
+    // @ts-ignore
+    setToVpcList(uniqueToVpcList);
+  }, [toVpcFilteredList]);
+
+  useEffect(() => {
+    const filteredToVpc: { fromVpc: string; toVpc: string; vpcInfo: [] }[] = toVpcFilteredList.filter((vpcItem: { fromVpc: string; toVpc: string; vpcInfo: [] }) => {
+      return vpcItem.toVpc === selectedToVpc;
+    });
+
+    // TODO: Error Point (Solved But recheck needed)
+    if (filteredToVpc.length && filteredToVpc[0].vpcInfo.length) {
+      filteredData(filteredToVpc[0].vpcInfo);
+    }
+  }, [toVpcFilteredList, selectedToVpc]);
+
+  useEffect(() => {
+    const filteredData = toVpcFilteredList.find((vpcItem: { fromVpc: string; toVpc: string; vpcInfo: [] }) => {
+      return vpcItem.toVpc === selectedToVpc;
+    });
+
+    if (filteredData) {
+      const { vpcInfo }: { fromVpc: string; toVpc: string; vpcInfo: [] } = filteredData;
+
+      vpcInfo.forEach((data: { fromSubnet: string; toSubnet: string }) => {
+        const { fromSubnet, toSubnet } = data;
+
+        setData((prev) => {
+          const nodes = [...prev.nodes];
+          const links = [...prev.links];
+
+          if (!nodes.find((node) => node.id === fromSubnet)) {
+            nodes.push({ id: fromSubnet, group: 'top', img: 'https://icons.terrastruct.com/aws%2F_Group%20Icons%2FVPC-subnet-private_light-bg.svg' });
+          }
+
+          if (!nodes.find((node) => node.id === toSubnet)) {
+            nodes.push({ id: toSubnet, group: 'bottom', img: 'https://icons.terrastruct.com/aws%2F_Group%20Icons%2FVPC-subnet-private_light-bg.svg' });
+          }
+
+          links.push({ source: fromSubnet, target: toSubnet });
+
+          return { nodes, links };
+        });
+      });
+    }
+  }, [selectedToVpc, toVpcFilteredList]);
+
+  const handleSelectedFromVpc = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedFromVpc(e.target.value);
+    setIsSelectedFromVpc(true);
+    onFromVpcChange(e.target.value);
+  };
+
+  const handleSelectedToVpc = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedToVpc(e.target.value);
+    onToVpcChange(e.target.value);
+    filteredData(finalData);
+  };
+
+  useEffect(() => {
+    if (d3Container.current && data.nodes.length && data.links.length) {
       const margin = { top: 30, right: 30, bottom: 20, left: 30 };
-      const width = data.nodes.length * 75 + margin.left + margin.right;
-      const height = 900;
+      const width = data.nodes.length * 45 + margin.left + margin.right;
+      const height = 350;
 
-      const boxPadding = 30;
-      let nodeWidth = 48;
-      let nodeHeight = 48;
+      const boxPadding = 15;
+      let nodeWidth = 20;
+      let nodeHeight = 20;
 
-      const svg = d3.select(d3Container.current).attr('viewBox', `0 0 ${width} ${height}`).attr('width', '100%').attr('height', '80%');
+      const svg = d3.select(d3Container.current).attr('viewBox', `0 0 ${width} ${height}`).attr('width', '100%').attr('height', '60%');
 
       svg.selectAll('*').remove();
-
-      // 화살표
-      svg
-        .append('defs')
-        .append('marker')
-        .attr('id', 'arrowhead')
-        .attr('viewBox', '-0 -5 10 10')
-        .attr('refX', 27)
-        .attr('refY', 0)
-        .attr('orient', 'auto')
-        .attr('markerWidth', 7)
-        .attr('markerHeight', 7)
-        .attr('xoverflow', 'visible')
-        .append('svg:path')
-        .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
-        .attr('fill', '#000')
-        .style('stroke', 'none');
 
       // 배경 클릭 시 이벤트
       svg.append('rect').attr('width', width).attr('height', height).attr('fill', 'none').attr('pointer-events', 'all').on('click', handleBackgroundClick);
@@ -155,32 +242,27 @@ const VPCTopology: React.FC = () => {
 
       const topBoxWidth = topNodes.length * (nodeWidth + boxPadding) + boxPadding;
       const bottomBoxWidth = bottomNodes.length * (nodeWidth + boxPadding) + boxPadding;
-      const boxHeight = nodeHeight + 2 * boxPadding;
+      const boxHeight = nodeHeight + 3 * boxPadding;
 
       svg
         .append('rect')
         .attr('x', (width - topBoxWidth) / 2)
-        .attr('y', 100)
+        // .attr('y', boxHeight - boxHeight / 2)
+        .attr('y', (boxHeight * 1) / 2 + boxHeight)
         .attr('width', topBoxWidth)
         .attr('height', boxHeight)
-        .attr('class', 'top-box');
+        .attr('class', 'top-box')
+        .style('fill', '#eee')
+        .style('stroke', 'none');
 
       svg
         .append('text')
         .attr('x', (width - topBoxWidth) / 2 + 10)
         .attr('y', 90)
         .attr('fill', 'black')
-        .text(selectedFromSubnet)
-        .style('font-size', '1.4rem')
+        .text(selectedFromVpc)
+        .style('font-size', '0.8rem')
         .style('font-weight', 'bold');
-
-      svg
-        .selectAll('.top-box')
-        .append('text')
-        .attr('dy', nodeHeight / 2 + 5)
-        .attr('dx', nodeWidth / 2)
-        .attr('text-anchor', 'middle')
-        .text(selectedFromSubnet);
 
       svg
         .append('rect')
@@ -188,15 +270,17 @@ const VPCTopology: React.FC = () => {
         .attr('y', height - boxHeight - 100)
         .attr('width', bottomBoxWidth)
         .attr('height', boxHeight)
-        .attr('class', 'bottom-box');
+        .attr('class', 'bottom-box')
+        .style('fill', '#eee')
+        .style('stroke', 'none');
 
       svg
         .append('text')
-        .attr('x', (width - bottomBoxWidth) / 2 + 10)
-        .attr('y', height - boxHeight + 30)
+        .attr('x', (width - bottomBoxWidth) / 2 + 12)
+        .attr('y', height - boxHeight - 20)
         .attr('fill', 'black')
-        .text(selectedToSubnet)
-        .style('font-size', '1.4rem')
+        .text(selectedToVpc)
+        .style('font-size', '0.8rem')
         .style('font-weight', 'bold');
 
       topNodes.forEach((node, index) => {
@@ -217,7 +301,7 @@ const VPCTopology: React.FC = () => {
           d3
             .forceLink(data.links)
             .id((d: any) => d.id)
-            .distance(200)
+            .distance(100)
         )
         .force('charge', d3.forceManyBody().strength(-300))
         .on('tick', ticked);
@@ -230,16 +314,25 @@ const VPCTopology: React.FC = () => {
         .enter()
         .append('line')
         .attr('class', 'link animated-link')
-        .attr('stroke', 'steelblue')
+        .attr('stroke', '#333')
         .attr('stroke-width', 2)
         .attr('marker-end', 'url(#arrowhead)');
 
-      const node = svg
+      const nodeGroup = svg
         .append('g')
         .attr('class', 'nodes')
-        .selectAll('image')
+        .selectAll('g')
         .data(data.nodes)
         .enter()
+        .append('g')
+        .attr('class', 'node-group')
+        .attr('transform', (d: any) => `translate(${d.x - nodeWidth / 2}, ${d.y - nodeHeight / 2})`); // 각 노드의 위치를 데이터에 따라 설정
+
+      // 배경 사각형을 추가합니다.
+      nodeGroup.append('rect').attr('class', 'node-background').attr('width', nodeWidth).attr('height', nodeHeight).attr('fill', '#eee');
+
+      // 이미지를 추가합니다.
+      nodeGroup
         .append('image')
         .attr('class', 'node')
         .attr('xlink:href', (d) => d.img)
@@ -254,10 +347,10 @@ const VPCTopology: React.FC = () => {
         .data(data.nodes)
         .enter()
         .append('text')
-        .attr('dy', nodeHeight / 1.5)
+        .attr('dy', nodeHeight)
         .attr('dx', nodeWidth / 8)
         .attr('text-anchor', 'middle')
-        .style('font-size', '1rem')
+        .style('font-size', '0.5rem')
         .style('font-weight', 'bold')
         .text((d) => d.id);
 
@@ -300,15 +393,19 @@ const VPCTopology: React.FC = () => {
           .attr('x2', (d) => (d.target as any).fx as number)
           .attr('y2', (d) => (d.target as any).fy as number);
 
-        node.attr('x', (d) => ((d as any).fx as number) - nodeWidth / 2).attr('y', (d) => ((d as any).fy as number) - nodeHeight / 2);
+        nodeGroup.attr('x', (d) => ((d as any).fx as number) - nodeWidth / 2).attr('y', (d) => ((d as any).fy as number) - nodeHeight / 2);
 
-        label.attr('x', (d) => (d as any).fx as number).attr('y', (d) => (d as any).fy as number);
+        label
+          .attr('x', (d) => ((d as any).fx as number) - 5)
+          .attr('y', (d) => {
+            return d.group === 'top' ? ((d as any).fy as number) - nodeHeight * 1.6 : ((d as any).fy as number);
+          });
       }
       return () => {
         setData({ nodes: [], links: [] });
       };
     }
-  }, [data, selectedToSubnet, toSubnetFilteredList]);
+  }, [data, selectedToVpc, toVpcFilteredList]);
 
   return (
     <>
@@ -316,33 +413,34 @@ const VPCTopology: React.FC = () => {
         {/* Choose fromVPC */}
         <div className='flex flex-col'>
           <p className='text-[0.8rem] font-semibold mb-[0.5rem]'>Source VPC</p>
-          <select className='select select-success max-w-xs' value={selectedFromVPC}>
+          <select className='select select-success max-w-xs' onChange={handleSelectedFromVpc} value={selectedFromVpc}>
             <option selected>Choose fromVPC</option>
-            {/* {fromSubnetList.map((subnet, idx) => {
+            {fromVpcList.map((subnet, idx) => {
               return (
                 <option key={idx} value={subnet}>
                   {subnet}
                 </option>
               );
-            })} */}
+            })}
           </select>
         </div>
         {/* Choose toVPC */}
         <div className='flex flex-col'>
           <p className='text-[0.8rem] font-semibold mb-[0.5rem]'>Target VPC</p>
-          <select className='select select-warning max-w-xs' value={selectedToVPC}>
+          <select className='select select-warning max-w-xs' onChange={handleSelectedToVpc} value={selectedToVpc} disabled={!isSelectedFromVpc}>
             <option selected>Choose toVPC</option>
-            {/* {toSubnetList.map((subnet, idx) => {
+            {toVpcList.map((subnet, idx) => {
               return (
                 <option key={idx} value={subnet}>
                   {subnet}
                 </option>
               );
-            })} */}
+            })}
           </select>
         </div>
       </div>
       <div style={{ overflowX: 'auto', width: '100%', height: '100%' }}>
+        {!(selectedFromVpc && selectedToVpc) ? <p className='mt-8 text-lg text-center'>Please select fromVPC and toVPC</p> : null}
         <svg ref={d3Container}></svg>
       </div>
     </>

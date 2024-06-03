@@ -39,7 +39,6 @@ const Sidebar = () => {
         let ele: any = ul.closest('li.menu').querySelectorAll('.nav-link') || [];
         if (ele.length) {
           ele = ele[0];
-          console.log(ele);
           setTimeout(() => {
             ele.click();
           });

@@ -3,7 +3,6 @@ import SubnetTopology from './_partials/SubnetTopology';
 import { useEffect, useState } from 'react';
 
 import DataTable from '@/components/DataTables/DataTable';
-import MergeTagData from '@/utils/MergeTagData';
 import SetColumnDefs from '@/utils/SetColumnDefs';
 import SetDefaultTableSetting from '@/utils/SetDefaultTableSetting';
 import '@/assets/css/dataTableStyle.css';
@@ -19,7 +18,6 @@ const SubnetFlow = () => {
   const [filteredData, setFilteredData] = useState<any[]>([]);
 
   const [columnDefs, setColumnDefs] = useState<any[]>([]);
-  const [mergedTableData, setMergedTableData] = useState<any[]>([]);
   const setDefaultTableSetting = SetDefaultTableSetting(tableOption);
 
   useEffect(() => {
@@ -41,17 +39,15 @@ const SubnetFlow = () => {
 
   const handleFilteredData = (value: any) => {
     setFilteredData((prev) => {
-      return [...prev, ...value];
+      prev = [];
+      return [...value];
     });
   };
 
   return (
     <>
-      {/* <div className='panel'>
-        
-      </div> */}
       <div className='grid grid-cols-5 grid-rows-2 gap-8'>
-        <div className='col-span-2 row-span-3'>
+        <div className='col-span-2 row-span-2'>
           {/* @ts-ignore */}
           <div className='panel'>
             {/* @ts-ignore */}
@@ -71,11 +67,13 @@ const SubnetFlow = () => {
             <p></p>
           </DataTable>
         </div>
-        <div className='panel col-span-3 row-span-1 overflow-x-auto'>
-          {/* @ts-ignore */}
-          {!(selectedVpc && selectedFromSubnet && selectedToSubnet) ? <p className='text-lg text-center'>Please select vpc and subnet</p> : null}
-          {/* @ts-ignore */}
-          <SubnetChart selectedVpc={selectedVpc} fromSubnet={selectedFromSubnet} toSubnet={selectedToSubnet} />
+        <div className='col-span-3 row-span-1 overflow-x-auto'>
+          <div className='panel'>
+            {/* @ts-ignore */}
+            {!(selectedVpc && selectedFromSubnet && selectedToSubnet) ? <p className='text-lg text-center'>Please select vpc and subnet</p> : null}
+            {/* @ts-ignore */}
+            <SubnetChart selectedVpc={selectedVpc} fromSubnet={selectedFromSubnet} toSubnet={selectedToSubnet} />
+          </div>
         </div>
       </div>
     </>

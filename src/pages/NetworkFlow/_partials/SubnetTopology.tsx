@@ -124,6 +124,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
 
     subnetFilter();
   }, [selectedVpc, vpcFilteredList]);
+  console.log(fromSubnetFilteredList);
 
   useEffect(() => {
     const subnetFilter = async () => {
@@ -201,8 +202,6 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
   const handleSelectedToSubnet = (event) => {
     setSelectedToSubnet(event.target.value);
     onToSubnetChange(event.target.value);
-
-    // filteredData(toSubnetFilteredList)
     filteredData(toSubnetFilteredList[0]['subnetInfo']);
   };
 
