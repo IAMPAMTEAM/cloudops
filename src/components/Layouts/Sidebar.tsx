@@ -14,13 +14,12 @@ import IconBarChart from '../Icon/IconBarChart';
 import IconLock from '../Icon/IconLock';
 import IconNotes from '../Icon/IconNotes';
 import IconChartSquare from '../Icon/IconChartSquare';
+import IconMenuDashboard from '../Icon/Menu/IconMenuDashboard';
 import LogoHybrix from '@/assets/icons/LogoHybrix.svg';
 
 const Sidebar = () => {
   const [currentMenu, setCurrentMenu] = useState<string>('');
-  const [errorSubMenu, setErrorSubMenu] = useState(false);
   const themeConfig = useSelector((state: IRootState) => state.themeConfig);
-  const semidark = useSelector((state: IRootState) => state.themeConfig.semidark);
   const location = useLocation();
   const dispatch = useDispatch();
   const { t } = useTranslation();
@@ -75,19 +74,19 @@ const Sidebar = () => {
           <PerfectScrollbar className='h-[calc(100vh-80px)] relative'>
             <ul className='relative font-semibold space-y-0.5 p-4 py-0'>
               <li className='menu nav-item'>
-                <NavLink to='/governance' className='group'>
+                <NavLink to='/dashboard-overview' className='group'>
                   <div className='flex items-center'>
-                    <IconMenuUsers className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('governance')}</span>
+                    <IconMenuDashboard className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('dashboardOverview')}</span>
                   </div>
                 </NavLink>
               </li>
 
               <li className='menu nav-item'>
-                <NavLink to='/dashboard-overview' className='group'>
+                <NavLink to='/governance' className='group'>
                   <div className='flex items-center'>
                     <IconMenuUsers className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('dashboardOverview')}</span>
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('governance')}</span>
                   </div>
                 </NavLink>
               </li>
