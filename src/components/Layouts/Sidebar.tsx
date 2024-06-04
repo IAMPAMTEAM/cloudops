@@ -15,6 +15,7 @@ import IconLock from '../Icon/IconLock';
 import IconNotes from '../Icon/IconNotes';
 import IconChartSquare from '../Icon/IconChartSquare';
 import IconMenuDashboard from '../Icon/Menu/IconMenuDashboard';
+import IconMenuApps from '../Icon/Menu/IconMenuApps';
 import LogoHybrix from '@/assets/icons/LogoHybrix.svg';
 
 const Sidebar = () => {
@@ -50,7 +51,6 @@ const Sidebar = () => {
     if (window.innerWidth < 1024 && themeConfig.sidebar) {
       dispatch(toggleSidebar());
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
 
   return (
@@ -83,6 +83,15 @@ const Sidebar = () => {
               </li>
 
               <li className='menu nav-item'>
+                <NavLink to='/dashboard-summary' className='group'>
+                  <div className='flex items-center'>
+                    <IconMenuApps className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('dashboardSummary')}</span>
+                  </div>
+                </NavLink>
+              </li>
+
+              <li className='menu nav-item'>
                 <NavLink to='/governance' className='group'>
                   <div className='flex items-center'>
                     <IconMenuUsers className='group-hover:!text-primary shrink-0' />
@@ -101,12 +110,34 @@ const Sidebar = () => {
               </li>
 
               <li className='menu nav-item'>
-                <NavLink to='/cost' className='group'>
+                <button type='button' className={`${currentMenu === 'cost' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('cost')}>
                   <div className='flex items-center'>
                     <IconCashBanknotes className='group-hover:!text-primary shrink-0' />
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('cost')}</span>
                   </div>
-                </NavLink>
+
+                  <div className={currentMenu !== 'cost' ? 'rtl:rotate-90 -rotate-90' : ''}>
+                    <IconCaretDown />
+                  </div>
+                </button>
+
+                <AnimateHeight duration={300} height={currentMenu === 'cost' ? 'auto' : 0}>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/cost/region'>{t('costRegion')}</NavLink>
+                    </li>
+                  </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/cost/service'>{t('costService')}</NavLink>
+                    </li>
+                  </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/cost/account'>{t('costAccount')}</NavLink>
+                    </li>
+                  </ul>
+                </AnimateHeight>
               </li>
 
               <li className='menu nav-item'>

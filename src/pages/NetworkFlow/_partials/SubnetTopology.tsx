@@ -281,7 +281,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .attr('x', (width - topBoxWidth) / 2 + 10)
         .attr('y', 90)
         .attr('fill', 'black')
-        .text(selectedFromSubnet)
+        .text(`${selectedFromSubnet} (from)`)
         .style('font-size', '1.4rem')
         .style('font-weight', 'bold');
 
@@ -308,7 +308,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .attr('x', (width - bottomBoxWidth) / 2 + 10)
         .attr('y', height - boxHeight / 2.5)
         .attr('fill', 'black')
-        .text(selectedToSubnet)
+        .text(`${selectedToSubnet} (to)`)
         .style('font-size', '1.4rem')
         .style('font-weight', 'bold');
 
@@ -343,8 +343,8 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .enter()
         .append('line')
         .attr('class', 'link animated-link')
-        .attr('stroke', '#333')
-        .attr('stroke-width', 2)
+        .attr('stroke', '#999')
+        .attr('stroke-width', 1)
         .attr('marker-end', 'url(#arrowhead)');
 
       // const node = svg

@@ -1,0 +1,1493 @@
+[
+  {
+    "date": "2024.1.1",
+    "numChecked": "512",
+    "numNormal": "512",
+    "numWarning": "297",
+    "numCritical": "78"
+  },
+  {
+    "date": "2024.1.2",
+    "numChecked": "512",
+    "numNormal": "512",
+    "numWarning": "297",
+    "numCritical": "78"
+  },
+  {
+    "date": "2024.1.3",
+    "numChecked": "512",
+    "numNormal": "512",
+    "numWarning": "297",
+    "numCritical": "78"
+  },
+  {
+    "date": "2024.1.4",
+    "numChecked": "512",
+    "numNormal": "512",
+    "numWarning": "297",
+    "numCritical": "78"
+  },
+  {
+    "date": "2024.1.5",
+    "numChecked": "512",
+    "numNormal": "512",
+    "numWarning": "297",
+    "numCritical": "78"
+  },
+  {
+    "date": "2024.1.6",
+    "numChecked": "512",
+    "numNormal": "512",
+    "numWarning": "297",
+    "numCritical": "78"
+  },
+  {
+    "date": "2024.1.7",
+    "numChecked": "512",
+    "numNormal": "512",
+    "numWarning": "288",
+    "numCritical": "82"
+  },
+  {
+    "date": "2024.1.8",
+    "numChecked": "512",
+    "numNormal": "512",
+    "numWarning": "288",
+    "numCritical": "82"
+  },
+  {
+    "date": "2024.1.9",
+    "numChecked": "512",
+    "numNormal": "512",
+    "numWarning": "288",
+    "numCritical": "82"
+  },
+  {
+    "date": "2024.1.10",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "288",
+    "numCritical": "82"
+  },
+  {
+    "date": "2024.1.11",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "288",
+    "numCritical": "82"
+  },
+  {
+    "date": "2024.1.12",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "292",
+    "numCritical": "78"
+  },
+  {
+    "date": "2024.1.13",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "292",
+    "numCritical": "78"
+  },
+  {
+    "date": "2024.1.14",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "292",
+    "numCritical": "78"
+  },
+  {
+    "date": "2024.1.15",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "292",
+    "numCritical": "78"
+  },
+  {
+    "date": "2024.1.16",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "292",
+    "numCritical": "78"
+  },
+  {
+    "date": "2024.1.17",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "292",
+    "numCritical": "78"
+  },
+  {
+    "date": "2024.1.18",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "249",
+    "numCritical": "121"
+  },
+  {
+    "date": "2024.1.19",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "249",
+    "numCritical": "121"
+  },
+  {
+    "date": "2024.1.20",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "249",
+    "numCritical": "121"
+  },
+  {
+    "date": "2024.1.21",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "249",
+    "numCritical": "121"
+  },
+  {
+    "date": "2024.1.22",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "249",
+    "numCritical": "121"
+  },
+  {
+    "date": "2024.1.23",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "243",
+    "numCritical": "127"
+  },
+  {
+    "date": "2024.1.24",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "243",
+    "numCritical": "127"
+  },
+  {
+    "date": "2024.1.25",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "243",
+    "numCritical": "127"
+  },
+  {
+    "date": "2024.1.26",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "249",
+    "numCritical": "121"
+  },
+  {
+    "date": "2024.1.27",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "314",
+    "numCritical": "56"
+  },
+  {
+    "date": "2024.1.28",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "314",
+    "numCritical": "56"
+  },
+  {
+    "date": "2024.1.29",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "314",
+    "numCritical": "56"
+  },
+  {
+    "date": "2024.1.30",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "314",
+    "numCritical": "56"
+  },
+  {
+    "date": "2024.1.31",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "314",
+    "numCritical": "56"
+  },
+  {
+    "date": "2024.2.1",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "314",
+    "numCritical": "56"
+  },
+  {
+    "date": "2024.2.2",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "314",
+    "numCritical": "56"
+  },
+  {
+    "date": "2024.2.3",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "314",
+    "numCritical": "56"
+  },
+  {
+    "date": "2024.2.4",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "314",
+    "numCritical": "56"
+  },
+  {
+    "date": "2024.2.5",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "314",
+    "numCritical": "56"
+  },
+  {
+    "date": "2024.2.6",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "314",
+    "numCritical": "56"
+  },
+  {
+    "date": "2024.2.7",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "314",
+    "numCritical": "56"
+  },
+  {
+    "date": "2024.2.8",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "314",
+    "numCritical": "56"
+  },
+  {
+    "date": "2024.2.9",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.10",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.11",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.12",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.13",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.14",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.15",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.16",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.17",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.18",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.19",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.20",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.21",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.22",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.23",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.24",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.25",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.26",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "327",
+    "numCritical": "43"
+  },
+  {
+    "date": "2024.2.27",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "338",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.2.28",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "338",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.2.29",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "338",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.1",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "338",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.2",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "338",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.3",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "338",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.4",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "338",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.5",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "338",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.6",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "338",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.7",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "338",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.8",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "338",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.9",
+    "numChecked": "512",
+    "numNormal": "142",
+    "numWarning": "338",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.10",
+    "numChecked": "512",
+    "numNormal": "217",
+    "numWarning": "263",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.11",
+    "numChecked": "512",
+    "numNormal": "217",
+    "numWarning": "263",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.12",
+    "numChecked": "512",
+    "numNormal": "217",
+    "numWarning": "263",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.13",
+    "numChecked": "512",
+    "numNormal": "217",
+    "numWarning": "263",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.14",
+    "numChecked": "512",
+    "numNormal": "217",
+    "numWarning": "263",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.15",
+    "numChecked": "512",
+    "numNormal": "217",
+    "numWarning": "263",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.16",
+    "numChecked": "512",
+    "numNormal": "217",
+    "numWarning": "263",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.17",
+    "numChecked": "512",
+    "numNormal": "217",
+    "numWarning": "263",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.18",
+    "numChecked": "512",
+    "numNormal": "230",
+    "numWarning": "250",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.19",
+    "numChecked": "512",
+    "numNormal": "230",
+    "numWarning": "250",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.20",
+    "numChecked": "512",
+    "numNormal": "230",
+    "numWarning": "250",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.21",
+    "numChecked": "512",
+    "numNormal": "230",
+    "numWarning": "250",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.22",
+    "numChecked": "512",
+    "numNormal": "230",
+    "numWarning": "250",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.23",
+    "numChecked": "512",
+    "numNormal": "230",
+    "numWarning": "250",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.24",
+    "numChecked": "512",
+    "numNormal": "230",
+    "numWarning": "250",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.25",
+    "numChecked": "512",
+    "numNormal": "210",
+    "numWarning": "270",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.26",
+    "numChecked": "512",
+    "numNormal": "210",
+    "numWarning": "270",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.27",
+    "numChecked": "512",
+    "numNormal": "210",
+    "numWarning": "270",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.28",
+    "numChecked": "512",
+    "numNormal": "210",
+    "numWarning": "270",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.29",
+    "numChecked": "512",
+    "numNormal": "313",
+    "numWarning": "167",
+    "numCritical": "32"
+  },
+  {
+    "date": "2024.3.30",
+    "numChecked": "512",
+    "numNormal": "313",
+    "numWarning": "178",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.3.31",
+    "numChecked": "512",
+    "numNormal": "313",
+    "numWarning": "178",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.1",
+    "numChecked": "512",
+    "numNormal": "313",
+    "numWarning": "178",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.2",
+    "numChecked": "512",
+    "numNormal": "313",
+    "numWarning": "178",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.3",
+    "numChecked": "512",
+    "numNormal": "313",
+    "numWarning": "178",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.4",
+    "numChecked": "512",
+    "numNormal": "313",
+    "numWarning": "178",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.5",
+    "numChecked": "512",
+    "numNormal": "313",
+    "numWarning": "178",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.6",
+    "numChecked": "512",
+    "numNormal": "313",
+    "numWarning": "178",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.7",
+    "numChecked": "512",
+    "numNormal": "313",
+    "numWarning": "178",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.8",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.9",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.10",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.11",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.12",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.13",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.14",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.15",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.16",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.17",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.18",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.19",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.20",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.21",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.22",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.23",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.24",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.25",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.26",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.27",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.28",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.29",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.4.30",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.1",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.2",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.3",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.4",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.5",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.6",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.7",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.8",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.9",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.10",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.11",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.12",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.13",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.14",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.15",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.16",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "80",
+    "numCritical": "21"
+  },
+  {
+    "date": "2024.5.17",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "83",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.5.18",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "83",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.5.19",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "83",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.5.20",
+    "numChecked": "512",
+    "numNormal": "411",
+    "numWarning": "83",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.5.21",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "44",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.5.22",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "44",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.5.23",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "44",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.5.24",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "44",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.5.25",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "44",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.5.26",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "44",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.5.27",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "44",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.5.28",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "44",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.5.29",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "44",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.5.30",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "44",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.5.31",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "44",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.6.1",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "44",
+    "numCritical": "18"
+  },
+  {
+    "date": "2024.6.2",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "45",
+    "numCritical": "17"
+  },
+  {
+    "date": "2024.6.3",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "45",
+    "numCritical": "17"
+  },
+  {
+    "date": "2024.6.4",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "45",
+    "numCritical": "17"
+  },
+  {
+    "date": "2024.6.5",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "45",
+    "numCritical": "17"
+  },
+  {
+    "date": "2024.6.6",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "45",
+    "numCritical": "17"
+  },
+  {
+    "date": "2024.6.7",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "45",
+    "numCritical": "17"
+  },
+  {
+    "date": "2024.6.8",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "45",
+    "numCritical": "17"
+  },
+  {
+    "date": "2024.6.9",
+    "numChecked": "512",
+    "numNormal": "450",
+    "numWarning": "45",
+    "numCritical": "17"
+  },
+  {
+    "date": "2024.6.10",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "29",
+    "numCritical": "86"
+  },
+  {
+    "date": "2024.6.11",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "29",
+    "numCritical": "86"
+  },
+  {
+    "date": "2024.6.12",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "29",
+    "numCritical": "86"
+  },
+  {
+    "date": "2024.6.13",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "29",
+    "numCritical": "86"
+  },
+  {
+    "date": "2024.6.14",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "29",
+    "numCritical": "86"
+  },
+  {
+    "date": "2024.6.15",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "29",
+    "numCritical": "86"
+  },
+  {
+    "date": "2024.6.16",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "29",
+    "numCritical": "86"
+  },
+  {
+    "date": "2024.6.17",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "29",
+    "numCritical": "86"
+  },
+  {
+    "date": "2024.6.18",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "29",
+    "numCritical": "86"
+  },
+  {
+    "date": "2024.6.19",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "53",
+    "numCritical": "62"
+  },
+  {
+    "date": "2024.6.20",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "53",
+    "numCritical": "62"
+  },
+  {
+    "date": "2024.6.21",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "53",
+    "numCritical": "62"
+  },
+  {
+    "date": "2024.6.22",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "53",
+    "numCritical": "62"
+  },
+  {
+    "date": "2024.6.23",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "53",
+    "numCritical": "62"
+  },
+  {
+    "date": "2024.6.24",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "53",
+    "numCritical": "62"
+  },
+  {
+    "date": "2024.6.25",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "53",
+    "numCritical": "62"
+  },
+  {
+    "date": "2024.6.26",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "53",
+    "numCritical": "62"
+  },
+  {
+    "date": "2024.6.27",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "53",
+    "numCritical": "62"
+  },
+  {
+    "date": "2024.6.28",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "53",
+    "numCritical": "62"
+  },
+  {
+    "date": "2024.6.29",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "53",
+    "numCritical": "62"
+  },
+  {
+    "date": "2024.6.30",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "53",
+    "numCritical": "62"
+  },
+  {
+    "date": "2024.7.1",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "53",
+    "numCritical": "62"
+  },
+  {
+    "date": "2024.7.2",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "53",
+    "numCritical": "62"
+  },
+  {
+    "date": "2024.7.3",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "62",
+    "numCritical": "53"
+  },
+  {
+    "date": "2024.7.4",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "62",
+    "numCritical": "53"
+  },
+  {
+    "date": "2024.7.5",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "62",
+    "numCritical": "53"
+  },
+  {
+    "date": "2024.7.6",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "62",
+    "numCritical": "53"
+  },
+  {
+    "date": "2024.7.7",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "62",
+    "numCritical": "53"
+  },
+  {
+    "date": "2024.7.8",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "62",
+    "numCritical": "53"
+  },
+  {
+    "date": "2024.7.9",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "62",
+    "numCritical": "53"
+  },
+  {
+    "date": "2024.7.10",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "74",
+    "numCritical": "41"
+  },
+  {
+    "date": "2024.7.11",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "74",
+    "numCritical": "41"
+  },
+  {
+    "date": "2024.7.12",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "74",
+    "numCritical": "41"
+  },
+  {
+    "date": "2024.7.13",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "74",
+    "numCritical": "41"
+  },
+  {
+    "date": "2024.7.14",
+    "numChecked": "630",
+    "numNormal": "515",
+    "numWarning": "74",
+    "numCritical": "41"
+  },
+  {
+    "date": "2024.7.15",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "46",
+    "numCritical": "41"
+  },
+  {
+    "date": "2024.7.16",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "46",
+    "numCritical": "41"
+  },
+  {
+    "date": "2024.7.17",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "46",
+    "numCritical": "41"
+  },
+  {
+    "date": "2024.7.18",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "46",
+    "numCritical": "41"
+  },
+  {
+    "date": "2024.7.19",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "46",
+    "numCritical": "41"
+  },
+  {
+    "date": "2024.7.20",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "60",
+    "numCritical": "27"
+  },
+  {
+    "date": "2024.7.21",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "60",
+    "numCritical": "27"
+  },
+  {
+    "date": "2024.7.22",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "60",
+    "numCritical": "27"
+  },
+  {
+    "date": "2024.7.23",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "60",
+    "numCritical": "27"
+  },
+  {
+    "date": "2024.7.24",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "60",
+    "numCritical": "27"
+  },
+  {
+    "date": "2024.7.25",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "60",
+    "numCritical": "27"
+  },
+  {
+    "date": "2024.7.26",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "60",
+    "numCritical": "27"
+  },
+  {
+    "date": "2024.7.27",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "60",
+    "numCritical": "27"
+  },
+  {
+    "date": "2024.7.28",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "76",
+    "numCritical": "11"
+  },
+  {
+    "date": "2024.7.29",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "76",
+    "numCritical": "11"
+  },
+  {
+    "date": "2024.7.30",
+    "numChecked": "630",
+    "numNormal": "543",
+    "numWarning": "76",
+    "numCritical": "11"
+  },
+  {
+    "date": "2024.7.31",
+    "numChecked": "630",
+    "numNormal": "560",
+    "numWarning": "59",
+    "numCritical": "11"
+  }
+]

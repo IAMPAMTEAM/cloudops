@@ -1,6 +1,7 @@
 {
   "dashboard": "Dashboard",
-  "dashboardOverview": "Dashboard Overview",
+  "dashboardOverview": "Dashboard",
+  "dashboardSummary": "Summary",
   "topology": "Topology",
   "approval": "Approval",
   "iamWorkflow": "IAM Workflow",
@@ -167,5 +168,8 @@
   "securitygroup": "Security Group",
   "resources": "Resources",
   "cost": "Cost",
+  "costRegion": "Cost Region",
+  "costService": "Cost Service",
+  "costAccount": "Cost Account",
   "networkflow": "Network Flow"
 }
