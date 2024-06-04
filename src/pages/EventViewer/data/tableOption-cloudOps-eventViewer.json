@@ -11,13 +11,12 @@
     { "field": "where" },
     { "field": "who" },
     { "field": "what" },
-    { "field": "counts" },
-    { "field": "details" }
+    { "field": "counts" }
   ],
   "columnWidth": [],
   "columnMaxWidth": [],
   "defaultColDef": { "filter": true },
-  "autoSizeStrategy": { "type": "fitCellContents" },
+  "autoSizeStrategy": {},
   "editableColumn": [],
   "tableHeight": 550,
   "pagination": true,

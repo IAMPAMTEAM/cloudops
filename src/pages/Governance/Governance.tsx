@@ -28,6 +28,7 @@ const Governance = () => {
     <>
       <div className='panel'>
         <DataTable
+          showSaveButton={true}
           datas={mergedTableData}
           columnDefs={columnDefs}
           defaultTableSetting={setDefaultTableSetting}

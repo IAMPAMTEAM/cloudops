@@ -36,6 +36,7 @@ const Resources = () => {
     <>
       <div className='pb-4 panel'>
         <DataTable
+          showSaveButton={true}
           datas={mergedTableData}
           columnDefs={columnDefs}
           defaultTableSetting={setDefaultTableSetting}

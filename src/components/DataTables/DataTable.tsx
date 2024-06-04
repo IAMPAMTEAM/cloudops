@@ -1,13 +1,14 @@
 import { AgGridReact } from 'ag-grid-react';
-import { SizeColumnsToContentStrategy, SizeColumnsToFitGridStrategy, SizeColumnsToFitProvidedWidthStrategy } from 'ag-grid-community';
+import { ColDef, SizeColumnsToContentStrategy, SizeColumnsToFitGridStrategy, SizeColumnsToFitProvidedWidthStrategy, ValueFormatterParams } from 'ag-grid-community';
 import 'ag-grid-enterprise';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 
-import { ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { ReactNode, useCallback, useMemo, useRef } from 'react';
 
 interface IDataTable {
   children: ReactNode;
+  showSaveButton: boolean;
   datas: any[];
   columnDefs: any[];
   defaultTableSetting: any;
@@ -17,10 +18,20 @@ interface IDataTable {
   paginationPageSizeSelector: number[];
 }
 
-export default function DataTable({ children, datas, columnDefs, defaultTableSetting, tableHeight, pagination, paginationPageSize, paginationPageSizeSelector }: IDataTable) {
+export default function DataTable({ children, showSaveButton, datas, columnDefs, defaultTableSetting, tableHeight, pagination, paginationPageSize, paginationPageSizeSelector }: IDataTable) {
   const autoSizeStrategy = useMemo<SizeColumnsToFitGridStrategy | SizeColumnsToFitProvidedWidthStrategy | SizeColumnsToContentStrategy>(() => {
     return defaultTableSetting.autoSizeStrategy;
   }, [defaultTableSetting.autoSizeStrategy]);
+
+  const autoGroupColumnDef = useMemo<ColDef>(() => {
+    return {
+      headerName: 'Group',
+      width: 120,
+      cellRendererParams: {
+        suppressCount: true,
+      },
+    };
+  }, []);
 
   const gridRef = useRef<AgGridReact>(null);
 
@@ -32,16 +43,25 @@ export default function DataTable({ children, datas, columnDefs, defaultTableSet
     gridRef.current!.api.exportDataAsExcel();
   }, []);
 
+  function onBtnSave() {
+    console.log(datas);
+  }
+
   return (
     <>
       <div className='flex justify-between items-center mb-4'>
         {children}
         <div className='flex'>
+          {showSaveButton && (
+            <button onClick={onBtnSave} className='bg-sky-500 font-bold text-white px-2 py-2 rounded-md mr-2'>
+              Save
+            </button>
+          )}
           <button onClick={onBtnCSVExport} className='bg-sky-500 font-bold text-white px-2 py-2 rounded-md mr-2'>
-            Download CSV
+            Export CSV
           </button>
           <button onClick={onBtnExcelExport} className='bg-sky-500 font-bold text-white px-2 py-2 rounded-md'>
-            Download Excel
+            Export Excel
           </button>
         </div>
       </div>
@@ -51,7 +71,9 @@ export default function DataTable({ children, datas, columnDefs, defaultTableSet
           rowData={datas}
           columnDefs={columnDefs}
           defaultColDef={defaultTableSetting.defaultColDef}
+          autoGroupColumnDef={autoGroupColumnDef}
           autoSizeStrategy={autoSizeStrategy}
+          suppressAggFuncInHeader={true}
           pagination={pagination}
           paginationPageSize={paginationPageSize}
           paginationPageSizeSelector={paginationPageSizeSelector}

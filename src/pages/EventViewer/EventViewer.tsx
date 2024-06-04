@@ -4,6 +4,7 @@ import EventViewerTable from '@/components/DataTables/EventViewerTable';
 import MergeTagData from '@/utils/MergeTagData';
 import SetColumnDefs from '@/utils/SetColumnDefs';
 import SetDefaultTableSetting from '@/utils/SetDefaultTableSetting';
+import statusRenderer from '@/pages/EventViewer/_partials/StatusRenderer';
 import '@/assets/css/dataTableStyle.css';
 
 import tableData from '@/pages/EventViewer/data/tableData-cloudOps-eventViewer.json';
@@ -18,6 +19,11 @@ const EventViewer = () => {
 
   useEffect(() => {
     const mergedColumnDefs = SetColumnDefs(tableOption, userTag, awsTag);
+    mergedColumnDefs.forEach((columnDef) => {
+      if (columnDef.cellRenderer === 'statusRenderer') {
+        columnDef.cellRenderer = statusRenderer;
+      }
+    });
     setColumnDefs(mergedColumnDefs);
 
     const mergedData = MergeTagData(tableData, userTag, awsTag);
@@ -36,7 +42,7 @@ const EventViewer = () => {
           paginationPageSize={tableOption.paginationPageSize}
           paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
         >
-          <p className='text-lg pb-4'>Governance</p>
+          <p className='text-lg pb-4'>Event Viewer</p>
         </EventViewerTable>
       </div>
     </>

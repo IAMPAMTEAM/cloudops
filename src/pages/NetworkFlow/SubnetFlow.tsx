@@ -60,6 +60,7 @@ const SubnetFlow = () => {
         </div>
         <div className='panel col-span-3 row-span-1'>
           <DataTable
+            showSaveButton={false}
             datas={filteredData}
             columnDefs={columnDefs}
             defaultTableSetting={setDefaultTableSetting}

@@ -32,16 +32,16 @@ export default function EventViewer({ children, datas, columnDefs, defaultTableS
     gridRef.current!.api.exportDataAsExcel();
   }, []);
 
-  const autoGroupColumnDef = useMemo<ColDef>(() => {
-    return {
-      headerCheckboxSelection: true,
-      field: 'status',
-      flex: 1,
-      cellRendererParams: {
-        checkbox: true,
-      },
-    };
-  }, []);
+  // const autoGroupColumnDef = useMemo<ColDef>(() => {
+  //   return {
+  //     headerCheckboxSelection: true,
+  //     field: 'status',
+  //     flex: 1,
+  //     cellRendererParams: {
+  //       checkbox: true,
+  //     },
+  //   };
+  // }, []);
 
   return (
     <>
@@ -61,7 +61,7 @@ export default function EventViewer({ children, datas, columnDefs, defaultTableS
           ref={gridRef}
           rowData={datas}
           columnDefs={columnDefs}
-          autoGroupColumnDef={autoGroupColumnDef}
+          // autoGroupColumnDef={autoGroupColumnDef}
           defaultColDef={defaultTableSetting.defaultColDef}
           autoSizeStrategy={autoSizeStrategy}
           rowSelection={'multiple'}
