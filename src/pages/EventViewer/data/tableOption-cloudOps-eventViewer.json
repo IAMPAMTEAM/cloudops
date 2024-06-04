@@ -4,16 +4,17 @@
     {
       "field": "status",
       "headerCheckboxSelection": true,
-      "checkboxSelection": true
+      "checkboxSelection": true,
+      "cellRenderer": "statusRenderer"
     },
     { "field": "date" },
     { "field": "time" },
     { "field": "where" },
     { "field": "who" },
     { "field": "what" },
-    { "field": "counts" }
+    { "field": "counts", "cellRenderer": "countsRenderer" }
   ],
-  "columnWidth": [],
+  "columnWidth": [{ "status": 130 }, { "date": 130 }, { "time": 100 }, { "where": 200 }, { "who": 200 }, { "what": 150 }, { "counts": 100 }],
   "columnMaxWidth": [],
   "defaultColDef": { "filter": true },
   "autoSizeStrategy": {},

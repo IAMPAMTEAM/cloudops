@@ -5,6 +5,7 @@ import MergeTagData from '@/utils/MergeTagData';
 import SetColumnDefs from '@/utils/SetColumnDefs';
 import SetDefaultTableSetting from '@/utils/SetDefaultTableSetting';
 import statusRenderer from '@/pages/EventViewer/_partials/StatusRenderer';
+import countsRenderer from '@/pages/EventViewer/_partials/CountsRenderer';
 import '@/assets/css/dataTableStyle.css';
 
 import tableData from '@/pages/EventViewer/data/tableData-cloudOps-eventViewer.json';
@@ -22,6 +23,8 @@ const EventViewer = () => {
     mergedColumnDefs.forEach((columnDef) => {
       if (columnDef.cellRenderer === 'statusRenderer') {
         columnDef.cellRenderer = statusRenderer;
+      } else if (columnDef.cellRenderer === 'countsRenderer') {
+        columnDef.cellRenderer = countsRenderer; // columnDef.cellRenderer = countsRenderer;
       }
     });
     setColumnDefs(mergedColumnDefs);
