@@ -15,9 +15,10 @@ interface IDataTable {
   pagination: boolean;
   paginationPageSize: number;
   paginationPageSizeSelector: number[];
+  getOnclickRowData: any;
 }
 
-export default function EventViewer({ children, datas, columnDefs, defaultTableSetting, tableHeight, pagination, paginationPageSize, paginationPageSizeSelector }: IDataTable) {
+export default function EventViewer({ children, datas, columnDefs, defaultTableSetting, tableHeight, pagination, paginationPageSize, paginationPageSizeSelector, getOnclickRowData }: IDataTable) {
   const autoSizeStrategy = useMemo<SizeColumnsToFitGridStrategy | SizeColumnsToFitProvidedWidthStrategy | SizeColumnsToContentStrategy>(() => {
     return defaultTableSetting.autoSizeStrategy;
   }, [defaultTableSetting.autoSizeStrategy]);
@@ -30,6 +31,12 @@ export default function EventViewer({ children, datas, columnDefs, defaultTableS
 
   const onBtnExcelExport = useCallback(() => {
     gridRef.current!.api.exportDataAsExcel();
+  }, []);
+
+  const onSelectionChanged = useCallback(() => {
+    const selectedRows = gridRef.current!.api.getSelectedRows();
+    getOnclickRowData(selectedRows[0]);
+    // console.log(selectedRows[0]);
   }, []);
 
   // const autoGroupColumnDef = useMemo<ColDef>(() => {
@@ -68,6 +75,7 @@ export default function EventViewer({ children, datas, columnDefs, defaultTableS
           pagination={pagination}
           paginationPageSize={paginationPageSize}
           paginationPageSizeSelector={paginationPageSizeSelector}
+          onSelectionChanged={onSelectionChanged}
         />
       </div>
     </>

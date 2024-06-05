@@ -66,11 +66,12 @@ const Cost = () => {
           paginationPageSize={serviceTableOption.paginationPageSize}
           paginationPageSizeSelector={serviceTableOption.paginationPageSizeSelector}
         >
-          <p className='text-lg pb-4'>Service Cost</p>
+          <p className='text-lg'>Service Cost</p>
         </DataTable>
       </div>
       <div className='pb-4 panel mt-6'>
         <DataTable
+          showSaveButton={false}
           datas={mergedRegionTableData}
           columnDefs={regionColumnDefs}
           defaultTableSetting={setDefaultRegionTableSetting}
@@ -79,7 +80,7 @@ const Cost = () => {
           paginationPageSize={regionTableOption.paginationPageSize}
           paginationPageSizeSelector={regionTableOption.paginationPageSizeSelector}
         >
-          <p className='text-lg pt-4 pb-4'>Region Cost</p>
+          <p className='text-lg'>Region Cost</p>
         </DataTable>
       </div>
     </>

@@ -37,7 +37,7 @@ const Governance = () => {
           paginationPageSize={tableOption.paginationPageSize}
           paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
         >
-          <p className='text-lg pb-4'>Governance</p>
+          <p className='text-lg'>Governance</p>
         </DataTable>
       </div>
     </>

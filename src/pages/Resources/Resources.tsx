@@ -45,7 +45,7 @@ const Resources = () => {
           paginationPageSize={tableOption.paginationPageSize}
           paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
         >
-          <p className='text-lg pb-4'>Resources</p>
+          <p className='text-lg'>Resources</p>
         </DataTable>
       </div>
       <div className='flex flex-col gap-6'>
