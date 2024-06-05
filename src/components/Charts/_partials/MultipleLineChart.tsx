@@ -26,6 +26,9 @@ export const MultipleLineChart = (props: Props) => {
         animations: {
           enabled: false,
         },
+        toolbar: {
+          show: false,
+        },
       },
       stroke: {
         width: [0, 0],
@@ -65,6 +68,9 @@ export const MultipleLineChart = (props: Props) => {
             },
             animations: {
               enabled: false,
+            },
+            toolbar: {
+              show: false,
             },
           },
           stroke: {

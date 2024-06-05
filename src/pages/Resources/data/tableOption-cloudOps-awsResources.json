@@ -21,7 +21,10 @@
     { "awsRegionName": 130 },
     { "awsServiceCategory": 140 },
     { "awsServiceName": 140 },
-    { "awsResourceTypeName": 160 }
+    { "awsResourceTypeName": 160 },
+    { "comment": 130 },
+    { "lastUpdated": 150 },
+    { "name": 150 }
   ],
   "columnMaxWidth": [],
   "defaultColDef": { "filter": true, "minWidth": 130, "autoHeaderHeight": true, "wrapHeaderText": true },

@@ -16,6 +16,7 @@ import IconNotes from '../Icon/IconNotes';
 import IconChartSquare from '../Icon/IconChartSquare';
 import IconMenuDashboard from '../Icon/Menu/IconMenuDashboard';
 import IconMenuApps from '../Icon/Menu/IconMenuApps';
+import IconVideo from '../Icon/IconVideo';
 import LogoHybrix from '@/assets/icons/LogoHybrix.svg';
 
 const Sidebar = () => {
@@ -207,6 +208,15 @@ const Sidebar = () => {
                   <div className='flex items-center'>
                     <IconLock className='group-hover:!text-primary shrink-0' />
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('securitygroup')}</span>
+                  </div>
+                </NavLink>
+              </li>
+
+              <li className='menu nav-item'>
+                <NavLink to='/event-viewer' className='group'>
+                  <div className='flex items-center'>
+                    <IconVideo className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('EventViewer')}</span>
                   </div>
                 </NavLink>
               </li>

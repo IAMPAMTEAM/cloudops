@@ -23,6 +23,7 @@ const AssetsDBAccessControl = lazy(() => import('@/pages/Assets/DBAccessControl'
 const AssetsDBAWSRDS = lazy(() => import('@/pages/Assets/DBAWSRDS'));
 const AssetsDBOnpremise = lazy(() => import('@/pages/Assets/DBOnpremise'));
 const SecurityGroup = lazy(() => import('@/pages/SecurityGroup/SecurityGroup'));
+const EventViewer = lazy(() => import('@/pages/EventViewer/EventViewer'));
 
 const PolicyPortal = lazy(() => import('@/pages/Policy/Portal'));
 const PolicyDevops = lazy(() => import('@/pages/Policy/PolicyDevops'));
@@ -243,6 +244,11 @@ const routes = [
     path: '/dashboard-summary',
     layout: 'default',
     element: <DashboardSummary />,
+  },
+  {
+    path: '/event-viewer',
+    layout: 'default',
+    element: <EventViewer />,
   },
 ];
 

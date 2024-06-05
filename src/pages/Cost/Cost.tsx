@@ -26,9 +26,25 @@ const Cost = () => {
   const setDefaultRegionTableSetting = SetDefaultTableSetting(regionTableOption);
 
   useEffect(() => {
+    const numberFormatter = (params) => {
+      if (!params.value || params.value === 0) return '0';
+      return '' + Math.round(params.value * 100) / 100;
+    };
+
     const mergedServiceColumnDefs = SetColumnDefs(serviceTableOption, serviceUserTag, serviceAwsTag);
+    mergedServiceColumnDefs.forEach((columnDef) => {
+      if (columnDef.valueFormatter === 'numberFormatter') {
+        columnDef.valueFormatter = numberFormatter;
+      }
+    });
     setServiceColumnDefs(mergedServiceColumnDefs);
+
     const mergedRegionColumnDefs = SetColumnDefs(regionTableOption, regionUserTag, regionAwsTag);
+    mergedRegionColumnDefs.forEach((columnDef) => {
+      if (columnDef.valueFormatter === 'numberFormatter') {
+        columnDef.valueFormatter = numberFormatter;
+      }
+    });
     setRegionColumnDefs(mergedRegionColumnDefs);
 
     const mergedServiceData = MergeTagData(serviceTableData, serviceUserTag, serviceAwsTag);
@@ -41,6 +57,7 @@ const Cost = () => {
     <>
       <div className='pb-4 panel'>
         <DataTable
+          showSaveButton={false}
           datas={mergedServiceTableData}
           columnDefs={serviceColumnDefs}
           defaultTableSetting={setDefaultServiceTableSetting}
@@ -49,11 +66,12 @@ const Cost = () => {
           paginationPageSize={serviceTableOption.paginationPageSize}
           paginationPageSizeSelector={serviceTableOption.paginationPageSizeSelector}
         >
-          <p className='text-lg pb-4'>Service Daily Cost</p>
+          <p className='text-lg'>Service Cost</p>
         </DataTable>
       </div>
       <div className='pb-4 panel mt-6'>
         <DataTable
+          showSaveButton={false}
           datas={mergedRegionTableData}
           columnDefs={regionColumnDefs}
           defaultTableSetting={setDefaultRegionTableSetting}
@@ -62,7 +80,7 @@ const Cost = () => {
           paginationPageSize={regionTableOption.paginationPageSize}
           paginationPageSizeSelector={regionTableOption.paginationPageSizeSelector}
         >
-          <p className='text-lg pt-4 pb-4'>Region Daily Cost</p>
+          <p className='text-lg'>Region Cost</p>
         </DataTable>
       </div>
     </>

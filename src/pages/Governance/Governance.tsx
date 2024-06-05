@@ -28,6 +28,7 @@ const Governance = () => {
     <>
       <div className='panel'>
         <DataTable
+          showSaveButton={true}
           datas={mergedTableData}
           columnDefs={columnDefs}
           defaultTableSetting={setDefaultTableSetting}
@@ -36,7 +37,7 @@ const Governance = () => {
           paginationPageSize={tableOption.paginationPageSize}
           paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
         >
-          <p className='text-lg pb-4'>Governance</p>
+          <p className='text-lg'>Governance</p>
         </DataTable>
       </div>
     </>
