@@ -34,8 +34,9 @@ const Compliance = lazy(() => import('@/pages/Compliance'));
 
 const WorkflowMain = lazy(() => import('@/pages/Workflow/WorkflowMain'));
 
-const SubnetFlow = lazy(() => import('@/pages/NetworkFlow/SubnetFlow'));
-const VPCFlow = lazy(() => import('@/pages/NetworkFlow/VPCFlow'));
+const SubnetFlow = lazy(() => import('@/pages/NetworkFlow/SubnetFlow/SubnetFlow'));
+const VPCFlow = lazy(() => import('@/pages/NetworkFlow/VPCFlow/VPCFlow'));
+const InternalElbFlow = lazy(() => import('@/pages/NetworkFlow/InternalElbFlow/InternalElbFlow'));
 
 // const Landing = lazy(() => import('@/pages/Landing/LandingContainer'));
 
@@ -211,6 +212,11 @@ const routes = [
     path: '/network-flow/vpc',
     layout: 'default',
     element: <VPCFlow />,
+  },
+  {
+    path: '/network-flow/internal-elb',
+    layout: 'default',
+    element: <InternalElbFlow />,
   },
   {
     path: '/governance',

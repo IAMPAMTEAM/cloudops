@@ -1,16 +1,39 @@
 import IconLogout from '@/components/Icon/IconLogout';
 import { useNavigate } from 'react-router-dom';
-import IconTopology from '@/assets/icons/IconTopology.svg';
-import IconLock from '@/assets/icons/IconLock.svg';
-import IconLink from '@/assets/icons/IconLink.svg';
+import IconTopology from '@/assets/icons/TOPOLOGY.svg';
+import IconLock from '@/assets/icons/NETWORKPOLICY.svg';
+import IconLink from '@/assets/icons/NETWORKFLOW.svg';
 import IconCost from '@/assets/icons/IconCost.svg';
-import IconUser from '@/assets/icons/IconUser.svg';
-import IconResources from '@/assets/icons/IconResources.svg';
+import IconUser from '@/assets/icons/GOVERNANCE.svg';
+import IconHome from '@/assets/icons/HOME.svg';
+import IconResources from '@/assets/icons/RESOURCES.svg';
+import IconDashboard from '@/assets/icons/DASHBOARD.svg';
+import IconNetwork from '@/assets/icons/NETWORK.svg';
+import IconCredentials from '@/assets/icons/CREDENTIALS.svg';
+import IconCompliance from '@/assets/icons/COMPLIANCES.svg';
+import IconMonitor from '@/assets/icons/MONITOR.svg';
+import IconLog from '@/assets/icons/LOG.svg';
+import IconChatbot from '@/assets/icons/AICHATBOT.svg';
+import IconAdmin from '@/assets/icons/ADMIN.svg';
 import LogoCloudOps from '@/assets/icons/LogoCloudOps.svg';
-import { useEffect, useLayoutEffect } from 'react';
 
 const EntryMenu = () => {
   const menuList = [
+    {
+      logo: IconHome,
+      menu: 'Home',
+      path: '/',
+    },
+    {
+      logo: IconDashboard,
+      menu: 'Dashboard',
+      path: '/dashboard-overview',
+    },
+    {
+      logo: IconNetwork,
+      menu: 'Network',
+      path: '/',
+    },
     {
       logo: IconUser,
       menu: 'Governance',
@@ -38,8 +61,38 @@ const EntryMenu = () => {
     },
     {
       logo: IconLock,
-      menu: 'Security Group',
+      menu: 'Policy',
       path: '/sg',
+    },
+    {
+      logo: IconCredentials,
+      menu: 'Credentials',
+      path: '/',
+    },
+    {
+      logo: IconCompliance,
+      menu: 'Compliance',
+      path: '/',
+    },
+    {
+      logo: IconMonitor,
+      menu: 'Monitor',
+      path: '/',
+    },
+    {
+      logo: IconLog,
+      menu: 'Log',
+      path: '/',
+    },
+    {
+      logo: IconChatbot,
+      menu: 'Chatbot',
+      path: '/',
+    },
+    {
+      logo: IconAdmin,
+      menu: 'Admin',
+      path: '/',
     },
   ];
 
@@ -49,21 +102,23 @@ const EntryMenu = () => {
 
   return (
     <div className='relative'>
-      <div className='flex gap-4 justify-center items-center'>
+      <div className='flex gap-4 justify-center items-cente'>
         <img className='w-16 p-2 bg-[#6667AB] rounded-xl ' src={LogoCloudOps} alt='' />
         <p className='text-6xl font-bold uppercase tracking-tighter text-[#fff]'>CloudOps Portal</p>
       </div>
 
-      <div className='flex m-[2.4rem]'>
+      <div className='flex m-[2.4rem] flex-wrap w-[1000px] relative'>
         {menuList.map((menu, idx) => {
           return (
-            <button
-              className='w-[12.5rem] flex flex-col items-center rounded hover:text-[#6667AB] hover:cursor-pointer p-8 fill-[#000] opacity-80 hover:opacity-100 hover:mt-[-8px] delay-50 duration-500'
-              onClick={() => navigateMenu(menu['path'])}
-            >
-              <img className='w-12 fill-[#000]' src={menu['logo']} alt={menu['menu']} />
-              <p className='font-extrabold uppercase text-[1rem] tracking-tighter mt-8 text-[#fff]  '>{menu['menu']}</p>
-            </button>
+            <div>
+              <button
+                className='w-[12.5rem] flex flex-col items-center rounded hover:text-[#6667AB] hover:cursor-pointer p-8 fill-[#000] opacity-80 hover:opacity-100 hover:translate-y-[-8px] delay-50 duration-500'
+                onClick={() => navigateMenu(menu['path'] ?? '')}
+              >
+                <img className='w-12 fill-[#000]' src={menu['logo']} alt={menu['menu']} />
+                <p className='font-extrabold uppercase text-[1rem] tracking-tighter mt-8 text-[#fff]  '>{menu['menu']}</p>
+              </button>
+            </div>
           );
           // if (menu.menu === 'Topology' || menu.menu === 'Security Group' || menu.menu === 'Network Flow') {
           // } else {

@@ -1,0 +1,322 @@
+[
+  {
+    "fromVpc": "10.1.0.0",
+    "fromSubnet": "10.1.1.0",
+    "toVpc": "10.1.0.0",
+    "toElb": "10.1.3.17",
+    "packetsSum": 14115007,
+    "bytesSum": 1398489190479
+  },
+  {
+    "fromVpc": "10.1.0.0",
+    "fromSubnet": "10.1.2.0",
+    "toVpc": "10.1.0.0",
+    "toElb": "10.1.3.17",
+    "packetsSum": 13678369,
+    "bytesSum": 1367764477248
+  },
+  {
+    "fromVpc": "10.1.0.0",
+    "fromSubnet": "10.1.3.0",
+    "toVpc": "10.1.0.0",
+    "toElb": "10.1.3.17",
+    "packetsSum": 42223921,
+    "bytesSum": 4272051869750
+  },
+  {
+    "fromVpc": "10.1.0.0",
+    "fromSubnet": "10.1.4.0",
+    "toVpc": "10.1.0.0",
+    "toElb": "10.1.3.17",
+    "packetsSum": 13915304,
+    "bytesSum": 1387134597856
+  },
+  {
+    "fromVpc": "10.1.0.0",
+    "fromSubnet": "10.1.1.0",
+    "toVpc": "10.1.0.0",
+    "toElb": "10.1.3.46",
+    "packetsSum": 13869355,
+    "bytesSum": 1388894075315
+  },
+  {
+    "fromVpc": "10.1.0.0",
+    "fromSubnet": "10.1.2.0",
+    "toVpc": "10.1.0.0",
+    "toElb": "10.1.3.46",
+    "packetsSum": 13403631,
+    "bytesSum": 1359964742269
+  },
+  {
+    "fromVpc": "10.1.0.0",
+    "fromSubnet": "10.1.3.0",
+    "toVpc": "10.1.0.0",
+    "toElb": "10.1.3.46",
+    "packetsSum": 42018231,
+    "bytesSum": 4228827459064
+  },
+  {
+    "fromVpc": "10.1.0.0",
+    "fromSubnet": "10.1.4.0",
+    "toVpc": "10.1.0.0",
+    "toElb": "10.1.3.46",
+    "packetsSum": 13804033,
+    "bytesSum": 1361847644543
+  },
+  {
+    "fromVpc": "10.2.0.0",
+    "fromSubnet": "10.2.1.0",
+    "toVpc": "10.2.0.0",
+    "toElb": "10.2.3.33",
+    "packetsSum": 11355094,
+    "bytesSum": 1124905354026
+  },
+  {
+    "fromVpc": "10.2.0.0",
+    "fromSubnet": "10.2.2.0",
+    "toVpc": "10.2.0.0",
+    "toElb": "10.2.3.33",
+    "packetsSum": 11098549,
+    "bytesSum": 1130140325327
+  },
+  {
+    "fromVpc": "10.2.0.0",
+    "fromSubnet": "10.2.3.0",
+    "toVpc": "10.2.0.0",
+    "toElb": "10.2.3.33",
+    "packetsSum": 32718061,
+    "bytesSum": 3301563258981
+  },
+  {
+    "fromVpc": "10.2.0.0",
+    "fromSubnet": "10.2.4.0",
+    "toVpc": "10.2.0.0",
+    "toElb": "10.2.3.33",
+    "packetsSum": 11550018,
+    "bytesSum": 1120999505782
+  },
+  {
+    "fromVpc": "10.2.0.0",
+    "fromSubnet": "10.2.1.0",
+    "toVpc": "10.2.0.0",
+    "toElb": "10.2.3.58",
+    "packetsSum": 10791433,
+    "bytesSum": 1079512717038
+  },
+  {
+    "fromVpc": "10.2.0.0",
+    "fromSubnet": "10.2.2.0",
+    "toVpc": "10.2.0.0",
+    "toElb": "10.2.3.58",
+    "packetsSum": 11415049,
+    "bytesSum": 1123011900046
+  },
+  {
+    "fromVpc": "10.2.0.0",
+    "fromSubnet": "10.2.3.0",
+    "toVpc": "10.2.0.0",
+    "toElb": "10.2.3.58",
+    "packetsSum": 33515647,
+    "bytesSum": 3369860841083
+  },
+  {
+    "fromVpc": "10.2.0.0",
+    "fromSubnet": "10.2.4.0",
+    "toVpc": "10.2.0.0",
+    "toElb": "10.2.3.58",
+    "packetsSum": 11521839,
+    "bytesSum": 1123262884499
+  },
+  {
+    "fromVpc": "10.3.0.0",
+    "fromSubnet": "10.3.1.0",
+    "toVpc": "10.3.0.0",
+    "toElb": "10.3.3.41",
+    "packetsSum": 11029136,
+    "bytesSum": 1109957606681
+  },
+  {
+    "fromVpc": "10.3.0.0",
+    "fromSubnet": "10.3.2.0",
+    "toVpc": "10.3.0.0",
+    "toElb": "10.3.3.41",
+    "packetsSum": 11191385,
+    "bytesSum": 1114469788862
+  },
+  {
+    "fromVpc": "10.3.0.0",
+    "fromSubnet": "10.3.3.0",
+    "toVpc": "10.3.0.0",
+    "toElb": "10.3.3.41",
+    "packetsSum": 33594247,
+    "bytesSum": 3335039382508
+  },
+  {
+    "fromVpc": "10.3.0.0",
+    "fromSubnet": "10.3.4.0",
+    "toVpc": "10.3.0.0",
+    "toElb": "10.3.3.41",
+    "packetsSum": 10762992,
+    "bytesSum": 1075738534168
+  },
+  {
+    "fromVpc": "10.3.0.0",
+    "fromSubnet": "10.3.1.0",
+    "toVpc": "10.3.0.0",
+    "toElb": "10.3.3.79",
+    "packetsSum": 10708126,
+    "bytesSum": 1085891949423
+  },
+  {
+    "fromVpc": "10.3.0.0",
+    "fromSubnet": "10.3.2.0",
+    "toVpc": "10.3.0.0",
+    "toElb": "10.3.3.79",
+    "packetsSum": 11221261,
+    "bytesSum": 1131134331648
+  },
+  {
+    "fromVpc": "10.3.0.0",
+    "fromSubnet": "10.3.3.0",
+    "toVpc": "10.3.0.0",
+    "toElb": "10.3.3.79",
+    "packetsSum": 34497847,
+    "bytesSum": 3410575326411
+  },
+  {
+    "fromVpc": "10.3.0.0",
+    "fromSubnet": "10.3.4.0",
+    "toVpc": "10.3.0.0",
+    "toElb": "10.3.3.79",
+    "packetsSum": 11071787,
+    "bytesSum": 1129055418550
+  },
+  {
+    "fromVpc": "10.4.0.0",
+    "fromSubnet": "10.4.1.0",
+    "toVpc": "10.4.0.0",
+    "toElb": "10.4.3.26",
+    "packetsSum": 14014128,
+    "bytesSum": 1421552549404
+  },
+  {
+    "fromVpc": "10.4.0.0",
+    "fromSubnet": "10.4.2.0",
+    "toVpc": "10.4.0.0",
+    "toElb": "10.4.3.26",
+    "packetsSum": 13391908,
+    "bytesSum": 1360582034158
+  },
+  {
+    "fromVpc": "10.4.0.0",
+    "fromSubnet": "10.4.3.0",
+    "toVpc": "10.4.0.0",
+    "toElb": "10.4.3.26",
+    "packetsSum": 41102096,
+    "bytesSum": 4139545075847
+  },
+  {
+    "fromVpc": "10.4.0.0",
+    "fromSubnet": "10.4.4.0",
+    "toVpc": "10.4.0.0",
+    "toElb": "10.4.3.26",
+    "packetsSum": 14311423,
+    "bytesSum": 1460314785600
+  },
+  {
+    "fromVpc": "10.4.0.0",
+    "fromSubnet": "10.4.1.0",
+    "toVpc": "10.4.0.0",
+    "toElb": "10.4.3.93",
+    "packetsSum": 14053936,
+    "bytesSum": 1409059267334
+  },
+  {
+    "fromVpc": "10.4.0.0",
+    "fromSubnet": "10.4.2.0",
+    "toVpc": "10.4.0.0",
+    "toElb": "10.4.3.93",
+    "packetsSum": 13892384,
+    "bytesSum": 1411322310236
+  },
+  {
+    "fromVpc": "10.4.0.0",
+    "fromSubnet": "10.4.3.0",
+    "toVpc": "10.4.0.0",
+    "toElb": "10.4.3.93",
+    "packetsSum": 41419762,
+    "bytesSum": 4169564857584
+  },
+  {
+    "fromVpc": "10.4.0.0",
+    "fromSubnet": "10.4.4.0",
+    "toVpc": "10.4.0.0",
+    "toElb": "10.4.3.93",
+    "packetsSum": 13654100,
+    "bytesSum": 1369080931371
+  },
+  {
+    "fromVpc": "10.1.0.0",
+    "fromSubnet": "10.1.1.0",
+    "toVpc": "10.1.0.0",
+    "toElb": "10.1.3.84",
+    "packetsSum": 13485191,
+    "bytesSum": 1343096162146
+  },
+  {
+    "fromVpc": "10.1.0.0",
+    "fromSubnet": "10.1.2.0",
+    "toVpc": "10.1.0.0",
+    "toElb": "10.1.3.84",
+    "packetsSum": 13900096,
+    "bytesSum": 1381425080119
+  },
+  {
+    "fromVpc": "10.1.0.0",
+    "fromSubnet": "10.1.3.0",
+    "toVpc": "10.1.0.0",
+    "toElb": "10.1.3.84",
+    "packetsSum": 41594909,
+    "bytesSum": 4146694972056
+  },
+  {
+    "fromVpc": "10.1.0.0",
+    "fromSubnet": "10.1.4.0",
+    "toVpc": "10.1.0.0",
+    "toElb": "10.1.3.84",
+    "packetsSum": 13346036,
+    "bytesSum": 1322760486405
+  },
+  {
+    "fromVpc": "10.2.0.0",
+    "fromSubnet": "10.2.1.0",
+    "toVpc": "10.2.0.0",
+    "toElb": "10.2.3.61",
+    "packetsSum": 11078825,
+    "bytesSum": 1095099044908
+  },
+  {
+    "fromVpc": "10.2.0.0",
+    "fromSubnet": "10.2.2.0",
+    "toVpc": "10.2.0.0",
+    "toElb": "10.2.3.61",
+    "packetsSum": 10951140,
+    "bytesSum": 1101305237658
+  },
+  {
+    "fromVpc": "10.2.0.0",
+    "fromSubnet": "10.2.3.0",
+    "toVpc": "10.2.0.0",
+    "toElb": "10.2.3.61",
+    "packetsSum": 33249238,
+    "bytesSum": 3331469770514
+  },
+  {
+    "fromVpc": "10.2.0.0",
+    "fromSubnet": "10.2.4.0",
+    "toVpc": "10.2.0.0",
+    "toElb": "10.2.3.61",
+    "packetsSum": 11140163,
+    "bytesSum": 1128310206922
+  }
+]

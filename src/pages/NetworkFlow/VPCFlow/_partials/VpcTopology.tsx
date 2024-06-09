@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
-import './NetworkTopology.css';
+import '@/assets/css/NetworkTopology.css';
 
 interface Node {
   id: string;
@@ -27,6 +27,7 @@ interface Subnet {
   bytesSum: number;
 }
 
+// @ts-ignore
 const VPCTopology: React.FC = ({ onFromVpcChange, onToVpcChange, filteredData }) => {
   const [data, setData] = useState<NetworkData>({ nodes: [], links: [] });
   const [fetchData, setFetchData] = useState<Subnet[]>([]);

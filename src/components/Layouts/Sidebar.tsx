@@ -6,6 +6,7 @@ import { toggleSidebar } from '../../store/themeConfigSlice';
 import AnimateHeight from 'react-animate-height';
 import { IRootState } from '../../store';
 import { useState, useEffect } from 'react';
+import IconUser from '../Icon/IconUser';
 import IconCaretsDown from '../Icon/IconCaretsDown';
 import IconCaretDown from '../Icon/IconCaretDown';
 import IconMenuUsers from '../Icon/Menu/IconMenuUsers';
@@ -17,6 +18,7 @@ import IconChartSquare from '../Icon/IconChartSquare';
 import IconMenuDashboard from '../Icon/Menu/IconMenuDashboard';
 import IconMenuApps from '../Icon/Menu/IconMenuApps';
 import IconVideo from '../Icon/IconVideo';
+import IconLink from '../Icon/IconLink';
 import LogoHybrix from '@/assets/icons/LogoHybrix.svg';
 
 const Sidebar = () => {
@@ -90,6 +92,27 @@ const Sidebar = () => {
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('dashboardSummary')}</span>
                   </div>
                 </NavLink>
+              </li>
+
+              <li className='menu nav-item'>
+                <button type='button' className={`${currentMenu === 'network' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('network')}>
+                  <div className='flex items-center'>
+                    <IconLink className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('network')}</span>
+                  </div>
+
+                  <div className={currentMenu !== 'network' ? 'rtl:rotate-90 -rotate-90' : ''}>
+                    <IconCaretDown />
+                  </div>
+                </button>
+
+                <AnimateHeight duration={300} height={currentMenu === 'network' ? 'auto' : 0}>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/'>{t('network')}</NavLink>
+                    </li>
+                  </ul>
+                </AnimateHeight>
               </li>
 
               <li className='menu nav-item'>
@@ -200,6 +223,16 @@ const Sidebar = () => {
                       <NavLink to='/network-flow/vpc'>{t('networkFlowVpc')}</NavLink>
                     </li>
                   </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/network-flow/internal-elb'>{t('networkFlowInternalElb')}</NavLink>
+                    </li>
+                  </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/network-flow/internet-elb'>{t('networkFlowInternetElb')}</NavLink>
+                    </li>
+                  </ul>
                 </AnimateHeight>
               </li>
 
@@ -217,6 +250,21 @@ const Sidebar = () => {
                   <div className='flex items-center'>
                     <IconVideo className='group-hover:!text-primary shrink-0' />
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('EventViewer')}</span>
+                  </div>
+                </NavLink>
+              </li>
+
+              {/* credentials */}
+
+              {/* compliance */}
+
+              {/*  */}
+
+              <li className='menu nav-item'>
+                <NavLink to='/admin' className='group'>
+                  <div className='flex items-center'>
+                    <IconUser className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('admin')}</span>
                   </div>
                 </NavLink>
               </li>
