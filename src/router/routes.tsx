@@ -34,16 +34,19 @@ const Compliance = lazy(() => import('@/pages/Compliance'));
 
 const WorkflowMain = lazy(() => import('@/pages/Workflow/WorkflowMain'));
 
-const SubnetFlow = lazy(() => import('@/pages/NetworkFlow/SubnetFlow'));
-const VPCFlow = lazy(() => import('@/pages/NetworkFlow/VPCFlow'));
+const SubnetFlow = lazy(() => import('@/pages/NetworkFlow/SubnetFlow/SubnetFlow'));
+const VPCFlow = lazy(() => import('@/pages/NetworkFlow/VPCFlow/VPCFlow'));
+const InternalElbFlow = lazy(() => import('@/pages/NetworkFlow/InternalElbFlow/InternalElbFlow'));
 
 // const Landing = lazy(() => import('@/pages/Landing/LandingContainer'));
 
 const Governance = lazy(() => import('@/pages/Governance/Governance'));
 const Resources = lazy(() => import('@/pages/Resources/Resources'));
 const Cost = lazy(() => import('@/pages/Cost/Cost'));
+const CostRegion = lazy(() => import('@/pages/Cost/CostRegion/CostRegion'));
 
 const DashboardOverview = lazy(() => import('@/pages/DashboardOverview/DashboardOverviewContainer'));
+const DashboardSummary = lazy(() => import('@/pages/DashboardSummary/DashboardSummaryContainer'));
 
 const routes = [
   {
@@ -211,6 +214,11 @@ const routes = [
     element: <VPCFlow />,
   },
   {
+    path: '/network-flow/internal-elb',
+    layout: 'default',
+    element: <InternalElbFlow />,
+  },
+  {
     path: '/governance',
     layout: 'default',
     element: <Governance />,
@@ -225,10 +233,23 @@ const routes = [
     layout: 'default',
     element: <Cost />,
   },
+  // Cost Region
+  {
+    path: '/cost/region',
+    layout: 'default',
+    element: <CostRegion />,
+  },
+  // Cost Service
+  // Cost Account
   {
     path: '/dashboard-overview',
     layout: 'default',
     element: <DashboardOverview />,
+  },
+  {
+    path: '/dashboard-summary',
+    layout: 'default',
+    element: <DashboardSummary />,
   },
   {
     path: '/event-viewer',

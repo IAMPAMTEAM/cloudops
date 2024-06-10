@@ -1,0 +1,6818 @@
+[
+  {
+    "date": "2024-01-01",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "51",
+      "RunningFargateTasks": "62",
+      "RunningECSTasks": "78"
+    },
+    "storage": {
+      "Buckets": "51",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "48",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "31",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-02",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "52",
+      "RunningFargateTasks": "62",
+      "RunningECSTasks": "78"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "49",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-03",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "53",
+      "RunningFargateTasks": "62",
+      "RunningECSTasks": "78"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "50",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-04",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "41",
+      "RunningFargateTasks": "62",
+      "RunningECSTasks": "78"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "17",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "51",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-05",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "41",
+      "RunningFargateTasks": "62",
+      "RunningECSTasks": "78"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "17",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "52",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-06",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "41",
+      "RunningFargateTasks": "68",
+      "RunningECSTasks": "78"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "17",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "53",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-07",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "41",
+      "RunningFargateTasks": "68",
+      "RunningECSTasks": "82"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "17",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "54",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-08",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "41",
+      "RunningFargateTasks": "68",
+      "RunningECSTasks": "82"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "17",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-09",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "41",
+      "RunningFargateTasks": "68",
+      "RunningECSTasks": "82"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "19",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-10",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "60",
+      "RunningFargateTasks": "68",
+      "RunningECSTasks": "82"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "19",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-11",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "61",
+      "RunningFargateTasks": "68",
+      "RunningECSTasks": "82"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "19",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-12",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "62",
+      "RunningFargateTasks": "68",
+      "RunningECSTasks": "78"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-13",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "62",
+      "RunningFargateTasks": "69",
+      "RunningECSTasks": "78"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-14",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "62",
+      "RunningFargateTasks": "70",
+      "RunningECSTasks": "78"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-15",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "62",
+      "RunningFargateTasks": "71",
+      "RunningECSTasks": "78"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-16",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "41",
+      "RunningFargateTasks": "72",
+      "RunningECSTasks": "78"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-17",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "41",
+      "RunningFargateTasks": "73",
+      "RunningECSTasks": "78"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-18",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "41",
+      "ActiveLambda": "41",
+      "RunningFargateTasks": "74",
+      "RunningECSTasks": "121"
+    },
+    "storage": {
+      "Buckets": "43",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-19",
+    "compute": {
+      "RunningEC2": "19",
+      "StoppedEC2": "37",
+      "ActiveLambda": "41",
+      "RunningFargateTasks": "75",
+      "RunningECSTasks": "121"
+    },
+    "storage": {
+      "Buckets": "55",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-20",
+    "compute": {
+      "RunningEC2": "19",
+      "StoppedEC2": "37",
+      "ActiveLambda": "41",
+      "RunningFargateTasks": "76",
+      "RunningECSTasks": "121"
+    },
+    "storage": {
+      "Buckets": "55",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-21",
+    "compute": {
+      "RunningEC2": "19",
+      "StoppedEC2": "37",
+      "ActiveLambda": "41",
+      "RunningFargateTasks": "77",
+      "RunningECSTasks": "121"
+    },
+    "storage": {
+      "Buckets": "55",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-22",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "41",
+      "ActiveLambda": "60",
+      "RunningFargateTasks": "78",
+      "RunningECSTasks": "121"
+    },
+    "storage": {
+      "Buckets": "55",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-23",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "41",
+      "ActiveLambda": "61",
+      "RunningFargateTasks": "79",
+      "RunningECSTasks": "127"
+    },
+    "storage": {
+      "Buckets": "55",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "53",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-24",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "37",
+      "ActiveLambda": "62",
+      "RunningFargateTasks": "80",
+      "RunningECSTasks": "127"
+    },
+    "storage": {
+      "Buckets": "55",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "53",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "8",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-25",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "37",
+      "ActiveLambda": "62",
+      "RunningFargateTasks": "81",
+      "RunningECSTasks": "127"
+    },
+    "storage": {
+      "Buckets": "55",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "53",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "32",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-26",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "37",
+      "ActiveLambda": "62",
+      "RunningFargateTasks": "82",
+      "RunningECSTasks": "121"
+    },
+    "storage": {
+      "Buckets": "55",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "16",
+      "Routes": "53",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-27",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "41",
+      "ActiveLambda": "62",
+      "RunningFargateTasks": "83",
+      "RunningECSTasks": "56"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "11",
+      "Routes": "53",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-28",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "41",
+      "ActiveLambda": "62",
+      "RunningFargateTasks": "84",
+      "RunningECSTasks": "56"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "11",
+      "Routes": "53",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-29",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "41",
+      "ActiveLambda": "62",
+      "RunningFargateTasks": "85",
+      "RunningECSTasks": "56"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "11",
+      "Routes": "53",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-30",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "41",
+      "ActiveLambda": "62",
+      "RunningFargateTasks": "86",
+      "RunningECSTasks": "56"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "11",
+      "Routes": "53",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-01-31",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "41",
+      "ActiveLambda": "68",
+      "RunningFargateTasks": "87",
+      "RunningECSTasks": "56"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "6",
+      "Subnets": "24",
+      "EIPs": "11",
+      "Routes": "53",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-01",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "41",
+      "ActiveLambda": "68",
+      "RunningFargateTasks": "88",
+      "RunningECSTasks": "56"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "54",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-02",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "41",
+      "ActiveLambda": "68",
+      "RunningFargateTasks": "89",
+      "RunningECSTasks": "56"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "55",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-03",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "41",
+      "ActiveLambda": "68",
+      "RunningFargateTasks": "89",
+      "RunningECSTasks": "56"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "56",
+      "NATGateways": "4",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-04",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "41",
+      "ActiveLambda": "121",
+      "RunningFargateTasks": "89",
+      "RunningECSTasks": "56"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "56",
+      "NATGateways": "0",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-05",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "41",
+      "ActiveLambda": "121",
+      "RunningFargateTasks": "89",
+      "RunningECSTasks": "56"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "56",
+      "NATGateways": "0",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-06",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "41",
+      "ActiveLambda": "121",
+      "RunningFargateTasks": "93",
+      "RunningECSTasks": "56"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "56",
+      "NATGateways": "0",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-07",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "41",
+      "ActiveLambda": "121",
+      "RunningFargateTasks": "94",
+      "RunningECSTasks": "56"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "15",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "56",
+      "NATGateways": "0",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-08",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "41",
+      "ActiveLambda": "143",
+      "RunningFargateTasks": "95",
+      "RunningECSTasks": "56"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "16",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "56",
+      "NATGateways": "0",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-09",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "41",
+      "ActiveLambda": "143",
+      "RunningFargateTasks": "121",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "17",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "56",
+      "NATGateways": "0",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-10",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "38",
+      "ActiveLambda": "143",
+      "RunningFargateTasks": "121",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "18",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "56",
+      "NATGateways": "0",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-11",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "38",
+      "ActiveLambda": "143",
+      "RunningFargateTasks": "121",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "19",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "56",
+      "NATGateways": "0",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-12",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "38",
+      "ActiveLambda": "143",
+      "RunningFargateTasks": "122",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "20",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "56",
+      "NATGateways": "0",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-13",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "38",
+      "ActiveLambda": "143",
+      "RunningFargateTasks": "123",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "21",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "56",
+      "NATGateways": "0",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-14",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "38",
+      "ActiveLambda": "143",
+      "RunningFargateTasks": "124",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "22",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "56",
+      "NATGateways": "0",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-15",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "38",
+      "ActiveLambda": "143",
+      "RunningFargateTasks": "125",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "23",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "57",
+      "NATGateways": "0",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-16",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "38",
+      "ActiveLambda": "143",
+      "RunningFargateTasks": "126",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "24",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "57",
+      "NATGateways": "0",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-17",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "38",
+      "ActiveLambda": "143",
+      "RunningFargateTasks": "161",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "48",
+      "EBS": "25",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "57",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-18",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "38",
+      "ActiveLambda": "143",
+      "RunningFargateTasks": "161",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "61",
+      "EBS": "26",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "57",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-19",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "38",
+      "ActiveLambda": "161",
+      "RunningFargateTasks": "161",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "61",
+      "EBS": "26",
+      "Glacier": "15"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "7",
+      "Routes": "57",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-20",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "38",
+      "ActiveLambda": "161",
+      "RunningFargateTasks": "161",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "61",
+      "EBS": "26",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "7",
+      "Routes": "57",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-21",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "38",
+      "ActiveLambda": "161",
+      "RunningFargateTasks": "161",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "61",
+      "EBS": "26",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "7",
+      "Routes": "57",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-22",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "26",
+      "ActiveLambda": "161",
+      "RunningFargateTasks": "161",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "61",
+      "EBS": "26",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "7",
+      "Routes": "57",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-23",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "26",
+      "ActiveLambda": "161",
+      "RunningFargateTasks": "161",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "61",
+      "EBS": "26",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "7",
+      "Routes": "57",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "56",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "86"
+    }
+  },
+  {
+    "date": "2024-02-24",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "26",
+      "ActiveLambda": "161",
+      "RunningFargateTasks": "162",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "61",
+      "EBS": "26",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "7",
+      "Routes": "57",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "99"
+    }
+  },
+  {
+    "date": "2024-02-25",
+    "compute": {
+      "RunningEC2": "17",
+      "StoppedEC2": "26",
+      "ActiveLambda": "161",
+      "RunningFargateTasks": "163",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "61",
+      "EBS": "26",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "7",
+      "Routes": "57",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "99"
+    }
+  },
+  {
+    "date": "2024-02-26",
+    "compute": {
+      "RunningEC2": "12",
+      "StoppedEC2": "26",
+      "ActiveLambda": "177",
+      "RunningFargateTasks": "164",
+      "RunningECSTasks": "43"
+    },
+    "storage": {
+      "Buckets": "61",
+      "EBS": "26",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "7",
+      "Routes": "57",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "99"
+    }
+  },
+  {
+    "date": "2024-02-27",
+    "compute": {
+      "RunningEC2": "12",
+      "StoppedEC2": "26",
+      "ActiveLambda": "177",
+      "RunningFargateTasks": "165",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "61",
+      "EBS": "26",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "7",
+      "Routes": "58",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "99"
+    }
+  },
+  {
+    "date": "2024-02-28",
+    "compute": {
+      "RunningEC2": "12",
+      "StoppedEC2": "26",
+      "ActiveLambda": "177",
+      "RunningFargateTasks": "166",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "61",
+      "EBS": "26",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "59",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "99"
+    }
+  },
+  {
+    "date": "2024-02-29",
+    "compute": {
+      "RunningEC2": "12",
+      "StoppedEC2": "26",
+      "ActiveLambda": "177",
+      "RunningFargateTasks": "167",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "61",
+      "EBS": "26",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "60",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "99"
+    }
+  },
+  {
+    "date": "2024-03-01",
+    "compute": {
+      "RunningEC2": "12",
+      "StoppedEC2": "26",
+      "ActiveLambda": "177",
+      "RunningFargateTasks": "168",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "61",
+      "EBS": "26",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "61",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "6",
+      "DirectConnects": "3"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "99"
+    }
+  },
+  {
+    "date": "2024-03-02",
+    "compute": {
+      "RunningEC2": "12",
+      "StoppedEC2": "26",
+      "ActiveLambda": "177",
+      "RunningFargateTasks": "169",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "61",
+      "EBS": "26",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "62",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "99"
+    }
+  },
+  {
+    "date": "2024-03-03",
+    "compute": {
+      "RunningEC2": "12",
+      "StoppedEC2": "26",
+      "ActiveLambda": "177",
+      "RunningFargateTasks": "180",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "61",
+      "EBS": "26",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "62",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "99"
+    }
+  },
+  {
+    "date": "2024-03-04",
+    "compute": {
+      "RunningEC2": "23",
+      "StoppedEC2": "26",
+      "ActiveLambda": "178",
+      "RunningFargateTasks": "181",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "77",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "62",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "99"
+    }
+  },
+  {
+    "date": "2024-03-05",
+    "compute": {
+      "RunningEC2": "23",
+      "StoppedEC2": "26",
+      "ActiveLambda": "179",
+      "RunningFargateTasks": "182",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "77",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "62",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "99"
+    }
+  },
+  {
+    "date": "2024-03-06",
+    "compute": {
+      "RunningEC2": "23",
+      "StoppedEC2": "26",
+      "ActiveLambda": "180",
+      "RunningFargateTasks": "183",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "77",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "62",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "99"
+    }
+  },
+  {
+    "date": "2024-03-07",
+    "compute": {
+      "RunningEC2": "23",
+      "StoppedEC2": "31",
+      "ActiveLambda": "181",
+      "RunningFargateTasks": "184",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "77",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "62",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "99"
+    }
+  },
+  {
+    "date": "2024-03-08",
+    "compute": {
+      "RunningEC2": "23",
+      "StoppedEC2": "31",
+      "ActiveLambda": "182",
+      "RunningFargateTasks": "185",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "64",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "62",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-09",
+    "compute": {
+      "RunningEC2": "23",
+      "StoppedEC2": "31",
+      "ActiveLambda": "183",
+      "RunningFargateTasks": "186",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "64",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "62",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-10",
+    "compute": {
+      "RunningEC2": "23",
+      "StoppedEC2": "31",
+      "ActiveLambda": "183",
+      "RunningFargateTasks": "187",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "64",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "62",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-11",
+    "compute": {
+      "RunningEC2": "23",
+      "StoppedEC2": "31",
+      "ActiveLambda": "184",
+      "RunningFargateTasks": "188",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "77",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-12",
+    "compute": {
+      "RunningEC2": "23",
+      "StoppedEC2": "31",
+      "ActiveLambda": "185",
+      "RunningFargateTasks": "189",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "77",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-13",
+    "compute": {
+      "RunningEC2": "23",
+      "StoppedEC2": "31",
+      "ActiveLambda": "186",
+      "RunningFargateTasks": "190",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "88",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-14",
+    "compute": {
+      "RunningEC2": "23",
+      "StoppedEC2": "31",
+      "ActiveLambda": "187",
+      "RunningFargateTasks": "191",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "88",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-15",
+    "compute": {
+      "RunningEC2": "23",
+      "StoppedEC2": "31",
+      "ActiveLambda": "188",
+      "RunningFargateTasks": "191",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "88",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "2",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-16",
+    "compute": {
+      "RunningEC2": "23",
+      "StoppedEC2": "35",
+      "ActiveLambda": "189",
+      "RunningFargateTasks": "191",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "88",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "8",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-17",
+    "compute": {
+      "RunningEC2": "23",
+      "StoppedEC2": "35",
+      "ActiveLambda": "190",
+      "RunningFargateTasks": "191",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "88",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "8",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-18",
+    "compute": {
+      "RunningEC2": "23",
+      "StoppedEC2": "35",
+      "ActiveLambda": "191",
+      "RunningFargateTasks": "191",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "88",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "8",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-19",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "35",
+      "ActiveLambda": "192",
+      "RunningFargateTasks": "191",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "89",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "8",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "51",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-20",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "35",
+      "ActiveLambda": "193",
+      "RunningFargateTasks": "191",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "90",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "8",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-21",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "35",
+      "ActiveLambda": "194",
+      "RunningFargateTasks": "191",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "91",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "8",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-22",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "35",
+      "ActiveLambda": "194",
+      "RunningFargateTasks": "191",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "8",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-23",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "35",
+      "ActiveLambda": "194",
+      "RunningFargateTasks": "191",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "8",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-24",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "35",
+      "ActiveLambda": "195",
+      "RunningFargateTasks": "191",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "8",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-25",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "35",
+      "ActiveLambda": "196",
+      "RunningFargateTasks": "191",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "32"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "8",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-26",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "35",
+      "ActiveLambda": "197",
+      "RunningFargateTasks": "191",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "32"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "8",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-27",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "35",
+      "ActiveLambda": "198",
+      "RunningFargateTasks": "191",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "32"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "8",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-28",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "35",
+      "ActiveLambda": "175",
+      "RunningFargateTasks": "191",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "32"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "8",
+      "InternetGateways": "4",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-29",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "41",
+      "ActiveLambda": "175",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "32"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "32"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "8",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-30",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "41",
+      "ActiveLambda": "175",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "32"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "62",
+      "NATGateways": "8",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-03-31",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "41",
+      "ActiveLambda": "175",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "32"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "77",
+      "NATGateways": "8",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-04-01",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "41",
+      "ActiveLambda": "176",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "32"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "77",
+      "NATGateways": "8",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-04-02",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "41",
+      "ActiveLambda": "177",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "32"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "77",
+      "NATGateways": "8",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "8",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-04-03",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "41",
+      "ActiveLambda": "178",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "32"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "77",
+      "NATGateways": "8",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-04-04",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "41",
+      "ActiveLambda": "179",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "32"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "77",
+      "NATGateways": "8",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-04-05",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "41",
+      "ActiveLambda": "180",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "32"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "77",
+      "NATGateways": "8",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-04-06",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "41",
+      "ActiveLambda": "181",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "32"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "77",
+      "NATGateways": "8",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-04-07",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "41",
+      "ActiveLambda": "178",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "32"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "77",
+      "NATGateways": "8",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-04-08",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "178",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "32",
+      "Glacier": "32"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-04-09",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "178",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "40",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "142",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-04-10",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "178",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "40",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-04-11",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "178",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "40",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "9",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-04-12",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "179",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "40",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-04-13",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "180",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "92",
+      "EBS": "40",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "132"
+    }
+  },
+  {
+    "date": "2024-04-14",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "181",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "41",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-15",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "182",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "42",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-16",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "183",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "43",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-17",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "184",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "44",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-18",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "31",
+      "ActiveLambda": "178",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "45",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "60",
+      "IAMGroups": "12",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-19",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "31",
+      "ActiveLambda": "179",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "46",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "54",
+      "IAMGroups": "12",
+      "IAMRoles": "125",
+      "IAMPolicies": "64",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-20",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "31",
+      "ActiveLambda": "187",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "47",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "54",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "64",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-21",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "31",
+      "ActiveLambda": "188",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "48",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "54",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "64",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-22",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "31",
+      "ActiveLambda": "189",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "49",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "54",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "64",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-23",
+    "compute": {
+      "RunningEC2": "18",
+      "StoppedEC2": "31",
+      "ActiveLambda": "190",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "50",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "54",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "64",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-24",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "190",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "54",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "64",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-25",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "190",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "54",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "56",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-26",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "190",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "54",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "56",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-27",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "28",
+      "ActiveLambda": "190",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "54",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "56",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-28",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "28",
+      "ActiveLambda": "189",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "54",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "56",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-29",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "28",
+      "ActiveLambda": "190",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "13",
+      "Routes": "77",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "54",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "56",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-04-30",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "28",
+      "ActiveLambda": "191",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "13",
+      "Routes": "65",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "56",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-01",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "28",
+      "ActiveLambda": "192",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "13",
+      "Routes": "65",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "56",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-02",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "28",
+      "ActiveLambda": "193",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "13",
+      "Routes": "65",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "56",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-03",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "28",
+      "ActiveLambda": "194",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "13",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-04",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "28",
+      "ActiveLambda": "201",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "13",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-05",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "28",
+      "ActiveLambda": "196",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "13",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-06",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "28",
+      "ActiveLambda": "201",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "13",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-07",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "28",
+      "ActiveLambda": "201",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-08",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "28",
+      "ActiveLambda": "201",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-09",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "28",
+      "ActiveLambda": "201",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-10",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "19",
+      "ActiveLambda": "201",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-11",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "19",
+      "ActiveLambda": "201",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "21"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-12",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "19",
+      "ActiveLambda": "201",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "22"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-13",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "19",
+      "ActiveLambda": "201",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "23"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-14",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "19",
+      "ActiveLambda": "201",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "24"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-15",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "19",
+      "ActiveLambda": "202",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "25"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-16",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "19",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "21"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "26"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-17",
+    "compute": {
+      "RunningEC2": "15",
+      "StoppedEC2": "19",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "27"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-18",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "19",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "51",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-19",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "19",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "89",
+      "EBS": "51",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-20",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "19",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "89",
+      "EBS": "51",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-21",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "19",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "89",
+      "EBS": "51",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-22",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "19",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "89",
+      "EBS": "51",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-23",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "19",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "89",
+      "EBS": "52",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "4",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-24",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "19",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "0",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "89",
+      "EBS": "53",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-25",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "19",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "19",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "89",
+      "EBS": "54",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-26",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "19",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "19",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "99",
+      "EBS": "55",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "12",
+      "Routes": "65",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-27",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "19",
+      "ActiveLambda": "204",
+      "RunningFargateTasks": "19",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "99",
+      "EBS": "56",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "65",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-28",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "19",
+      "ActiveLambda": "205",
+      "RunningFargateTasks": "19",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "99",
+      "EBS": "57",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-29",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "19",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "19",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "99",
+      "EBS": "58",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-30",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "19",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "19",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "99",
+      "EBS": "59",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-05-31",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "17",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "19",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "99",
+      "EBS": "60",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-01",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "17",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "19",
+      "RunningECSTasks": "18"
+    },
+    "storage": {
+      "Buckets": "100",
+      "EBS": "61",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-02",
+    "compute": {
+      "RunningEC2": "26",
+      "StoppedEC2": "17",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "19",
+      "RunningECSTasks": "17"
+    },
+    "storage": {
+      "Buckets": "101",
+      "EBS": "62",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-03",
+    "compute": {
+      "RunningEC2": "26",
+      "StoppedEC2": "17",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "19",
+      "RunningECSTasks": "17"
+    },
+    "storage": {
+      "Buckets": "102",
+      "EBS": "63",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-04",
+    "compute": {
+      "RunningEC2": "26",
+      "StoppedEC2": "17",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "19",
+      "RunningECSTasks": "17"
+    },
+    "storage": {
+      "Buckets": "103",
+      "EBS": "64",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-05",
+    "compute": {
+      "RunningEC2": "26",
+      "StoppedEC2": "17",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "19",
+      "RunningECSTasks": "17"
+    },
+    "storage": {
+      "Buckets": "104",
+      "EBS": "57",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-06",
+    "compute": {
+      "RunningEC2": "26",
+      "StoppedEC2": "17",
+      "ActiveLambda": "203",
+      "RunningFargateTasks": "20",
+      "RunningECSTasks": "17"
+    },
+    "storage": {
+      "Buckets": "105",
+      "EBS": "57",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-07",
+    "compute": {
+      "RunningEC2": "26",
+      "StoppedEC2": "17",
+      "ActiveLambda": "204",
+      "RunningFargateTasks": "21",
+      "RunningECSTasks": "17"
+    },
+    "storage": {
+      "Buckets": "106",
+      "EBS": "57",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-08",
+    "compute": {
+      "RunningEC2": "26",
+      "StoppedEC2": "17",
+      "ActiveLambda": "205",
+      "RunningFargateTasks": "22",
+      "RunningECSTasks": "17"
+    },
+    "storage": {
+      "Buckets": "107",
+      "EBS": "57",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-09",
+    "compute": {
+      "RunningEC2": "26",
+      "StoppedEC2": "17",
+      "ActiveLambda": "206",
+      "RunningFargateTasks": "23",
+      "RunningECSTasks": "17"
+    },
+    "storage": {
+      "Buckets": "108",
+      "EBS": "57",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-10",
+    "compute": {
+      "RunningEC2": "26",
+      "StoppedEC2": "17",
+      "ActiveLambda": "207",
+      "RunningFargateTasks": "24",
+      "RunningECSTasks": "86"
+    },
+    "storage": {
+      "Buckets": "109",
+      "EBS": "57",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-11",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "17",
+      "ActiveLambda": "208",
+      "RunningFargateTasks": "25",
+      "RunningECSTasks": "86"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "12",
+      "Subnets": "48",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-12",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "17",
+      "ActiveLambda": "209",
+      "RunningFargateTasks": "26",
+      "RunningECSTasks": "86"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "28"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-13",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "17",
+      "ActiveLambda": "210",
+      "RunningFargateTasks": "27",
+      "RunningECSTasks": "86"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-14",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "17",
+      "ActiveLambda": "211",
+      "RunningFargateTasks": "28",
+      "RunningECSTasks": "86"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-15",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "24",
+      "ActiveLambda": "212",
+      "RunningFargateTasks": "29",
+      "RunningECSTasks": "86"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-16",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "24",
+      "ActiveLambda": "213",
+      "RunningFargateTasks": "30",
+      "RunningECSTasks": "86"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-17",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "24",
+      "ActiveLambda": "213",
+      "RunningFargateTasks": "31",
+      "RunningECSTasks": "86"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-18",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "24",
+      "ActiveLambda": "213",
+      "RunningFargateTasks": "32",
+      "RunningECSTasks": "86"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "10",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "85",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-19",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "24",
+      "ActiveLambda": "213",
+      "RunningFargateTasks": "32",
+      "RunningECSTasks": "62"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-20",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "24",
+      "ActiveLambda": "213",
+      "RunningFargateTasks": "32",
+      "RunningECSTasks": "62"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-21",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "24",
+      "ActiveLambda": "213",
+      "RunningFargateTasks": "32",
+      "RunningECSTasks": "62"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-22",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "24",
+      "ActiveLambda": "213",
+      "RunningFargateTasks": "32",
+      "RunningECSTasks": "62"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-23",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "24",
+      "ActiveLambda": "206",
+      "RunningFargateTasks": "32",
+      "RunningECSTasks": "62"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-24",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "24",
+      "ActiveLambda": "206",
+      "RunningFargateTasks": "32",
+      "RunningECSTasks": "62"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "178",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-25",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "24",
+      "ActiveLambda": "206",
+      "RunningFargateTasks": "32",
+      "RunningECSTasks": "62"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-26",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "24",
+      "ActiveLambda": "206",
+      "RunningFargateTasks": "33",
+      "RunningECSTasks": "62"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-27",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "24",
+      "ActiveLambda": "206",
+      "RunningFargateTasks": "34",
+      "RunningECSTasks": "62"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-28",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "24",
+      "ActiveLambda": "206",
+      "RunningFargateTasks": "35",
+      "RunningECSTasks": "62"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-29",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "207",
+      "RunningFargateTasks": "36",
+      "RunningECSTasks": "62"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-06-30",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "208",
+      "RunningFargateTasks": "37",
+      "RunningECSTasks": "62"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-01",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "209",
+      "RunningFargateTasks": "37",
+      "RunningECSTasks": "62"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-02",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "210",
+      "RunningFargateTasks": "37",
+      "RunningECSTasks": "62"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-03",
+    "compute": {
+      "RunningEC2": "21",
+      "StoppedEC2": "31",
+      "ActiveLambda": "211",
+      "RunningFargateTasks": "37",
+      "RunningECSTasks": "53"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-04",
+    "compute": {
+      "RunningEC2": "14",
+      "StoppedEC2": "31",
+      "ActiveLambda": "211",
+      "RunningFargateTasks": "37",
+      "RunningECSTasks": "53"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-05",
+    "compute": {
+      "RunningEC2": "14",
+      "StoppedEC2": "31",
+      "ActiveLambda": "211",
+      "RunningFargateTasks": "37",
+      "RunningECSTasks": "53"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-06",
+    "compute": {
+      "RunningEC2": "14",
+      "StoppedEC2": "31",
+      "ActiveLambda": "211",
+      "RunningFargateTasks": "37",
+      "RunningECSTasks": "53"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-07",
+    "compute": {
+      "RunningEC2": "14",
+      "StoppedEC2": "27",
+      "ActiveLambda": "211",
+      "RunningFargateTasks": "38",
+      "RunningECSTasks": "53"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-08",
+    "compute": {
+      "RunningEC2": "14",
+      "StoppedEC2": "27",
+      "ActiveLambda": "211",
+      "RunningFargateTasks": "39",
+      "RunningECSTasks": "53"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "8",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "4",
+      "DirectConnects": "2"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-09",
+    "compute": {
+      "RunningEC2": "14",
+      "StoppedEC2": "27",
+      "ActiveLambda": "212",
+      "RunningFargateTasks": "40",
+      "RunningECSTasks": "53"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-10",
+    "compute": {
+      "RunningEC2": "14",
+      "StoppedEC2": "27",
+      "ActiveLambda": "213",
+      "RunningFargateTasks": "41",
+      "RunningECSTasks": "41"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-11",
+    "compute": {
+      "RunningEC2": "14",
+      "StoppedEC2": "27",
+      "ActiveLambda": "214",
+      "RunningFargateTasks": "42",
+      "RunningECSTasks": "41"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "0",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-12",
+    "compute": {
+      "RunningEC2": "14",
+      "StoppedEC2": "27",
+      "ActiveLambda": "215",
+      "RunningFargateTasks": "43",
+      "RunningECSTasks": "41"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-13",
+    "compute": {
+      "RunningEC2": "14",
+      "StoppedEC2": "27",
+      "ActiveLambda": "216",
+      "RunningFargateTasks": "44",
+      "RunningECSTasks": "41"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-14",
+    "compute": {
+      "RunningEC2": "14",
+      "StoppedEC2": "27",
+      "ActiveLambda": "217",
+      "RunningFargateTasks": "45",
+      "RunningECSTasks": "41"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-15",
+    "compute": {
+      "RunningEC2": "14",
+      "StoppedEC2": "27",
+      "ActiveLambda": "218",
+      "RunningFargateTasks": "46",
+      "RunningECSTasks": "41"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-16",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "27",
+      "ActiveLambda": "219",
+      "RunningFargateTasks": "47",
+      "RunningECSTasks": "41"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-17",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "27",
+      "ActiveLambda": "220",
+      "RunningFargateTasks": "48",
+      "RunningECSTasks": "41"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-18",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "24",
+      "ActiveLambda": "221",
+      "RunningFargateTasks": "49",
+      "RunningECSTasks": "41"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-19",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "24",
+      "ActiveLambda": "222",
+      "RunningFargateTasks": "50",
+      "RunningECSTasks": "41"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "98"
+    }
+  },
+  {
+    "date": "2024-07-20",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "24",
+      "ActiveLambda": "222",
+      "RunningFargateTasks": "51",
+      "RunningECSTasks": "27"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "87"
+    }
+  },
+  {
+    "date": "2024-07-21",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "24",
+      "ActiveLambda": "222",
+      "RunningFargateTasks": "52",
+      "RunningECSTasks": "27"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "87"
+    }
+  },
+  {
+    "date": "2024-07-22",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "24",
+      "ActiveLambda": "223",
+      "RunningFargateTasks": "53",
+      "RunningECSTasks": "27"
+    },
+    "storage": {
+      "Buckets": "110",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "87"
+    }
+  },
+  {
+    "date": "2024-07-23",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "24",
+      "ActiveLambda": "224",
+      "RunningFargateTasks": "54",
+      "RunningECSTasks": "27"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "87"
+    }
+  },
+  {
+    "date": "2024-07-24",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "24",
+      "ActiveLambda": "225",
+      "RunningFargateTasks": "55",
+      "RunningECSTasks": "27"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "78",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "87"
+    }
+  },
+  {
+    "date": "2024-07-25",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "24",
+      "ActiveLambda": "226",
+      "RunningFargateTasks": "56",
+      "RunningECSTasks": "27"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "13",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "90",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "87"
+    }
+  },
+  {
+    "date": "2024-07-26",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "24",
+      "ActiveLambda": "227",
+      "RunningFargateTasks": "57",
+      "RunningECSTasks": "27"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "90",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "87"
+    }
+  },
+  {
+    "date": "2024-07-27",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "24",
+      "ActiveLambda": "228",
+      "RunningFargateTasks": "57",
+      "RunningECSTasks": "27"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "78",
+      "NATGateways": "2",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "90",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "87"
+    }
+  },
+  {
+    "date": "2024-07-28",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "24",
+      "ActiveLambda": "229",
+      "RunningFargateTasks": "57",
+      "RunningECSTasks": "11"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "78",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "90",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "87"
+    }
+  },
+  {
+    "date": "2024-07-29",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "24",
+      "ActiveLambda": "229",
+      "RunningFargateTasks": "57",
+      "RunningECSTasks": "11"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "78",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "90",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "87"
+    }
+  },
+  {
+    "date": "2024-07-30",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "24",
+      "ActiveLambda": "229",
+      "RunningFargateTasks": "57",
+      "RunningECSTasks": "11"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "78",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "90",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "87"
+    }
+  },
+  {
+    "date": "2024-07-31",
+    "compute": {
+      "RunningEC2": "11",
+      "StoppedEC2": "24",
+      "ActiveLambda": "229",
+      "RunningFargateTasks": "57",
+      "RunningECSTasks": "11"
+    },
+    "storage": {
+      "Buckets": "115",
+      "EBS": "57",
+      "Glacier": "31"
+    },
+    "network": {
+      "VPCs": "10",
+      "Subnets": "40",
+      "EIPs": "11",
+      "Routes": "78",
+      "NATGateways": "6",
+      "InternetGateways": "6",
+      "VPCPeerings": "6",
+      "DirectConnects": "4"
+    },
+    "security": {
+      "IAMUsers": "90",
+      "IAMGroups": "12",
+      "IAMRoles": "211",
+      "IAMPolicies": "62",
+      "AccessKeys": "87"
+    }
+  }
+]

@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export const userSlice = createSlice({
   name: 'login',
-  initialState: { value: { email: '', password: '' } },
+  // TODO: 임시 로그인 정보
+  initialState: { value: { email: 'admin@iampam.io', password: 'dkdldpavka1@#' } },
   reducers: {
     login: (state, action) => {
       state.value = action.payload;

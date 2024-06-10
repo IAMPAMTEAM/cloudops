@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
-import './NetworkTopology.css';
+import '@/assets/css/NetworkTopology.css';
 
 interface Node {
   id: string;
@@ -124,6 +124,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
 
     subnetFilter();
   }, [selectedVpc, vpcFilteredList]);
+  console.log(fromSubnetFilteredList);
 
   useEffect(() => {
     const subnetFilter = async () => {
@@ -201,8 +202,6 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
   const handleSelectedToSubnet = (event) => {
     setSelectedToSubnet(event.target.value);
     onToSubnetChange(event.target.value);
-
-    // filteredData(toSubnetFilteredList)
     filteredData(toSubnetFilteredList[0]['subnetInfo']);
   };
 
@@ -282,7 +281,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .attr('x', (width - topBoxWidth) / 2 + 10)
         .attr('y', 90)
         .attr('fill', 'black')
-        .text(selectedFromSubnet)
+        .text(`${selectedFromSubnet} (from)`)
         .style('font-size', '1.4rem')
         .style('font-weight', 'bold');
 
@@ -309,7 +308,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .attr('x', (width - bottomBoxWidth) / 2 + 10)
         .attr('y', height - boxHeight / 2.5)
         .attr('fill', 'black')
-        .text(selectedToSubnet)
+        .text(`${selectedToSubnet} (to)`)
         .style('font-size', '1.4rem')
         .style('font-weight', 'bold');
 
@@ -344,8 +343,8 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .enter()
         .append('line')
         .attr('class', 'link animated-link')
-        .attr('stroke', '#333')
-        .attr('stroke-width', 2)
+        .attr('stroke', '#999')
+        .attr('stroke-width', 1)
         .attr('marker-end', 'url(#arrowhead)');
 
       // const node = svg

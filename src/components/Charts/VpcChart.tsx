@@ -8,7 +8,6 @@ function VpcChart({ fromVpc, toVpc }: { fromVpc: string; toVpc: string }) {
   if (!vpcPacketInfo || !vpcByteInfo) {
     return;
   }
-  console.log(fromVpc, toVpc);
   return (
     <>
       <div id='chart'>

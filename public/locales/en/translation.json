@@ -1,6 +1,7 @@
 {
   "dashboard": "Dashboard",
-  "dashboardOverview": "Dashboard Overview",
+  "dashboardOverview": "Dashboard",
+  "dashboardSummary": "Summary",
   "topology": "Topology",
   "approval": "Approval",
   "iamWorkflow": "IAM Workflow",
@@ -16,8 +17,11 @@
   "usersDevops": "DevOps",
   "usersApp": "App",
   "usersSaaS": "SaaS",
+  "network": "Network",
   "networkFlowSubnet": "Subnet Flow",
   "networkFlowVpc": "VPC Flow",
+  "networkFlowInternalElb": "Internal ELB Flow",
+  "networkFlowInternetElb": "Internet ELB Flow",
   "assetsServerAWS": "Server AWS",
   "assetsServerOnpremise": "Server Onpremise",
   "assetsServerAccessControl": "Server Access Control",
@@ -164,8 +168,15 @@
   "contact_us_boxed": "Contact Us Boxed",
   "contact_us_cover": "Contact Us Cover",
   "governance": "Governance",
-  "securitygroup": "Security Group",
+  "securitygroup": "Policy",
   "resources": "Resources",
   "cost": "Cost",
-  "networkflow": "Network Flow"
+  "costRegion": "Cost Region",
+  "costService": "Cost Service",
+  "costAccount": "Cost Account",
+  "networkflow": "Network Flow",
+  "credentials": "Credentials",
+  "monitor": "Monitor",
+  "log": "Log",
+  "chatbot": "AI Chatbot"
 }

@@ -6,6 +6,7 @@ import { toggleSidebar } from '../../store/themeConfigSlice';
 import AnimateHeight from 'react-animate-height';
 import { IRootState } from '../../store';
 import { useState, useEffect } from 'react';
+import IconUser from '../Icon/IconUser';
 import IconCaretsDown from '../Icon/IconCaretsDown';
 import IconCaretDown from '../Icon/IconCaretDown';
 import IconMenuUsers from '../Icon/Menu/IconMenuUsers';
@@ -14,13 +15,20 @@ import IconBarChart from '../Icon/IconBarChart';
 import IconLock from '../Icon/IconLock';
 import IconNotes from '../Icon/IconNotes';
 import IconChartSquare from '../Icon/IconChartSquare';
+import IconMenuDashboard from '../Icon/Menu/IconMenuDashboard';
+import IconMenuApps from '../Icon/Menu/IconMenuApps';
+import IconVideo from '../Icon/IconVideo';
+import IconLink from '../Icon/IconLink';
+import IconCreditCard from '../Icon/IconCreditCard';
+import IconListCheck from '../Icon/IconListCheck';
+import IconTrendingUp from '../Icon/IconTrendingUp';
+import IconChatNotification from '../Icon/IconChatNotification';
+import IconInfoHexagon from '../Icon/IconInfoHexagon';
 import LogoHybrix from '@/assets/icons/LogoHybrix.svg';
 
 const Sidebar = () => {
   const [currentMenu, setCurrentMenu] = useState<string>('');
-  const [errorSubMenu, setErrorSubMenu] = useState(false);
   const themeConfig = useSelector((state: IRootState) => state.themeConfig);
-  const semidark = useSelector((state: IRootState) => state.themeConfig.semidark);
   const location = useLocation();
   const dispatch = useDispatch();
   const { t } = useTranslation();
@@ -39,7 +47,6 @@ const Sidebar = () => {
         let ele: any = ul.closest('li.menu').querySelectorAll('.nav-link') || [];
         if (ele.length) {
           ele = ele[0];
-          console.log(ele);
           setTimeout(() => {
             ele.click();
           });
@@ -52,7 +59,6 @@ const Sidebar = () => {
     if (window.innerWidth < 1024 && themeConfig.sidebar) {
       dispatch(toggleSidebar());
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
 
   return (
@@ -76,19 +82,49 @@ const Sidebar = () => {
           <PerfectScrollbar className='h-[calc(100vh-80px)] relative'>
             <ul className='relative font-semibold space-y-0.5 p-4 py-0'>
               <li className='menu nav-item'>
-                <NavLink to='/governance' className='group'>
+                <NavLink to='/dashboard-overview' className='group'>
                   <div className='flex items-center'>
-                    <IconMenuUsers className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('governance')}</span>
+                    <IconMenuDashboard className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('dashboardOverview')}</span>
                   </div>
                 </NavLink>
               </li>
 
               <li className='menu nav-item'>
-                <NavLink to='/dashboard-overview' className='group'>
+                <NavLink to='/dashboard-summary' className='group'>
+                  <div className='flex items-center'>
+                    <IconMenuApps className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('dashboardSummary')}</span>
+                  </div>
+                </NavLink>
+              </li>
+
+              <li className='menu nav-item'>
+                <button type='button' className={`${currentMenu === 'network' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('network')}>
+                  <div className='flex items-center'>
+                    <IconLink className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('network')}</span>
+                  </div>
+
+                  <div className={currentMenu !== 'network' ? 'rtl:rotate-90 -rotate-90' : ''}>
+                    <IconCaretDown />
+                  </div>
+                </button>
+
+                <AnimateHeight duration={300} height={currentMenu === 'network' ? 'auto' : 0}>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/'>{t('network')}</NavLink>
+                    </li>
+                  </ul>
+                </AnimateHeight>
+              </li>
+
+              <li className='menu nav-item'>
+                <NavLink to='/governance' className='group'>
                   <div className='flex items-center'>
                     <IconMenuUsers className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('dashboardOverview')}</span>
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('governance')}</span>
                   </div>
                 </NavLink>
               </li>
@@ -103,12 +139,34 @@ const Sidebar = () => {
               </li>
 
               <li className='menu nav-item'>
-                <NavLink to='/cost' className='group'>
+                <button type='button' className={`${currentMenu === 'cost' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('cost')}>
                   <div className='flex items-center'>
                     <IconCashBanknotes className='group-hover:!text-primary shrink-0' />
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('cost')}</span>
                   </div>
-                </NavLink>
+
+                  <div className={currentMenu !== 'cost' ? 'rtl:rotate-90 -rotate-90' : ''}>
+                    <IconCaretDown />
+                  </div>
+                </button>
+
+                <AnimateHeight duration={300} height={currentMenu === 'cost' ? 'auto' : 0}>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/cost/region'>{t('costRegion')}</NavLink>
+                    </li>
+                  </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/cost/service'>{t('costService')}</NavLink>
+                    </li>
+                  </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/cost/account'>{t('costAccount')}</NavLink>
+                    </li>
+                  </ul>
+                </AnimateHeight>
               </li>
 
               <li className='menu nav-item'>
@@ -170,6 +228,16 @@ const Sidebar = () => {
                       <NavLink to='/network-flow/vpc'>{t('networkFlowVpc')}</NavLink>
                     </li>
                   </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/network-flow/internal-elb'>{t('networkFlowInternalElb')}</NavLink>
+                    </li>
+                  </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/network-flow/internet-elb'>{t('networkFlowInternetElb')}</NavLink>
+                    </li>
+                  </ul>
                 </AnimateHeight>
               </li>
 
@@ -183,10 +251,68 @@ const Sidebar = () => {
               </li>
 
               <li className='menu nav-item'>
+                <NavLink to='/sg' className='group'>
+                  <div className='flex items-center'>
+                    <IconCreditCard className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('credentials')}</span>
+                  </div>
+                </NavLink>
+              </li>
+
+              <li className='menu nav-item'>
                 <NavLink to='/event-viewer' className='group'>
                   <div className='flex items-center'>
-                    <IconMenuUsers className='group-hover:!text-primary shrink-0' />
+                    <IconVideo className='group-hover:!text-primary shrink-0' />
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('EventViewer')}</span>
+                  </div>
+                </NavLink>
+              </li>
+
+              {/* compliance */}
+              <li className='menu nav-item'>
+                <NavLink to='/event-viewer' className='group'>
+                  <div className='flex items-center'>
+                    <IconListCheck className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('compliance')}</span>
+                  </div>
+                </NavLink>
+              </li>
+
+              {/* monitor */}
+              <li className='menu nav-item'>
+                <NavLink to='/event-viewer' className='group'>
+                  <div className='flex items-center'>
+                    <IconTrendingUp className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('monitor')}</span>
+                  </div>
+                </NavLink>
+              </li>
+
+              {/* log */}
+              <li className='menu nav-item'>
+                <NavLink to='/event-viewer' className='group'>
+                  <div className='flex items-center'>
+                    <IconInfoHexagon className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('log')}</span>
+                  </div>
+                </NavLink>
+              </li>
+
+              {/* chatbot */}
+              <li className='menu nav-item'>
+                <NavLink to='/event-viewer' className='group'>
+                  <div className='flex items-center'>
+                    <IconChatNotification className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('chatbot')}</span>
+                  </div>
+                </NavLink>
+              </li>
+
+              <li className='menu nav-item'>
+                <NavLink to='/admin' className='group'>
+                  <div className='flex items-center'>
+                    <IconUser className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('admin')}</span>
                   </div>
                 </NavLink>
               </li>

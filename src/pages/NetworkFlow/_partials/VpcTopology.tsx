@@ -4,8 +4,8 @@ import './NetworkTopology.css';
 
 interface Node {
   id: string;
-  group: string;
-  img: string;
+  group: string; // "top" or "bottom"
+  img: string; // Image path
 }
 
 interface Link {
@@ -19,10 +19,10 @@ interface NetworkData {
 }
 
 interface Subnet {
-  fromVPC: string;
   fromSubnet: string;
-  toVPC: string;
+  fromEc2: string;
   toSubnet: string;
+  toEc2: string;
   packets: number;
   bytes: number;
 }
@@ -30,14 +30,16 @@ interface Subnet {
 const VPCTopology: React.FC = () => {
   const [data, setData] = useState<NetworkData>({ nodes: [], links: [] });
   const [fetchData, setFetchData] = useState<Subnet[]>([]);
-  const [vpcCnt, setVPCCnt] = useState(0);
-
-  const [selectedFromVPC, setSelectedFromVPC] = useState('');
-  const [selectedToVPC, setSelectedToVPC] = useState('');
+  const [subnetCnt, setSubnetCnt] = useState(0);
 
   const [vpcFilteredList, setVpcFilteredList] = useState([]);
+  const [subnetFilteredList, setSubnetFilteredList] = useState([]);
+
   const [fromSubnetFilteredList, setFromSubnetFilteredList] = useState([]);
   const [toSubnetFilteredList, setToSubnetFilteredList] = useState([]);
+  const [vpcList, setVpcList] = useState<[]>([]);
+  const [fromSubnetList, setFromSubnetList] = useState<[]>([]);
+  const [toSubnetList, setToSubnetList] = useState<[]>([]);
 
   const [isSelectedVpc, setIsSelectedVpc] = useState(false);
   const [isSelectedFromSubnet, setIsSelectedFromSubnet] = useState(false);
@@ -46,69 +48,185 @@ const VPCTopology: React.FC = () => {
   const [selectedFromSubnet, setSelectedFromSubnet] = useState('');
   const [selectedToSubnet, setSelectedToSubnet] = useState('');
 
-  const d3Container = useRef<SVGSVGElement | null>(null);
-
   useEffect(() => {
-    fetch('https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/subnetToSubnet.json')
+    fetch('https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/ec2ToEc2BeforeUpdate.json')
       .then(async (res) => await res.json())
       .then((data) => {
-        if (data.length && vpcCnt < 1) {
+        if (data.length && subnetCnt < 1) {
           setFetchData(data);
-          setVPCCnt((prev) => prev + 1);
+          setSubnetCnt((prev) => prev + 1);
         }
       })
       .catch((err) => console.error(err));
-  }, [vpcCnt]);
-
-  // TODO: Logic
-  /**
-   * 1. fromVPC 목록들 가져와서 x.x.0.0으로 fromVPC 기준 목록 만들기
-   * 2. 위에서 filter한 데이터를 기반으로 같은방식의 toVPC 목록 만들기
-   * 3. 여기서부터는 subnet에서 했던 방식대로 subnet 목록 만들기
-   */
-
-  // filtering from fetch Data
-  const [fromVpcFilteredList, setFromVpcFilteredList] = useState([]);
-  const [toVpcFilteredList, setToVpcFilteredList] = useState([]);
-
-  // Select - option list
-  const [fromVpcList, setFromVpcList] = useState([]);
-  const [toVpcList, setToVpcList] = useState([]);
-
-  const [isSelectedFromVpc, setIsSelectedFromVpc] = useState(false);
-
-  const [selectedFromVpc, setSelectedFromVpc] = useState('');
-  const [selectedToVpc, setSelectedToVpc] = useState('');
+  }, [subnetCnt]);
 
   useEffect(() => {
-    const fromVpcFilter = async () => {
+    const vpcFilter = async () => {
       const groupedData = fetchData.reduce((acc, item) => {
-        const { fromVPC } = item;
-        if (!acc[fromVPC]) {
-          acc[fromVPC] = {
-            ...item,
+        const { fromSubnet } = item;
+        const vpc = fromSubnet.slice(0, fromSubnet.lastIndexOf('.') - 1) + '0.0';
+        if (!acc[vpc]) {
+          acc[vpc] = {
+            vpc,
+            subnetInfo: [],
           };
         }
-        acc[fromVPC] = { ...item };
+        acc[vpc].subnetInfo.push(item);
         return acc;
       }, {});
 
-      // setFromVpcFilteredList(Object.values(groupedData));
+      setVpcFilteredList(Object.values(groupedData));
     };
 
-    fromVpcFilter();
-  }, [fromVpcFilteredList]);
+    vpcFilter();
+  }, [fetchData]);
 
   useEffect(() => {
-    const toVpcFilter = async () => {
-      const groupedData = fromVpcFilteredList.reduce((acc, item) => {
-        // TODO: 여기서 무한루프가 도는 이유를 찾아야함
-        return acc;
-      }, {});
-    };
-  });
+    const uniqueVpcSet = new Set<string>();
+    const uniqueVpcList: string[] = [];
 
-  // console.log(fromVpcFilteredList);
+    vpcFilteredList.forEach((vpcItem: { vpc: string }) => {
+      if (!uniqueVpcSet.has(vpcItem.vpc)) {
+        uniqueVpcSet.add(vpcItem.vpc);
+        uniqueVpcList.push(vpcItem.vpc);
+      }
+    });
+    // @ts-ignore
+    setVpcList(uniqueVpcList);
+  }, [vpcFilteredList]);
+
+  useEffect(() => {
+    const subnetFilter = async () => {
+      vpcFilteredList.forEach((vpcItem: { vpc: string; subnetInfo: [] }) => {
+        if (vpcItem.vpc === selectedVpc) {
+          const data = vpcItem.subnetInfo;
+          const groupedData = data.reduce((acc, item) => {
+            const { fromSubnet } = item;
+            // @ts-ignore
+            if (selectedVpc.slice(0, selectedVpc.lastIndexOf('.') - 1) === fromSubnet.slice(0, fromSubnet.lastIndexOf('.') - 1)) {
+              if (!acc[fromSubnet]) {
+                // @ts-ignore
+                acc[fromSubnet] = {
+                  fromSubnet,
+                  subnetInfo: [],
+                };
+              }
+              // @ts-ignore
+              acc[fromSubnet].subnetInfo.push(item);
+            }
+            return acc;
+          }, {});
+          setFromSubnetFilteredList(Object.values(groupedData));
+        }
+      });
+    };
+
+    subnetFilter();
+  }, [selectedVpc, vpcFilteredList]);
+
+  useEffect(() => {
+    const subnetFilter = async () => {
+      fromSubnetFilteredList.forEach((subnetItem: { fromSubnet: string; subnetInfo: [] }) => {
+        if (subnetItem.fromSubnet === selectedFromSubnet) {
+          const data = subnetItem.subnetInfo;
+          const groupedData = data.reduce((acc, item) => {
+            const { toSubnet } = item;
+
+            if (selectedFromSubnet.slice(0, selectedFromSubnet.lastIndexOf('.') - 1) === toSubnet.slice(0, toSubnet.lastIndexOf('.') - 1) && selectedFromSubnet !== toSubnet) {
+              if (!acc[toSubnet]) {
+                acc[toSubnet] = {
+                  fromSubnet: selectedFromSubnet,
+                  toSubnet,
+                  subnetInfo: [],
+                };
+              }
+              acc[toSubnet].subnetInfo.push(item);
+            }
+            return acc;
+          }, {});
+          setToSubnetFilteredList(Object.values(groupedData));
+        }
+      });
+    };
+
+    subnetFilter();
+  }, [selectedFromSubnet, fromSubnetFilteredList]);
+
+  useEffect(() => {
+    const uniqueFromSubnetSet = new Set<string>();
+    const uniqueFromSubnetList: string[] = [];
+
+    fromSubnetFilteredList.forEach((subnetItem: { fromSubnet: string }) => {
+      if (!uniqueFromSubnetSet.has(subnetItem.fromSubnet)) {
+        uniqueFromSubnetSet.add(subnetItem.fromSubnet);
+        uniqueFromSubnetList.push(subnetItem.fromSubnet);
+      }
+    });
+
+    setFromSubnetList(uniqueFromSubnetList);
+  }, [fromSubnetFilteredList]);
+
+  useEffect(() => {
+    const uniqueToSubnetSet = new Set<string>();
+    const uniqueToSubnetList: string[] = [];
+
+    toSubnetFilteredList.forEach((subnetItem: { toSubnet: string }) => {
+      if (!uniqueToSubnetSet.has(subnetItem.toSubnet)) {
+        uniqueToSubnetSet.add(subnetItem.toSubnet);
+        uniqueToSubnetList.push(subnetItem.toSubnet);
+      }
+    });
+
+    setToSubnetList(uniqueToSubnetList);
+  }, [toSubnetFilteredList]);
+
+  const handleSelectVpc = (event) => {
+    setSelectedVpc(event.target.value);
+    setIsSelectedVpc(true);
+    onVpcChange(event.target.value);
+  };
+
+  const handleSelectedFromSubnet = (event) => {
+    setSelectedFromSubnet(event.target.value);
+    setIsSelectedFromSubnet(true);
+    onFromSubnetChange(event.target.value);
+  };
+
+  const handleSelectedToSubnet = (event) => {
+    setSelectedToSubnet(event.target.value);
+    onToSubnetChange(event.target.value);
+  };
+
+  useEffect(() => {
+    const filteredData = toSubnetFilteredList.find((subnetItem: { toSubnet: string; subnetInfo: [] }) => {
+      return subnetItem.toSubnet === selectedToSubnet;
+    });
+
+    if (filteredData) {
+      const { subnetInfo }: { vpc: string; subnetInfo: any[] } = filteredData;
+      subnetInfo.forEach((data) => {
+        const fromEc2 = data.fromEc2;
+        const toEc2 = data.toEc2;
+
+        setData((prev) => {
+          const nodes = [...prev.nodes];
+          const links = [...prev.links];
+
+          if (!nodes.find((node) => node.id === fromEc2)) {
+            nodes.push({ id: fromEc2, group: 'top', img: 'https://icons.terrastruct.com/aws%2FCompute%2F_Instance%2FAmazon-EC2_Instance_light-bg.svg' });
+          }
+
+          if (!nodes.find((node) => node.id === toEc2)) {
+            nodes.push({ id: toEc2, group: 'bottom', img: 'https://icons.terrastruct.com/aws%2FCompute%2F_Instance%2FAmazon-EC2_Instance_light-bg.svg' });
+          }
+
+          links.push({ source: fromEc2, target: toEc2 });
+
+          return { nodes, links };
+        });
+      });
+    }
+  }, [selectedToSubnet, toSubnetFilteredList]);
 
   useEffect(() => {
     if (d3Container.current && data.nodes.length && data.links.length && selectedToSubnet) {
