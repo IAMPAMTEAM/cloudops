@@ -30,7 +30,7 @@ const PolicyDevops = lazy(() => import('@/pages/Policy/PolicyDevops'));
 const PolicyApp = lazy(() => import('@/pages/Policy/PolicyApp'));
 const PolicySaaS = lazy(() => import('@/pages/Policy/PolicySaaS'));
 
-const Compliance = lazy(() => import('@/pages/Compliance'));
+// const Compliance = lazy(() => import('@/pages/Compliance'));
 
 const WorkflowMain = lazy(() => import('@/pages/Workflow/WorkflowMain'));
 
@@ -47,6 +47,13 @@ const CostRegion = lazy(() => import('@/pages/Cost/CostRegion/CostRegion'));
 
 const DashboardOverview = lazy(() => import('@/pages/DashboardOverview/DashboardOverviewContainer'));
 const DashboardSummary = lazy(() => import('@/pages/DashboardSummary/DashboardSummaryContainer'));
+
+const Credentials = lazy(() => import('@/pages/Credentials/CredentialsContainer'));
+const Compliance = lazy(() => import('@/pages/Compliance/ComplianceContainer'));
+const Monitor = lazy(() => import('@/pages/Monitor/MonitorContainer'));
+const Log = lazy(() => import('@/pages/Log/LogContainer'));
+const Chatbot = lazy(() => import('@/pages/Chatbot/ChatbotContainer'));
+const Admin = lazy(() => import('@/pages/Admin/AdminContainer'));
 
 const routes = [
   {
@@ -255,6 +262,31 @@ const routes = [
     path: '/event-viewer',
     layout: 'default',
     element: <EventViewer />,
+  },
+  {
+    path: '/monitor',
+    layout: 'default',
+    element: <Monitor />,
+  },
+  {
+    path: '/credentials',
+    layout: 'default',
+    element: <Credentials />,
+  },
+  {
+    path: '/log',
+    layout: 'default',
+    element: <Log />,
+  },
+  {
+    path: '/chatbot',
+    layout: 'default',
+    element: <Chatbot />,
+  },
+  {
+    path: '/admin',
+    layout: 'default',
+    element: <Admin />,
   },
 ];
 
