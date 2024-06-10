@@ -174,5 +174,9 @@
   "costRegion": "Cost Region",
   "costService": "Cost Service",
   "costAccount": "Cost Account",
-  "networkflow": "Network Flow"
+  "networkflow": "Network Flow",
+  "credentials": "Credentials",
+  "monitor": "Monitor",
+  "log": "Log",
+  "chatbot": "AI Chatbot"
 }

@@ -107,7 +107,7 @@ const EntryMenu = () => {
         <p className='text-6xl font-bold uppercase tracking-tighter text-[#fff]'>CloudOps Portal</p>
       </div>
 
-      <div className='flex m-[2.4rem] flex-wrap w-[1000px] relative'>
+      <div className='flex m-[2.4rem] flex-wrap w-[1000px] relative items-end'>
         {menuList.map((menu, idx) => {
           return (
             <div>
@@ -115,7 +115,7 @@ const EntryMenu = () => {
                 className='w-[12.5rem] flex flex-col items-center rounded hover:text-[#6667AB] hover:cursor-pointer p-8 fill-[#000] opacity-80 hover:opacity-100 hover:translate-y-[-8px] delay-50 duration-500'
                 onClick={() => navigateMenu(menu['path'] ?? '')}
               >
-                <img className='w-12 fill-[#000]' src={menu['logo']} alt={menu['menu']} />
+                <img className='w-[2rem] fill-[#000]' src={menu['logo']} alt={menu['menu']} />
                 <p className='font-extrabold uppercase text-[1rem] tracking-tighter mt-8 text-[#fff]  '>{menu['menu']}</p>
               </button>
             </div>

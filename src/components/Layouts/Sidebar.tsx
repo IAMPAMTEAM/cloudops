@@ -19,6 +19,11 @@ import IconMenuDashboard from '../Icon/Menu/IconMenuDashboard';
 import IconMenuApps from '../Icon/Menu/IconMenuApps';
 import IconVideo from '../Icon/IconVideo';
 import IconLink from '../Icon/IconLink';
+import IconCreditCard from '../Icon/IconCreditCard';
+import IconListCheck from '../Icon/IconListCheck';
+import IconTrendingUp from '../Icon/IconTrendingUp';
+import IconChatNotification from '../Icon/IconChatNotification';
+import IconInfoHexagon from '../Icon/IconInfoHexagon';
 import LogoHybrix from '@/assets/icons/LogoHybrix.svg';
 
 const Sidebar = () => {
@@ -246,6 +251,15 @@ const Sidebar = () => {
               </li>
 
               <li className='menu nav-item'>
+                <NavLink to='/sg' className='group'>
+                  <div className='flex items-center'>
+                    <IconCreditCard className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('credentials')}</span>
+                  </div>
+                </NavLink>
+              </li>
+
+              <li className='menu nav-item'>
                 <NavLink to='/event-viewer' className='group'>
                   <div className='flex items-center'>
                     <IconVideo className='group-hover:!text-primary shrink-0' />
@@ -254,11 +268,45 @@ const Sidebar = () => {
                 </NavLink>
               </li>
 
-              {/* credentials */}
-
               {/* compliance */}
+              <li className='menu nav-item'>
+                <NavLink to='/event-viewer' className='group'>
+                  <div className='flex items-center'>
+                    <IconListCheck className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('compliance')}</span>
+                  </div>
+                </NavLink>
+              </li>
 
-              {/*  */}
+              {/* monitor */}
+              <li className='menu nav-item'>
+                <NavLink to='/event-viewer' className='group'>
+                  <div className='flex items-center'>
+                    <IconTrendingUp className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('monitor')}</span>
+                  </div>
+                </NavLink>
+              </li>
+
+              {/* log */}
+              <li className='menu nav-item'>
+                <NavLink to='/event-viewer' className='group'>
+                  <div className='flex items-center'>
+                    <IconInfoHexagon className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('log')}</span>
+                  </div>
+                </NavLink>
+              </li>
+
+              {/* chatbot */}
+              <li className='menu nav-item'>
+                <NavLink to='/event-viewer' className='group'>
+                  <div className='flex items-center'>
+                    <IconChatNotification className='group-hover:!text-primary shrink-0' />
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('chatbot')}</span>
+                  </div>
+                </NavLink>
+              </li>
 
               <li className='menu nav-item'>
                 <NavLink to='/admin' className='group'>
