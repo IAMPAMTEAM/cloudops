@@ -5,7 +5,7 @@ export default (params: CustomCellRendererProps) => {
   if (params.value <= 5) {
     return <span className='bg-green-500 text-white flex justify-center items-center w-[34px] h-[34px] text-center px-2 py-2 mt-0.5 rounded-full'>{params.value}</span>;
   } else if (params.value <= 10) {
-    return <span className='bg-sky-500 text-white flex justify-center items-center w-[34px] h-[34px] text-center px-2 py-2 mt-0.5 rounded-full'>{params.value}</span>;
+    return <span className='bg-blue-500 text-white flex justify-center items-center w-[34px] h-[34px] text-center px-2 py-2 mt-0.5 rounded-full'>{params.value}</span>;
   } else {
     return <span className='bg-red-500 text-white flex justify-center items-center w-[34px] h-[34px] text-center px-2 py-2 mt-0.5 rounded-full'>{params.value}</span>;
   }
