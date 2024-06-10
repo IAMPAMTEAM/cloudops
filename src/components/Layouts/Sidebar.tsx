@@ -251,7 +251,7 @@ const Sidebar = () => {
               </li>
 
               <li className='menu nav-item'>
-                <NavLink to='/sg' className='group'>
+                <NavLink to='/credentials' className='group'>
                   <div className='flex items-center'>
                     <IconCreditCard className='group-hover:!text-primary shrink-0' />
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('credentials')}</span>
@@ -270,7 +270,7 @@ const Sidebar = () => {
 
               {/* compliance */}
               <li className='menu nav-item'>
-                <NavLink to='/event-viewer' className='group'>
+                <NavLink to='/compliance' className='group'>
                   <div className='flex items-center'>
                     <IconListCheck className='group-hover:!text-primary shrink-0' />
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('compliance')}</span>
@@ -280,7 +280,7 @@ const Sidebar = () => {
 
               {/* monitor */}
               <li className='menu nav-item'>
-                <NavLink to='/event-viewer' className='group'>
+                <NavLink to='/monitor' className='group'>
                   <div className='flex items-center'>
                     <IconTrendingUp className='group-hover:!text-primary shrink-0' />
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('monitor')}</span>
@@ -290,7 +290,7 @@ const Sidebar = () => {
 
               {/* log */}
               <li className='menu nav-item'>
-                <NavLink to='/event-viewer' className='group'>
+                <NavLink to='/log' className='group'>
                   <div className='flex items-center'>
                     <IconInfoHexagon className='group-hover:!text-primary shrink-0' />
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('log')}</span>
@@ -300,7 +300,7 @@ const Sidebar = () => {
 
               {/* chatbot */}
               <li className='menu nav-item'>
-                <NavLink to='/event-viewer' className='group'>
+                <NavLink to='/chatbot' className='group'>
                   <div className='flex items-center'>
                     <IconChatNotification className='group-hover:!text-primary shrink-0' />
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('chatbot')}</span>
