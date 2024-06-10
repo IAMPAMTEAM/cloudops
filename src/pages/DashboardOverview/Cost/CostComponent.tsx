@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { MultipleLineChart } from '@/components/Charts/_partials/MultipleLineChart';
-import { CostStats } from './CostStats';
+import { CostStats } from './_partials/CostStats';
 
 interface ServiceCost {
   date: string;
@@ -62,7 +62,7 @@ interface RegionCost {
 interface AccountCost {
   date: string;
   totalCost: number;
-  account: any;
+  account: {};
 }
 
 export const CostComponent = () => {
@@ -317,22 +317,55 @@ export const CostComponent = () => {
   }, [regionCostData]);
 
   useEffect(() => {
-    accountCostData.map((data: AccountCost) => {
-      // Object.keys(data.account): name
-      // Object.values(data.account): value
-      const key = Object.keys(data.account);
-      setAccountCostLineData([
-        // {
-        // name: Object.keys(data.account).map(d => d),
-        // data: Object.values(data.account),
-        // }
-      ]);
+    let groupedAccounts = {};
+    accountCostData.forEach((item) => {
+      // account 객체를 확인
+      for (const key in item.account) {
+        const value = item.account[key];
+
+        // 같은 값을 가진 키들을 그룹화
+        if (!groupedAccounts[key]) {
+          groupedAccounts[key] = [];
+        }
+
+        // 해당 계정의 데이터를 추가
+        groupedAccounts[key].push(value);
+      }
     });
-    // setAccountCostLineData([
-    //   {
-    //     name: accountCostData.map(data => data.account)
-    //   }
-    // ])
+    const result = Object.keys(groupedAccounts).map((key) => ({
+      name: key,
+      data: groupedAccounts[key],
+    }));
+
+    setAccountCostLineData(result);
+    // accountCostData.map((data: AccountCost, idx: number) => {
+    //   const accountInfo = data.account;
+    //   let valueArr: number[] = [];
+    //   let keyWithVal: any[] = [];
+    //   const keyArr = Object.keys(accountInfo);
+
+    //   keyArr.forEach((key: string, i: number) => {
+    //     valueArr.push(...valueArr, Object.values(accountInfo)[i] as number);
+    //   });
+
+    //   keyArr.forEach((key: string, i: number) => {
+    //     keyWithVal.push({
+    //       name: key,
+    //       data: valueArr,
+    //     });
+    //   });
+    //   console.log(keyWithVal);
+
+    //   // keyArr.map((key: string, i: number) => {
+    //   //   const value = Object.values(accountInfo)[i] as number;
+    //   //   valueArr.push(...valueArr, value);
+
+    //   //   keyWithVal.push({
+    //   //     name: key,
+    //   //     data: valueArr,
+    //   //   });
+    //   // });
+    // });
   }, [accountCostData]);
 
   return (
@@ -360,9 +393,9 @@ export const CostComponent = () => {
       <div className='panel lg:col-span-3'>
         <p className='text-[1rem] font-bold mb-[1.2rem]'>Account</p>
         <div className=' grid lg:grid-cols-3 gap-[1.2rem]'>
-          <CostStats costData={[]} category={''} />
+          <CostStats costData={accountCostData} category={'account'} />
           <div className='lg:col-span-3'>
-            <MultipleLineChart data={[]} colors={[]} title={'Daily Trend [Cost per Account]'} categories={[]} strokeWidth={[]} />
+            <MultipleLineChart data={accountCostLineData} colors={[]} title={'Daily Trend [Cost per Account]'} categories={serviceXAxisCategories} strokeWidth={[]} />
           </div>
         </div>
       </div>

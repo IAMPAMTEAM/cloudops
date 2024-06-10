@@ -1090,17 +1090,5 @@
       "demo-staging2": "0",
       "demo-product2": "2.86"
     }
-  },
-  {
-    "date": "",
-    "totalCost": "0.06",
-    "account": {
-      "demo-dev1": "0",
-      "demo-staging1": "0.06",
-      "demo-product1": "0.06",
-      "demo-dev2": "0",
-      "demo-staging2": "0",
-      "demo-product2": "2.02"
-    }
   }
 ]

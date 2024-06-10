@@ -80,7 +80,7 @@ export const ComplianceComponent = () => {
     <div>
       <div className='grid lg:grid-cols-3 gap-[1.2rem]'>
         <div className='panel lg:col-span-2'>
-          <MultipleLineChart data={lineData} colors={['#FFAF45', '#C40C0C', '#40A578']} title={'Daily Trend [Waring & Critical]'} categories={xAxisCategories} strokeWidth={[3, 3, 3]} />
+          <MultipleLineChart data={lineData} colors={['#FFAF45', '#C40C0C', '#40A578']} title={'Daily Trend [Waring & Critical & Normal]'} categories={xAxisCategories} strokeWidth={[3, 3, 3]} />
         </div>
         <div className=' lg:col-span-1 grid grid-cols-2 gap-[1.2rem]'>
           <div className='stats shadow'>
