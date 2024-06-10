@@ -7,7 +7,9 @@
     "who": "3.12.3.101 (south korea)",
     "what": "ssh login",
     "counts": 1,
-    "details": {}
+    "details": {
+      "team": "hybrix"
+    }
   },
   {
     "status": "ALERT",
@@ -17,7 +19,9 @@
     "who": "3.12.3.101 (south korea)",
     "what": "ssh login",
     "counts": 3,
-    "details": {}
+    "details": {
+      "team": "hybrix"
+    }
   },
   {
     "status": "OK",
@@ -27,7 +31,9 @@
     "who": "3.12.3.101 (south korea)",
     "what": "ssh login",
     "counts": 12,
-    "details": {}
+    "details": {
+      "team": "AI"
+    }
   },
   {
     "status": "ALERT",
@@ -37,7 +43,9 @@
     "who": "3.12.3.101 (south korea)",
     "what": "ssh login",
     "counts": 11,
-    "details": {}
+    "details": {
+      "team": "hybrix"
+    }
   },
   {
     "status": "ALERT",
@@ -47,7 +55,9 @@
     "who": "3.12.3.101 (south korea)",
     "what": "ssh login",
     "counts": 7,
-    "details": {}
+    "details": {
+      "team": "hybrix"
+    }
   },
   {
     "status": "OK",
@@ -57,7 +67,9 @@
     "who": "3.12.3.101 (south korea)",
     "what": "ssh login",
     "counts": 21,
-    "details": {}
+    "details": {
+      "team": "backend"
+    }
   },
   {
     "status": "ALERT",
@@ -67,7 +79,9 @@
     "who": "3.12.3.101 (south korea)",
     "what": "ssh login",
     "counts": 4,
-    "details": {}
+    "details": {
+      "team": "frontend"
+    }
   },
   {
     "status": "ALERT",
@@ -77,7 +91,9 @@
     "who": "3.12.3.101 (south korea)",
     "what": "ssh login",
     "counts": 9,
-    "details": {}
+    "details": {
+      "team": "devops"
+    }
   },
   {
     "status": "ALERT",
@@ -87,6 +103,8 @@
     "who": "3.12.3.101 (south korea)",
     "what": "ssh login",
     "counts": 1,
-    "details": {}
+    "details": {
+      "team": "databricks"
+    }
   }
 ]

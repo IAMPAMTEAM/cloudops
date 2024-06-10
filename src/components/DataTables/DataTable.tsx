@@ -53,14 +53,14 @@ export default function DataTable({ children, showSaveButton, datas, columnDefs,
         {children}
         <div className='flex'>
           {showSaveButton && (
-            <button onClick={onBtnSave} className='bg-sky-500 font-bold text-white px-2 py-2 rounded-md mr-2'>
+            <button onClick={onBtnSave} className='bg-blue-500 font-bold text-white px-2 py-2 rounded-md mr-2'>
               Save
             </button>
           )}
-          <button onClick={onBtnCSVExport} className='bg-sky-500 font-bold text-white px-2 py-2 rounded-md mr-2'>
+          <button onClick={onBtnCSVExport} className='bg-blue-500 font-bold text-white px-2 py-2 rounded-md mr-2'>
             Export CSV
           </button>
-          <button onClick={onBtnExcelExport} className='bg-sky-500 font-bold text-white px-2 py-2 rounded-md'>
+          <button onClick={onBtnExcelExport} className='bg-blue-500 font-bold text-white px-2 py-2 rounded-md'>
             Export Excel
           </button>
         </div>
