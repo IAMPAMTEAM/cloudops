@@ -13,7 +13,6 @@ interface Props {
 }
 
 export const MultipleLineChart = (props: Props) => {
-  const [chartCnt, setChartCnt] = useState<number>(0);
   const [chartData, setChartData] = useState({
     series: [{}],
     options: {

@@ -55,6 +55,10 @@ const Log = lazy(() => import('@/pages/Log/LogContainer'));
 const Chatbot = lazy(() => import('@/pages/Chatbot/ChatbotContainer'));
 const Admin = lazy(() => import('@/pages/Admin/AdminContainer'));
 
+const NetworkCidr = lazy(() => import('@/pages/Network/NetworkCidr/NetworkCidr'));
+const NetworkNodes = lazy(() => import('@/pages/Network/NetworkNodes/NetworkNodes'));
+const NetworkPorts = lazy(() => import('@/pages/Network/NetworkPorts/NetworkPorts'));
+
 const routes = [
   {
     path: '/',
@@ -287,6 +291,21 @@ const routes = [
     path: '/admin',
     layout: 'default',
     element: <Admin />,
+  },
+  {
+    path: '/network/cidr',
+    layout: 'default',
+    element: <NetworkCidr />,
+  },
+  {
+    path: '/network/ports',
+    layout: 'default',
+    element: <NetworkPorts />,
+  },
+  {
+    path: '/network/nodes',
+    layout: 'default',
+    element: <NetworkNodes />,
   },
 ];
 

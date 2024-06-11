@@ -82,19 +82,19 @@ const Sidebar = () => {
           <PerfectScrollbar className='h-[calc(100vh-80px)] relative'>
             <ul className='relative font-semibold space-y-0.5 p-4 py-0'>
               <li className='menu nav-item'>
-                <NavLink to='/dashboard-overview' className='group'>
+                <NavLink to='/dashboard-summary' className='group'>
                   <div className='flex items-center'>
                     <IconMenuDashboard className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('dashboardOverview')}</span>
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('dashboardSummary')}</span>
                   </div>
                 </NavLink>
               </li>
 
               <li className='menu nav-item'>
-                <NavLink to='/dashboard-summary' className='group'>
+                <NavLink to='/dashboard-overview' className='group'>
                   <div className='flex items-center'>
                     <IconMenuApps className='group-hover:!text-primary shrink-0' />
-                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('dashboardSummary')}</span>
+                    <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('dashboardOverview')}</span>
                   </div>
                 </NavLink>
               </li>
@@ -114,12 +114,21 @@ const Sidebar = () => {
                 <AnimateHeight duration={300} height={currentMenu === 'network' ? 'auto' : 0}>
                   <ul className='sub-menu text-gray-500'>
                     <li>
-                      <NavLink to='/'>{t('network')}</NavLink>
+                      <NavLink to='/network/cidr'>{t('networkCidr')}</NavLink>
+                    </li>
+                  </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/network/ports'>{t('networkPorts')}</NavLink>
+                    </li>
+                  </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/network/nodes'>{t('networkNodes')}</NavLink>
                     </li>
                   </ul>
                 </AnimateHeight>
               </li>
-
               <li className='menu nav-item'>
                 <NavLink to='/governance' className='group'>
                   <div className='flex items-center'>

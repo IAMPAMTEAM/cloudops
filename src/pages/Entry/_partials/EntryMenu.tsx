@@ -22,7 +22,7 @@ const EntryMenu = () => {
     {
       logo: IconHome,
       menu: 'Home',
-      path: '/',
+      path: '/dashboard-summary',
     },
     {
       logo: IconDashboard,
