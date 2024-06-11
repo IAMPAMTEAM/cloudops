@@ -152,7 +152,7 @@ const CostRegion = () => {
                 </div>
                 <div className='grid lg:grid-cols-5 gap-[1.2rem] mt-[1.2rem]'>
                   <div className='panel lg:col-span-2'>
-                    <TreemapChart data={treemapData} colors={['#FF9EAA']} title={'Reginal Cost [Treemap]'} />
+                    <TreemapChart data={treemapData} colors={['#FF9EAA']} title={'Regional Cost [Treemap]'} />
                   </div>
                   <div className='panel lg:col-span-3'>
                     <StackedVerticalBarChart data={[]} colors={[]} categories={[]} title={''} />

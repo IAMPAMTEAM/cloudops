@@ -192,6 +192,8 @@ const SecurityGroup = () => {
         })
         .filter((v) => v) as unknown as ColumnDefsType;
 
+      console.log(inboundColumns);
+
       setInboundColumnDefs(inboundColumns);
       setInboundRowData(sgInboundUri);
     } else {

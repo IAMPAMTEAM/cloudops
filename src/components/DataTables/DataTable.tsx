@@ -16,9 +16,21 @@ interface IDataTable {
   pagination: boolean;
   paginationPageSize: number;
   paginationPageSizeSelector: number[];
+  saveCallback?: (data: any[]) => void;
 }
 
-export default function DataTable({ children, showSaveButton, datas, columnDefs, defaultTableSetting, tableHeight, pagination, paginationPageSize, paginationPageSizeSelector }: IDataTable) {
+export default function DataTable({
+  children,
+  showSaveButton,
+  datas,
+  columnDefs,
+  defaultTableSetting,
+  tableHeight,
+  pagination,
+  paginationPageSize,
+  paginationPageSizeSelector,
+  saveCallback,
+}: IDataTable) {
   const autoSizeStrategy = useMemo<SizeColumnsToFitGridStrategy | SizeColumnsToFitProvidedWidthStrategy | SizeColumnsToContentStrategy>(() => {
     return defaultTableSetting.autoSizeStrategy;
   }, [defaultTableSetting.autoSizeStrategy]);
@@ -44,7 +56,11 @@ export default function DataTable({ children, showSaveButton, datas, columnDefs,
   }, []);
 
   function onBtnSave() {
+    if (!saveCallback) {
+      return;
+    }
     console.log(datas);
+    saveCallback(datas);
   }
 
   return (
