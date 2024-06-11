@@ -68,7 +68,8 @@ const SecurityGroup = () => {
   const [associationsRowData, setAssociationsRowData] = useState<SgAssociationUri[]>();
   const [associationsColumnDefs, setAssociationsColumnDefs] = useState<{ [index: string]: string }[]>();
   const [inboundRowData, setInboundRowData] = useState<SgInboundUri[]>();
-  const [inboundColumnDefs, setInboundColumnDefs] = useState<{ filter: string; cellClassRules?: { string: () => boolean } }[]>();
+
+  const [inboundColumnDefs, setInboundColumnDefs] = useState<{ filter: string; cellClassRules?: { string: () => boolean } | undefined }[]>();
   const [outboundRowData, setOutboundRowData] = useState<SgOutboundUri[]>();
   const [outboundColumnDefs, setOutboundColumnDefs] = useState<{ filter: string; cellClassRules?: { string: () => boolean } }[]>();
   const [currentRowData, setCurrentRowData] = useState<RowData>();
@@ -192,9 +193,30 @@ const SecurityGroup = () => {
         })
         .filter((v) => v) as unknown as ColumnDefsType;
 
-      console.log(inboundColumns);
+      const [protoclType, protocol, portRange, source] = inboundColumns;
 
-      setInboundColumnDefs(inboundColumns);
+      const newInboundColumns = [
+        protoclType,
+        protocol,
+        portRange,
+        source,
+        {
+          headerName: 'Hit Count',
+          children: [
+            {
+              field: 'today',
+            },
+            {
+              field: 'thisWeek',
+            },
+            {
+              field: 'thisMonth',
+            },
+          ],
+        },
+      ];
+
+      setInboundColumnDefs(newInboundColumns);
       setInboundRowData(sgInboundUri);
     } else {
       setInboundColumnDefs([]);

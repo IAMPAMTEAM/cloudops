@@ -162,17 +162,32 @@ const Sidebar = () => {
                 <AnimateHeight duration={300} height={currentMenu === 'cost' ? 'auto' : 0}>
                   <ul className='sub-menu text-gray-500'>
                     <li>
-                      <NavLink to='/cost/region'>{t('costRegion')}</NavLink>
+                      <NavLink to='/cost/region/daily'>{t('costRegionDaily')}</NavLink>
                     </li>
                   </ul>
                   <ul className='sub-menu text-gray-500'>
                     <li>
-                      <NavLink to='/cost/service'>{t('costService')}</NavLink>
+                      <NavLink to='/cost/region/monthly'>{t('costRegionMonthly')}</NavLink>
                     </li>
                   </ul>
                   <ul className='sub-menu text-gray-500'>
                     <li>
-                      <NavLink to='/cost/account'>{t('costAccount')}</NavLink>
+                      <NavLink to='/cost/service/daily'>{t('costServiceDaily')}</NavLink>
+                    </li>
+                  </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/cost/service/monthly'>{t('costServiceMonthly')}</NavLink>
+                    </li>
+                  </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/cost/account/daily'>{t('costAccountDaily')}</NavLink>
+                    </li>
+                  </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/cost/account/monthly'>{t('costAccountMonthly')}</NavLink>
                     </li>
                   </ul>
                 </AnimateHeight>

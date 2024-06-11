@@ -20,8 +20,10 @@ interface UseOpenSearchByVpcProps {
   fromVpc: string;
   toVpc: string;
 }
-const username = 'yubeom';
-const password = 'Kimsm1204!';
+
+const username = import.meta.env.VITE_OPENSEARCH_ID;
+const password = import.meta.env.VITE_OPENSEARCH_PASSWORD;
+
 export const useOpenSearchByVpc = ({ fromVpc, toVpc }: UseOpenSearchByVpcProps): { packetInfo?: Info; byteInfo?: Info } => {
   const [packetInfo, setPacketInfo] = useState<Info>();
   const [byteInfo, setByteInfo] = useState<Info>();
