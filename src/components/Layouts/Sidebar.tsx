@@ -114,12 +114,21 @@ const Sidebar = () => {
                 <AnimateHeight duration={300} height={currentMenu === 'network' ? 'auto' : 0}>
                   <ul className='sub-menu text-gray-500'>
                     <li>
-                      <NavLink to='/'>{t('network')}</NavLink>
+                      <NavLink to='/network/cidr'>{t('networkCidr')}</NavLink>
+                    </li>
+                  </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/network/ports'>{t('networkPorts')}</NavLink>
+                    </li>
+                  </ul>
+                  <ul className='sub-menu text-gray-500'>
+                    <li>
+                      <NavLink to='/network/nodes'>{t('networkNodes')}</NavLink>
                     </li>
                   </ul>
                 </AnimateHeight>
               </li>
-
               <li className='menu nav-item'>
                 <NavLink to='/governance' className='group'>
                   <div className='flex items-center'>
