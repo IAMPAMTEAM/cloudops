@@ -27,8 +27,8 @@ interface UseOpenSearchBySubnetProps {
   toSubnet: string;
 }
 
-const username = 'yubeom';
-const password = 'Kimsm1204!';
+const username = import.meta.env.VITE_OPENSEARCH_ID;
+const password = import.meta.env.VITE_OPENSEARCH_PASSWORD;
 
 export const useOpenSearchBySubnet = ({
   selectedVpc,

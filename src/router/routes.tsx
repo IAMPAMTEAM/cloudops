@@ -43,7 +43,12 @@ const InternalElbFlow = lazy(() => import('@/pages/NetworkFlow/InternalElbFlow/I
 const Governance = lazy(() => import('@/pages/Governance/Governance'));
 const Resources = lazy(() => import('@/pages/Resources/Resources'));
 const Cost = lazy(() => import('@/pages/Cost/Cost'));
-const CostRegion = lazy(() => import('@/pages/Cost/CostRegion/CostRegion'));
+const CostRegionDaily = lazy(() => import('@/pages/Cost/CostRegion/CostRegionDaily'));
+const CostRegionMonthly = lazy(() => import('@/pages/Cost/CostRegion/CostRegionMonthly'));
+const CostServiceDaily = lazy(() => import('@/pages/Cost/CostService/CostServiceDaily'));
+const CostServiceMonthly = lazy(() => import('@/pages/Cost/CostService/CostServiceMonthly'));
+const CostAccountDaily = lazy(() => import('@/pages/Cost/CostAccount/CostAccountDaily'));
+const CostAccountMonthly = lazy(() => import('@/pages/Cost/CostAccount/CostAccountMonthly'));
 
 const DashboardOverview = lazy(() => import('@/pages/DashboardOverview/DashboardOverviewContainer'));
 const DashboardSummary = lazy(() => import('@/pages/DashboardSummary/DashboardSummaryContainer'));
@@ -246,12 +251,37 @@ const routes = [
   },
   // Cost Region
   {
-    path: '/cost/region',
+    path: '/cost/region/daily',
     layout: 'default',
-    element: <CostRegion />,
+    element: <CostRegionDaily />,
+  },
+  {
+    path: '/cost/region/monthly',
+    layout: 'default',
+    element: <CostRegionMonthly />,
   },
   // Cost Service
+  {
+    path: '/cost/service/daily',
+    layout: 'default',
+    element: <CostServiceDaily />,
+  },
+  {
+    path: '/cost/service/monthly',
+    layout: 'default',
+    element: <CostServiceMonthly />,
+  },
   // Cost Account
+  {
+    path: '/cost/account/daily',
+    layout: 'default',
+    element: <CostAccountDaily />,
+  },
+  {
+    path: '/cost/account/monthly',
+    layout: 'default',
+    element: <CostAccountMonthly />,
+  },
   {
     path: '/dashboard-overview',
     layout: 'default',

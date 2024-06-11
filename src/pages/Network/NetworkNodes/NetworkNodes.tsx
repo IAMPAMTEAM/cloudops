@@ -18,10 +18,10 @@ const NetworkNodes = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const { data: tableData } = await axios('https://iampam-tenants.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-nodes/data.json');
-      const { data: tableOption } = await axios('https://iampam-tenants.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-nodes/schema.json');
-      const { data: userTag } = await axios('https://iampam-tenants.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-nodes/taguser.json');
-      const { data: awsTag } = await axios('https://iampam-tenants.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-nodes/tagaws.json');
+      const { data: tableData } = await axios('https://iampam-cloudops-tenants-data.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-nodes/data.json');
+      const { data: tableOption } = await axios('https://iampam-cloudops-tenants-data.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-nodes/schema.json');
+      const { data: userTag } = await axios('https://iampam-cloudops-tenants-data.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-nodes/taguser.json');
+      const { data: awsTag } = await axios('https://iampam-cloudops-tenants-data.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-nodes/tagaws.json');
 
       setTableData(tableData);
       setDefaultTableSettings(SetDefaultTableSetting(tableOption));

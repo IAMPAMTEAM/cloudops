@@ -8,7 +8,7 @@ import { ReactNode, useCallback, useMemo, useRef } from 'react';
 
 interface IDataTable {
   children: ReactNode;
-  showSaveButton: boolean;
+  showSaveButton?: boolean;
   datas: any[];
   columnDefs: any[];
   defaultTableSetting: any;

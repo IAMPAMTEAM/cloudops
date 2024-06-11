@@ -18,10 +18,10 @@ const NetworkCidr = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const { data: tableData } = await axios('https://iampam-tenants.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-cidr/data.json');
-      const { data: tableOption } = await axios('https://iampam-tenants.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-cidr/schema.json');
-      const { data: userTag } = await axios('https://iampam-tenants.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-cidr/taguser.json');
-      const { data: awsTag } = await axios('https://iampam-tenants.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-cidr/tagaws.json');
+      const { data: tableData } = await axios('https://iampam-cloudops-tenants-data.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-cidr/data.json');
+      const { data: tableOption } = await axios('https://iampam-cloudops-tenants-data.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-cidr/schema.json');
+      const { data: userTag } = await axios('https://iampam-cloudops-tenants-data.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-cidr/taguser.json');
+      const { data: awsTag } = await axios('https://iampam-cloudops-tenants-data.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/network-cidr/tagaws.json');
 
       setTableData(tableData);
       setDefaultTableSettings(SetDefaultTableSetting(tableOption));
