@@ -1,0 +1,404 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1548" height="443.5" viewBox="0 0 1548 443.5">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_73" data-name="사각형 73" width="206" height="118.972" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="사각형_4401" data-name="사각형 4401" width="36.642" height="41.999" transform="translate(0 0)" fill="#333"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <rect id="사각형_4402" data-name="사각형 4402" width="42" height="42" fill="#333"/>
+    </clipPath>
+    <clipPath id="clip-path-6">
+      <rect id="사각형_4397" data-name="사각형 4397" width="37.998" height="37.784" transform="translate(0 0)" fill="#333"/>
+    </clipPath>
+    <filter id="타원_39" x="378" y="204.5" width="19" height="19" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="타원_40" x="518" y="204.5" width="19" height="19" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-2"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="타원_39-2" x="657" y="204.5" width="19" height="19" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-3"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="타원_41" x="297" y="304.5" width="19" height="19" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-4"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="타원_42" x="445" y="304.5" width="19" height="19" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-5"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="타원_39-3" x="723" y="304.5" width="19" height="19" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-6"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="타원_39-4" x="952" y="151.472" width="37.88" height="37.88" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-7"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur-7"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="타원_40-2" x="1110" y="151.472" width="37.88" height="37.88" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-8"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur-8"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="타원_41-2" x="1269" y="151.472" width="37.88" height="37.88" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-9"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur-9"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="타원_42-2" x="1428" y="151.472" width="37.88" height="37.88" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-10"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur-10"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="타원_39-5" x="952" y="257.5" width="37.88" height="37.88" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-11"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur-11"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="타원_40-3" x="1110" y="257.472" width="37.88" height="37.88" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-12"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur-12"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="타원_41-3" x="1269" y="257.472" width="37.88" height="37.88" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-13"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur-13"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="타원_42-3" x="1428" y="257.472" width="37.88" height="37.88" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-14"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur-14"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_7418" data-name="그룹 7418" transform="translate(-321.5 -719)">
+    <rect id="bg-card" width="500" height="318" rx="8" transform="translate(584 770)" fill="#fff"/>
+    <path id="bg-card_-_윤곽선" data-name="bg-card - 윤곽선" d="M8,1A7.008,7.008,0,0,0,1,8V310a7.008,7.008,0,0,0,7,7H492a7.008,7.008,0,0,0,7-7V8a7.008,7.008,0,0,0-7-7H8M8,0H492a8,8,0,0,1,8,8V310a8,8,0,0,1-8,8H8a8,8,0,0,1-8-8V8A8,8,0,0,1,8,0Z" transform="translate(584 770)" fill="#eee"/>
+    <g id="GovernanceArea-----" transform="translate(0 11)">
+      <text id="Governance" transform="translate(322 736)" fill="#222" font-size="24" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="0" y="0">Governance</tspan></text>
+      <path id="선_11" data-name="선 11" d="M1546,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H1546a1,1,0,0,1,1,1A1,1,0,0,1,1546,1Z" transform="translate(322.5 750.5)" fill="#222"/>
+    </g>
+    <rect id="bg-card-2" data-name="bg-card" width="238" height="320" rx="8" transform="translate(322 770)" fill="#fff"/>
+    <path id="bg-card_-_윤곽선-2" data-name="bg-card - 윤곽선" d="M8,1A7.008,7.008,0,0,0,1,8V312a7.008,7.008,0,0,0,7,7H230a7.008,7.008,0,0,0,7-7V8a7.008,7.008,0,0,0-7-7H8M8,0H230a8,8,0,0,1,8,8V312a8,8,0,0,1-8,8H8a8,8,0,0,1-8-8V8A8,8,0,0,1,8,0Z" transform="translate(322 770)" fill="#eee"/>
+    <rect id="bg-card-3" data-name="bg-card" width="761" height="318" rx="8" transform="translate(1108 770)" fill="#fff"/>
+    <path id="bg-card_-_윤곽선-3" data-name="bg-card - 윤곽선" d="M8,1A7.008,7.008,0,0,0,1,8V310a7.008,7.008,0,0,0,7,7H753a7.008,7.008,0,0,0,7-7V8a7.008,7.008,0,0,0-7-7H8M8,0H753a8,8,0,0,1,8,8V310a8,8,0,0,1-8,8H8a8,8,0,0,1-8-8V8A8,8,0,0,1,8,0Z" transform="translate(1108 770)" fill="#eee"/>
+    <text id="Today_Overall" data-name="Today Overall" transform="translate(338 807)" fill="#333" font-size="18" font-family="NotoSansKR-Medium, Noto Sans KR" font-weight="500"><tspan x="0" y="0">Today Overall</tspan></text>
+    <g id="img-gauge" transform="translate(338 828)">
+      <g id="그룹_758" data-name="그룹 758" clip-path="url(#clip-path)">
+        <path id="StateGauge" d="M7.26,27.1,6.567,62.183A.786.786,0,0,1,5,62.2l-1.59-35.1C1.882,24.986.017,21.957,0,19.769c-.015-1.942,1.415-4.522,2.78-6.543L2.223.929A.787.787,0,0,1,2.992.07L6.98,0a.789.789,0,0,1,.584.244c.021.024.041.048.061.073A.789.789,0,0,1,7.778.84L7.539,12.986c1.438,2.025,3.01,4.69,3.026,6.7.017,2.195-1.81,5.267-3.3,7.412m-.179-8.62a2.225,2.225,0,1,0-.456,3.115,2.222,2.222,0,0,0,.456-3.115" transform="matrix(-0.695, -0.719, 0.719, -0.695, 85.375, 113.167)" fill="#333"/>
+        <g id="그룹_7243" data-name="그룹 7243">
+          <path id="color-Orange-Base" d="M150.163,70.973l-26.295-20.6a86.924,86.924,0,0,1,40.588-28.847l10.731,31.649a53.6,53.6,0,0,0-25.024,17.8" transform="translate(-88.635 -0.768)" fill="#ed8c00"/>
+          <path id="color-Yellow" d="M102.394,50.173a53.829,53.829,0,0,0-14,2.058L79.217,20.1a87.424,87.424,0,0,1,49.767.539L119.1,52.56a53.585,53.585,0,0,0-16.707-2.387" transform="translate(0.625 -0.598)" fill="#fbf665"/>
+          <path id="color-Red" d="M167.325,54.936l27.254,19.312a53.394,53.394,0,0,0-9.718,27.524H151.425a86.748,86.748,0,0,1,15.9-46.836" transform="translate(-134.601 -1.96)" fill="#e53935"/>
+          <path id="color-Lime" d="M33.648,53.58l11.424-31.4A86.984,86.984,0,0,1,85.023,51.889L58.292,71.921A53.66,53.66,0,0,0,33.648,53.58" transform="translate(88.53 -0.791)" fill="#dbe961"/>
+          <path id="color-Green" d="M43.417,56.546a86.8,86.8,0,0,1,14.816,45.283H24.8a53.434,53.434,0,0,0-9.047-26.564Z" transform="translate(132.576 -2.018)" fill="#47996b"/>
+          <path id="패스_32" data-name="패스 32" d="M5.786,103.078a97.215,97.215,0,1,1,194.429,0H206a103,103,0,1,0-206,0Z" transform="translate(-0.001)" fill="#ccc"/>
+        </g>
+      </g>
+    </g>
+    <g id="그룹_7244" data-name="그룹 7244">
+      <g id="그룹_1058" data-name="그룹 1058" transform="translate(0 -1042.028)">
+        <circle id="타원_36" data-name="타원 36" cx="4" cy="4" r="4" transform="translate(338 2016)" fill="#e53935"/>
+        <path id="선_12" data-name="선 12" d="M206,.5H0A.5.5,0,0,1-.5,0,.5.5,0,0,1,0-.5H206a.5.5,0,0,1,.5.5A.5.5,0,0,1,206,.5Z" transform="translate(338.5 2034)" fill="#e53935"/>
+        <text id="Crititcal" transform="translate(354 2027)" fill="#333" font-size="16" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">Crititcal</tspan></text>
+        <text id="_7" data-name="7" transform="translate(544 2028)" fill="#333" font-size="20" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="-11.78" y="0">7</tspan></text>
+      </g>
+      <g id="그룹_1059" data-name="그룹 1059" transform="translate(0 -1042.028)">
+        <circle id="타원_37" data-name="타원 37" cx="4" cy="4" r="4" transform="translate(338 2053)" fill="#ed8c00"/>
+        <path id="선_13" data-name="선 13" d="M206,.5H0A.5.5,0,0,1-.5,0,.5.5,0,0,1,0-.5H206a.5.5,0,0,1,.5.5A.5.5,0,0,1,206,.5Z" transform="translate(338.5 2071)" fill="#ed8c00"/>
+        <text id="High" transform="translate(354 2064)" fill="#333" font-size="16" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">High</tspan></text>
+        <text id="_21" data-name="21" transform="translate(544 2065)" fill="#333" font-size="20" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="-23.56" y="0">21</tspan></text>
+      </g>
+      <g id="그룹_1057" data-name="그룹 1057" transform="translate(0 -1042)">
+        <circle id="타원_38" data-name="타원 38" cx="4" cy="4" r="4" transform="translate(338 2090)" fill="#fbf665"/>
+        <path id="선_14" data-name="선 14" d="M206,.5H0A.5.5,0,0,1-.5,0,.5.5,0,0,1,0-.5H206a.5.5,0,0,1,.5.5A.5.5,0,0,1,206,.5Z" transform="translate(338.5 2108)" fill="#fbf665"/>
+        <text id="Medium" transform="translate(354 2101)" fill="#333" font-size="16" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">Medium</tspan></text>
+        <text id="_123" data-name="123" transform="translate(544 2102)" fill="#333" font-size="20" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="-35.34" y="0">123</tspan></text>
+      </g>
+    </g>
+    <text id="Today_Category" data-name="Today Category" transform="translate(600 807)" fill="#333" font-size="18" font-family="NotoSansKR-Medium, Noto Sans KR" font-weight="500"><tspan x="0" y="0">Today Category</tspan></text>
+    <g id="ic-Resource" transform="translate(-8 24)">
+      <rect id="사각형_4406" data-name="사각형 4406" width="48" height="48" transform="translate(608 836)" fill="#fff" opacity="0"/>
+      <g id="그룹_7203" data-name="그룹 7203" transform="translate(614 839)">
+        <g id="그룹_7185" data-name="그룹 7185" clip-path="url(#clip-path-2)">
+          <path id="패스_22967" data-name="패스 22967" d="M18.32,42a1,1,0,0,1-.5-.134L.5,31.865A1,1,0,0,1,0,31V11a1,1,0,0,1,.5-.866l17.32-10a1,1,0,0,1,1,0l17.321,10a1,1,0,0,1,.5.866V31a1,1,0,0,1-.5.866l-17.321,10a1,1,0,0,1-.5.134M2,30.422l16.32,9.423,16.321-9.423V11.576L18.32,2.153,2,11.576ZM35.641,31h0Z" fill="#333"/>
+          <path id="패스_22968" data-name="패스 22968" d="M18.32,22a1,1,0,0,1-.5-.134L.5,11.865a1,1,0,1,1,1-1.732l17.32,10A1,1,0,0,1,18.32,22" fill="#333"/>
+          <path id="패스_22969" data-name="패스 22969" d="M18.321,42a1,1,0,0,1-1-1V21a1,1,0,0,1,2,0V41a1,1,0,0,1-1,1" fill="#333"/>
+          <path id="패스_22970" data-name="패스 22970" d="M18.322,22a1,1,0,0,1-.5-1.866l17.321-10a1,1,0,1,1,1,1.732l-17.321,10a.994.994,0,0,1-.5.134" fill="#333"/>
+        </g>
+      </g>
+    </g>
+    <g id="ic-Resource-2" data-name="ic-Resource" transform="translate(-8 124)">
+      <rect id="사각형_4406-2" data-name="사각형 4406" width="48" height="48" transform="translate(608 836)" fill="#fff" opacity="0"/>
+      <g id="그룹_7203-2" data-name="그룹 7203" transform="translate(614 839)">
+        <g id="그룹_7185-2" data-name="그룹 7185" clip-path="url(#clip-path-2)">
+          <path id="패스_22967-2" data-name="패스 22967" d="M18.32,42a1,1,0,0,1-.5-.134L.5,31.865A1,1,0,0,1,0,31V11a1,1,0,0,1,.5-.866l17.32-10a1,1,0,0,1,1,0l17.321,10a1,1,0,0,1,.5.866V31a1,1,0,0,1-.5.866l-17.321,10a1,1,0,0,1-.5.134M2,30.422l16.32,9.423,16.321-9.423V11.576L18.32,2.153,2,11.576ZM35.641,31h0Z" fill="#333"/>
+          <path id="패스_22968-2" data-name="패스 22968" d="M18.32,22a1,1,0,0,1-.5-.134L.5,11.865a1,1,0,1,1,1-1.732l17.32,10A1,1,0,0,1,18.32,22" fill="#333"/>
+          <path id="패스_22969-2" data-name="패스 22969" d="M18.321,42a1,1,0,0,1-1-1V21a1,1,0,0,1,2,0V41a1,1,0,0,1-1,1" fill="#333"/>
+          <path id="패스_22970-2" data-name="패스 22970" d="M18.322,22a1,1,0,0,1-.5-1.866l17.321-10a1,1,0,1,1,1,1.732l-17.321,10a.994.994,0,0,1-.5.134" fill="#333"/>
+        </g>
+      </g>
+    </g>
+    <g id="ic-Cost" transform="translate(1 24)">
+      <rect id="사각형_4408" data-name="사각형 4408" width="48" height="48" transform="translate(766 836)" fill="#fff" opacity="0"/>
+      <g id="그룹_7204" data-name="그룹 7204" transform="translate(769 839)">
+        <g id="그룹_7187" data-name="그룹 7187" clip-path="url(#clip-path-4)">
+          <path id="패스_22971" data-name="패스 22971" d="M26.88,27.631a4.291,4.291,0,0,0-1.271-3.206,12.384,12.384,0,0,0-4.485-2.357,13.028,13.028,0,0,1-5.6-2.976,6.271,6.271,0,0,1-1.606-4.458,6.368,6.368,0,0,1,1.765-4.67,7.314,7.314,0,0,1,4.8-2.04V4.357h1.8V7.924A6.76,6.76,0,0,1,27.1,10.245a8.4,8.4,0,0,1,1.7,5.554H26.7a6.429,6.429,0,0,0-1.439-4.4,4.969,4.969,0,0,0-3.929-1.633,5.491,5.491,0,0,0-3.911,1.317,4.588,4.588,0,0,0-1.4,3.511,4.293,4.293,0,0,0,1.289,3.316A12.576,12.576,0,0,0,21.7,20.151a19.483,19.483,0,0,1,4.5,2.014,6.431,6.431,0,0,1,2.1,2.278A6.651,6.651,0,0,1,29,27.6a6.245,6.245,0,0,1-1.809,4.669,7.7,7.7,0,0,1-4.972,2.023v3.355H20.435V34.305a8.056,8.056,0,0,1-5.491-2.233A7.545,7.545,0,0,1,13,26.588H15.12a5.745,5.745,0,0,0,1.607,4.318,6.161,6.161,0,0,0,4.485,1.562A6.1,6.1,0,0,0,25.3,31.127a4.371,4.371,0,0,0,1.58-3.5" fill="#333"/>
+          <path id="패스_22972" data-name="패스 22972" d="M21,42A21,21,0,1,1,42,21,21.024,21.024,0,0,1,21,42M21,2A19,19,0,1,0,40,21,19.021,19.021,0,0,0,21,2" fill="#333"/>
+        </g>
+      </g>
+    </g>
+    <g id="ic-Cost-2" data-name="ic-Cost" transform="translate(1 124)">
+      <rect id="사각형_4408-2" data-name="사각형 4408" width="48" height="48" transform="translate(766 836)" fill="#fff" opacity="0"/>
+      <g id="그룹_7204-2" data-name="그룹 7204" transform="translate(769 839)">
+        <g id="그룹_7187-2" data-name="그룹 7187" clip-path="url(#clip-path-4)">
+          <path id="패스_22971-2" data-name="패스 22971" d="M26.88,27.631a4.291,4.291,0,0,0-1.271-3.206,12.384,12.384,0,0,0-4.485-2.357,13.028,13.028,0,0,1-5.6-2.976,6.271,6.271,0,0,1-1.606-4.458,6.368,6.368,0,0,1,1.765-4.67,7.314,7.314,0,0,1,4.8-2.04V4.357h1.8V7.924A6.76,6.76,0,0,1,27.1,10.245a8.4,8.4,0,0,1,1.7,5.554H26.7a6.429,6.429,0,0,0-1.439-4.4,4.969,4.969,0,0,0-3.929-1.633,5.491,5.491,0,0,0-3.911,1.317,4.588,4.588,0,0,0-1.4,3.511,4.293,4.293,0,0,0,1.289,3.316A12.576,12.576,0,0,0,21.7,20.151a19.483,19.483,0,0,1,4.5,2.014,6.431,6.431,0,0,1,2.1,2.278A6.651,6.651,0,0,1,29,27.6a6.245,6.245,0,0,1-1.809,4.669,7.7,7.7,0,0,1-4.972,2.023v3.355H20.435V34.305a8.056,8.056,0,0,1-5.491-2.233A7.545,7.545,0,0,1,13,26.588H15.12a5.745,5.745,0,0,0,1.607,4.318,6.161,6.161,0,0,0,4.485,1.562A6.1,6.1,0,0,0,25.3,31.127a4.371,4.371,0,0,0,1.58-3.5" fill="#333"/>
+          <path id="패스_22972-2" data-name="패스 22972" d="M21,42A21,21,0,1,1,42,21,21.024,21.024,0,0,1,21,42M21,2A19,19,0,1,0,40,21,19.021,19.021,0,0,0,21,2" fill="#333"/>
+        </g>
+      </g>
+    </g>
+    <g id="ic-Topology" transform="translate(9 24)">
+      <rect id="사각형_4409" data-name="사각형 4409" width="48" height="48" transform="translate(924 836)" fill="#fff" opacity="0"/>
+      <g id="그룹_7205" data-name="그룹 7205" transform="translate(929 841)">
+        <g id="그룹_7177" data-name="그룹 7177" clip-path="url(#clip-path-6)">
+          <path id="패스_22941" data-name="패스 22941" d="M22.6,16.4H15.4a4.6,4.6,0,0,1-4.6-4.6V4.6A4.6,4.6,0,0,1,15.4,0h7.2a4.605,4.605,0,0,1,4.6,4.6v7.2a4.605,4.605,0,0,1-4.6,4.6M15.4,2a2.6,2.6,0,0,0-2.6,2.6v7.2a2.6,2.6,0,0,0,2.6,2.6h7.2a2.6,2.6,0,0,0,2.6-2.6V4.6A2.6,2.6,0,0,0,22.6,2Z" fill="#333"/>
+          <path id="패스_22942" data-name="패스 22942" d="M35.2,37.784H29.8a2.8,2.8,0,0,1-2.8-2.8v-5.4a2.8,2.8,0,0,1,2.8-2.8h5.4a2.8,2.8,0,0,1,2.8,2.8v5.4a2.8,2.8,0,0,1-2.8,2.8m-5.4-9a.8.8,0,0,0-.8.8v5.4a.8.8,0,0,0,.8.8h5.4a.8.8,0,0,0,.8-.8v-5.4a.8.8,0,0,0-.8-.8Z" fill="#333"/>
+          <path id="패스_22943" data-name="패스 22943" d="M8.2,37.784H2.8a2.8,2.8,0,0,1-2.8-2.8v-5.4a2.8,2.8,0,0,1,2.8-2.8H8.2a2.8,2.8,0,0,1,2.8,2.8v5.4a2.8,2.8,0,0,1-2.8,2.8m-5.4-9a.8.8,0,0,0-.8.8v5.4a.8.8,0,0,0,.8.8H8.2a.8.8,0,0,0,.8-.8v-5.4a.8.8,0,0,0-.8-.8Z" fill="#333"/>
+          <path id="패스_22944" data-name="패스 22944" d="M21.7,37.784H16.3a2.8,2.8,0,0,1-2.8-2.8v-5.4a2.8,2.8,0,0,1,2.8-2.8h5.4a2.8,2.8,0,0,1,2.8,2.8v5.4a2.8,2.8,0,0,1-2.8,2.8m-5.4-9a.8.8,0,0,0-.8.8v5.4a.8.8,0,0,0,.8.8h5.4a.8.8,0,0,0,.8-.8v-5.4a.8.8,0,0,0-.8-.8Z" fill="#333"/>
+          <path id="패스_22945" data-name="패스 22945" d="M32.5,28.243a1,1,0,0,1-1-1V22.589H6.5v4.654a1,1,0,0,1-2,0V21.589a1,1,0,0,1,1-1h27a1,1,0,0,1,1,1v5.654a1,1,0,0,1-1,1" fill="#333"/>
+          <path id="패스_22946" data-name="패스 22946" d="M19,28.78a1,1,0,0,1-1-1V15.4a1,1,0,1,1,2,0V27.78a1,1,0,0,1-1,1" fill="#333"/>
+        </g>
+      </g>
+    </g>
+    <g id="ic-Topology-2" data-name="ic-Topology" transform="translate(9 124)">
+      <rect id="사각형_4409-2" data-name="사각형 4409" width="48" height="48" transform="translate(924 836)" fill="#fff" opacity="0"/>
+      <g id="그룹_7205-2" data-name="그룹 7205" transform="translate(929 841)">
+        <g id="그룹_7177-2" data-name="그룹 7177" clip-path="url(#clip-path-6)">
+          <path id="패스_22941-2" data-name="패스 22941" d="M22.6,16.4H15.4a4.6,4.6,0,0,1-4.6-4.6V4.6A4.6,4.6,0,0,1,15.4,0h7.2a4.605,4.605,0,0,1,4.6,4.6v7.2a4.605,4.605,0,0,1-4.6,4.6M15.4,2a2.6,2.6,0,0,0-2.6,2.6v7.2a2.6,2.6,0,0,0,2.6,2.6h7.2a2.6,2.6,0,0,0,2.6-2.6V4.6A2.6,2.6,0,0,0,22.6,2Z" fill="#333"/>
+          <path id="패스_22942-2" data-name="패스 22942" d="M35.2,37.784H29.8a2.8,2.8,0,0,1-2.8-2.8v-5.4a2.8,2.8,0,0,1,2.8-2.8h5.4a2.8,2.8,0,0,1,2.8,2.8v5.4a2.8,2.8,0,0,1-2.8,2.8m-5.4-9a.8.8,0,0,0-.8.8v5.4a.8.8,0,0,0,.8.8h5.4a.8.8,0,0,0,.8-.8v-5.4a.8.8,0,0,0-.8-.8Z" fill="#333"/>
+          <path id="패스_22943-2" data-name="패스 22943" d="M8.2,37.784H2.8a2.8,2.8,0,0,1-2.8-2.8v-5.4a2.8,2.8,0,0,1,2.8-2.8H8.2a2.8,2.8,0,0,1,2.8,2.8v5.4a2.8,2.8,0,0,1-2.8,2.8m-5.4-9a.8.8,0,0,0-.8.8v5.4a.8.8,0,0,0,.8.8H8.2a.8.8,0,0,0,.8-.8v-5.4a.8.8,0,0,0-.8-.8Z" fill="#333"/>
+          <path id="패스_22944-2" data-name="패스 22944" d="M21.7,37.784H16.3a2.8,2.8,0,0,1-2.8-2.8v-5.4a2.8,2.8,0,0,1,2.8-2.8h5.4a2.8,2.8,0,0,1,2.8,2.8v5.4a2.8,2.8,0,0,1-2.8,2.8m-5.4-9a.8.8,0,0,0-.8.8v5.4a.8.8,0,0,0,.8.8h5.4a.8.8,0,0,0,.8-.8v-5.4a.8.8,0,0,0-.8-.8Z" fill="#333"/>
+          <path id="패스_22945-2" data-name="패스 22945" d="M32.5,28.243a1,1,0,0,1-1-1V22.589H6.5v4.654a1,1,0,0,1-2,0V21.589a1,1,0,0,1,1-1h27a1,1,0,0,1,1,1v5.654a1,1,0,0,1-1,1" fill="#333"/>
+          <path id="패스_22946-2" data-name="패스 22946" d="M19,28.78a1,1,0,0,1-1-1V15.4a1,1,0,1,1,2,0V27.78a1,1,0,0,1-1,1" fill="#333"/>
+        </g>
+      </g>
+    </g>
+    <text id="Resource" transform="translate(656 891)" fill="#333" font-size="16" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">Resource</tspan></text>
+    <text id="Resource-2" data-name="Resource" transform="translate(656 991)" fill="#333" font-size="16" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">Resource</tspan></text>
+    <text id="Cost" transform="translate(821 891)" fill="#333" font-size="16" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">Cost</tspan></text>
+    <text id="Cost-2" data-name="Cost" transform="translate(821 991)" fill="#333" font-size="16" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">Cost</tspan></text>
+    <text id="Topology" transform="translate(988 891)" fill="#333" font-size="16" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">Topology</tspan></text>
+    <text id="Topology-2" data-name="Topology" transform="translate(988 991)" fill="#333" font-size="16" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="0" y="0">Topology</tspan></text>
+    <g id="Meterbar">
+      <rect id="사각형_4407" data-name="사각형 4407" width="135" height="4" rx="2" transform="translate(735 920) rotate(180)" fill="#eee"/>
+      <rect id="StatusMeterbar" width="108" height="4" rx="2" transform="translate(708 920) rotate(180)" fill="#e53935"/>
+    </g>
+    <g id="Meterbar-2" data-name="Meterbar">
+      <rect id="사각형_4415" data-name="사각형 4415" width="135" height="4" rx="2" transform="translate(735 1020) rotate(180)" fill="#eee"/>
+      <rect id="StateMeterbar" width="27" height="4" rx="2" transform="translate(627 1020) rotate(180)" fill="#dbe961"/>
+    </g>
+    <g id="Meterbar-3" data-name="Meterbar" transform="translate(5)">
+      <rect id="사각형_4410" data-name="사각형 4410" width="135" height="4" rx="2" transform="translate(897 920) rotate(180)" fill="#eee"/>
+      <rect id="StateMeterbar-2" data-name="StateMeterbar" width="81" height="4" rx="2" transform="translate(843 920) rotate(180)" fill="#ed8c00"/>
+    </g>
+    <g id="Meterbar-4" data-name="Meterbar" transform="translate(5)">
+      <rect id="사각형_4416" data-name="사각형 4416" width="135" height="4" rx="2" transform="translate(897 1020) rotate(180)" fill="#eee"/>
+      <rect id="StateMeterbar-3" data-name="StateMeterbar" width="8" height="4" rx="2" transform="translate(770 1020) rotate(180)" fill="#47996b"/>
+    </g>
+    <g id="Meterbar-5" data-name="Meterbar" transform="translate(9)">
+      <rect id="사각형_4411" data-name="사각형 4411" width="135" height="4" rx="2" transform="translate(1059 920) rotate(180)" fill="#eee"/>
+      <rect id="StateMeterbar-4" data-name="StateMeterbar" width="54" height="4" rx="2" transform="translate(978 920) rotate(180)" fill="#fbf665"/>
+    </g>
+    <g id="Meterbar-6" data-name="Meterbar" transform="translate(9)">
+      <rect id="사각형_4417" data-name="사각형 4417" width="135" height="4" rx="2" transform="translate(1059 1020) rotate(180)" fill="#eee"/>
+      <rect id="StateMeterbar-5" data-name="StateMeterbar" width="120" height="4" rx="2" transform="translate(1044 1020) rotate(180)" fill="#e53935"/>
+    </g>
+    <g id="StateFace-100" transform="translate(26 29)">
+      <g transform="matrix(1, 0, 0, 1, 295.5, 690)" filter="url(#타원_39)">
+        <circle id="타원_39-6" data-name="타원 39" cx="8" cy="8" r="8" transform="translate(378.5 205)" fill="#fff"/>
+      </g>
+      <path id="StateFaceColor" d="M8,.563a8,8,0,1,0,8,8A8,8,0,0,0,8,.563ZM4.386,8.044a1.021,1.021,0,0,1,.339-.755l-1-.3A.515.515,0,0,1,4.021,6l2.58.774a.516.516,0,0,1-.148,1.009c-.016,0-.035-.006-.055-.006a1.043,1.043,0,0,1,.055.264,1.034,1.034,0,0,1-2.067,0ZM9.8,13.017a2.426,2.426,0,0,0-3.615,0,.516.516,0,0,1-.793-.661,3.381,3.381,0,0,1,5.2,0A.515.515,0,0,1,9.8,13.017Zm2.47-6.027-1,.3a1.029,1.029,0,1,1-1.725.755A.9.9,0,0,1,9.6,7.78a.318.318,0,0,1-.055.006A.516.516,0,0,1,9.4,6.777L11.98,6a.515.515,0,1,1,.293.987Z" transform="translate(674 894.438)" fill="#e53935"/>
+    </g>
+    <g id="StateFace-75" transform="translate(8 29)">
+      <g transform="matrix(1, 0, 0, 1, 313.5, 690)" filter="url(#타원_40)">
+        <circle id="타원_40-4" data-name="타원 40" cx="8" cy="8" r="8" transform="translate(518.5 205)" fill="#fff"/>
+      </g>
+      <path id="StateFaceColor-2" data-name="StateFaceColor" d="M8,.563a8,8,0,1,0,8,8A8,8,0,0,0,8,.563Zm2.58,5.418A1.032,1.032,0,1,1,9.545,7.012,1.031,1.031,0,0,1,10.577,5.98ZM4.9,13.72A1.531,1.531,0,0,1,3.354,12.2,6.618,6.618,0,0,1,4.7,9.7a.257.257,0,0,1,.413,0A6.618,6.618,0,0,1,6.45,12.2,1.531,1.531,0,0,1,4.9,13.72Zm.516-5.676A1.032,1.032,0,1,1,6.45,7.012,1.031,1.031,0,0,1,5.418,8.044Zm5.489,4.973A3.784,3.784,0,0,0,8,11.656a.516.516,0,0,1,0-1.032,4.8,4.8,0,0,1,3.7,1.735A.514.514,0,0,1,10.906,13.017Z" transform="translate(832 894.438)" fill="#ed8c00"/>
+    </g>
+    <g id="StateFace-50" transform="translate(305 28.972)">
+      <g transform="matrix(1, 0, 0, 1, 16.5, 690.03)" filter="url(#타원_39-2)">
+        <circle id="타원_39-7" data-name="타원 39" cx="8" cy="8" r="8" transform="translate(657.5 205)" fill="#fff"/>
+      </g>
+      <path id="StateFaceColor-3" data-name="StateFaceColor" d="M8,.563a8,8,0,1,0,8,8A8,8,0,0,0,8,.563ZM4.386,7.012A1.032,1.032,0,1,1,5.418,8.044,1.031,1.031,0,0,1,4.386,7.012ZM8,13.72a2.064,2.064,0,1,1,2.064-2.064A2.066,2.066,0,0,1,8,13.72Zm2.58-5.676a1.032,1.032,0,1,1,1.032-1.032A1.031,1.031,0,0,1,10.577,8.044Z" transform="translate(674 894.465)" fill="#efe821"/>
+    </g>
+    <g id="StateFace-25" transform="translate(-372 129)">
+      <g transform="matrix(1, 0, 0, 1, 693.5, 590)" filter="url(#타원_41)">
+        <circle id="타원_41-4" data-name="타원 41" cx="8" cy="8" r="8" transform="translate(297.5 305)" fill="#fff"/>
+      </g>
+      <path id="StateFaceColor-4" data-name="StateFaceColor" d="M8,.563a8,8,0,1,0,8,8A8,8,0,0,0,8,.563Zm2.58,5.418A1.032,1.032,0,1,1,9.545,7.012,1.031,1.031,0,0,1,10.577,5.98Zm-5.16,0A1.032,1.032,0,1,1,4.386,7.012,1.031,1.031,0,0,1,5.418,5.98ZM11.7,11.469a4.817,4.817,0,0,1-7.4,0,.516.516,0,0,1,.793-.661,3.789,3.789,0,0,0,5.818,0A.516.516,0,0,1,11.7,11.469Z" transform="translate(991 894.438)" fill="#bdcb44"/>
+    </g>
+    <g id="StateFace-0" transform="translate(-383 129)">
+      <g transform="matrix(1, 0, 0, 1, 704.5, 590)" filter="url(#타원_42)">
+        <circle id="타원_42-4" data-name="타원 42" cx="8" cy="8" r="8" transform="translate(445.5 305)" fill="#fff"/>
+      </g>
+      <path id="StateFaceColor-5" data-name="StateFaceColor" d="M8,.563a8,8,0,1,0,8,8A8,8,0,0,0,8,.563Zm2.58,4.9A1.032,1.032,0,1,1,9.545,6.5,1.031,1.031,0,0,1,10.577,5.464Zm-5.16,0A1.032,1.032,0,1,1,4.386,6.5,1.031,1.031,0,0,1,5.418,5.464Zm2.838,8.771H7.74a4.648,4.648,0,0,1-4.608-4.063.518.518,0,0,1,.513-.58h8.707a.516.516,0,0,1,.513.58A4.648,4.648,0,0,1,8.255,14.236Z" transform="translate(1150 894.438)" fill="#47996b"/>
+    </g>
+    <g id="StateFace-100-2" data-name="StateFace-100" transform="translate(371 129)">
+      <g transform="matrix(1, 0, 0, 1, -49.5, 590)" filter="url(#타원_39-3)">
+        <circle id="타원_39-8" data-name="타원 39" cx="8" cy="8" r="8" transform="translate(723.5 305)" fill="#fff"/>
+      </g>
+      <path id="StateFaceColor-6" data-name="StateFaceColor" d="M8,.563a8,8,0,1,0,8,8A8,8,0,0,0,8,.563ZM4.386,8.044a1.021,1.021,0,0,1,.339-.755l-1-.3A.515.515,0,0,1,4.021,6l2.58.774a.516.516,0,0,1-.148,1.009c-.016,0-.035-.006-.055-.006a1.043,1.043,0,0,1,.055.264,1.034,1.034,0,0,1-2.067,0ZM9.8,13.017a2.426,2.426,0,0,0-3.615,0,.516.516,0,0,1-.793-.661,3.381,3.381,0,0,1,5.2,0A.515.515,0,0,1,9.8,13.017Zm2.47-6.027-1,.3a1.029,1.029,0,1,1-1.725.755A.9.9,0,0,1,9.6,7.78a.318.318,0,0,1-.055.006A.516.516,0,0,1,9.4,6.777L11.98,6a.515.515,0,1,1,.293.987Z" transform="translate(674 894.438)" fill="#e53935"/>
+    </g>
+    <text id="Weekly_Monthly" data-name="Weekly &amp; Monthly" transform="translate(1126 807)" fill="#333" font-size="18" font-family="NotoSansKR-Medium, Noto Sans KR" font-weight="500"><tspan x="0" y="0">Weekly &amp; Monthly</tspan></text>
+    <text id="Weekly" transform="translate(1156 895.972)" fill="#333" font-size="18" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="-30.096" y="0">Weekly</tspan></text>
+    <text id="Monthly" transform="translate(1160 1001.972)" fill="#333" font-size="18" font-family="NotoSansKR-Regular, Noto Sans KR"><tspan x="-34.371" y="0">Monthly</tspan></text>
+    <g id="State-100">
+      <g id="bg-StatusWeekly" transform="translate(600 -24.028)">
+        <path id="빼기_1" data-name="빼기 1" d="M148,56H0L34.594,28,0,0H148V56Z" transform="translate(600 884)" fill="#fad7d6"/>
+        <path id="다각형_1" data-name="다각형 1" d="M28,0,56,34.595H0Z" transform="translate(782.595 884) rotate(90)" fill="#fad7d6"/>
+      </g>
+      <g id="StateFace-100-3" data-name="StateFace-100" transform="translate(600 -24.028)">
+        <g transform="matrix(1, 0, 0, 1, -278.5, 743.03)" filter="url(#타원_39-4)">
+          <circle id="타원_39-9" data-name="타원 39" cx="17.44" cy="17.44" r="17.44" transform="translate(952.5 151.97)" fill="#fff"/>
+        </g>
+        <path id="StateFaceColor-7" data-name="StateFaceColor" d="M17.438.563A17.438,17.438,0,1,0,34.875,18,17.434,17.434,0,0,0,17.438.563ZM9.563,16.875A2.227,2.227,0,0,1,10.3,15.23l-2.18-.654a1.123,1.123,0,0,1,.647-2.152l5.625,1.688a1.124,1.124,0,0,1-.323,2.2c-.035,0-.077-.014-.12-.014a2.273,2.273,0,0,1,.12.577,2.254,2.254,0,0,1-4.507,0ZM21.375,27.717a5.29,5.29,0,0,0-7.882,0,1.126,1.126,0,0,1-1.73-1.441,7.371,7.371,0,0,1,11.334,0A1.123,1.123,0,0,1,21.375,27.717Zm5.386-13.141-2.18.654a2.244,2.244,0,1,1-3.762,1.645,1.958,1.958,0,0,1,.12-.577.693.693,0,0,1-.12.014,1.124,1.124,0,0,1-.323-2.2l5.625-1.687a1.122,1.122,0,1,1,.64,2.152Z" transform="translate(674 894.438)" fill="#e53935"/>
+      </g>
+    </g>
+    <g id="State-75">
+      <g id="bg-StatusWeekly-2" data-name="bg-StatusWeekly" transform="translate(759 -24.028)">
+        <path id="빼기_1-2" data-name="빼기 1" d="M148,56H0L34.594,28,0,0H148V56Z" transform="translate(600 884)" fill="#fce8cc"/>
+        <path id="다각형_1-2" data-name="다각형 1" d="M28,0,56,34.595H0Z" transform="translate(782.595 884) rotate(90)" fill="#fce8cc"/>
+      </g>
+      <g id="StateFace-75-2" data-name="StateFace-75" transform="translate(600 -24.028)">
+        <g transform="matrix(1, 0, 0, 1, -278.5, 743.03)" filter="url(#타원_40-2)">
+          <circle id="타원_40-5" data-name="타원 40" cx="17.44" cy="17.44" r="17.44" transform="translate(1110.5 151.97)" fill="#fff"/>
+        </g>
+        <path id="StateFaceColor-8" data-name="StateFaceColor" d="M17.438.563A17.438,17.438,0,1,0,34.875,18,17.434,17.434,0,0,0,17.438.563Zm5.625,11.813a2.25,2.25,0,1,1-2.25,2.25A2.248,2.248,0,0,1,23.063,12.375ZM10.688,29.25a3.339,3.339,0,0,1-3.375-3.3c0-1.406,2-4.247,2.925-5.47a.56.56,0,0,1,.9,0c.921,1.223,2.925,4.064,2.925,5.47A3.339,3.339,0,0,1,10.688,29.25Zm1.125-12.375a2.25,2.25,0,1,1,2.25-2.25A2.248,2.248,0,0,1,11.813,16.875ZM23.78,27.717a8.25,8.25,0,0,0-6.342-2.967,1.125,1.125,0,0,1,0-2.25A10.461,10.461,0,0,1,25.5,26.283,1.121,1.121,0,0,1,23.78,27.717Z" transform="translate(832 894.438)" fill="#ed8c00"/>
+      </g>
+    </g>
+    <g id="State-25">
+      <g id="bg-StatusWeekly-3" data-name="bg-StatusWeekly" transform="translate(917 -24.028)">
+        <path id="빼기_1-3" data-name="빼기 1" d="M148,56H0L34.594,28,0,0H148V56Z" transform="translate(600 884)" fill="#ebefc6"/>
+        <path id="다각형_1-3" data-name="다각형 1" d="M28,0,56,34.595H0Z" transform="translate(782.595 884) rotate(90)" fill="#ebefc6"/>
+      </g>
+      <g id="StateFace-25-2" data-name="StateFace-25" transform="translate(600 -24.028)">
+        <g transform="matrix(1, 0, 0, 1, -278.5, 743.03)" filter="url(#타원_41-2)">
+          <circle id="타원_41-5" data-name="타원 41" cx="17.44" cy="17.44" r="17.44" transform="translate(1269.5 151.97)" fill="#fff"/>
+        </g>
+        <path id="StateFaceColor-9" data-name="StateFaceColor" d="M17.438.563A17.438,17.438,0,1,0,34.875,18,17.434,17.434,0,0,0,17.438.563Zm5.625,11.813a2.25,2.25,0,1,1-2.25,2.25A2.248,2.248,0,0,1,23.063,12.375Zm-11.25,0a2.25,2.25,0,1,1-2.25,2.25A2.248,2.248,0,0,1,11.813,12.375Zm13.7,11.967a10.5,10.5,0,0,1-16.144,0A1.126,1.126,0,0,1,11.1,22.9a8.262,8.262,0,0,0,12.684,0A1.126,1.126,0,0,1,25.509,24.342Z" transform="translate(991 894.438)" fill="#bdcb44"/>
+      </g>
+    </g>
+    <g id="State-0">
+      <g id="bg-StatusWeekly-4" data-name="bg-StatusWeekly" transform="translate(1076 -24.028)">
+        <path id="빼기_1-4" data-name="빼기 1" d="M148,56H0L34.594,28,0,0H148V56Z" transform="translate(600 884)" fill="#daebe1"/>
+        <path id="다각형_1-4" data-name="다각형 1" d="M28,0,56,34.595H0Z" transform="translate(782.595 884) rotate(90)" fill="#daebe1"/>
+      </g>
+      <g id="StateFace-0-2" data-name="StateFace-0" transform="translate(600 -24.028)">
+        <g transform="matrix(1, 0, 0, 1, -278.5, 743.03)" filter="url(#타원_42-2)">
+          <circle id="타원_42-5" data-name="타원 42" cx="17.44" cy="17.44" r="17.44" transform="translate(1428.5 151.97)" fill="#fff"/>
+        </g>
+        <path id="StateFaceColor-10" data-name="StateFaceColor" d="M17.438.563A17.438,17.438,0,1,0,34.875,18,17.434,17.434,0,0,0,17.438.563ZM23.063,11.25a2.25,2.25,0,1,1-2.25,2.25A2.248,2.248,0,0,1,23.063,11.25Zm-11.25,0a2.25,2.25,0,1,1-2.25,2.25A2.248,2.248,0,0,1,11.813,11.25ZM18,30.375H16.875A10.134,10.134,0,0,1,6.827,21.516,1.13,1.13,0,0,1,7.945,20.25H26.93a1.126,1.126,0,0,1,1.118,1.266A10.134,10.134,0,0,1,18,30.375Z" transform="translate(1150 894.438)" fill="#47996b"/>
+      </g>
+    </g>
+    <g id="State-50">
+      <g id="bg-StatusMonthly" transform="translate(600 81.972)">
+        <path id="빼기_1-5" data-name="빼기 1" d="M148,56H0L34.594,28,0,0H148V56Z" transform="translate(600 884)" fill="#fcfab1"/>
+        <path id="다각형_1-5" data-name="다각형 1" d="M28,0,56,34.595H0Z" transform="translate(782.595 884) rotate(90)" fill="#fcfab1"/>
+      </g>
+      <g id="StateFace-50-2" data-name="StateFace-50" transform="translate(600 81.972)">
+        <g transform="matrix(1, 0, 0, 1, -278.5, 637.03)" filter="url(#타원_39-5)">
+          <circle id="타원_39-10" data-name="타원 39" cx="17.44" cy="17.44" r="17.44" transform="translate(952.5 258)" fill="#fff"/>
+        </g>
+        <path id="StateFaceColor-11" data-name="StateFaceColor" d="M17.438.563A17.438,17.438,0,1,0,34.875,18,17.434,17.434,0,0,0,17.438.563ZM9.563,14.625a2.25,2.25,0,1,1,2.25,2.25A2.248,2.248,0,0,1,9.563,14.625ZM17.438,29.25a4.5,4.5,0,1,1,4.5-4.5A4.5,4.5,0,0,1,17.438,29.25Zm5.625-12.375a2.25,2.25,0,1,1,2.25-2.25A2.248,2.248,0,0,1,23.063,16.875Z" transform="translate(674 894.465)" fill="#efe821"/>
+      </g>
+    </g>
+    <g id="State-75-2" data-name="State-75">
+      <g id="bg-StatusMonthly-2" data-name="bg-StatusMonthly" transform="translate(759 81.972)">
+        <path id="빼기_1-6" data-name="빼기 1" d="M148,56H0L34.594,28,0,0H148V56Z" transform="translate(600 884)" fill="#fce8cc"/>
+        <path id="다각형_1-6" data-name="다각형 1" d="M28,0,56,34.595H0Z" transform="translate(782.595 884) rotate(90)" fill="#fce8cc"/>
+      </g>
+      <g id="StateFace-75-3" data-name="StateFace-75" transform="translate(600 81.972)">
+        <g transform="matrix(1, 0, 0, 1, -278.5, 637.03)" filter="url(#타원_40-3)">
+          <circle id="타원_40-6" data-name="타원 40" cx="17.44" cy="17.44" r="17.44" transform="translate(1110.5 257.97)" fill="#fff"/>
+        </g>
+        <path id="StateFaceColor-12" data-name="StateFaceColor" d="M17.438.563A17.438,17.438,0,1,0,34.875,18,17.434,17.434,0,0,0,17.438.563Zm5.625,11.813a2.25,2.25,0,1,1-2.25,2.25A2.248,2.248,0,0,1,23.063,12.375ZM10.688,29.25a3.339,3.339,0,0,1-3.375-3.3c0-1.406,2-4.247,2.925-5.47a.56.56,0,0,1,.9,0c.921,1.223,2.925,4.064,2.925,5.47A3.339,3.339,0,0,1,10.688,29.25Zm1.125-12.375a2.25,2.25,0,1,1,2.25-2.25A2.248,2.248,0,0,1,11.813,16.875ZM23.78,27.717a8.25,8.25,0,0,0-6.342-2.967,1.125,1.125,0,0,1,0-2.25A10.461,10.461,0,0,1,25.5,26.283,1.121,1.121,0,0,1,23.78,27.717Z" transform="translate(832 894.438)" fill="#ed8c00"/>
+      </g>
+    </g>
+    <g id="State-25-2" data-name="State-25">
+      <g id="bg-StatusMonthly-3" data-name="bg-StatusMonthly" transform="translate(917 81.972)">
+        <path id="빼기_1-7" data-name="빼기 1" d="M148,56H0L34.594,28,0,0H148V56Z" transform="translate(600 884)" fill="#ebefc6"/>
+        <path id="다각형_1-7" data-name="다각형 1" d="M28,0,56,34.595H0Z" transform="translate(782.595 884) rotate(90)" fill="#ebefc6"/>
+      </g>
+      <g id="StateFace-25-3" data-name="StateFace-25" transform="translate(600 81.972)">
+        <g transform="matrix(1, 0, 0, 1, -278.5, 637.03)" filter="url(#타원_41-3)">
+          <circle id="타원_41-6" data-name="타원 41" cx="17.44" cy="17.44" r="17.44" transform="translate(1269.5 257.97)" fill="#fff"/>
+        </g>
+        <path id="StateFaceColor-13" data-name="StateFaceColor" d="M17.438.563A17.438,17.438,0,1,0,34.875,18,17.434,17.434,0,0,0,17.438.563Zm5.625,11.813a2.25,2.25,0,1,1-2.25,2.25A2.248,2.248,0,0,1,23.063,12.375Zm-11.25,0a2.25,2.25,0,1,1-2.25,2.25A2.248,2.248,0,0,1,11.813,12.375Zm13.7,11.967a10.5,10.5,0,0,1-16.144,0A1.126,1.126,0,0,1,11.1,22.9a8.262,8.262,0,0,0,12.684,0A1.126,1.126,0,0,1,25.509,24.342Z" transform="translate(991 894.438)" fill="#bdcb44"/>
+      </g>
+    </g>
+    <g id="State-0-2" data-name="State-0">
+      <g id="bg-StatusMonthly-4" data-name="bg-StatusMonthly" transform="translate(1076 81.972)">
+        <path id="빼기_1-8" data-name="빼기 1" d="M148,56H0L34.594,28,0,0H148V56Z" transform="translate(600 884)" fill="#daebe1"/>
+        <path id="다각형_1-8" data-name="다각형 1" d="M28,0,56,34.595H0Z" transform="translate(782.595 884) rotate(90)" fill="#daebe1"/>
+      </g>
+      <g id="StateFace-50-3" data-name="StateFace-50" transform="translate(600 81.972)">
+        <g transform="matrix(1, 0, 0, 1, -278.5, 637.03)" filter="url(#타원_42-3)">
+          <circle id="타원_42-6" data-name="타원 42" cx="17.44" cy="17.44" r="17.44" transform="translate(1428.5 257.97)" fill="#fff"/>
+        </g>
+        <path id="StateFaceColor-14" data-name="StateFaceColor" d="M17.438.563A17.438,17.438,0,1,0,34.875,18,17.434,17.434,0,0,0,17.438.563ZM23.063,11.25a2.25,2.25,0,1,1-2.25,2.25A2.248,2.248,0,0,1,23.063,11.25Zm-11.25,0a2.25,2.25,0,1,1-2.25,2.25A2.248,2.248,0,0,1,11.813,11.25ZM18,30.375H16.875A10.134,10.134,0,0,1,6.827,21.516,1.13,1.13,0,0,1,7.945,20.25H26.93a1.126,1.126,0,0,1,1.118,1.266A10.134,10.134,0,0,1,18,30.375Z" transform="translate(1150 894.438)" fill="#47996b"/>
+      </g>
+    </g>
+    <text id="_3_Weeks_ago" data-name="3 Weeks ago" transform="translate(1291 937.972)" fill="#666" font-size="14" font-family="NotoSansKR-Light, Noto Sans KR" font-weight="300"><tspan x="-38.892" y="0">3 Weeks ago</tspan></text>
+    <text id="February" transform="translate(1291 1043.972)" fill="#666" font-size="14" font-family="NotoSansKR-Light, Noto Sans KR" font-weight="300"><tspan x="-28.294" y="0">February</tspan></text>
+    <text id="_2_Weeks_ago" data-name="2 Weeks ago" transform="translate(1450 937.972)" fill="#666" font-size="14" font-family="NotoSansKR-Light, Noto Sans KR" font-weight="300"><tspan x="-38.892" y="0">2 Weeks ago</tspan></text>
+    <text id="March" transform="translate(1450 1043.972)" fill="#666" font-size="14" font-family="NotoSansKR-Light, Noto Sans KR" font-weight="300"><tspan x="-19.39" y="0">March</tspan></text>
+    <text id="Last_Week" data-name="Last Week" transform="translate(1608 937.972)" fill="#666" font-size="14" font-family="NotoSansKR-Light, Noto Sans KR" font-weight="300"><tspan x="-31.689" y="0">Last Week</tspan></text>
+    <text id="April" transform="translate(1608 1043.972)" fill="#666" font-size="14" font-family="NotoSansKR-Light, Noto Sans KR" font-weight="300"><tspan x="-14.525" y="0">April</tspan></text>
+    <text id="This_Week" data-name="This Week" transform="translate(1767 937.972)" fill="#666" font-size="14" font-family="NotoSansKR-Light, Noto Sans KR" font-weight="300"><tspan x="-31.906" y="0">This Week</tspan></text>
+    <text id="This_Month" data-name="This Month" transform="translate(1767 1043.972)" fill="#666" font-size="14" font-family="NotoSansKR-Light, Noto Sans KR" font-weight="300"><tspan x="-35.133" y="0">This Month</tspan></text>
+    <g id="TopologyArea-----" transform="translate(0 411)">
+      <text id="Topology-3" data-name="Topology" transform="translate(322 736)" fill="#222" font-size="24" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="0" y="0">Topology</tspan></text>
+      <path id="선_11-2" data-name="선 11" d="M1546,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H1546a1,1,0,0,1,1,1A1,1,0,0,1,1546,1Z" transform="translate(322.5 750.5)" fill="#222"/>
+    </g>
+  </g>
+</svg>
