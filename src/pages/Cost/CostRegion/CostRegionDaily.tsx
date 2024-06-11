@@ -34,15 +34,39 @@ const CostRegionDaily = () => {
       const { data: userTag } = await axios('https://iampam-cloudops-tenants-data.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/cost/region-daily/taguser.json');
       const { data: awsTag } = await axios('https://iampam-cloudops-tenants-data.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/cost/region-daily/tagaws.json');
 
-      const [lastMonthKey, lastDateKey, lastTotalCostKey, ...lastMapedTableDataKeys] = Object.keys(tableData[tableData.length - 2]).map((key) => key);
-      const [lastMonthVal, lastDateVal, lastTotalCostVal, ...lastMapedTableDataVals] = Object.values(tableData[tableData.length - 2]).map((value) => value);
-      setLastLabels(lastMapedTableDataKeys);
-      setLastSeries(lastMapedTableDataVals);
+      const lastTableDataKeys = [];
+      const lastTableDataVals = [];
 
-      const [monthKey, dateKey, totalCostKey, ...mapedTableDataKeys] = Object.keys(tableData[tableData.length - 1]).map((key) => key);
-      const [monthVal, dateVal, totalCostVal, ...mapedTableDataVals] = Object.values(tableData[tableData.length - 1]).map((value) => value);
-      setLabels(mapedTableDataKeys);
-      setSeries(mapedTableDataVals);
+      Object.entries(tableData[tableData.length - 2]).forEach(([key, value]) => {
+        if (key === 'month' || key === 'date' || key === 'totalCost') {
+          return;
+        }
+
+        if (value !== 0) {
+          lastTableDataKeys.push(key);
+          lastTableDataVals.push(value);
+        }
+      });
+
+      setLastLabels(lastTableDataKeys);
+      setLastSeries(lastTableDataVals);
+
+      const tableDataKeys = [];
+      const tableDataVals = [];
+
+      Object.entries(tableData[tableData.length - 1]).forEach(([key, value]) => {
+        if (key === 'month' || key === 'date' || key === 'totalCost') {
+          return;
+        }
+
+        if (value !== 0) {
+          tableDataKeys.push(key);
+          tableDataVals.push(value);
+        }
+      });
+
+      setLabels(tableDataKeys);
+      setSeries(tableDataVals);
 
       setRegionTableData(tableData);
       setDefaultTableSettings(SetDefaultTableSetting(tableOption));
