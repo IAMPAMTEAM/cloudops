@@ -74,13 +74,36 @@ export default function FilterDataTable({
     updateFilteredDatas(newCheckedStates);
   };
 
-  const updateFilteredDatas = (newCheckedStates) => {
-    const filteredUsers = result.policyResults.filter((_, i) => newCheckedStates[i]).flatMap((policy) => Object.values(policy)[0]);
+  // const updateFilteredDatas = (newCheckedStates) => {
+  //   const filteredUsers = result.policyResults.filter((_, i) => newCheckedStates[i]).flatMap((policy) => Object.values(policy)[0]);
 
-    if (filteredUsers.length === 0) {
+  //   if (filteredUsers.length === 0) {
+  //     setFilteredDatas(datas);
+  //   } else {
+  //     setFilteredDatas(datas.filter((data) => filteredUsers.includes(data.user)));
+  //     console.log(datas.filter((data) => filteredUsers.includes(data.user)));
+  //   }
+
+  const updateFilteredDatas = (newCheckedStates) => {
+    const checkedPolicies = result.policyResults.filter((_, i) => newCheckedStates[i]);
+
+    if (checkedPolicies.length === 0) {
       setFilteredDatas(datas);
     } else {
-      setFilteredDatas(datas.filter((data) => filteredUsers.includes(data.user)));
+      const filteredUsersArrays = checkedPolicies.map((policy) => Object.values(policy)[0]);
+
+      if (filteredUsersArrays.length === 1) {
+        const filteredUsers = new Set(filteredUsersArrays[0]);
+        const filteredData = datas.filter((data) => filteredUsers.has(data.user));
+        setFilteredDatas(filteredData);
+      } else {
+        const commonUsers = filteredUsersArrays.reduce((acc, users) => {
+          return new Set([...acc].filter((user) => users.includes(user)));
+        });
+
+        const filteredData = datas.filter((data) => commonUsers.has(data.user));
+        setFilteredDatas(filteredData);
+      }
     }
   };
 
