@@ -48,7 +48,7 @@ const CostRegion = lazy(() => import('@/pages/Cost/CostRegion/CostRegion'));
 const DashboardOverview = lazy(() => import('@/pages/DashboardOverview/DashboardOverviewContainer'));
 const DashboardSummary = lazy(() => import('@/pages/DashboardSummary/DashboardSummaryContainer'));
 
-const Credentials = lazy(() => import('@/pages/Credentials/CredentialsContainer'));
+const Credentials = lazy(() => import('@/pages/Credentials/Credentials'));
 const Compliance = lazy(() => import('@/pages/Compliance/ComplianceContainer'));
 const Monitor = lazy(() => import('@/pages/Monitor/MonitorContainer'));
 const Log = lazy(() => import('@/pages/Log/LogContainer'));
