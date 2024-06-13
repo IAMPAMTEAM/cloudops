@@ -119,7 +119,7 @@ const SecurityGroup = () => {
     const [outboundFirstRowData] = sgOutboundUri;
 
     if (associationsFirstRowData) {
-      const associationsColumns = [{ field: 'type' }, { field: 'resource' }, { field: 'tag' }];
+      const associationsColumns = [{ field: 'type' }, { field: 'resource' }, { field: 'tag', minWidth: 195 }];
 
       const somedAssociationsUri = sgAssociationsUri.some((association) => {
         return Object.keys(association).length >= 3;
@@ -165,6 +165,7 @@ const SecurityGroup = () => {
         tag: string;
       }[];
 
+      // @ts-ignore
       setAssociationsColumnDefs(associationsColumns);
 
       setAssociationsRowData(somedAssociationsUri ? flatedSgAssociationsUri : []);
@@ -216,6 +217,7 @@ const SecurityGroup = () => {
         },
       ];
 
+      // @ts-ignore
       setInboundColumnDefs(newInboundColumns);
       setInboundRowData(sgInboundUri);
     } else {
@@ -266,7 +268,7 @@ const SecurityGroup = () => {
       <div className='flex flex-col gap-6'>
         <div className='flex gap-6'>
           <div className='w-[60%]'>
-            <p className='text-lg pb-4 '>Security Group</p>
+            <p className='text-lg pb-2 '>Security Group</p>
             <div className='ag-theme-alpine' style={{ height: defaultTableConfig.tableHeight }}>
               <AgGridReact
                 ref={gridRef}
@@ -284,7 +286,7 @@ const SecurityGroup = () => {
           </div>
           {currentRowData && (
             <div className='w-[40%]'>
-              <p className='text-lg pb-4'>Associations</p>
+              <p className='text-lg pb-2'>Associations</p>
               <div className='ag-theme-alpine' style={{ height: defaultTableConfig.tableHeight }}>
                 <AgGridReact
                   ref={gridAssociationsRef}
@@ -301,11 +303,11 @@ const SecurityGroup = () => {
             </div>
           )}
         </div>
-        <div className='flex gap-6'>
+        <div className='flex gap-6 mt-[1rem]'>
           {currentRowData && (
             <>
-              <div className='w-[50%]'>
-                <p className='text-lg pb-4'>InBound</p>
+              <div className='w-[60%]'>
+                <p className='text-lg pb-2'>InBound</p>
                 <div className='ag-theme-alpine' style={{ height: defaultTableConfig.tableHeight }}>
                   <AgGridReact
                     ref={gridInboundRef}
@@ -320,8 +322,8 @@ const SecurityGroup = () => {
                   />
                 </div>
               </div>
-              <div className='w-[50%]'>
-                <p className='text-lg pb-4'>OutBound</p>
+              <div className='w-[40%]'>
+                <p className='text-lg pb-2'>OutBound</p>
                 <div className='ag-theme-alpine' style={{ height: defaultTableConfig.tableHeight }}>
                   <AgGridReact
                     ref={gridOutboundRef}

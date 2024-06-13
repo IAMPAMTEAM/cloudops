@@ -34,8 +34,8 @@ const CostRegionMonthly = () => {
       const { data: userTag } = await axios('https://iampam-cloudops-tenants-data.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/cost/region-monthly/taguser.json');
       const { data: awsTag } = await axios('https://iampam-cloudops-tenants-data.s3.ap-northeast-2.amazonaws.com/tenants/330886885966/cost/region-monthly/tagaws.json');
 
-      const lastTableDataKeys = [];
-      const lastTableDataVals = [];
+      const lastTableDataKeys: string[] = [];
+      const lastTableDataVals: any[] = [];
 
       Object.entries(tableData[tableData.length - 2]).forEach(([key, value]) => {
         if (key === 'month' || key === 'date' || key === 'totalCost') {
@@ -51,8 +51,8 @@ const CostRegionMonthly = () => {
       setLastLabels(lastTableDataKeys);
       setLastSeries(lastTableDataVals);
 
-      const tableDataKeys = [];
-      const tableDataVals = [];
+      const tableDataKeys: string[] = [];
+      const tableDataVals: any[] = [];
 
       Object.entries(tableData[tableData.length - 1]).forEach(([key, value]) => {
         if (key === 'month' || key === 'date' || key === 'totalCost') {
@@ -110,9 +110,11 @@ const CostRegionMonthly = () => {
       </div>
       <div className='grid lg:grid-cols-4 gap-[1.2rem] mt-[1.2rem]'>
         <div className='panel lg:col-span-2'>
+          <p className='text-[16px] font-semibold'>Last Month</p>
           <CostChart title='Last Month' labels={lastLabels} series={lastSeries} />
         </div>
         <div className='panel lg:col-span-2'>
+          <p className='text-[16px] font-semibold'>This Month</p>
           <CostChart title='This Month' labels={labels} series={series} />
         </div>
       </div>

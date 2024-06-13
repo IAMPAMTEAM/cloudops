@@ -1,6 +1,6 @@
 import { AgGridReact } from 'ag-grid-react';
 import { ColDef, SizeColumnsToContentStrategy, SizeColumnsToFitGridStrategy, SizeColumnsToFitProvidedWidthStrategy, ValueFormatterParams } from 'ag-grid-community';
-import 'ag-grid-enterprise';
+// import 'ag-grid-enterprise';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 
@@ -125,11 +125,11 @@ export default function FilterDataTable({
           </button>
         </div>
       </div>
-      <div className='flex flex-wrap justify-between px-7'>
+      <div className='flex flex-nowrap justify-between '>
         {result.policyResults.map((policy: any, index) => {
           const key = Object.keys(policy)[0];
           return (
-            <div key={index} className='inline-flex items-center mb-2 w-1/4'>
+            <div key={index} className='inline-flex items-center mb-2'>
               <label className='relative flex items-center p-2 rounded-full cursor-pointer' htmlFor={`check${index}`}>
                 <input
                   type='checkbox'
@@ -144,7 +144,7 @@ export default function FilterDataTable({
                   </svg>
                 </span>
               </label>
-              <label className='mt-px ml-2 cursor-pointer select-none' htmlFor={`check${index}`}>
+              <label className='mt-px  cursor-pointer select-none' htmlFor={`check${index}`}>
                 {key}
               </label>
             </div>

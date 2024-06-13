@@ -111,7 +111,7 @@ const Sidebar = () => {
                   </div>
                 </button>
 
-                <AnimateHeight duration={300} height={currentMenu === 'network' ? 'auto' : 0}>
+                <AnimateHeight className='seungyeon' duration={300} height={currentMenu === 'network' ? 'auto' : 0}>
                   <ul className='sub-menu text-gray-500'>
                     <li>
                       <NavLink to='/network/cidr'>{t('networkCidr')}</NavLink>
@@ -252,7 +252,7 @@ const Sidebar = () => {
                       <NavLink to='/network-flow/vpc'>{t('networkFlowVpc')}</NavLink>
                     </li>
                   </ul>
-                  <ul className='sub-menu text-gray-500'>
+                  {/* <ul className='sub-menu text-gray-500'>
                     <li>
                       <NavLink to='/network-flow/internal-elb'>{t('networkFlowInternalElb')}</NavLink>
                     </li>
@@ -261,7 +261,7 @@ const Sidebar = () => {
                     <li>
                       <NavLink to='/network-flow/internet-elb'>{t('networkFlowInternetElb')}</NavLink>
                     </li>
-                  </ul>
+                  </ul> */}
                 </AnimateHeight>
               </li>
 
@@ -294,7 +294,7 @@ const Sidebar = () => {
 
               {/* compliance */}
               <li className='menu nav-item'>
-                <NavLink to='/compliance' className='group'>
+                <NavLink to='/compliance' className='group hover:cursor-not-allowed opacity-50'>
                   <div className='flex items-center'>
                     <IconListCheck className='group-hover:!text-primary shrink-0' />
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('compliance')}</span>
@@ -304,7 +304,7 @@ const Sidebar = () => {
 
               {/* monitor */}
               <li className='menu nav-item'>
-                <NavLink to='/monitor' className='group'>
+                <NavLink to='/monitor' className='group hover:cursor-not-allowed opacity-50'>
                   <div className='flex items-center'>
                     <IconTrendingUp className='group-hover:!text-primary shrink-0' />
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('monitor')}</span>
@@ -314,7 +314,7 @@ const Sidebar = () => {
 
               {/* log */}
               <li className='menu nav-item'>
-                <NavLink to='/log' className='group'>
+                <NavLink to='/log' className='group hover:cursor-not-allowed opacity-50'>
                   <div className='flex items-center'>
                     <IconInfoHexagon className='group-hover:!text-primary shrink-0' />
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('log')}</span>
@@ -324,7 +324,7 @@ const Sidebar = () => {
 
               {/* chatbot */}
               <li className='menu nav-item'>
-                <NavLink to='/chatbot' className='group'>
+                <NavLink to='/chatbot' className='group hover:cursor-not-allowed opacity-50'>
                   <div className='flex items-center'>
                     <IconChatNotification className='group-hover:!text-primary shrink-0' />
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('chatbot')}</span>
@@ -333,7 +333,7 @@ const Sidebar = () => {
               </li>
 
               <li className='menu nav-item'>
-                <NavLink to='/admin' className='group'>
+                <NavLink to='/admin' className='group hover:cursor-not-allowed opacity-50'>
                   <div className='flex items-center'>
                     <IconUser className='group-hover:!text-primary shrink-0' />
                     <span className='ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark'>{t('admin')}</span>

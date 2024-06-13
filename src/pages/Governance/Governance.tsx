@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-
+import Infographics from '@/assets/images/governanceInfographics.svg';
 import DataTable from '@/components/DataTables/DataTable';
 import MergeTagData from '@/utils/MergeTagData';
 import SetColumnDefs from '@/utils/SetColumnDefs';
@@ -65,7 +65,8 @@ const Governance = () => {
 
   return (
     <>
-      <div className='panel'>
+      <img src={Infographics} alt='Governance Infographics' className='m-0 ml-auto mr-auto' />
+      <div className='panel mt-[1.2rem]'>
         <DataTable
           showSaveButton={true}
           datas={mergedTableData}
@@ -77,7 +78,7 @@ const Governance = () => {
           paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
           saveCallback={saveEditedRow}
         >
-          <p className='text-lg'>Governance</p>
+          <p className='text-lg'></p>
         </DataTable>
       </div>
     </>

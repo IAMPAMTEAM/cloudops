@@ -10,10 +10,10 @@ const CostChart = ({ title, labels, series }: { title: string; labels: any[]; se
           type: 'donut',
         },
         title: {
-          text: title,
-          margin: 20,
+          // text: title,
+          margin: 70,
           style: {
-            fontSize: 15,
+            fontSize: '1rem',
           },
         },
         colors: [

@@ -5,7 +5,7 @@ interface Props {
 
 export const TopologyRepeat = (props: Props) => {
   return (
-    <div className={`panel grid lg:grid-cols-2 gap-6`}>
+    <div className={`grid lg:grid-cols-2 gap-6`}>
       {props.imageSrcs.map((imageSrc: any, idx: number) => {
         return (
           <>

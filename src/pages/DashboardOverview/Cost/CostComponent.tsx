@@ -319,16 +319,13 @@ export const CostComponent = () => {
   useEffect(() => {
     let groupedAccounts = {};
     accountCostData.forEach((item) => {
-      // account 객체를 확인
       for (const key in item.account) {
         const value = item.account[key];
 
-        // 같은 값을 가진 키들을 그룹화
         if (!groupedAccounts[key]) {
           groupedAccounts[key] = [];
         }
 
-        // 해당 계정의 데이터를 추가
         groupedAccounts[key].push(value);
       }
     });
@@ -338,34 +335,6 @@ export const CostComponent = () => {
     }));
 
     setAccountCostLineData(result);
-    // accountCostData.map((data: AccountCost, idx: number) => {
-    //   const accountInfo = data.account;
-    //   let valueArr: number[] = [];
-    //   let keyWithVal: any[] = [];
-    //   const keyArr = Object.keys(accountInfo);
-
-    //   keyArr.forEach((key: string, i: number) => {
-    //     valueArr.push(...valueArr, Object.values(accountInfo)[i] as number);
-    //   });
-
-    //   keyArr.forEach((key: string, i: number) => {
-    //     keyWithVal.push({
-    //       name: key,
-    //       data: valueArr,
-    //     });
-    //   });
-    //   console.log(keyWithVal);
-
-    //   // keyArr.map((key: string, i: number) => {
-    //   //   const value = Object.values(accountInfo)[i] as number;
-    //   //   valueArr.push(...valueArr, value);
-
-    //   //   keyWithVal.push({
-    //   //     name: key,
-    //   //     data: valueArr,
-    //   //   });
-    //   // });
-    // });
   }, [accountCostData]);
 
   return (

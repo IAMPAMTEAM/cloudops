@@ -1,7 +1,13 @@
 /** @type {import('tailwindcss').Config} */
-import withMT from '@material-tailwind/react/utils/withMT';
-
-module.exports = withMT({
+const plugin = require('tailwindcss/plugin');
+const rotateX = plugin(function ({ addUtilities }) {
+  addUtilities({
+    '.rotate-y-180': {
+      transform: 'rotateY(180deg)',
+    },
+  });
+});
+module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
@@ -87,14 +93,21 @@ module.exports = withMT({
       },
     },
   },
-  daisyui: {
-    theme: ['light'],
-  },
   plugins: [
+    // require('daisyui'),
     require('@tailwindcss/forms')({
       strategy: 'class',
     }),
     require('@tailwindcss/typography'),
-    require('daisyui'),
+    // rotateX,
   ],
-});
+  // daisyui: {
+  //   themes: true,
+  //   styled: true, // 기본 스타일링 비활성화
+  //   base: false, // 기본 reset CSS 비활성화
+  //   utils: true, // 유틸리티 클래스 사용 여부
+  //   logs: true,
+  //   rtl: false,
+  //   prefix: '',
+  // },
+};

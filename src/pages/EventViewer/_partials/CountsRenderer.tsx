@@ -3,11 +3,11 @@ import CountsIcon from '@/pages/EventViewer/_partials/countsIcon.svg';
 
 export default (params: CustomCellRendererProps) => {
   if (params.value <= 5) {
-    return <span className='bg-green-500 text-white flex justify-center items-center w-[34px] h-[34px] text-center px-2 py-2 mt-0.5 rounded-full'>{params.value}</span>;
+    return <span className='bg-[#f0f7f3] text-[green] flex justify-center items-center w-[34px] h-[34px] text-center px-2 py-2 mt-0.5 rounded-full'>{params.value}</span>;
   } else if (params.value <= 10) {
-    return <span className='bg-blue-500 text-white flex justify-center items-center w-[34px] h-[34px] text-center px-2 py-2 mt-0.5 rounded-full'>{params.value}</span>;
+    return <span className='bg-[#f1f7fc] text-[blue] flex justify-center items-center w-[34px] h-[34px] text-center px-2 py-2 mt-0.5 rounded-full'>{params.value}</span>;
   } else {
-    return <span className='bg-red-500 text-white flex justify-center items-center w-[34px] h-[34px] text-center px-2 py-2 mt-0.5 rounded-full'>{params.value}</span>;
+    return <span className='bg-[#fcf2f2] text-[red] flex justify-center items-center w-[34px] h-[34px] text-center px-2 py-2 mt-0.5 rounded-full'>{params.value}</span>;
   }
   // return (
   //   <div style={{ display: 'flex', alignItems: 'center' }}>

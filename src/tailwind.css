@@ -1,6 +1,48 @@
 /* Animate css */
 @import './assets/css/animate.css';
 
+/* tippy css */
+@import './assets/css/tippy.css';
+
+/* swiper css */
+@import './assets/css/swiper.css';
+
+/* Elements - Progressbar */
+@import './assets/css/progressbar.css';
+
+/* Data tables css */
+@import './assets/css/datatables.css';
+
+/* scrumboard */
+@import './assets/css/scrumboard.css';
+
+/* calendar css */
+@import './assets/css/fullcalendar.css';
+
+/* sweetalert css */
+@import './assets/css/sweetalert.css';
+
+/* flatpickr css */
+@import './assets/css/flatpickr.css';
+
+/* quill-editor css */
+@import './assets/css/quill-editor.css';
+
+/* markdown-editor css */
+@import './assets/css/markdown-editor.css';
+
+/* file upload with preview */
+@import './assets/css/file-upload-preview.css';
+
+/* dragndrop*/
+@import './assets/css/dragndrop.css';
+
+/* form element*/
+@import './assets/css/form-elements.css';
+
+/* Select2*/
+@import './assets/css/select2.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,6 +64,7 @@
   .panel {
     @apply relative rounded-md bg-white p-5 shadow dark:bg-black;
   }
+
   /* Navbar */
   .navbar-sticky header,
   .navbar-floating header {
@@ -30,8 +73,14 @@
   .navbar-floating header {
     @apply bg-[#fafafa]/90 px-6 pt-4 dark:bg-[#060818]/90;
   }
-  .navbar-floating header > div .horizontal-menu {
-    @apply rounded-b-md shadow;
+  .navbar-floating header > div > div:first-child {
+    @apply rounded-md;
+  }
+  .horizontal .navbar-floating header > div > div:first-child {
+    @apply rounded-b-none;
+  }
+  .horizontal .navbar-floating header .horizontal-menu {
+    @apply rounded-b-md;
   }
 
   /* Sidebar */
@@ -41,11 +90,11 @@
 
   .sidebar .nav-item > button,
   .sidebar .nav-item > a {
-    @apply mb-1 flex items-center justify-between overflow-hidden whitespace-nowrap rounded-md p-2.5 text-[#506690] hover:bg-[#000]/[0.08] hover:text-black dark:hover:bg-[#181f32] dark:hover:text-white-dark;
+    @apply mb-1 flex w-full items-center justify-between overflow-hidden whitespace-nowrap rounded-md p-2.5 text-[#506690] hover:bg-[#000]/[0.08] hover:text-black dark:hover:bg-[#181f32] dark:hover:text-white-dark;
   }
   .sidebar .nav-item > button.active,
   .sidebar .nav-item > a.active {
-    @apply bg-[#000]/[0.08] text-black dark:bg-[#040404] dark:text-white-dark;
+    @apply bg-[#000]/[0.08] text-black dark:bg-[#181f32] dark:text-white-dark;
   }
 
   .sidebar .nav-item > button.active > div > span,
@@ -53,26 +102,19 @@
     @apply dark:!text-white-dark;
   }
 
-  .sidebar {
-    @apply w-full;
-  }
-
-  .sidebar ul {
-    @apply min-w-full;
-  }
   .sidebar ul.sub-menu li button,
   .sidebar ul.sub-menu li a {
-    @apply flex items-center px-4 py-4.5 hover:bg-gray-100 w-full h-[40px]
-      hover:text-[#6667AB]  dark:hover:bg-gray-900 dark:hover:text-primary;
+    @apply flex w-full items-center px-9 py-2.5 before:h-0.5 before:w-2 hover:bg-gray-100
+hover:text-[#6667ab] dark:before:bg-gray-500 dark:hover:bg-gray-900 dark:hover:text-primary;
   }
   .sidebar ul.sub-menu li button.active,
   .sidebar ul.sub-menu li a.active {
-    @apply text-[#FFF] bg-[#6667AB] font-extrabold;
+    @apply bg-[#6667ab] text-[#fff] rounded-[4px];
   }
 
   .sidebar .nav-item a div:first-child svg,
   .sidebar .nav-item button div:first-child svg {
-    @apply w-5 h-5 text-black/50 dark:text-white/50;
+    @apply h-5 w-5 text-black/50 dark:text-white/50;
   }
 
   .main-container .main-content {
@@ -285,6 +327,10 @@
     @apply border-dark text-dark shadow-none hover:bg-dark hover:text-white;
   }
 
+  .btn-gradient {
+    @apply bg-gradient-to-r from-[#EF1262] to-[#4361EE] hover:to-[#EF1262] hover:from-[#4361EE] text-white;
+  }
+
   /* Badge */
   .badge {
     @apply relative my-1 rounded border border-transparent px-2 py-0.5 text-xs font-semibold text-white;
@@ -343,7 +389,7 @@
   .has-error .form-select,
   .has-error .form-multiselect,
   .has-error .multiselect__tags {
-    @apply border-danger text-danger bg-danger/[0.08] placeholder-danger/70 focus:border-danger;
+    @apply border-danger bg-danger/[0.08] text-danger placeholder-danger/70 focus:border-danger;
   }
   .has-error .form-label,
   .has-error .form-help,
@@ -364,7 +410,7 @@
   .has-success .form-select,
   .has-success .form-multiselect,
   .has-success .multiselect__tags {
-    @apply border-success text-success bg-success/[0.08] placeholder-success/70 focus:border-success;
+    @apply border-success bg-success/[0.08] text-success placeholder-success/70 focus:border-success;
   }
   .has-success .form-label,
   .has-success .form-help,
@@ -468,7 +514,7 @@
   }
   table thead tr,
   table tfoot tr {
-    @apply border-b-0 bg-white-light/30  dark:!bg-[#1a2941];
+    @apply border-b-0 !bg-[#f6f8fa]  dark:!bg-[#1a2941];
   }
   table thead tr th,
   table tfoot tr th,
@@ -491,7 +537,7 @@
 
   table.dataTable-table tbody tr th,
   table.dataTable-table tbody tr td {
-    @apply border-b border-[#e5e7eb] py-3 px-4 ltr:text-left rtl:text-right dark:border-[#191e3a];
+    @apply border-b border-white-light/40 py-3 px-4 ltr:text-left rtl:text-right dark:border-[#191e3a];
   }
   table.dataTable-table tbody tr:last-child td {
     @apply border-b-0;
@@ -656,20 +702,6 @@
 .modal-fade-enter-to,
 .modal-fade-leave-from {
   @apply transform opacity-100 scale-100;
-}
-
-/* AG Grid */
-.ag-theme-quartz,
-.ag-theme-quartz-dark {
-  --ag-foreground-color: rgb(126, 46, 132);
-  --ag-background-color: rgb(249, 245, 227);
-  --ag-header-foreground-color: rgb(204, 245, 172);
-  --ag-header-background-color: rgb(209, 64, 129);
-  --ag-odd-row-background-color: rgb(0, 0, 0, 0.03);
-  --ag-header-column-resize-handle-color: rgb(126, 46, 132);
-
-  --ag-font-size: 17px;
-  --ag-font-family: monospace;
 }
 
 /* Hightlight JS */
