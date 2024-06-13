@@ -25,7 +25,37 @@ export const PieChart = (props: Props) => {
         enabled: false,
       },
       labels: props.labels,
-      colors: props.colors,
+      colors: [
+        '#9aa7e8',
+        '#8b5795',
+        '#6667ab',
+        '#e087b5',
+        '#ea435d',
+        '#d75078',
+        '#e53935',
+        '#c22626',
+        '#d67d6f',
+        '#e2c0be',
+        '#d3927e',
+        '#c5acaf',
+        '#d67d6f',
+        '#8e7860',
+        '#7b635f',
+        '#edc371',
+        '#ed8c00',
+        '#cfbe54',
+        '#fbf665',
+        '#dbe961',
+        '#92c766',
+        '#47996b',
+        '#a1c9c8',
+        '#668b8a',
+        '#849fa8',
+        '#568392',
+        '#75b0de',
+        '#3c71a5',
+        '#585dc6',
+      ],
       title: {
         text: props.title,
         margin: 20,
@@ -68,7 +98,7 @@ export const PieChart = (props: Props) => {
         options={chartData.options}
         series={chartData.series}
         type='pie'
-        height={500}
+        height={350}
       />
     </section>
   );

@@ -4,16 +4,20 @@ import { CostComponent } from './Cost/CostComponent';
 const DashboardOverviewContainer = () => {
   return (
     <>
-      <div className='bg-[#f3f3f9] p-[24px] rounded-[8px]'>
-        <p className='text-[1.2rem] font-semibold mb-[1.2rem] text-[#6667ab]'>Compliance</p>
+      <div className='p-[24px] rounded-[8px]'>
+        <p className='text-[1.2rem] font-semibold mb-[8px] text-[#333]'>Compliance</p>
+        <hr className='mb-[8px] border-[1px] border-[#333]' />
         <ComplianceComponent />
       </div>
-      <div className='bg-[#f3f3f9] p-[24px] rounded-[8px] mt-[1.2rem]'>
-        <p className='text-[1.2rem] font-semibold mb-[1.2rem] text-[#6667ab]'>Resources</p>
+      <div className='p-[24px] rounded-[8px]'>
+        <p className='text-[1.2rem] font-semibold mb-[8px] text-[#333]'>Resources</p>
+        <hr className='mb-[8px] border-[1px] border-[#333]' />
+
         <ResourcesComponent />
       </div>
-      <div className='bg-[#f3f3f9] p-[24px] rounded-[8px] mt-[1.2rem]'>
-        <p className='text-[1.2rem] font-semibold mb-[1.2rem] text-[#6667ab]'>Cost</p>
+      <div className='p-[24px] rounded-[8px]'>
+        <p className='text-[1.2rem] font-semibold mb-[8px] text-[#333]'>Cost</p>
+        <hr className='mb-[8px] border-[1px] border-[#333]' />
         <CostComponent />
       </div>
     </>

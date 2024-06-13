@@ -414,7 +414,7 @@ const VPCTopology: React.FC = ({ onFromVpcChange, onToVpcChange, filteredData })
         {/* Choose fromVPC */}
         <div className='flex flex-col'>
           <p className='text-[0.8rem] font-semibold mb-[0.5rem]'>Source VPC</p>
-          <select className='select select-success max-w-xs' onChange={handleSelectedFromVpc} value={selectedFromVpc}>
+          <select className='select select-success max-w-xs border-[1px] border-[#ccc] rounded-[4px] p-[4px]' onChange={handleSelectedFromVpc} value={selectedFromVpc}>
             <option selected>Choose fromVPC</option>
             {fromVpcList.map((subnet, idx) => {
               return (
@@ -428,7 +428,7 @@ const VPCTopology: React.FC = ({ onFromVpcChange, onToVpcChange, filteredData })
         {/* Choose toVPC */}
         <div className='flex flex-col'>
           <p className='text-[0.8rem] font-semibold mb-[0.5rem]'>Target VPC</p>
-          <select className='select select-warning max-w-xs' onChange={handleSelectedToVpc} value={selectedToVpc} disabled={!isSelectedFromVpc}>
+          <select className='select select-warning max-w-xs border-[1px] border-[#ccc] rounded-[4px] p-[4px]' onChange={handleSelectedToVpc} value={selectedToVpc} disabled={!isSelectedFromVpc}>
             <option selected>Choose toVPC</option>
             {toVpcList.map((subnet, idx) => {
               return (

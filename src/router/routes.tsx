@@ -1,5 +1,4 @@
 import { lazy } from 'react';
-import { useSelector } from 'react-redux';
 const Chart = lazy(() => import('@/pages/Chart'));
 const Test = lazy(() => import('@/pages/Test'));
 const UserTest = lazy(() => import('@/pages/UserTest'));
@@ -40,14 +39,22 @@ const InternalElbFlow = lazy(() => import('@/pages/NetworkFlow/InternalElbFlow/I
 
 // const Landing = lazy(() => import('@/pages/Landing/LandingContainer'));
 
+// @ts-ignore
 const Governance = lazy(() => import('@/pages/Governance/Governance'));
+// @ts-ignore
 const Resources = lazy(() => import('@/pages/Resources/Resources'));
 const Cost = lazy(() => import('@/pages/Cost/Cost'));
+// @ts-ignore
 const CostRegionDaily = lazy(() => import('@/pages/Cost/CostRegion/CostRegionDaily'));
+// @ts-ignore
 const CostRegionMonthly = lazy(() => import('@/pages/Cost/CostRegion/CostRegionMonthly'));
+// @ts-ignore
 const CostServiceDaily = lazy(() => import('@/pages/Cost/CostService/CostServiceDaily'));
+// @ts-ignore
 const CostServiceMonthly = lazy(() => import('@/pages/Cost/CostService/CostServiceMonthly'));
+// @ts-ignore
 const CostAccountDaily = lazy(() => import('@/pages/Cost/CostAccount/CostAccountDaily'));
+// @ts-ignore
 const CostAccountMonthly = lazy(() => import('@/pages/Cost/CostAccount/CostAccountMonthly'));
 
 const DashboardOverview = lazy(() => import('@/pages/DashboardOverview/DashboardOverviewContainer'));
@@ -60,8 +67,11 @@ const Log = lazy(() => import('@/pages/Log/LogContainer'));
 const Chatbot = lazy(() => import('@/pages/Chatbot/ChatbotContainer'));
 const Admin = lazy(() => import('@/pages/Admin/AdminContainer'));
 
+// @ts-ignore
 const NetworkCidr = lazy(() => import('@/pages/Network/NetworkCidr/NetworkCidr'));
+// @ts-ignore
 const NetworkNodes = lazy(() => import('@/pages/Network/NetworkNodes/NetworkNodes'));
+// @ts-ignore
 const NetworkPorts = lazy(() => import('@/pages/Network/NetworkPorts/NetworkPorts'));
 
 const routes = [

@@ -32,7 +32,7 @@ const EntryMenu = () => {
     {
       logo: IconNetwork,
       menu: 'Network',
-      path: '/',
+      path: '/network/cidr',
     },
     {
       logo: IconUser,
@@ -47,7 +47,7 @@ const EntryMenu = () => {
     {
       logo: IconCost,
       menu: 'Cost',
-      path: '/cost',
+      path: '/cost/region/daily',
     },
     {
       logo: IconTopology,
@@ -67,32 +67,32 @@ const EntryMenu = () => {
     {
       logo: IconCredentials,
       menu: 'Credentials',
-      path: '/',
+      path: '/credentials',
     },
     {
       logo: IconCompliance,
       menu: 'Compliance',
-      path: '/',
+      path: '/compliance',
     },
     {
       logo: IconMonitor,
       menu: 'Monitor',
-      path: '/',
+      path: '/monitor',
     },
     {
       logo: IconLog,
       menu: 'Log',
-      path: '/',
+      path: '/log',
     },
     {
       logo: IconChatbot,
       menu: 'Chatbot',
-      path: '/',
+      path: '/chatbot',
     },
     {
       logo: IconAdmin,
       menu: 'Admin',
-      path: '/',
+      path: '/admin',
     },
   ];
 
@@ -109,17 +109,28 @@ const EntryMenu = () => {
 
       <div className='flex m-[2.4rem] flex-wrap w-[1000px] relative items-end'>
         {menuList.map((menu, idx) => {
-          return (
-            <div>
-              <button
-                className='w-[12.5rem] flex flex-col items-center rounded hover:text-[#6667AB] hover:cursor-pointer p-8 fill-[#000] opacity-80 hover:opacity-100 hover:translate-y-[-8px] delay-50 duration-500'
-                onClick={() => navigateMenu(menu['path'] ?? '')}
-              >
-                <img className='w-[2rem] fill-[#000]' src={menu['logo']} alt={menu['menu']} />
-                <p className='font-extrabold uppercase text-[1rem] tracking-tighter mt-8 text-[#fff]  '>{menu['menu']}</p>
-              </button>
-            </div>
-          );
+          if (!(menu.menu === 'Compliance' || menu.menu === 'Monitor' || menu.menu === 'Log' || menu.menu === 'Chatbot' || menu.menu === 'Admin'))
+            return (
+              <div>
+                <button
+                  className='w-[12.5rem] flex flex-col items-center rounded hover:text-[#6667AB] hover:cursor-pointer p-8 fill-[#000] opacity-80 hover:opacity-100 hover:translate-y-[-8px] delay-50 duration-500'
+                  onClick={() => navigateMenu(menu['path'] ?? '')}
+                >
+                  <img className='w-[2rem] fill-[#000]' src={menu['logo']} alt={menu['menu']} />
+                  <p className='font-extrabold uppercase text-[1rem] tracking-tighter mt-8 text-[#fff]  '>{menu['menu']}</p>
+                </button>
+              </div>
+            );
+          else {
+            return (
+              <div>
+                <button className='w-[12.5rem] flex flex-col items-center rounded hover:text-[#6667AB] hover:cursor-not-allowed opacity-20 p-8' onClick={() => navigateMenu(menu['path'] ?? '')}>
+                  <img className='w-[2rem] fill-[#000]' src={menu['logo']} alt={menu['menu']} />
+                  <p className='font-extrabold uppercase text-[1rem] tracking-tighter mt-8 text-[#fff]  '>{menu['menu']}</p>
+                </button>
+              </div>
+            );
+          }
           // if (menu.menu === 'Topology' || menu.menu === 'Security Group' || menu.menu === 'Network Flow') {
           // } else {
           //   return (

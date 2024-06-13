@@ -79,38 +79,8 @@ export const ComplianceComponent = () => {
   return (
     <div>
       <div className='grid lg:grid-cols-3 gap-[1.2rem]'>
-        <div className='panel lg:col-span-2'>
+        <div className='panel lg:col-span-3'>
           <MultipleLineChart data={lineData} colors={['#FFAF45', '#C40C0C', '#40A578']} title={'Daily Trend [Waring & Critical & Normal]'} categories={xAxisCategories} strokeWidth={[3, 3, 3]} />
-        </div>
-        <div className=' lg:col-span-1 grid grid-cols-2 gap-[1.2rem]'>
-          <div className='stats shadow'>
-            <div className='stat'>
-              <div className='stat-title text-[#6667ab]'>Checked</div>
-              <div className='stat-value'>{numCheckedData[212]}</div>
-              <div className='stat-desc'>same with yesterday</div>
-            </div>
-          </div>
-          <div className='stats shadow'>
-            <div className='stat'>
-              <div className='stat-title text-[#6667ab]'>Normal</div>
-              <div className='stat-value text-[#47996b]'>{numNormalData[212]}</div>
-              <div className='stat-desc'>1% more than yesterday</div>
-            </div>
-          </div>
-          <div className='stats shadow'>
-            <div className='stat'>
-              <div className='stat-title text-[#6667ab]'>Warning</div>
-              <div className='stat-value text-[#ed8c00]'>{numWarningData[212]}</div>
-              <div className='stat-desc'>same with yesterday</div>
-            </div>
-          </div>
-          <div className='stats shadow'>
-            <div className='stat'>
-              <div className='stat-title text-[#6667ab]'>Critical</div>
-              <div className='stat-value text-[#c22626]'>{numCriticalData[212]}</div>
-              <div className='stat-desc'>same with yesterday</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

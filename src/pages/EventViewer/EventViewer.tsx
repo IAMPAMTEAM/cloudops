@@ -75,10 +75,10 @@ const EventViewer = () => {
         </EventViewerTable>
       </div>
       <div className='panel mt-6'>
-        <p className='text-lg pb-4'>Details</p>
+        <p className='text-lg pb-8'>Details</p>
 
-        <div className='flex flex-row pb-4'>
-          <div className='basis-1/2 mx-1'>
+        <div className='flex flex-row pb-4 gap-[2.4rem]'>
+          <div className='basis-1/2'>
             <label className='font-medium'>Status</label>
             <input
               type='text'
@@ -87,7 +87,7 @@ const EventViewer = () => {
               placeholder={rowDataDetails?.status || defaultRowDataDetails.status}
             />
           </div>
-          <div className='basis-1/2 mx-1'>
+          <div className='basis-1/2'>
             <label className='font-medium'>Where</label>
             <input
               type='text'
@@ -96,10 +96,7 @@ const EventViewer = () => {
               placeholder={rowDataDetails?.where || defaultRowDataDetails.where}
             />
           </div>
-        </div>
-
-        <div className='flex flex-row pb-4'>
-          <div className='basis-1/2 mx-1'>
+          <div className='basis-1/2'>
             <label className='font-medium'>Date</label>
             <input
               type='text'
@@ -108,7 +105,7 @@ const EventViewer = () => {
               placeholder={rowDataDetails?.date || defaultRowDataDetails.date}
             />
           </div>
-          <div className='basis-1/2 mx-1'>
+          <div className='basis-1/2'>
             <label className='font-medium'>Who</label>
             <input
               type='text'
@@ -119,8 +116,8 @@ const EventViewer = () => {
           </div>
         </div>
 
-        <div className='flex flex-row pb-4'>
-          <div className='basis-1/2 mx-1'>
+        <div className='flex flex-row pb-4 gap-[2.4rem] mt-[0.8rem]'>
+          <div className='basis-1/2 '>
             <label className='font-medium'>Time</label>
             <input
               type='text'
@@ -129,7 +126,7 @@ const EventViewer = () => {
               placeholder={rowDataDetails?.time || defaultRowDataDetails.time}
             />
           </div>
-          <div className='basis-1/2 mx-1'>
+          <div className='basis-1/2'>
             <label className='font-medium'>What</label>
             <input
               type='text'
@@ -138,10 +135,7 @@ const EventViewer = () => {
               placeholder={rowDataDetails?.what || defaultRowDataDetails.what}
             />
           </div>
-        </div>
-
-        <div className='flex flex-row pb-4'>
-          <div className='basis-1/2 mx-1'>
+          <div className='basis-1/2'>
             <label className='font-medium'>Counts</label>
             <input
               type='text'
@@ -150,7 +144,7 @@ const EventViewer = () => {
               placeholder={(rowDataDetails?.counts !== null ? rowDataDetails.counts.toString() : '') || (defaultRowDataDetails.counts !== null ? defaultRowDataDetails.counts.toString() : '')}
             />
           </div>
-          <div className='basis-1/2 mx-1'>
+          <div className='basis-1/2'>
             <label className='font-medium'>Who</label>
             <input
               type='text'

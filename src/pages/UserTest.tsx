@@ -4,8 +4,8 @@ import { UpdatingPieChart } from '@/components/Charts/_partials/UpdatingPieChart
 import { VerticalBarChart } from '@/components/Charts/_partials/VerticalBarChart';
 import DefaultDataTable from '@/components/DataTables/DefaultDataTableFitWidth';
 import { useState, useEffect } from 'react';
-import AccordionTabletest from '@/components/DataTables/AccordionTabletest';
-import AccordionTable from '@/components/DataTables/AccordionTable';
+// import AccordionTabletest from '@/components/DataTables/AccordionTabletest';
+// import AccordionTable from '@/components/DataTables/AccordionTable';
 import AccessPolicyDevopsTable from '@/components/DataTables/AccessPolicyDevopsTable';
 import OnclickGetRowDataTable from '@/components/DataTables/OnclickGetRowDataTable';
 import DefaultDataTableFitWidth from '@/components/DataTables/DefaultDataTableFitWidth';

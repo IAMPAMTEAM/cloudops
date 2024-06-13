@@ -13,6 +13,7 @@ import { useState } from 'react';
 import DashboardBanner from '@/assets/images/dashboard_main.svg';
 import DashboardTop from '@/assets/images/dashboard_top.svg';
 import DashboardBottom from '@/assets/images/dashboard_bottom.svg';
+import './arrow.scss';
 
 const images = [elbSeoul, regionalResourcesOregon, subnetRoutesSeoulA, vpcGatewaysSeoul, subnetSeoulA, subnetSeoulB, vpcGatewayVirginia, vpcGatewayVirginia, vpcGatewayVirginia, vpcGatewayVirginia];
 const networkFlowImages = [networkFlowImage1, networkFlowImage2, networkFlowImage3, networkFlowImage4, networkFlowImage2, networkFlowImage3];
@@ -33,36 +34,41 @@ const DashboardSummaryContainer = () => {
     <div className='w-[1550px]'>
       <img src={DashboardBanner} alt='' />
       <img className='mt-[1.2rem]' src={DashboardTop} alt='' />
-      <div className='relative w-full overflow-hidden mt-8 mb-8'>
-        <div className='flex transition-transform duration-500 gap-[24px]' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {images.map((image, index) => (
-            <div className='w-1/4 flex-shrink-0 panel' key={index}>
-              <img src={image} alt={`Slide ${index}`} className='w-full' />
-            </div>
-          ))}
+
+      <div className='relative'>
+        <div className='arrow arrow--left absolute top-1/2 left-6 transform -translate-y-1/2 ' onClick={handlePrevClick}>
+          <span></span>
         </div>
-        <button className='absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full' onClick={handlePrevClick}>
-          &#9664;
-        </button>
-        <button className='absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full' onClick={handleNextClick}>
-          &#9654;
-        </button>
+        <div className='arrow arrow--right absolute top-1/2 right-6 transform -translate-y-1/2' onClick={handleNextClick}>
+          <span></span>
+        </div>
+        <div className='relative w-[90%] overflow-hidden mt-8 mb-8 ml-auto mr-auto'>
+          <div className='flex transition-transform duration-500 gap-[24px]' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+            {images.map((image, index) => (
+              <div className='w-1/4 flex-shrink-0 panel' key={index}>
+                <img src={image} alt={`Slide ${index}`} className='w-full' />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
       <img src={DashboardBottom} alt='' />
-      <div className='relative w-full overflow-hidden mt-8 mb-8'>
-        <div className='flex transition-transform duration-500 gap-[24px]' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {networkFlowImages.map((image, index) => (
-            <div className='w-1/4 flex-shrink-0 panel' key={index}>
-              <img src={image} alt={`Slide ${index}`} className='w-full' />
-            </div>
-          ))}
+      <div className='relative'>
+        <div className='arrow arrow--left absolute top-1/2 left-6 transform -translate-y-1/2 ' onClick={handlePrevClick}>
+          <span></span>
         </div>
-        <button className='absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full' onClick={handlePrevClick}>
-          &#9664;
-        </button>
-        <button className='absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full' onClick={handleNextClick}>
-          &#9654;
-        </button>
+        <div className='arrow arrow--right absolute top-1/2 right-6 transform -translate-y-1/2' onClick={handleNextClick}>
+          <span></span>
+        </div>
+        <div className='relative w-[90%] overflow-hidden mt-8 mb-8 ml-auto mr-auto'>
+          <div className='flex transition-transform duration-500 gap-[24px]' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+            {networkFlowImages.map((image, index) => (
+              <div className='w-1/4 flex-shrink-0 panel' key={index}>
+                <img src={image} alt={`Slide ${index}`} className='w-full' />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

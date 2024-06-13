@@ -124,7 +124,6 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
 
     subnetFilter();
   }, [selectedVpc, vpcFilteredList]);
-  console.log(fromSubnetFilteredList);
 
   useEffect(() => {
     const subnetFilter = async () => {
@@ -239,8 +238,8 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
   useEffect(() => {
     if (d3Container.current && data.nodes.length && data.links.length && selectedToSubnet) {
       const margin = { top: 30, right: 30, bottom: 20, left: 30 };
-      const width = data.nodes.length * 45 + margin.left + margin.right;
-      const height = 600;
+      const width = data.nodes.length * 75 + margin.left + margin.right;
+      const height = 1000;
 
       const boxPadding = 30;
       let nodeWidth = 48;
@@ -249,6 +248,23 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
       const svg = d3.select(d3Container.current).attr('viewBox', `0 0 ${width} ${height}`).attr('width', '100%').attr('height', '60%');
 
       svg.selectAll('*').remove();
+
+      // 화살표
+      svg
+        .append('defs')
+        .append('marker')
+        .attr('id', 'arrowhead')
+        .attr('viewBox', '-0 -5 10 10')
+        .attr('refX', 27)
+        .attr('refY', 0)
+        .attr('orient', 'auto')
+        .attr('markerWidth', 7)
+        .attr('markerHeight', 7)
+        .attr('xoverflow', 'visible')
+        .append('svg:path')
+        .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
+        .attr('fill', '#000')
+        .style('stroke', 'none');
 
       // 배경 클릭 시 이벤트
       svg.append('rect').attr('width', width).attr('height', height).attr('fill', 'none').attr('pointer-events', 'all').on('click', handleBackgroundClick);
@@ -294,6 +310,23 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .text(selectedFromSubnet);
 
       svg
+        .append('text')
+        .attr('x', (width - topBoxWidth) / 2 + 10)
+        .attr('y', 90)
+        .attr('fill', 'black')
+        .text(selectedFromSubnet)
+        .style('font-size', '1.4rem')
+        .style('font-weight', 'bold');
+
+      svg
+        .selectAll('.top-box')
+        .append('text')
+        .attr('dy', nodeHeight / 2 + 5)
+        .attr('dx', nodeWidth / 2)
+        .attr('text-anchor', 'middle')
+        .text(selectedFromSubnet);
+
+      svg
         .append('rect')
         .attr('x', (width - bottomBoxWidth) / 2)
         .attr('y', height - boxHeight - 80)
@@ -309,6 +342,15 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .attr('y', height - boxHeight / 2.5)
         .attr('fill', 'black')
         .text(`${selectedToSubnet} (to)`)
+        .style('font-size', '1.4rem')
+        .style('font-weight', 'bold');
+
+      svg
+        .append('text')
+        .attr('x', (width - bottomBoxWidth) / 2 + 10)
+        .attr('y', height - boxHeight + 30)
+        .attr('fill', 'black')
+        .text(selectedToSubnet)
         .style('font-size', '1.4rem')
         .style('font-weight', 'bold');
 
@@ -389,7 +431,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .data(data.nodes)
         .enter()
         .append('text')
-        .attr('dy', nodeHeight)
+        .attr('dy', nodeHeight / 1.5)
         .attr('dx', nodeWidth / 8)
         .attr('text-anchor', 'middle')
         .style('font-size', '1rem')
@@ -455,7 +497,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         {/* Choose VPC */}
         <div className='flex flex-col'>
           <p className='text-[0.8rem] font-semibold mb-[0.5rem]'>VPC</p>
-          <select className='select select-accent max-w-xs' onChange={handleSelectVpc} value={selectedVpc}>
+          <select className='select select-accent max-w-xs border-[1px] border-[#ccc] rounded-[4px] p-[4px]' onChange={handleSelectVpc} value={selectedVpc}>
             <option selected>Choose VPC</option>
             {vpcList.map((vpc, idx) => {
               return (
@@ -469,7 +511,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         {/* Choose fromSubnet */}
         <div className='flex flex-col'>
           <p className='text-[0.8rem] font-semibold mb-[0.5rem]'>Source Subnet</p>
-          <select className='select select-success max-w-xs' onChange={handleSelectedFromSubnet} value={selectedFromSubnet} disabled={!isSelectedVpc}>
+          <select className='select select-success max-w-xs border-[1px] border-[#ccc] rounded-[4px] p-[4px]' onChange={handleSelectedFromSubnet} value={selectedFromSubnet} disabled={!isSelectedVpc}>
             <option selected>Choose fromSubnet</option>
             {fromSubnetList.map((subnet, idx) => {
               return (
@@ -483,7 +525,12 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         {/* Choose toSubnet */}
         <div className='flex flex-col'>
           <p className='text-[0.8rem] font-semibold mb-[0.5rem]'>Target Subnet</p>
-          <select className='select select-warning max-w-xs' onChange={handleSelectedToSubnet} value={selectedToSubnet} disabled={!isSelectedFromSubnet}>
+          <select
+            className='select select-warning max-w-xs border-[1px] border-[#ccc] rounded-[4px] p-[4px]'
+            onChange={handleSelectedToSubnet}
+            value={selectedToSubnet}
+            disabled={!isSelectedFromSubnet}
+          >
             <option selected>Choose toSubnet</option>
             {toSubnetList.map((subnet, idx) => {
               return (
