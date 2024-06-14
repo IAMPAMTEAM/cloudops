@@ -6,6 +6,7 @@ import SetColumnDefs from '@/utils/SetColumnDefs';
 import SetDefaultTableSetting from '@/utils/SetDefaultTableSetting';
 import statusRenderer from '@/pages/EventViewer/_partials/StatusRenderer';
 import countsRenderer from '@/pages/EventViewer/_partials/CountsRenderer';
+import CreateData from '@/pages/EventViewer/_partials/CreateData';
 import '@/assets/css/dataTableStyle.css';
 
 import tableData from '@/pages/EventViewer/data/tableData-cloudOps-eventViewer.json';
@@ -53,6 +54,14 @@ const EventViewer = () => {
 
     const mergedData = MergeTagData(tableData, userTag, awsTag);
     setMergedTableData(mergedData);
+
+    const interval = setInterval(() => {
+      const newData = CreateData();
+      setMergedTableData((prevData) => [...newData, ...prevData]);
+    }, 5000);
+
+    // Clean up interval on component unmount
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -68,7 +77,6 @@ const EventViewer = () => {
           paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
           getOnclickRowData={(data: any) => {
             setRowDataDetails(data || defaultRowDataDetails);
-            console.log(data);
           }}
         >
           <p className='text-lg'>Event Viewer</p>
