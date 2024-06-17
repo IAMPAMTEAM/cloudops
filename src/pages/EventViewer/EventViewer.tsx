@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import EventViewerTable from '@/components/DataTables/EventViewerTable';
 import MergeTagData from '@/utils/MergeTagData';
@@ -6,7 +6,6 @@ import SetColumnDefs from '@/utils/SetColumnDefs';
 import SetDefaultTableSetting from '@/utils/SetDefaultTableSetting';
 import statusRenderer from '@/pages/EventViewer/_partials/StatusRenderer';
 import countsRenderer from '@/pages/EventViewer/_partials/CountsRenderer';
-import CreateData from '@/pages/EventViewer/_partials/CreateData';
 import '@/assets/css/dataTableStyle.css';
 
 import tableData from '@/pages/EventViewer/data/tableData-cloudOps-eventViewer.json';
@@ -39,6 +38,7 @@ const EventViewer = () => {
   const [columnDefs, setColumnDefs] = useState<any[]>([]);
   const [mergedTableData, setMergedTableData] = useState<any[]>([]);
   const [rowDataDetails, setRowDataDetails] = useState<IRowDataDetails>(defaultRowDataDetails);
+
   const setDefaultTableSetting = SetDefaultTableSetting(tableOption);
 
   useEffect(() => {
@@ -54,14 +54,6 @@ const EventViewer = () => {
 
     const mergedData = MergeTagData(tableData, userTag, awsTag);
     setMergedTableData(mergedData);
-
-    const interval = setInterval(() => {
-      const newData = CreateData();
-      setMergedTableData((prevData) => [...newData, ...prevData]);
-    }, 5000);
-
-    // Clean up interval on component unmount
-    return () => clearInterval(interval);
   }, []);
 
   return (

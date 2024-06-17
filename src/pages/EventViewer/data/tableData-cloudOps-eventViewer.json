@@ -2,7 +2,7 @@
   {
     "status": "OK",
     "date": "2024-05-31",
-    "time": "15:23:30",
+    "time": "15:23:31",
     "where": "elb-seoul-web",
     "who": "3.12.3.101 (south korea)",
     "what": "ssh login",
