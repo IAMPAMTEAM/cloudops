@@ -43,6 +43,7 @@
   "subnetRoutes": "Subnet Routes",
   "loadBalancers": "Load Balancers",
   "vpcPeering": "VPC Peering",
+  "internetElb": "Internet ELB",
   "sales": "Profile",
   "analytics": "Chart",
   "apps": "Apps",

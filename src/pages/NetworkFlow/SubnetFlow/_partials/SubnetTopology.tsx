@@ -249,7 +249,6 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
 
       svg.selectAll('*').remove();
 
-      // 화살표
       svg
         .append('defs')
         .append('marker')
@@ -282,6 +281,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
       const bottomBoxWidth = bottomNodes.length * (nodeWidth + boxPadding) + boxPadding;
       const boxHeight = nodeHeight + 3 * boxPadding;
 
+      // group화
       svg
         .append('rect')
         .attr('x', (width - topBoxWidth) / 2)
@@ -342,15 +342,6 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .attr('y', height - boxHeight / 2.5)
         .attr('fill', 'black')
         .text(`${selectedToSubnet} (to)`)
-        .style('font-size', '1.4rem')
-        .style('font-weight', 'bold');
-
-      svg
-        .append('text')
-        .attr('x', (width - bottomBoxWidth) / 2 + 10)
-        .attr('y', height - boxHeight + 30)
-        .attr('fill', 'black')
-        .text(selectedToSubnet)
         .style('font-size', '1.4rem')
         .style('font-weight', 'bold');
 
@@ -457,6 +448,8 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
           connectedNodes.add(link.target.toString());
         });
 
+        console.log(connectedLinks);
+
         svg.selectAll('.node').classed('blur', (d: any) => {
           return !connectedNodes.has(d.id);
         });
@@ -474,7 +467,10 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         link
           .attr('x1', (d) => (d.source as any).fx as number)
           .attr('y1', (d) => (d.source as any).fy as number)
-          .attr('x2', (d) => (d.target as any).fx as number)
+          .attr('x2', (d) => {
+            console.log(d);
+            return (d.target as any).fx as number;
+          })
           .attr('y2', (d) => (d.target as any).fy as number);
 
         nodeGroup.attr('x', (d) => ((d as any).fx as number) - nodeWidth / 2).attr('y', (d) => ((d as any).fy as number) - nodeHeight / 2);

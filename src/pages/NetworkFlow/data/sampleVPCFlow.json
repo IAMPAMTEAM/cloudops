@@ -1,0 +1,310 @@
+[
+  {
+    "fromCidr": "10.1.0.0/16",
+    "fromCidrName": "vpc-iampam-seoul",
+    "toCidr": "10.1.0.0/16",
+    "toCidrName": "vpc-iampam-seoul",
+    "weightTraffic": {
+      "todayWeight": 5,
+      "thisWeekWeight": 7,
+      "thisMonthWeight": 2,
+      "nextWeekWeight": 5,
+      "nextMonthWeight": 3,
+      "nextQuarterWeight": 5
+    },
+    "traffic": {
+      "todayPackets": 3752,
+      "todayBytes": 480256,
+      "thisWeekPackets": 1864,
+      "thisWeekBytes": 5055,
+      "thisMonthPackets": 2964,
+      "thisMonthBytes": 379392
+    }
+  },
+  {
+    "fromCidr": "10.1.0.0/16",
+    "fromCidrName": "vpc-iampam-seoul",
+    "toCidr": "10.10.0.0/16",
+    "toCidrName": "vpc-provider",
+    "weightTraffic": {
+      "todayWeight": 4,
+      "thisWeekWeight": 0,
+      "thisMonthWeight": 1,
+      "nextWeekWeight": 2,
+      "nextMonthWeight": 1,
+      "nextQuarterWeight": 2
+    },
+    "traffic": {
+      "todayPackets": 3112,
+      "todayBytes": 398336,
+      "thisWeekPackets": 932,
+      "thisWeekBytes": 2022,
+      "thisMonthPackets": 988,
+      "thisMonthBytes": 126464
+    }
+  },
+  {
+    "fromCidr": "10.1.0.0/16",
+    "fromCidrName": "vpc-iampam-seoul",
+    "toCidr": "10.2.0.0/16",
+    "toCidrName": "vpc-zerotrust-seoul",
+    "weightTraffic": {
+      "todayWeight": 2,
+      "thisWeekWeight": 3,
+      "thisMonthWeight": 1,
+      "nextWeekWeight": 3,
+      "nextMonthWeight": 1,
+      "nextQuarterWeight": 3
+    },
+    "traffic": {
+      "todayPackets": 1032,
+      "todayBytes": 132096,
+      "thisWeekPackets": 932,
+      "thisWeekBytes": 3033,
+      "thisMonthPackets": 988,
+      "thisMonthBytes": 126464
+    }
+  },
+  {
+    "fromCidr": "10.10.0.0/16",
+    "fromCidrName": "vpc-provider",
+    "toCidr": "10.2.0.0/16",
+    "toCidrName": "vpc-zerotrust-seoul",
+    "weightTraffic": {
+      "todayWeight": 5,
+      "thisWeekWeight": 8,
+      "thisMonthWeight": 6,
+      "nextWeekWeight": 8,
+      "nextMonthWeight": 7,
+      "nextQuarterWeight": 9
+    },
+    "traffic": {
+      "todayPackets": 3932,
+      "todayBytes": 503296,
+      "thisWeekPackets": 5592,
+      "thisWeekBytes": 8088,
+      "thisMonthPackets": 6916,
+      "thisMonthBytes": 885248
+    }
+  },
+  {
+    "fromCidr": "10.10.0.0/16",
+    "fromCidrName": "vpc-provider",
+    "toCidr": "10.100.0.0/16",
+    "toCidrName": "vpc-tenants",
+    "weightTraffic": {
+      "todayWeight": 7,
+      "thisWeekWeight": 8,
+      "thisMonthWeight": 5,
+      "nextWeekWeight": 8,
+      "nextMonthWeight": 6,
+      "nextQuarterWeight": 8
+    },
+    "traffic": {
+      "todayPackets": 6233,
+      "todayBytes": 797824,
+      "thisWeekPackets": 4660,
+      "thisWeekBytes": 8088,
+      "thisMonthPackets": 5928,
+      "thisMonthBytes": 758784
+    }
+  },
+  {
+    "fromCidr": "10.10.0.0/16",
+    "fromCidrName": "vpc-provider",
+    "toCidr": "10.1.0.0/16",
+    "toCidrName": "vpc-iampam-seoul",
+    "weightTraffic": {
+      "todayWeight": 2,
+      "thisWeekWeight": 4,
+      "thisMonthWeight": 2,
+      "nextWeekWeight": 1,
+      "nextMonthWeight": 2,
+      "nextQuarterWeight": 2
+    },
+    "traffic": {
+      "todayPackets": 932,
+      "todayBytes": 119296,
+      "thisWeekPackets": 1864,
+      "thisWeekBytes": 1011,
+      "thisMonthPackets": 1976,
+      "thisMonthBytes": 252928
+    }
+  },
+  {
+    "fromCidr": "10.2.0.0/16",
+    "fromCidrName": "vpc-zerotrust-seoul",
+    "toCidr": "10.1.0.0/16",
+    "toCidrName": "vpc-iampam-seoul",
+    "weightTraffic": {
+      "todayWeight": 9,
+      "thisWeekWeight": 7,
+      "thisMonthWeight": 9,
+      "nextWeekWeight": 8,
+      "nextMonthWeight": 9,
+      "nextQuarterWeight": 9
+    },
+    "traffic": {
+      "todayPackets": 6832,
+      "todayBytes": 874496,
+      "thisWeekPackets": 8388,
+      "thisWeekBytes": 8088,
+      "thisMonthPackets": 8892,
+      "thisMonthBytes": 1138176
+    }
+  },
+  {
+    "fromCidr": "10.2.0.0/16",
+    "fromCidrName": "vpc-zerotrust-seoul",
+    "toCidr": "10.10.0.0/16",
+    "toCidrName": "vpc-provider",
+    "weightTraffic": {
+      "todayWeight": 8,
+      "thisWeekWeight": 7,
+      "thisMonthWeight": 8,
+      "nextWeekWeight": 9,
+      "nextMonthWeight": 8,
+      "nextQuarterWeight": 10
+    },
+    "traffic": {
+      "todayPackets": 6323,
+      "todayBytes": 809344,
+      "thisWeekPackets": 7456,
+      "thisWeekBytes": 9099,
+      "thisMonthPackets": 7904,
+      "thisMonthBytes": 1011712
+    }
+  },
+  {
+    "fromCidr": "10.1.0.0/16",
+    "fromCidrName": "vpc-iampam-seoul",
+    "toCidr": "10.100.0.0/16",
+    "toCidrName": "vpc-tenants",
+    "weightTraffic": {
+      "todayWeight": 2,
+      "thisWeekWeight": 1,
+      "thisMonthWeight": 3,
+      "nextWeekWeight": 2,
+      "nextMonthWeight": 1,
+      "nextQuarterWeight": 1
+    },
+    "traffic": {
+      "todayPackets": 1012,
+      "todayBytes": 129536,
+      "thisWeekPackets": 2796,
+      "thisWeekBytes": 2022,
+      "thisMonthPackets": 988,
+      "thisMonthBytes": 126464
+    }
+  },
+  {
+    "fromCidr": "10.10.0.0/16",
+    "fromCidrName": "vpc-provider",
+    "toCidr": "10.100.0.0/16",
+    "toCidrName": "vpc-tenants",
+    "weightTraffic": {
+      "todayWeight": 3,
+      "thisWeekWeight": 1,
+      "thisMonthWeight": 0,
+      "nextWeekWeight": 0,
+      "nextMonthWeight": 0,
+      "nextQuarterWeight": 1
+    },
+    "traffic": {
+      "todayPackets": 1323,
+      "todayBytes": 169344,
+      "thisWeekPackets": 0,
+      "thisWeekBytes": 0,
+      "thisMonthPackets": 0,
+      "thisMonthBytes": 0
+    }
+  },
+  {
+    "fromCidr": "10.10.0.0/16",
+    "fromCidrName": "vpc-provider",
+    "toCidr": "192.168.0.0/16",
+    "toCidrName": "운영팀 VPC",
+    "weightTraffic": {
+      "todayWeight": 2,
+      "thisWeekWeight": 0,
+      "thisMonthWeight": 0,
+      "nextWeekWeight": 0,
+      "nextMonthWeight": 0,
+      "nextQuarterWeight": 0
+    },
+    "traffic": {
+      "todayPackets": 927,
+      "todayBytes": 118656,
+      "thisWeekPackets": 0,
+      "thisWeekBytes": 0,
+      "thisMonthPackets": 0,
+      "thisMonthBytes": 0
+    }
+  },
+  {
+    "fromCidr": "10.10.0.0/16",
+    "fromCidrName": "vpc-provider",
+    "toCidr": "10.1.0.0/16",
+    "toCidrName": "vpc-iampam-seoul",
+    "weightTraffic": {
+      "todayWeight": 2,
+      "thisWeekWeight": 6,
+      "thisMonthWeight": 3,
+      "nextWeekWeight": 5,
+      "nextMonthWeight": 4,
+      "nextQuarterWeight": 6
+    },
+    "traffic": {
+      "todayPackets": 889,
+      "todayBytes": 113792,
+      "thisWeekPackets": 2796,
+      "thisWeekBytes": 5055,
+      "thisMonthPackets": 3952,
+      "thisMonthBytes": 505856
+    }
+  },
+  {
+    "fromCidr": "192.168.0.0/16",
+    "fromCidrName": "운영팀 VPC",
+    "toCidr": "10.1.0.0/16",
+    "toCidrName": "vpc-iampam-seoul",
+    "weightTraffic": {
+      "todayWeight": 1,
+      "thisWeekWeight": 3,
+      "thisMonthWeight": 2,
+      "nextWeekWeight": 1,
+      "nextMonthWeight": 1,
+      "nextQuarterWeight": 1
+    },
+    "traffic": {
+      "todayPackets": 321,
+      "todayBytes": 41088,
+      "thisWeekPackets": 1864,
+      "thisWeekBytes": 1011,
+      "thisMonthPackets": 988,
+      "thisMonthBytes": 126464
+    }
+  },
+  {
+    "fromCidr": "192.168.0.0/16",
+    "fromCidrName": "운영팀 VPC",
+    "toCidr": "10.10.0.0/16",
+    "toCidrName": "vpc-provider",
+    "weightTraffic": {
+      "todayWeight": 0,
+      "thisWeekWeight": 1,
+      "thisMonthWeight": 1,
+      "nextWeekWeight": 0,
+      "nextMonthWeight": 1,
+      "nextQuarterWeight": 1
+    },
+    "traffic": {
+      "todayPackets": 21,
+      "todayBytes": 2688,
+      "thisWeekPackets": 932,
+      "thisWeekBytes": 0,
+      "thisMonthPackets": 988,
+      "thisMonthBytes": 126464
+    }
+  }
+]

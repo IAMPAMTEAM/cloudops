@@ -225,6 +225,9 @@ const Sidebar = () => {
                     <li>
                       <NavLink to='/vpc-peering'>{t('vpcPeering')}</NavLink>
                     </li>
+                    <li>
+                      <NavLink to='/internet-elb'>{t('internetElb')}</NavLink>
+                    </li>
                   </ul>
                 </AnimateHeight>
               </li>
@@ -252,7 +255,7 @@ const Sidebar = () => {
                       <NavLink to='/network-flow/vpc'>{t('networkFlowVpc')}</NavLink>
                     </li>
                   </ul>
-                  {/* <ul className='sub-menu text-gray-500'>
+                  <ul className='sub-menu text-gray-500'>
                     <li>
                       <NavLink to='/network-flow/internal-elb'>{t('networkFlowInternalElb')}</NavLink>
                     </li>
@@ -261,7 +264,7 @@ const Sidebar = () => {
                     <li>
                       <NavLink to='/network-flow/internet-elb'>{t('networkFlowInternetElb')}</NavLink>
                     </li>
-                  </ul> */}
+                  </ul>
                 </AnimateHeight>
               </li>
 
