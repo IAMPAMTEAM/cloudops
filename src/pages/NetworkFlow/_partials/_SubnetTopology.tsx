@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
-import '@/assets/css/NetworkTopology.css';
+import './NetworkTopology.css';
 
 interface Node {
   id: string;
@@ -27,8 +27,7 @@ interface Subnet {
   bytes: number;
 }
 
-// @ts-ignore
-const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetChange, filteredData }) => {
+const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetChange }) => {
   const [data, setData] = useState<NetworkData>({ nodes: [], links: [] });
   const [fetchData, setFetchData] = useState<Subnet[]>([]);
   const [subnetCnt, setSubnetCnt] = useState(0);
@@ -50,16 +49,20 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
   const d3Container = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
-    fetch('https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/ec2ToEc2.json')
+    fetch('https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/ec2ToEc2BeforeUpdate.json')
       .then(async (res) => await res.json())
       .then((data) => {
         if (data.length && subnetCnt < 1) {
-          setFetchData(data);
-          setSubnetCnt((prev) => prev + 1);
+          const timer = setTimeout(() => {
+            setFetchData(data);
+            setSubnetCnt((prev) => prev + 1);
+          }, 1000);
+
+          return () => clearTimeout(timer);
         }
       })
       .catch((err) => console.error(err));
-  }, [subnetCnt]);
+  }, [fetchData, subnetCnt, data]);
 
   useEffect(() => {
     const vpcFilter = async () => {
@@ -123,7 +126,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
     };
 
     subnetFilter();
-  }, [selectedVpc, vpcFilteredList]);
+  }, [fetchData, selectedVpc]);
 
   useEffect(() => {
     const subnetFilter = async () => {
@@ -133,17 +136,14 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
           const groupedData = data.reduce((acc, item) => {
             const { toSubnet } = item;
 
-            // @ts-ignore
             if (selectedFromSubnet.slice(0, selectedFromSubnet.lastIndexOf('.') - 1) === toSubnet.slice(0, toSubnet.lastIndexOf('.') - 1) && selectedFromSubnet !== toSubnet) {
               if (!acc[toSubnet]) {
-                // @ts-ignore
                 acc[toSubnet] = {
                   fromSubnet: selectedFromSubnet,
                   toSubnet,
                   subnetInfo: [],
                 };
               }
-              // @ts-ignore
               acc[toSubnet].subnetInfo.push(item);
             }
             return acc;
@@ -167,7 +167,6 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
       }
     });
 
-    // @ts-ignore
     setFromSubnetList(uniqueFromSubnetList);
   }, [fromSubnetFilteredList]);
 
@@ -182,7 +181,6 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
       }
     });
 
-    // @ts-ignore
     setToSubnetList(uniqueToSubnetList);
   }, [toSubnetFilteredList]);
 
@@ -201,9 +199,9 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
   const handleSelectedToSubnet = (event) => {
     setSelectedToSubnet(event.target.value);
     onToSubnetChange(event.target.value);
-    filteredData(toSubnetFilteredList[0]['subnetInfo']);
   };
 
+  // TODO: selectedVpc에 따라 subnetInfo를 가져와서 subnetInfo에 있는 데이터로 다시 setData
   useEffect(() => {
     const filteredData = toSubnetFilteredList.find((subnetItem: { toSubnet: string; subnetInfo: [] }) => {
       return subnetItem.toSubnet === selectedToSubnet;
@@ -211,9 +209,14 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
 
     if (filteredData) {
       const { subnetInfo }: { vpc: string; subnetInfo: any[] } = filteredData;
-      subnetInfo.forEach((data) => {
+      subnetInfo.map((data) => {
         const fromEc2 = data.fromEc2;
         const toEc2 = data.toEc2;
+        const fromSubnet = data.fromSubnet;
+        const toSubnet = data.toSubnet;
+        // TODO: packets, bytes에 따라 link 굵기, 색깔 변경 (기준 미정)
+        const packets = data.packets;
+        const bytes = data.bytes;
 
         setData((prev) => {
           const nodes = [...prev.nodes];
@@ -233,7 +236,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         });
       });
     }
-  }, [selectedToSubnet, toSubnetFilteredList]);
+  }, [vpcList, selectedVpc, vpcFilteredList, fetchData, subnetCnt, toSubnetFilteredList]);
 
   useEffect(() => {
     if (d3Container.current && data.nodes.length && data.links.length && selectedToSubnet) {
@@ -245,7 +248,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
       let nodeWidth = 48;
       let nodeHeight = 48;
 
-      const svg = d3.select(d3Container.current).attr('viewBox', `0 0 ${width} ${height}`).attr('width', '100%').attr('height', '60%');
+      const svg = d3.select(d3Container.current).attr('viewBox', `0 0 ${width} ${height}`).attr('width', '100%').attr('height', '100%');
 
       svg.selectAll('*').remove();
 
@@ -280,52 +283,15 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
 
       const topBoxWidth = topNodes.length * (nodeWidth + boxPadding) + boxPadding;
       const bottomBoxWidth = bottomNodes.length * (nodeWidth + boxPadding) + boxPadding;
-      const boxHeight = nodeHeight + 3 * boxPadding;
+      const boxHeight = nodeHeight + 2 * boxPadding;
 
-      // group화
       svg
         .append('rect')
         .attr('x', (width - topBoxWidth) / 2)
-        .attr('y', boxHeight - boxHeight / 3.3)
+        .attr('y', 100)
         .attr('width', topBoxWidth)
         .attr('height', boxHeight)
-        .attr('class', 'top-box')
-        .style('fill', '#eee')
-        .style('stroke', 'none');
-
-      svg
-        .append('text')
-        .attr('x', (width - topBoxWidth) / 2 + 10)
-        .attr('y', 90)
-        .attr('fill', 'black')
-        .text(`${selectedFromSubnet} (from)`)
-        .style('font-size', '1.4rem')
-        .style('font-weight', 'bold');
-
-      svg
-        .selectAll('.top-box')
-        .append('text')
-        .attr('dy', nodeHeight / 2 + 5)
-        .attr('dx', nodeWidth / 2)
-        .attr('text-anchor', 'middle')
-        .text(selectedFromSubnet);
-
-      svg
-        .append('text')
-        .attr('x', (width - topBoxWidth) / 2 + 10)
-        .attr('y', 90)
-        .attr('fill', 'black')
-        .text(selectedFromSubnet)
-        .style('font-size', '1.4rem')
-        .style('font-weight', 'bold');
-
-      svg
-        .selectAll('.top-box')
-        .append('text')
-        .attr('dy', nodeHeight / 2 + 5)
-        .attr('dx', nodeWidth / 2)
-        .attr('text-anchor', 'middle')
-        .text(selectedFromSubnet);
+        .attr('class', 'top-box');
 
       svg
         .append('text')
@@ -347,21 +313,10 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
       svg
         .append('rect')
         .attr('x', (width - bottomBoxWidth) / 2)
-        .attr('y', height - boxHeight - 80)
+        .attr('y', height - boxHeight - 100)
         .attr('width', bottomBoxWidth)
         .attr('height', boxHeight)
-        .attr('class', 'bottom-box')
-        .style('fill', '#eee')
-        .style('stroke', 'none');
-
-      svg
-        .append('text')
-        .attr('x', (width - bottomBoxWidth) / 2 + 10)
-        .attr('y', height - boxHeight / 2.5)
-        .attr('fill', 'black')
-        .text(`${selectedToSubnet} (to)`)
-        .style('font-size', '1.4rem')
-        .style('font-weight', 'bold');
+        .attr('class', 'bottom-box');
 
       svg
         .append('text')
@@ -390,7 +345,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
           d3
             .forceLink(data.links)
             .id((d: any) => d.id)
-            .distance(100)
+            .distance(200)
         )
         .force('charge', d3.forceManyBody().strength(-300))
         .on('tick', ticked);
@@ -403,39 +358,18 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .enter()
         .append('line')
         .attr('class', 'link animated-link')
-        .attr('stroke', '#999')
-        .attr('stroke-width', 1)
+        .attr('stroke', 'steelblue')
+        .attr('stroke-width', 2)
         .attr('marker-end', 'url(#arrowhead)');
 
-      // const node = svg
-      //   .append('g')
-      //   .attr('class', 'nodes')
-      //   .selectAll('image')
-      //   .data(data.nodes)
-      //   .enter()
-      //   .append('image')
-      //   .attr('class', 'node')
-      //   .attr('xlink:href', (d) => d.img)
-      //   .attr('width', nodeWidth)
-      //   .attr('height', nodeHeight)
-      //   .on('click', handleNodeClick);
-
-      const nodeGroup = svg
+      const node = svg
         .append('g')
         .attr('class', 'nodes')
-        .selectAll('g')
+        .selectAll('image')
         .data(data.nodes)
         .enter()
-        .append('g')
-        .attr('class', 'node-group')
-        .attr('transform', (d: any) => `translate(${d.x - nodeWidth / 2}, ${d.y - nodeHeight / 2})`); // 각 노드의 위치를 데이터에 따라 설정
-
-      // 배경 사각형을 추가합니다.
-      nodeGroup.append('rect').attr('class', 'node-background').attr('width', nodeWidth).attr('height', nodeHeight).attr('fill', '#eee');
-
-      // 이미지를 추가합니다.
-      nodeGroup
         .append('image')
+        // .attr('class', (d) => `node ${['A', 'F', 'P'].includes(d.id) ? 'blink' : ''}`)
         .attr('class', 'node')
         .attr('xlink:href', (d) => d.img)
         .attr('width', nodeWidth)
@@ -475,8 +409,6 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
           connectedNodes.add(link.target.toString());
         });
 
-        console.log(connectedLinks);
-
         svg.selectAll('.node').classed('blur', (d: any) => {
           return !connectedNodes.has(d.id);
         });
@@ -494,33 +426,23 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         link
           .attr('x1', (d) => (d.source as any).fx as number)
           .attr('y1', (d) => (d.source as any).fy as number)
-          .attr('x2', (d) => {
-            console.log(d);
-            return (d.target as any).fx as number;
-          })
+          .attr('x2', (d) => (d.target as any).fx as number)
           .attr('y2', (d) => (d.target as any).fy as number);
 
-        nodeGroup.attr('x', (d) => ((d as any).fx as number) - nodeWidth / 2).attr('y', (d) => ((d as any).fy as number) - nodeHeight / 2);
+        node.attr('x', (d) => ((d as any).fx as number) - nodeWidth / 2).attr('y', (d) => ((d as any).fy as number) - nodeHeight / 2);
 
-        label
-          .attr('x', (d) => ((d as any).fx as number) - 5)
-          .attr('y', (d) => {
-            return d.group === 'top' ? ((d as any).fy as number) - nodeHeight * 1.6 : ((d as any).fy as number);
-          });
+        label.attr('x', (d) => (d as any).fx as number).attr('y', (d) => (d as any).fy as number);
       }
-      return () => {
-        setData({ nodes: [], links: [] });
-      };
     }
-  }, [data, selectedToSubnet, toSubnetFilteredList]);
+  }, [data, selectedToSubnet, d3Container, toSubnetFilteredList]);
 
   return (
     <>
-      <div className='grid gap-2 justify-center lg:grid-cols-3'>
+      <div className='flex gap-8 justify-center'>
         {/* Choose VPC */}
         <div className='flex flex-col'>
           <p className='text-[0.8rem] font-semibold mb-[0.5rem]'>VPC</p>
-          <select className='select select-accent max-w-xs border-[1px] border-[#ccc] rounded-[4px] p-[4px]' onChange={handleSelectVpc} value={selectedVpc}>
+          <select className='select select-accent max-w-xs' onChange={handleSelectVpc} value={selectedVpc}>
             <option selected>Choose VPC</option>
             {vpcList.map((vpc, idx) => {
               return (
@@ -534,7 +456,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         {/* Choose fromSubnet */}
         <div className='flex flex-col'>
           <p className='text-[0.8rem] font-semibold mb-[0.5rem]'>Source Subnet</p>
-          <select className='select select-success max-w-xs border-[1px] border-[#ccc] rounded-[4px] p-[4px]' onChange={handleSelectedFromSubnet} value={selectedFromSubnet} disabled={!isSelectedVpc}>
+          <select className='select select-success max-w-xs' onChange={handleSelectedFromSubnet} value={selectedFromSubnet} disabled={!isSelectedVpc}>
             <option selected>Choose fromSubnet</option>
             {fromSubnetList.map((subnet, idx) => {
               return (
@@ -548,12 +470,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         {/* Choose toSubnet */}
         <div className='flex flex-col'>
           <p className='text-[0.8rem] font-semibold mb-[0.5rem]'>Target Subnet</p>
-          <select
-            className='select select-warning max-w-xs border-[1px] border-[#ccc] rounded-[4px] p-[4px]'
-            onChange={handleSelectedToSubnet}
-            value={selectedToSubnet}
-            disabled={!isSelectedFromSubnet}
-          >
+          <select className='select select-warning max-w-xs' onChange={handleSelectedToSubnet} value={selectedToSubnet} disabled={!isSelectedFromSubnet}>
             <option selected>Choose toSubnet</option>
             {toSubnetList.map((subnet, idx) => {
               return (
@@ -566,7 +483,6 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         </div>
       </div>
       <div style={{ overflowX: 'auto', width: '100%', height: '100%' }}>
-        {!(selectedVpc && selectedFromSubnet && selectedToSubnet) ? <p className='mt-8 text-center text-lg'>Please select VPC and Subnet</p> : null}
         <svg ref={d3Container}></svg>
       </div>
     </>

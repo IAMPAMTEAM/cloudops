@@ -228,6 +228,9 @@ const Sidebar = () => {
                     <li>
                       <NavLink to='/internet-elb'>{t('internetElb')}</NavLink>
                     </li>
+                    <li>
+                      <NavLink to='/subnets-nodes'>{t('subnetsNodes')}</NavLink>
+                    </li>
                   </ul>
                 </AnimateHeight>
               </li>

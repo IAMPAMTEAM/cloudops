@@ -9,6 +9,7 @@ const VPCGateways = lazy(() => import('@/pages/Topology/VPCGateways'));
 const LoadBalancers = lazy(() => import('@/pages/Topology/LoadBalancers'));
 const VPCPeering = lazy(() => import('@/pages/Topology/VPCPeering'));
 const InternetELB = lazy(() => import('@/pages/Topology/InternetElb'));
+const SubnetsNodes = lazy(() => import('@/pages/Topology/SubnetsNodes'));
 const Approval = lazy(() => import('@/pages/Approval'));
 const EntryContainer = lazy(() => import('@/pages/Entry/EntryContainer'));
 const ChatContainer = lazy(() => import('@/pages/Chat/ChatContainer'));
@@ -139,6 +140,11 @@ const routes = [
   {
     path: '/internet-elb',
     element: <InternetELB />,
+    layout: 'default',
+  },
+  {
+    path: '/subnets-nodes',
+    element: <SubnetsNodes />,
     layout: 'default',
   },
   {

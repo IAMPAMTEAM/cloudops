@@ -44,6 +44,7 @@
   "loadBalancers": "Load Balancers",
   "vpcPeering": "VPC Peering",
   "internetElb": "Internet ELB",
+  "subnetsNodes": "Subnets Nodes",
   "sales": "Profile",
   "analytics": "Chart",
   "apps": "Apps",

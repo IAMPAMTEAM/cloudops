@@ -5,6 +5,8 @@ interface Node {
   id: string;
   group: string;
   img?: string;
+  fx?: number;
+  fy?: number;
 }
 
 interface Link {
@@ -30,18 +32,18 @@ interface ELBSubnet {
   subnetName: string;
 }
 
-interface InternetELB {
+interface ELB {
   elbName: string;
   elbId: string;
   flows: Flow[];
   subnets: ELBSubnet[];
 }
 
-/**
- * TODO: use icons
- * internet icon: https://icons.terrastruct.com/essentials%2F140-internet.svg
- * elb icon: https://icons.terrastruct.com/aws%2FNetworking%20&%20Content%20Delivery%2FElastic-Load-Balancing-ELB_Application-load-balancer_light-bg.svg
- */
+interface InternetELB {
+  vpcName: string;
+  vpcCidr: string;
+  elbs: ELB[];
+}
 
 const InternetElb = () => {
   const [fetchData, setFetchData] = useState<InternetELB[]>([]);
@@ -71,68 +73,59 @@ const InternetElb = () => {
   // bottom - bottom group - az에 따라 그룹화된 subnet list
   // subnets 정보에 따라 일치하는 topgroup의 elb와 연결되어야 함
 
-  useEffect(() => {
-    fetchData.forEach((data: InternetELB) => {
-      const elbNode: Node = {
-        id: data.elbName,
-        group: 'top',
-        img: 'https://icons.terrastruct.com/aws%2FNetworking%20&%20Content%20Delivery%2FElastic-Load-Balancing-ELB_Application-load-balancer_light-bg.svg',
-      };
-    });
-  }, [fetchData]);
-
   // az group생성 과정
   // 1. subnetAz로 group화
   useEffect(() => {
     const uniqueGroupedSubnets = new Map<string, { subnetAz: string; subnetsInfo: { subnetName: string; subnetCidr: string; elbId: string }[] }>();
 
-    fetchData.forEach((data: InternetELB) => {
-      const groupedSubnets = data.subnets.reduce((acc: any[], subnet) => {
-        const existingGroup = acc.find((group) => group.subnetAz === subnet.subnetAz);
+    if (fetchData.length && fetchData[0]['elbs'].length) {
+      fetchData[0]['elbs'].forEach((data: ELB) => {
+        const groupedSubnets = data.subnets.reduce((acc: any[], subnet) => {
+          const existingGroup = acc.find((group) => group.subnetAz === subnet.subnetAz);
 
-        if (existingGroup) {
-          const isDuplicate = existingGroup.subnetsInfo.some((info) => info.subnetName === subnet.subnetName && info.subnetCidr === subnet.subnetCidr);
-          if (!isDuplicate) {
-            existingGroup.subnetsInfo.push({
-              subnetName: subnet.subnetName,
-              subnetCidr: subnet.subnetCidr,
-              elbId: data.elbId, // elbId 추가
-            });
-          }
-        } else {
-          acc.push({
-            subnetAz: subnet.subnetAz,
-            subnetsInfo: [
-              {
+          if (existingGroup) {
+            const isDuplicate = existingGroup.subnetsInfo.some((info) => info.subnetName === subnet.subnetName && info.subnetCidr === subnet.subnetCidr);
+            if (!isDuplicate) {
+              existingGroup.subnetsInfo.push({
                 subnetName: subnet.subnetName,
                 subnetCidr: subnet.subnetCidr,
-                elbId: data.elbId, // elbId 추가
-                elbName: data.elbName,
-              },
-            ],
-          });
-        }
-        return acc;
-      }, []);
-
-      groupedSubnets.forEach((group) => {
-        if (uniqueGroupedSubnets.has(group.subnetAz)) {
-          const existingGroup = uniqueGroupedSubnets.get(group.subnetAz);
-          if (existingGroup) {
-            group.subnetsInfo.forEach((info: any) => {
-              const isDuplicate = existingGroup.subnetsInfo.some((existingInfo) => existingInfo.subnetName === info.subnetName && existingInfo.subnetCidr === info.subnetCidr);
-              if (!isDuplicate) {
-                existingGroup.subnetsInfo.push(info);
-              }
+                elbId: data.elbId,
+              });
+            }
+          } else {
+            acc.push({
+              subnetAz: subnet.subnetAz,
+              subnetsInfo: [
+                {
+                  subnetName: subnet.subnetName,
+                  subnetCidr: subnet.subnetCidr,
+                  elbId: data.elbId,
+                  elbName: data.elbName,
+                },
+              ],
             });
           }
-        } else {
-          uniqueGroupedSubnets.set(group.subnetAz, group);
-        }
-      });
-    });
+          return acc;
+        }, []);
 
-    setGroupedSubnets(Array.from(uniqueGroupedSubnets.values()));
+        groupedSubnets.forEach((group) => {
+          if (uniqueGroupedSubnets.has(group.subnetAz)) {
+            const existingGroup = uniqueGroupedSubnets.get(group.subnetAz);
+            if (existingGroup) {
+              group.subnetsInfo.forEach((info: any) => {
+                const isDuplicate = existingGroup.subnetsInfo.some((existingInfo) => existingInfo.subnetName === info.subnetName && existingInfo.subnetCidr === info.subnetCidr);
+                if (!isDuplicate) {
+                  existingGroup.subnetsInfo.push(info);
+                }
+              });
+            }
+          } else {
+            uniqueGroupedSubnets.set(group.subnetAz, group);
+          }
+        });
+      });
+      setGroupedSubnets(Array.from(uniqueGroupedSubnets.values()));
+    }
   }, [fetchData]);
 
   useEffect(() => {
@@ -177,13 +170,12 @@ const InternetElb = () => {
 
   useEffect(() => {
     if (d3Container.current && data.nodes.length && data.links.length) {
-      const margin = { top: 30, right: 30, bottom: 20, left: 30 };
       const width = 1200;
       const height = 600;
 
       const boxPadding = 30;
-      let nodeWidth = 48;
-      let nodeHeight = 48;
+      let nodeWidth = 40;
+      let nodeHeight = 40;
       const groupSpacing = 200; // 그룹 간 간격
 
       const svg = d3.select(d3Container.current).attr('viewBox', `0 0 ${width} ${height}`).attr('width', '100%').attr('height', '100%');
@@ -199,42 +191,60 @@ const InternetElb = () => {
         nodeWidth = nodeHeight = 48 * (10 / maxNodes);
       }
 
-      const topBoxWidth = topNodes.length * (nodeWidth + boxPadding) + boxPadding;
+      const nodeSpacing = 40;
+      const topBoxWidth = topNodes.length * (nodeWidth + boxPadding + nodeSpacing) + boxPadding;
       const boxHeight = nodeHeight + 3 * boxPadding;
+
+      const internetBox = svg.append('g').attr('class', 'internet-box-group');
+
+      internetBox
+        .append('image')
+        .attr('class', 'node')
+        .attr('xlink:href', 'https://icons.terrastruct.com/essentials%2F140-internet.svg')
+        .attr('x', (width - topBoxWidth) / 2 + topBoxWidth / 2 - nodeWidth / 2)
+        .attr('y', 0)
+        .attr('width', nodeWidth)
+        .attr('height', nodeHeight);
+
+      const internetNode = { id: '', group: 'top', fx: (width - topBoxWidth) / 2 + topBoxWidth / 2, fy: nodeHeight - 50 };
 
       // Top group box
       const topBox = svg.append('g').attr('class', 'top-box-group');
 
       topBox
         .append('rect')
-        .attr('x', (width - topBoxWidth) / 2)
-        .attr('y', 50)
+        .attr('x', (width - topBoxWidth) / 2.1)
+        .attr('y', 80)
         .attr('width', topBoxWidth)
         .attr('height', boxHeight)
-        .style('fill', '#eee')
+        .style('fill', 'none')
         .style('stroke', 'none');
 
-      topBox
-        .append('text')
-        .attr('x', (width - topBoxWidth) / 2 + 10)
-        .attr('y', 40)
-        .attr('fill', 'black')
-        .text('Top Group')
-        .style('font-size', '1.4rem')
-        .style('font-weight', 'bold');
-
       topNodes.forEach((node, index) => {
-        const isEven = index % 2 === 0;
-        node.fx = (width - topBoxWidth) / 2 + boxPadding + index * (nodeWidth + boxPadding) + nodeWidth / 2;
-        node.fy = 50 + boxHeight / 2;
+        node.fx = (width - topBoxWidth) / 2 + boxPadding + index * (nodeWidth + boxPadding + nodeSpacing) + nodeWidth / 2;
+        node.fy = 10 + boxHeight;
+
+        data.links.push({ source: internetNode.id, target: node.id });
       });
+
+      data.nodes.push(internetNode);
 
       const bottomBoxGroup = svg.append('g').attr('class', 'bottom-box-group');
 
+      // Calculate the total width of all subnet groups
+      const totalSubnetGroupsWidth =
+        groupedSubnets.reduce((acc, group) => {
+          const subnetGroupWidth = group.subnetsInfo.length * (nodeWidth + boxPadding + nodeSpacing) + boxPadding;
+          return acc + subnetGroupWidth + groupSpacing;
+        }, 0) - groupSpacing; // Subtract extra spacing added in the last iteration
+
+      // Calculate the starting x position to center the bottomBoxGroup
+      const bottomBoxGroupX = (width - totalSubnetGroupsWidth) / 2;
+
       // Bottom group boxes for each subnetAz
       groupedSubnets.forEach((group, groupIndex) => {
-        const subnetGroupWidth = group.subnetsInfo.length * (nodeWidth + boxPadding) + boxPadding;
-        const xPosition = margin.left + groupIndex * groupSpacing;
+        const subnetGroupWidth = group.subnetsInfo.length * (nodeWidth + boxPadding + nodeSpacing) + boxPadding;
+        const xPosition = bottomBoxGroupX + groupIndex * (subnetGroupWidth + groupSpacing + 70);
 
         const bottomBox = bottomBoxGroup.append('g').attr('class', 'bottom-box');
 
@@ -244,50 +254,45 @@ const InternetElb = () => {
           .attr('y', height - boxHeight - 80)
           .attr('width', subnetGroupWidth)
           .attr('height', boxHeight)
-          .style('fill', '#eee')
-          .style('stroke', 'none');
+          .style('fill', 'none')
+          .style('stroke', '#6667AB')
+          .attr('rx', 10)
+          .attr('ry', 10)
+          .attr('stroke-width', 2)
+          .attr('stroke-dasharray', 12);
 
         bottomBox
           .append('text')
           .attr('x', xPosition + 10)
-          .attr('y', height - boxHeight / 2.5)
+          .attr('y', height - boxHeight * 1.5 - 20)
           .attr('fill', 'black')
           .text(group.subnetAz)
-          .style('font-size', '12px')
+          .style('font-size', '1.1rem')
           .style('font-weight', 'bold');
 
         group.subnetsInfo.forEach((subnet, subnetIndex) => {
-          const fx = xPosition + boxPadding + subnetIndex * (nodeWidth + boxPadding) + nodeWidth / 2;
+          const fx = xPosition + boxPadding + subnetIndex * (nodeWidth + boxPadding + nodeSpacing) + nodeWidth / 2;
           const fy = height - boxHeight - 100 + boxHeight / 2;
+
+          const subnetGroup = bottomBox.append('g').attr('class', 'subnet-group');
+
+          subnetGroup
+            .append('rect')
+            .attr('x', fx - nodeWidth / 1.5)
+            .attr('y', fy - nodeHeight / 2)
+            .attr('width', nodeWidth + 50)
+            .attr('height', nodeHeight * 2)
+            .attr('fill', 'none')
+            .attr('stroke', '#6667AB')
+            .attr('stroke-width', 1)
+            .attr('rx', 10)
+            .attr('ry', 10);
 
           const node = data.nodes.find((n) => n.id === subnet.subnetCidr);
           if (node) {
             node.fx = fx;
             node.fy = fy;
           }
-
-          const subnetGroup = bottomBox.append('g').attr('class', 'subnet-group');
-
-          subnetGroup
-            .append('rect')
-            .attr('x', fx - nodeWidth / 2)
-            .attr('y', fy - nodeHeight / 2)
-            .attr('width', nodeWidth)
-            .attr('height', nodeHeight)
-            .attr('fill', '#fff')
-            .attr('stroke', '#000')
-            .attr('stroke-width', 1)
-            .attr('rx', 10) // 둥근 모서리를 위해 추가된 속성
-            .attr('ry', 10); // 둥근 모서리를 위해 추가된 속성
-
-          subnetGroup
-            .append('text')
-            .attr('x', fx)
-            .attr('y', fy)
-            .attr('dy', '.35em') // 세로 중앙 정렬을 위한 속성
-            .attr('text-anchor', 'middle')
-            .style('font-size', '0.8rem')
-            .text(subnet.subnetCidr);
         });
       });
 
@@ -302,7 +307,7 @@ const InternetElb = () => {
         .force('charge', d3.forceManyBody().strength(-300))
         .on('tick', ticked);
 
-      const link = svg.append('g').attr('class', 'links').selectAll('line').data(data.links).enter().append('line').attr('class', 'link animated-link').attr('stroke', '#999').attr('stroke-width', 1);
+      const link = svg.append('g').attr('class', 'links').selectAll('line').data(data.links).enter().append('line').attr('class', 'link animated-link').attr('stroke', '#000').attr('stroke-width', 2);
 
       const nodeGroup = svg
         .append('g')
@@ -314,7 +319,7 @@ const InternetElb = () => {
         .attr('class', 'node-group')
         .attr('transform', (d: any) => `translate(${d.x}, ${d.y})`);
 
-      nodeGroup.append('rect').attr('class', 'node-background').attr('width', nodeWidth).attr('height', nodeHeight).attr('fill', '#eee');
+      nodeGroup.append('rect').attr('class', 'node-background').attr('width', nodeWidth).attr('height', nodeHeight).attr('fill', 'none');
 
       nodeGroup
         .append('image')
@@ -322,52 +327,73 @@ const InternetElb = () => {
         .attr('xlink:href', (d: any) => d.img)
         .attr('width', nodeWidth)
         .attr('height', nodeHeight);
+      // .on('click', handleNodeClick);
 
       nodeGroup
         .append('text')
-        .attr('x', nodeWidth / 2)
+        .attr('x', nodeWidth - 1)
         .attr('y', nodeHeight + 5)
         .attr('text-anchor', 'middle')
-        .text((d: any) => d.id);
+        .text((d: any) => (d.group === 'bottom' ? d.id : null))
+        .style('font-size', '1rem')
+        .style('font-weight', 'bold');
+
+      nodeGroup
+        .append('text')
+        .attr('x', nodeWidth * 1.5 - 40)
+        .attr('y', nodeHeight * 1.5)
+        .attr('text-anchor', 'middle')
+        .text((d: any) => (d.group === 'top' ? d.id : null))
+        .style('font-size', '1rem')
+        .style('font-weight', 'bold');
 
       function ticked() {
         link
           .attr('x1', (d: any) => d.source.fx)
-          .attr('y1', (d: any) => d.source.fy)
+          .attr('y1', (d: any) => d.source.fy + 45)
           .attr('x2', (d: any) => d.target.fx)
-          .attr('y2', (d: any) => d.target.fy);
+          .attr('y2', (d: any) => d.target.fy - 20);
 
         nodeGroup.attr('transform', (d: any) => `translate(${d.fx - nodeWidth / 2}, ${d.fy - nodeHeight / 2})`);
       }
 
-      svg.append('rect').attr('width', width).attr('height', height).attr('fill', 'none').attr('pointer-events', 'all').on('click', handleBackgroundClick);
+      // function handleNodeClick(event: any, clickedNode: any) {
+      //   const connectedNodes = new Set<string>();
+      //   const connectedLinks = new Set<any>();
 
-      function handleBackgroundClick() {
-        svg.selectAll('.node').classed('blur', false);
-        svg.selectAll('.link').style('visibility', 'visible');
-      }
+      //   data.links.forEach((link) => {
+      //     if (link.source.id === clickedNode.id || link.target.id === clickedNode.id) {
+      //       connectedNodes.add(link.source.id.toString());
+      //       connectedNodes.add(link.target.id.toString());
+      //       connectedLinks.add(link);
+      //     }
+      //   });
+
+      //   connectedNodes.add(clickedNode.id);
+
+      //   connectedLinks.forEach((link) => {
+      //     connectedNodes.add(link.source.toString());
+      //     connectedNodes.add(link.target.toString());
+      //   });
+
+      //   svg.selectAll('.node').classed('blur', (d: any) => !connectedNodes.has(d.id));
+      //   svg.selectAll('.link').style('visibility', (d: any) => {
+      //     return !(connectedNodes.has(d.source.id) && connectedNodes.has(d.target.id)) ? 'hidden' : 'visible';
+      //   });
+      // }
+
+      // svg.append('rect').attr('width', width).attr('height', height).attr('fill', 'none').attr('pointer-events', 'all').on('click', handleBackgroundClick);
+
+      // function handleBackgroundClick() {
+      //   svg.selectAll('.node').classed('blur', false);
+      //   svg.selectAll('.link').style('visibility', 'visible');
+      // }
     }
+    // if (d3Container.current && data.nodes.length && data.links.length) {
+
+    // }
   }, [groupedSubnets, data, d3Container]);
 
-  // TODO: Data 가공
-
-  // TODO: d3 topology 구현
-  // useEffect(() => {
-  //   const margin = { top: 30, right: 30, bottom: 20, left: 30 };
-  //   const width = data.nodes.length * 75 + margin.left + margin.right;
-  //   const height = 1000;
-
-  //   const boxPadding = 30;
-  //   let nodeWidth = 48;
-  //   let nodeHeight = 48;
-
-  //   const svg = d3.select(d3Container.current).attr('viewBox', `0 0 ${width} ${height}`).attr('width', width).attr('height', '60%');
-
-  //   svg.selectAll('*').remove()
-
-  //   // top group
-
-  // })
   return (
     <div>
       <div className='panel' style={{ overflowX: 'auto', width: '100%', height: '100%' }}>

@@ -1,43 +1,49 @@
 [
   {
-    "elbName": "elb-cloudops",
-    "elbId": "elb-61513.elb.amazonaws.com",
-    "subnets": [
-      { "subnetName": "subnet-iampam-seoulA", "subnetCidr": "10.1.1.0/24", "subnetAz": "AZ-A" },
-      { "subnetName": "subnet-iampam-seoulB", "subnetCidr": "10.1.2.0/24", "subnetAz": "AZ-C" },
-      { "subnetName": "subnet-iampam-seoulC", "subnetCidr": "10.1.5.0/24", "subnetAz": "AZ-D" }
-    ],
-    "flows": [
-      { "geoName": "South Korea", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/southkoreaFlag.svg", "flowWeight": 7, "flowStatus": "normal" },
-      { "geoName": "US", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/usFlag.svg", "flowWeight": 3, "flowStatus": "normal" },
-      { "geoName": "Canada", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/canadaFlag.svg", "flowWeight": 3, "flowStatus": "normal" },
-      { "geoName": "China", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/chinaFlag.svg", "flowWeight": 2, "flowStatus": "abnormal" }
-    ]
-  },
-  {
-    "elbName": "elb-zerotrust",
-    "elbId": "elb-54426.elb.amazonaws.com",
-    "flows": [
-      { "geoName": "South Korea", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/southkoreaFlag.svg", "flowWeight": 8, "flowStatus": "normal" },
-      { "geoName": "US", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/usFlag.svg", "flowWeight": 2, "flowStatus": "normal" },
-      { "geoName": "Canada", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/canadaFlag.svg", "flowWeight": 1, "flowStatus": "normal" }
-    ],
-    "subnets": [
-      { "subnetName": "subnet-zerotrust-seoulA", "subnetCidr": "10.1.3.0/24", "subnetAz": "AZ-A" },
-      { "subnetName": "subnet-iampam-seoulB", "subnetCidr": "10.1.2.0/24", "subnetAz": "AZ-C" }
-    ]
-  },
-  {
-    "elbName": "elb-aiops",
-    "elbId": "elb-4a22b.elb.amazonaws.com",
-    "flows": [
-      { "geoName": "South Korea", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/southkoreaFlag.svg", "flowWeight": 8, "flowStatus": "normal" },
-      { "geoName": "US", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/usFlag.svg", "flowWeight": 2, "flowStatus": "normal" },
-      { "geoName": "Canada", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/canadaFlag.svg", "flowWeight": 1, "flowStatus": "normal" }
-    ],
-    "subnets": [
-      { "subnetName": "subnet-zerotrust-seoulA", "subnetCidr": "10.1.3.0/24", "subnetAz": "AZ-A" },
-      { "subnetName": "subnet-zerotrust-seoulB", "subnetCidr": "10.1.4.0/24", "subnetAz": "AZ-C" }
+    "vpcName": "vpc-iampam-seoul",
+    "vpcCidr": "10.1.0.0/16",
+    "elbs": [
+      {
+        "elbName": "elb-cloudops",
+        "elbId": "elb-61513.elb.amazonaws.com",
+        "subnets": [
+          { "subnetName": "subnet-iampam-seoulA", "subnetCidr": "10.1.1.0/24", "subnetAz": "AZ-A" },
+          { "subnetName": "subnet-iampam-seoulB", "subnetCidr": "10.1.2.0/24", "subnetAz": "AZ-C" },
+          { "subnetName": "subnet-iampam-seoulC", "subnetCidr": "10.1.5.0/24", "subnetAz": "AZ-D" }
+        ],
+        "flows": [
+          { "geoName": "South Korea", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/southkoreaFlag.svg", "flowWeight": 7, "flowStatus": "normal" },
+          { "geoName": "US", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/usFlag.svg", "flowWeight": 3, "flowStatus": "normal" },
+          { "geoName": "Canada", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/canadaFlag.svg", "flowWeight": 3, "flowStatus": "normal" },
+          { "geoName": "China", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/chinaFlag.svg", "flowWeight": 2, "flowStatus": "abnormal" }
+        ]
+      },
+      {
+        "elbName": "elb-zerotrust",
+        "elbId": "elb-54426.elb.amazonaws.com",
+        "flows": [
+          { "geoName": "South Korea", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/southkoreaFlag.svg", "flowWeight": 8, "flowStatus": "normal" },
+          { "geoName": "US", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/usFlag.svg", "flowWeight": 2, "flowStatus": "normal" },
+          { "geoName": "Canada", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/canadaFlag.svg", "flowWeight": 1, "flowStatus": "normal" }
+        ],
+        "subnets": [
+          { "subnetName": "subnet-zerotrust-seoulA", "subnetCidr": "10.1.3.0/24", "subnetAz": "AZ-A" },
+          { "subnetName": "subnet-iampam-seoulB", "subnetCidr": "10.1.2.0/24", "subnetAz": "AZ-C" }
+        ]
+      },
+      {
+        "elbName": "elb-aiops",
+        "elbId": "elb-4a22b.elb.amazonaws.com",
+        "flows": [
+          { "geoName": "South Korea", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/southkoreaFlag.svg", "flowWeight": 8, "flowStatus": "normal" },
+          { "geoName": "US", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/usFlag.svg", "flowWeight": 2, "flowStatus": "normal" },
+          { "geoName": "Canada", "flag": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flags/canadaFlag.svg", "flowWeight": 1, "flowStatus": "normal" }
+        ],
+        "subnets": [
+          { "subnetName": "subnet-zerotrust-seoulA", "subnetCidr": "10.1.3.0/24", "subnetAz": "AZ-A" },
+          { "subnetName": "subnet-zerotrust-seoulB", "subnetCidr": "10.1.4.0/24", "subnetAz": "AZ-C" }
+        ]
+      }
     ]
   }
 ]
