@@ -27,17 +27,15 @@ export default function SetColumnDefs(tableOption: any, userTag: any, awsTag: an
     });
   });
 
-  // add Column minWidth Option
+  // add Column width Option
   tableOption.columnWidth.forEach((columnWidth: any) => {
     mergedColumnDefs.forEach((columnDefs: any, index) => {
       if (columnDefs['field'] && columnDefs['field'] === Object.keys(columnWidth)[0]) {
-        // mergedColumnDefs[index]['width'] = columnWidth[Object.keys(columnWidth)[0]];
-        mergedColumnDefs[index]['width'] = 400;
+        mergedColumnDefs[index]['width'] = columnWidth[Object.keys(columnWidth)[0]];
       } else if (columnDefs['children']) {
         columnDefs['children'].forEach((childColumnDefs: any, childIndex: number) => {
           if (childColumnDefs['field'] && childColumnDefs['field'] === Object.keys(columnWidth)[0]) {
-            // mergedColumnDefs[index]['children'][childIndex]['width'] = columnWidth[Object.keys(columnWidth)[0]];
-            mergedColumnDefs[index]['children'][childIndex]['width'] = 400;
+            mergedColumnDefs[index]['children'][childIndex]['width'] = columnWidth[Object.keys(columnWidth)[0]];
           }
         });
       }
