@@ -57,21 +57,25 @@ const SubnetsNodes = () => {
     <div>
       <p className='text-[16px] font-semibold text-[#6667AB]'>Subnets Nodes</p>
       <div className='grid grid-cols-3 gap-[12px]'>
-        {groupedByCidrData.map((data: { cidr: string; cidrName: string; nodes: { nodeId: string; nodeIp: string; nodeName: string; nodeType: string }[] }) => (
-          // <div key={data.cidr} className='col-span-1 border border-[#E0E0E0] p-4 rounded-md'>
-          // <div key={data.cidr} className='col-span-1 border border-[#E0E0E0] p-4 rounded-md max-h-[500px] overflow-y-hidden'>
-          <div key={data.cidr} className='panel col-span-1 border border-[#E0E0E0] p-4 rounded-md max-h-[500px] overflow-y-auto'>
-            <p className='text-[14px] font-semibold text-[#6667AB]'>{data.cidrName}</p>
-            <div className='grid grid-cols-4 gap-4 mt-4'>
-              {data.nodes.map((node) => (
-                <div key={node.nodeId} className='flex flex-col items-center'>
-                  <img src={getNodeIcon(node.nodeType)} alt='node' className='w-6 h-6 mr-2' />
-                  <p className='text-[14px] font-semibold text-[#6667AB]'>{node.nodeName}</p>
-                </div>
-              ))}
+        {groupedByCidrData.length ? (
+          groupedByCidrData.map((data: { cidr: string; cidrName: string; nodes: { nodeId: string; nodeIp: string; nodeName: string; nodeType: string }[] }) => (
+            // <div key={data.cidr} className='col-span-1 border border-[#E0E0E0] p-4 rounded-md'>
+            // <div key={data.cidr} className='col-span-1 border border-[#E0E0E0] p-4 rounded-md max-h-[500px] overflow-y-hidden'>
+            <div key={data.cidr} className='panel col-span-1 border border-[#E0E0E0] p-4 rounded-md max-h-[500px] overflow-y-auto'>
+              <p className='text-[14px] font-semibold text-[#6667AB]'>{data.cidrName}</p>
+              <div className='grid grid-cols-4 gap-4 mt-4'>
+                {data.nodes.map((node) => (
+                  <div key={node.nodeId} className='flex flex-col items-center'>
+                    <img src={getNodeIcon(node.nodeType)} alt='node' className='w-6 h-6 mr-2' />
+                    <p className='text-[14px] font-semibold text-[#6667AB]'>{node.nodeName}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p>Loading...</p>
+        )}
         {/* {
         groupedByCidrData.map((data: {cidr: string; cidrName: string; nodes: {nodeId: string; nodeIp: string; nodeName: string; nodeType: string}}) => {
 

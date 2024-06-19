@@ -29,9 +29,9 @@ const Compliance = () => {
     <div>
       <div className='grid'>
         <div className='panel'>
-          <p className='font-semibold text-xl pl-4'>Compliance</p>
+          <p className='font-semibold text-xl pl-4'></p>
           <hr className='mt-4' />
-          <div dangerouslySetInnerHTML={{ __html: reportHTML }}></div>
+          {/* <div dangerouslySetInnerHTML={{ __html: reportHTML }}></div> */}
         </div>
       </div>
     </div>
