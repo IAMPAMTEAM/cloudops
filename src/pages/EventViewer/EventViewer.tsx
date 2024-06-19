@@ -23,6 +23,7 @@ interface IRowDataDetails {
   counts: number | null;
   details: object;
 }
+
 const defaultRowDataDetails: IRowDataDetails = {
   status: '',
   date: '',

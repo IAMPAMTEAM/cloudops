@@ -53,18 +53,12 @@ export default function EventViewer({ children, datas, columnDefs, defaultTableS
           for (let i = 0; i < newData.length; i++) {
             gridRef.current!.api.flashCells({ flashDuration: 2000, fadeDuration: 1000, rowNodes: [gridRef.current!.api.getDisplayedRowAtIndex(i)!] });
           }
-        }, 0);
+        }, 1);
       }, 5000);
 
       return () => clearInterval(interval);
     }
   }, [datas]);
-
-  // const onFlashTwoRows = useCallback(() => {
-  //   var rowNode1 = gridRef.current!.api.getDisplayedRowAtIndex(4)!;
-
-  //   gridRef.current!.api.flashCells({ rowNodes: [rowNode1] });
-  // }, []);
 
   // const autoGroupColumnDef = useMemo<ColDef>(() => {
   //   return {
