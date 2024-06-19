@@ -1,21 +1,20 @@
 {
-  "name": "EvnetViewer",
+  "name": "EventViewer",
   "columnDefs": [
     {
       "field": "status",
-      "headerCheckboxSelection": true,
-      "checkboxSelection": true,
+
       "cellRenderer": "statusRenderer"
     },
-    { "field": "date", "minWidth": 250 },
-    { "field": "time", "minWidth": 250 },
-    { "field": "where", "minWidth": 250 },
-    { "field": "who", "minWidth": 250 },
-    { "field": "what", "minWidth": 250 },
+    { "field": "date" },
+    { "field": "time" },
+    { "field": "where" },
+    { "field": "who" },
+    { "field": "what" },
     { "field": "counts", "cellRenderer": "countsRenderer" }
   ],
   "columnWidth": [],
-  "columnMaxWidth": [{ "status": 200 }, { "date": 350 }, { "time": 350 }, { "where": 350 }, { "who": 350 }, { "what": 200 }, { "counts": 200 }],
+  "columnMaxWidth": [{ "status": 120 }, { "date": 150 }, { "time": 150 }, { "where": 250 }, { "who": 250 }, { "what": 200 }, { "counts": 100 }],
   "defaultColDef": { "filter": true },
   "autoSizeStrategy": {},
   "editableColumn": [],

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import EventViewerTable from '@/components/DataTables/EventViewerTable';
 import MergeTagData from '@/utils/MergeTagData';
@@ -23,6 +23,7 @@ interface IRowDataDetails {
   counts: number | null;
   details: object;
 }
+
 const defaultRowDataDetails: IRowDataDetails = {
   status: '',
   date: '',
@@ -38,6 +39,7 @@ const EventViewer = () => {
   const [columnDefs, setColumnDefs] = useState<any[]>([]);
   const [mergedTableData, setMergedTableData] = useState<any[]>([]);
   const [rowDataDetails, setRowDataDetails] = useState<IRowDataDetails>(defaultRowDataDetails);
+
   const setDefaultTableSetting = SetDefaultTableSetting(tableOption);
 
   useEffect(() => {
@@ -68,7 +70,6 @@ const EventViewer = () => {
           paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
           getOnclickRowData={(data: any) => {
             setRowDataDetails(data || defaultRowDataDetails);
-            console.log(data);
           }}
         >
           <p className='text-lg'>Event Viewer</p>

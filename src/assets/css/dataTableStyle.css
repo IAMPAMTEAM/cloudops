@@ -28,4 +28,5 @@
 .ag-theme-quartz {
   font-size: 15px;
   --ag-row-hover-color: #eee;
+  --ag-value-change-value-highlight-background-color: #ffe4e1;
 }

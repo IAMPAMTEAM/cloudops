@@ -5,6 +5,7 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 
 import { ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import CreateData from '@/pages/EventViewer/_partials/CreateData';
 
 interface IDataTable {
   children: ReactNode;
@@ -23,6 +24,8 @@ export default function EventViewer({ children, datas, columnDefs, defaultTableS
     return defaultTableSetting.autoSizeStrategy;
   }, [defaultTableSetting.autoSizeStrategy]);
 
+  const [rowData, setRowData] = useState<any[]>([]);
+
   const gridRef = useRef<AgGridReact>(null);
 
   const onBtnCSVExport = useCallback(() => {
@@ -36,8 +39,26 @@ export default function EventViewer({ children, datas, columnDefs, defaultTableS
   const onSelectionChanged = useCallback(() => {
     const selectedRows = gridRef.current!.api.getSelectedRows();
     getOnclickRowData(selectedRows[0]);
-    // console.log(selectedRows[0]);
   }, []);
+
+  useEffect(() => {
+    if (gridRef.current) {
+      setRowData(datas);
+
+      const interval = setInterval(() => {
+        const newData = CreateData();
+        setRowData((prevData) => [...newData, ...prevData]);
+
+        setTimeout(() => {
+          for (let i = 0; i < newData.length; i++) {
+            gridRef.current!.api.flashCells({ flashDuration: 2000, fadeDuration: 1000, rowNodes: [gridRef.current!.api.getDisplayedRowAtIndex(i)!] });
+          }
+        }, 1);
+      }, 5000);
+
+      return () => clearInterval(interval);
+    }
+  }, [datas]);
 
   // const autoGroupColumnDef = useMemo<ColDef>(() => {
   //   return {
@@ -63,10 +84,11 @@ export default function EventViewer({ children, datas, columnDefs, defaultTableS
           </button>
         </div>
       </div>
+
       <div style={{ height: tableHeight }} className={'ag-theme-quartz'}>
         <AgGridReact
           ref={gridRef}
-          rowData={datas}
+          rowData={rowData}
           columnDefs={columnDefs}
           // autoGroupColumnDef={autoGroupColumnDef}
           defaultColDef={defaultTableSetting.defaultColDef}
