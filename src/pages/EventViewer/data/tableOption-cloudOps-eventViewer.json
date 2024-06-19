@@ -3,7 +3,6 @@
   "columnDefs": [
     {
       "field": "status",
-
       "cellRenderer": "statusRenderer"
     },
     { "field": "date" },
@@ -13,8 +12,8 @@
     { "field": "what" },
     { "field": "counts", "cellRenderer": "countsRenderer" }
   ],
-  "columnWidth": [],
-  "columnMaxWidth": [{ "status": 120 }, { "date": 150 }, { "time": 150 }, { "where": 250 }, { "who": 250 }, { "what": 200 }, { "counts": 100 }],
+  "columnWidth": [{ "status": 120 }, { "date": 220 }, { "time": 220 }, { "where": 220 }, { "who": 320 }, { "what": 350 }, { "counts": 100 }],
+  "columnMaxWidth": [],
   "defaultColDef": { "filter": true },
   "autoSizeStrategy": {},
   "editableColumn": [],
