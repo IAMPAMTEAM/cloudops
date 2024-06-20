@@ -345,6 +345,23 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .text(selectedFromSubnet);
 
       svg
+        .append('text')
+        .attr('x', (width - topBoxWidth) / 2 + 10)
+        .attr('y', 90)
+        .attr('fill', 'black')
+        .text(selectedFromSubnet)
+        .style('font-size', '1.4rem')
+        .style('font-weight', 'bold');
+
+      svg
+        .selectAll('.top-box')
+        .append('text')
+        .attr('dy', nodeHeight / 2 + 5)
+        .attr('dx', nodeWidth / 2)
+        .attr('text-anchor', 'middle')
+        .text(selectedFromSubnet);
+
+      svg
         .append('rect')
         .attr('x', (width - bottomBoxWidth) / 2)
         .attr('y', height - boxHeight - 80)
@@ -360,6 +377,15 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
         .attr('y', height - boxHeight / 2.5)
         .attr('fill', 'black')
         .text(`${selectedToSubnet} (to)`)
+        .style('font-size', '1.4rem')
+        .style('font-weight', 'bold');
+
+      svg
+        .append('text')
+        .attr('x', (width - bottomBoxWidth) / 2 + 10)
+        .attr('y', height - boxHeight + 30)
+        .attr('fill', 'black')
+        .text(selectedToSubnet)
         .style('font-size', '1.4rem')
         .style('font-weight', 'bold');
 
