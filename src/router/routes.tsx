@@ -63,7 +63,7 @@ const DashboardSummary = lazy(() => import('@/pages/DashboardSummary/DashboardSu
 const Credentials = lazy(() => import('@/pages/Credentials/Credentials'));
 const Compliance = lazy(() => import('@/pages/Compliance/ComplianceContainer'));
 const Monitor = lazy(() => import('@/pages/Monitor/MonitorContainer'));
-const Log = lazy(() => import('@/pages/Log/LogContainer'));
+const Log = lazy(() => import('@/pages/Log/Log'));
 const Chatbot = lazy(() => import('@/pages/Chatbot/ChatbotContainer'));
 const Admin = lazy(() => import('@/pages/Admin/AdminContainer'));
 

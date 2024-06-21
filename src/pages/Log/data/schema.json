@@ -1,27 +1,6 @@
 {
-  "name": "cloudOps-governance",
-  "columnDefs": [
-    {
-      "field": "companyName"
-    },
-    { "field": "awsAccountSetName" },
-    {
-      "headerName": "Governance",
-      "children": [
-        { "field": "governanceName" },
-        { "field": "governanceTypes" },
-        { "field": "complianceAssets" },
-        { "field": "complianceCost" },
-        { "field": "complianceIdentity" },
-        { "field": "complianceAccessControl" },
-        { "field": "complianceEncryption" },
-        { "field": "complianceHA" },
-        { "field": "complianceDR" },
-        { "field": "complianceBackup" },
-        { "field": "complianceLog" }
-      ]
-    }
-  ],
+  "name": "cloudOps-log",
+  "columnDefs": [{ "field": "eventName" }, { "field": "eventTime" }, { "field": "userName" }, { "field": "eventSource" }],
   "columnWidth": [
     { "companyName": 165 },
     { "awsAccountSetName": 250 },
