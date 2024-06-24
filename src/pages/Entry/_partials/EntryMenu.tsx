@@ -109,7 +109,7 @@ const EntryMenu = () => {
 
       <div className='flex m-[2.4rem] flex-wrap w-[1000px] relative items-end'>
         {menuList.map((menu, idx) => {
-          if (!(menu.menu === 'Monitor' || menu.menu === 'Log' || menu.menu === 'Chatbot' || menu.menu === 'Admin'))
+          if (!(menu.menu === 'Monitor' || menu.menu === 'Chatbot' || menu.menu === 'Admin'))
             return (
               <div>
                 <button
