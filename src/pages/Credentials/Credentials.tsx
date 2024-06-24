@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import FilterDataTable from '@/components/DataTables/FilterDataTable';
+import CredentialsDataTable from '@/components/DataTables/CredentialsDataTable';
 import MergeTagData from '@/utils/MergeTagData';
 import SetColumnDefs from '@/utils/SetColumnDefs';
 import SetDefaultTableSetting from '@/utils/SetDefaultTableSetting';
@@ -28,7 +28,7 @@ const Credentials = () => {
   return (
     <>
       <div className='panel'>
-        <FilterDataTable
+        <CredentialsDataTable
           showSaveButton={false}
           result={result}
           datas={mergedTableData}
@@ -40,7 +40,7 @@ const Credentials = () => {
           paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
         >
           <p className='text-lg'>Credentials</p>
-        </FilterDataTable>
+        </CredentialsDataTable>
       </div>
     </>
   );

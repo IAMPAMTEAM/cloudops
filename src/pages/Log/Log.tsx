@@ -1,12 +1,18 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Select from 'react-select';
 import { Dayjs } from 'dayjs';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import DataTable from '@/components/DataTables/DataTable';
+import MergeTagData from '@/utils/MergeTagData';
+import SetColumnDefs from '@/utils/SetColumnDefs';
+import SetDefaultTableSetting from '@/utils/SetDefaultTableSetting';
+import DateFormatter from '@/pages/Log/_partials/DateFormatter';
 
 import SetFrequentOptions from '@/pages/Log/_partials/SetFrequentOptions';
+import SetLogData from '@/pages/Log/_partials/SetLogData';
 
 import regionData from '@/pages/Log/filterData/region.json';
 import serviceData from '@/pages/Log/filterData/service.json';
@@ -17,6 +23,11 @@ import elbFrequntData from '@/pages/Log/filterData/elbFrequentEventsList.json';
 import rdsFrequntData from '@/pages/Log/filterData/rdsFrequentEventsList.json';
 import iamFrequntData from '@/pages/Log/filterData/iamFrequentEventsList.json';
 import s3FrequntData from '@/pages/Log/filterData/s3FrequentEventsList.json';
+
+import LogData from '@/pages/Log/data/data.json';
+import tableOption from '@/pages/Log/data/schema.json';
+import userTag from '@/pages/Log/data/taguser.json';
+import awsTag from '@/pages/Log/data/tagaws.json';
 
 const Log = () => {
   const [fromDateValue, setFromDataValue] = useState<Dayjs | null>(null);
@@ -33,7 +44,8 @@ const Log = () => {
   const [iamFrequentEventsValue, setIamFrequentEventsValue] = useState<string[]>([]);
   const [s3FrequentEventsValue, setS3FrequentEventsValue] = useState<string[]>([]);
 
-  const [frequentEventsValue, setFrequentEventsValue] = useState<string[]>([]);
+  const [columnDefs, setColumnDefs] = useState<any[]>([]);
+  const [mergedTableData, setMergedTableData] = useState<any[]>([]);
 
   const regionOptions = regionData.Region.map((region: string) => ({ value: region, label: region }));
 
@@ -52,6 +64,22 @@ const Log = () => {
   const rdsFrequentEventsOption = SetFrequentOptions(rdsFrequntData);
   const iamFrequentEventsOption = SetFrequentOptions(iamFrequntData);
   const s3FrequentEventsOption = SetFrequentOptions(s3FrequntData);
+
+  const logData = SetLogData(LogData);
+  const setDefaultTableSetting = SetDefaultTableSetting(tableOption);
+
+  useEffect(() => {
+    const mergedColumnDefs = SetColumnDefs(tableOption, userTag, awsTag);
+    mergedColumnDefs.forEach((columnDef) => {
+      if (columnDef.valueFormatter === 'DateFormatter') {
+        columnDef.valueFormatter = DateFormatter;
+      }
+    });
+    setColumnDefs(mergedColumnDefs);
+
+    const mergedData = MergeTagData(logData, userTag, awsTag);
+    setMergedTableData(mergedData);
+  }, []);
 
   const onChangeSelect = (selectOption, selectBoxId: string) => {
     let options = selectOption ? selectOption.map((option) => option.value) : [];
@@ -186,6 +214,21 @@ const Log = () => {
             <Select isMulti options={s3FrequentEventsOption} onChange={(e) => onChangeSelect(e, 's3Frequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
           </div>
         </div>
+      </div>
+      <div className='panel mt-2'>
+        <DataTable
+          showSaveButton={false}
+          datas={mergedTableData}
+          columnDefs={columnDefs}
+          defaultTableSetting={setDefaultTableSetting}
+          tableHeight={tableOption.tableHeight}
+          pagination={tableOption.pagination}
+          paginationPageSize={tableOption.paginationPageSize}
+          paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
+          // saveCallback={saveEditedRow}
+        >
+          <p className='text-lg'>Log Viewer</p>
+        </DataTable>
       </div>
     </>
   );
