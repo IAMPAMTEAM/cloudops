@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import ComplianceTop from '@/assets/images/compliance.svg';
 
 const Compliance = () => {
   const [reportHTML, setReportHTML] = useState('');
@@ -61,8 +61,9 @@ const Compliance = () => {
 
   return (
     <div>
-      <p className='text-[1.2rem] font-semibold mb-[8px] text-[#333]'>Compliance</p>
-      <hr className='mb-[8px] border-[1px] border-[#333]' />
+      {/* <p className='text-[1.2rem] font-semibold mb-[8px] text-[#333]'>Compliance</p>
+      <hr className='mb-[8px] border-[1px] border-[#333]' /> */}
+      <img src={ComplianceTop} alt='Compliance' className='w-full h-full object-cover mb-4' />
       <style dangerouslySetInnerHTML={{ __html: convertedHTML?.querySelector('style')?.innerHTML ?? '' }}></style>
       <div className='flex flex-col gap-8'>
         <div className='panel'>

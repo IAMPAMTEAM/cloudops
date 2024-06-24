@@ -65,8 +65,8 @@ const Governance = () => {
 
   return (
     <>
-      <img src={Infographics} alt='Governance Infographics' className='m-0 ml-auto mr-auto' />
-      <div className='panel mt-[1.2rem]'>
+      <img src={Infographics} alt='Governance Infographics' className='w-full h-full' />
+      <div className='panel mt-4'>
         <DataTable
           showSaveButton={true}
           datas={mergedTableData}
