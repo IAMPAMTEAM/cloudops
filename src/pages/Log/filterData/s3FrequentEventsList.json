@@ -1,0 +1,22 @@
+{
+  "S3": [
+    "CreateBucket",
+    "DeleteBucket",
+    "DeleteBucketCors",
+    "DeleteBucketLifecycle",
+    "DeleteBucketPolicy",
+    "DeleteBucketReplication",
+    "DeleteBucketTagging",
+    "PutBucketAcl",
+    "PutBucketCors",
+    "PutBucketLifecycle",
+    "PutBucketLogging",
+    "PutBucketNotification",
+    "PutBucketPolicy",
+    "PutBucketReplication",
+    "PutBucketRequestPayment",
+    "PutBucketTagging",
+    "PutBucketVersioning",
+    "PutBucketWebsite"
+  ]
+}

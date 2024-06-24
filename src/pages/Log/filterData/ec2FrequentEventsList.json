@@ -1,0 +1,4 @@
+{
+  "EC2": ["RunInstances", "StartInstances", "StopInstances", "TerminateInstances"],
+  "EC2 Security Groups": ["AuthorizeSecurityGroupEgress", "AuthorizeSecurityGroupIngress", "RevokeSecurityGroupEgress", "RevokeSecurityGroupIngress"]
+}
