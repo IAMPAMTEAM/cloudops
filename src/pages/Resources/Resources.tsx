@@ -4,6 +4,7 @@ import DataTable from '@/components/DataTables/DataTable';
 import MergeTagData from '@/utils/MergeTagData';
 import SetColumnDefs from '@/utils/SetColumnDefs';
 import SetDefaultTableSetting from '@/utils/SetDefaultTableSetting';
+import ResourcesTop from '@/assets/images/Resources.svg';
 import '@/assets/css/dataTableStyle.css';
 import axios from 'axios';
 
@@ -73,6 +74,7 @@ const Resources = () => {
 
   return (
     <>
+      <img src={ResourcesTop} className='w-full h-full mb-4' />
       <div className='pb-4 panel'>
         <DataTable
           showSaveButton={true}
@@ -85,7 +87,7 @@ const Resources = () => {
           paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
           saveCallback={saveEditedRow}
         >
-          <p className='text-lg'>Resources</p>
+          <p className='text-lg'></p>
         </DataTable>
       </div>
       <div className='flex flex-col gap-6'>

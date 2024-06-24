@@ -13,6 +13,8 @@ import tableOption from '@/pages/EventViewer/data/tableOption-cloudOps-eventView
 import userTag from '@/pages/EventViewer/data/userTag-cloudOps-eventViewer.json';
 import awsTag from '@/pages/EventViewer/data/awsTag-cloudOps-eventViewer.json';
 
+import { ColumnChart } from '@/components/Charts/_partials/ColumnChart';
+
 interface IRowDataDetails {
   status: string;
   date: string;
@@ -57,9 +59,39 @@ const EventViewer = () => {
     setMergedTableData(mergedData);
   }, []);
 
+  const data = [2, 0, 1, 1, 7, 3, 5, 0, 0, 3, 7, 4, 5, 2, 3, 12, 16, 21, 11, 14];
+
+  const categories = [
+    '06:00',
+    '06:30',
+    '07:00',
+    '07:30',
+    '08:00',
+    '08:30',
+    '09:00',
+    '09:30',
+    '10:00',
+    '10:30',
+    '11:00',
+    '11:30',
+    '12:00',
+    '12:30',
+    '13:00',
+    '13:30',
+    '14:00',
+    '14:30',
+    '15:00',
+    '15:30',
+  ];
+
   return (
     <>
-      <div className='panel pb-4'>
+      <p className='text-[1.2rem] font-semibold mb-[8px] text-[#333]'>Event Viewer</p>
+      <hr className='mb-[8px] border-[1px] border-[#333]' />
+      <div className='panel mb-4'>
+        <ColumnChart data={data} categories={categories} name='Events' />
+      </div>
+      <div className='panel mb-4'>
         <EventViewerTable
           datas={mergedTableData}
           columnDefs={columnDefs}
@@ -72,10 +104,10 @@ const EventViewer = () => {
             setRowDataDetails(data || defaultRowDataDetails);
           }}
         >
-          <p className='text-lg'>Event Viewer</p>
+          <p className='text-lg'></p>
         </EventViewerTable>
       </div>
-      <div className='panel mt-6'>
+      <div className='panel'>
         <p className='text-lg pb-8'>Details</p>
 
         <div className='flex flex-row pb-4 gap-[2.4rem]'>

@@ -3,6 +3,7 @@ import DataTable from '@/components/DataTables/DataTable';
 import MergeTagData from '@/utils/MergeTagData';
 import SetColumnDefs from '@/utils/SetColumnDefs';
 import SetDefaultTableSetting from '@/utils/SetDefaultTableSetting';
+import CostServiceTop from '@/assets/images/Cost_Top Services.svg';
 import '@/assets/css/dataTableStyle.css';
 
 import axios from 'axios';
@@ -96,6 +97,7 @@ const CostServiceMonthly = () => {
   }
   return (
     <>
+      <img src={CostServiceTop} className='w-full h-full mb-4' />
       <div className='panel'>
         <DataTable
           datas={mergedRegionTableData}

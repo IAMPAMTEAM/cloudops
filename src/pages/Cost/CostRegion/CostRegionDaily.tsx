@@ -3,6 +3,7 @@ import DataTable from '@/components/DataTables/DataTable';
 import MergeTagData from '@/utils/MergeTagData';
 import SetColumnDefs from '@/utils/SetColumnDefs';
 import SetDefaultTableSetting from '@/utils/SetDefaultTableSetting';
+import CostRegionTop from '@/assets/images/Cost_TopRegions.svg';
 import '@/assets/css/dataTableStyle.css';
 
 import axios from 'axios';
@@ -95,6 +96,7 @@ const CostRegionDaily = () => {
   }
   return (
     <>
+      <img src={CostRegionTop} className='w-full h-full mb-4' />
       <div className='panel'>
         <DataTable
           datas={mergedRegionTableData}

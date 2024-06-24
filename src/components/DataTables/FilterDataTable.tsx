@@ -6,6 +6,8 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
 
 import { ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
+import IconFilter from '@/assets/icons/filter.png';
+
 interface IDataTable {
   children: ReactNode;
   showSaveButton: boolean;
@@ -125,15 +127,20 @@ export default function FilterDataTable({
           </button>
         </div>
       </div>
-      <div className='flex flex-nowrap justify-between '>
-        {result.policyResults.map((policy: any, index) => {
+      {/* TODO: 문구 변경 */}
+      <div className='flex gap-[4px] justify-start items-center mb-[8px]'>
+        <img src={IconFilter} className='w-[16px] h-[16px]' />
+        <p className='text-[1rem] font-[500]'> Filter</p>
+      </div>
+      <div className='flex flex-nowrap justify-between mb-[8px]'>
+        {result.policyResults.map((policy: any, index: number) => {
           const key = Object.keys(policy)[0];
           return (
-            <div key={index} className='inline-flex items-center mb-2'>
-              <label className='relative flex items-center p-2 rounded-full cursor-pointer' htmlFor={`check${index}`}>
+            <div key={index} className='inline-flex bg-[#f3f3f9] gap-[8px] px-[12px] py-[8px] pb-0 rounded-[20px] border-[1.2px] border-[#6667AB] border-dashed'>
+              <label className='relative flex rounded-full cursor-pointer' htmlFor={`check${index}`}>
                 <input
                   type='checkbox'
-                  className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:bg-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
+                  className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-[#6667AB] checked:bg-[#6667AB] checked:before:bg-gray-900 hover:before:opacity-10"
                   id={`check${index}`}
                   checked={checkedStates[index]}
                   onChange={handleChange(index)}
@@ -144,7 +151,7 @@ export default function FilterDataTable({
                   </svg>
                 </span>
               </label>
-              <label className='mt-px  cursor-pointer select-none' htmlFor={`check${index}`}>
+              <label className='cursor-pointer select-none' htmlFor={`check${index}`}>
                 {key}
               </label>
             </div>
