@@ -1,0 +1,24 @@
+{
+  "ELB": [
+    "ApplySecurityGroupsToLoadBalancer",
+    "CreateListener",
+    "CreateLoadBalancer",
+    "CreateLoadBalancerPolicy",
+    "CreateRule",
+    "CreateTargetGroup",
+    "DeleteListener",
+    "DeleteLoadBalancer",
+    "DeleteLoadBalancerListeners",
+    "DeleteRule",
+    "DeleteTargetGroup",
+    "DeregisterTargets",
+    "ModifyListener",
+    "ModifyLoadBalancerAttributes",
+    "ModifyRule",
+    "ModifyTargetGroup",
+    "ModifyTargetGroupAttributes",
+    "RegisterTargets",
+    "RemoveTags",
+    "SetSecurityGroups"
+  ]
+}
