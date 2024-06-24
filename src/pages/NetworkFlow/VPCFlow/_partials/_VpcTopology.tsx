@@ -50,7 +50,7 @@ const VPCTopology: React.FC = ({ onFromVpcChange, onToVpcChange, filteredData })
   const d3Container = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
-    fetch('https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/sampleVPCFlow.json')
+    fetch('https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/subnetToSubnet.json')
       .then(async (res) => await res.json())
       .then((data) => {
         if (data.length && vpcCnt < 1) {
@@ -373,8 +373,6 @@ const VPCTopology: React.FC = ({ onFromVpcChange, onToVpcChange, filteredData })
           connectedNodes.add(link.source.toString());
           connectedNodes.add(link.target.toString());
         });
-
-        console.log(connectedNodes);
 
         svg.selectAll('.node').classed('blur', (d: any) => {
           return !connectedNodes.has(d.id);

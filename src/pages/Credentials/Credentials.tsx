@@ -27,6 +27,8 @@ const Credentials = () => {
 
   return (
     <>
+      <p className='text-[1.2rem] font-semibold mb-[8px] text-[#333]'>Credentials</p>
+      <hr className='mb-[8px] border-[1px] border-[#333]' />
       <div className='panel'>
         <CredentialsDataTable
           showSaveButton={false}
