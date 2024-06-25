@@ -11,6 +11,76 @@
       },
       "eventTime": "2024-06-19T03:48:38Z",
       "eventSource": "signin.amazonaws.com",
+      "eventName": "Test",
+      "awsRegion": "Seoul",
+      "sourceIPAddress": "14.63.67.157",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+      "requestParameters": null,
+      "responseElements": { "ConsoleLogin": "Success" },
+      "additionalEventData": {
+        "LoginTo": "https://ap-northeast-2.console.aws.amazon.com/console/home?hashArgs=%23&isauthcode=true&oauthStart=1718768914109&region=ap-northeast-2&state=hashArgsFromTB_ap-northeast-2_8c733e029e81f863",
+        "MobileVersion": "No",
+        "MFAUsed": "No"
+      },
+
+      "eventID": "e6971926-fe8c-4a0c-8a57-289d09285600",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "330886885966",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "ap-northeast-2.signin.aws.amazon.com"
+      }
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAU2CTFGJHCI4JDRZDP",
+        "arn": "arn:aws:iam::330886885966:user/wanis",
+        "accountId": "330886885966",
+        "userName": "wanis"
+      },
+      "eventTime": "2024-06-19T03:48:38Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "Test2",
+      "awsRegion": "Spain",
+      "sourceIPAddress": "14.63.67.157",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+      "requestParameters": null,
+      "responseElements": { "ConsoleLogin": "Success" },
+      "additionalEventData": {
+        "LoginTo": "https://ap-northeast-2.console.aws.amazon.com/console/home?hashArgs=%23&isauthcode=true&oauthStart=1718768914109&region=ap-northeast-2&state=hashArgsFromTB_ap-northeast-2_8c733e029e81f863",
+        "MobileVersion": "No",
+        "MFAUsed": "No"
+      },
+
+      "eventID": "e6971926-fe8c-4a0c-8a57-289d09285600",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "330886885966",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "ap-northeast-2.signin.aws.amazon.com"
+      }
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAU2CTFGJHCI4JDRZDP",
+        "arn": "arn:aws:iam::330886885966:user/wanis",
+        "accountId": "330886885966",
+        "userName": "wanis"
+      },
+      "eventTime": "2024-06-19T03:48:38Z",
+      "eventSource": "signin.amazonaws.com",
       "eventName": "ConsoleLogin",
       "awsRegion": "ap-northeast-2",
       "sourceIPAddress": "14.63.67.157",

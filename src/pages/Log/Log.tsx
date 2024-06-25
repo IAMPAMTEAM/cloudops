@@ -10,6 +10,7 @@ import MergeTagData from '@/utils/MergeTagData';
 import SetColumnDefs from '@/utils/SetColumnDefs';
 import SetDefaultTableSetting from '@/utils/SetDefaultTableSetting';
 import DateFormatter from '@/pages/Log/_partials/DateFormatter';
+import FilterLogData from '@/pages/Log/_partials/FilterLogData';
 
 import SetFrequentOptions from '@/pages/Log/_partials/SetFrequentOptions';
 import SetLogData from '@/pages/Log/_partials/SetLogData';
@@ -34,7 +35,7 @@ const Log = () => {
   const [toDateValue, setToDataValue] = useState<Dayjs | null>(null);
 
   const [regionValue, setRegionValue] = useState<string[]>([]);
-  const [serviceCategoryValue, setServiceCategoryValue] = useState<string[]>([]);
+  const [serviceCategoryValue, setServiceCategoryValue] = useState<string | undefined>(undefined);
   const [serviceValue, setServiceValue] = useState<string[]>([]);
 
   const [vpcFrequentEventsValue, setVpcFrequentEventsValue] = useState<string[]>([]);
@@ -49,14 +50,23 @@ const Log = () => {
 
   const regionOptions = regionData.Region.map((region: string) => ({ value: region, label: region }));
 
-  const serviceCategoryOption = Object.values(serviceData)
-    .flat()
-    .map((serviceCategory: string) => ({ value: serviceCategory, label: serviceCategory }));
+  const serviceCategoryOption = Object.keys(serviceData).map((serviceCategory: string) => ({ value: serviceCategory, label: serviceCategory }));
 
-  const serviceOption = Object.keys(serviceData).map((category) => ({
-    label: category,
-    options: serviceData[category].map((service: string) => ({ value: service, label: service })),
-  }));
+  // const serviceOption = Object.keys(serviceData).map((category) => ({
+  //   label: category,
+  //   options: serviceData[category].map((service: string) => ({ value: service, label: service })),
+  // }));
+
+  const serviceOption = serviceCategoryValue !== undefined ? serviceData[serviceCategoryValue]?.map((service: string) => ({ value: service, label: service })) : [];
+
+  const isFrequentEvents = regionValue.length > 0 || (serviceCategoryValue !== undefined && serviceCategoryValue !== '') || serviceValue.length > 0;
+  const isEventFilter =
+    vpcFrequentEventsValue.length > 0 ||
+    ec2FrequentEventsValue.length > 0 ||
+    elbFrequentEventsValue.length > 0 ||
+    rdsFrequentEventsValue.length > 0 ||
+    iamFrequentEventsValue.length > 0 ||
+    s3FrequentEventsValue.length > 0;
 
   const vpcFrequentEventsOption = SetFrequentOptions(vpcFrequntData);
   const ec2FrequentEventsOption = SetFrequentOptions(ec2FrequntData);
@@ -82,38 +92,54 @@ const Log = () => {
   }, []);
 
   const onChangeSelect = (selectOption, selectBoxId: string) => {
-    let options = selectOption ? selectOption.map((option) => option.value) : [];
+    if (selectBoxId === 'serviceCategory') {
+      setServiceCategoryValue(selectOption.value);
+    } else {
+      let options = selectOption ? selectOption.map((option) => option.value) : [];
 
-    switch (selectBoxId) {
-      case 'region':
-        setRegionValue(options);
-        break;
-      case 'serviceCategory':
-        setServiceCategoryValue(options);
-        break;
-      case 'service':
-        setServiceValue(options);
-        break;
-      case 'vpnFrequent':
-        setVpcFrequentEventsValue(options);
-        break;
-      case 'ec2Frequent':
-        setEc2FrequentEventsValue(options);
-        break;
-      case 'elbFrequent':
-        setElbFrequentEventsValue(options);
-        break;
-      case 'rdsFrequent':
-        setRdsFrequentEventsValue(options);
-        break;
-      case 'iamFrequent':
-        setIamFrequentEventsValue(options);
-        break;
-      case 's3Frequent':
-        setS3FrequentEventsValue(options);
-        break;
+      switch (selectBoxId) {
+        case 'region':
+          setRegionValue(options);
+          break;
+        case 'service':
+          setServiceValue(options);
+          break;
+        case 'vpnFrequent':
+          setVpcFrequentEventsValue(options);
+          break;
+        case 'ec2Frequent':
+          setEc2FrequentEventsValue(options);
+          break;
+        case 'elbFrequent':
+          setElbFrequentEventsValue(options);
+          break;
+        case 'rdsFrequent':
+          setRdsFrequentEventsValue(options);
+          break;
+        case 'iamFrequent':
+          setIamFrequentEventsValue(options);
+          break;
+        case 's3Frequent':
+          setS3FrequentEventsValue(options);
+          break;
+      }
     }
   };
+
+  const filteredData = FilterLogData({
+    region: regionValue,
+    fromDate: fromDateValue,
+    toDate: toDateValue,
+    serviceCategory: serviceCategoryValue,
+    service: serviceValue,
+    vpc: vpcFrequentEventsValue,
+    ec2: ec2FrequentEventsValue,
+    elb: elbFrequentEventsValue,
+    rds: rdsFrequentEventsValue,
+    iam: iamFrequentEventsValue,
+    s3: s3FrequentEventsValue,
+    logData: mergedTableData,
+  });
 
   return (
     <>
@@ -122,7 +148,7 @@ const Log = () => {
         <div className='flex flex-row'>
           <div className='basis-1/2 pr-1'>
             <p>Region</p>
-            <Select isMulti options={regionOptions} onChange={(e) => onChangeSelect(e, 'region')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select isDisabled={isEventFilter} isMulti options={regionOptions} onChange={(e) => onChangeSelect(e, 'region')} closeMenuOnSelect={false} hideSelectedOptions={false} />
           </div>
           <div className='basis-1/4 px-1'>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -134,6 +160,7 @@ const Log = () => {
               >
                 <DatePicker
                   label='From'
+                  disabled={isEventFilter}
                   sx={{ width: '100%' }}
                   slotProps={{
                     textField: {
@@ -158,6 +185,7 @@ const Log = () => {
               >
                 <DatePicker
                   label='To'
+                  disabled={isEventFilter}
                   sx={{ width: '100%' }}
                   slotProps={{
                     textField: {
@@ -176,11 +204,11 @@ const Log = () => {
         <div className='flex flex-row mt-3'>
           <div className='basis-1/2 pr-1'>
             <p>Service Category</p>
-            <Select isMulti options={serviceCategoryOption} onChange={(e) => onChangeSelect(e, 'serviceCategory')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select isDisabled={isEventFilter} options={serviceCategoryOption} onChange={(e) => onChangeSelect(e, 'serviceCategory')} hideSelectedOptions={false} />
           </div>
           <div className='basis-1/2 pl-1'>
             <p>Service</p>
-            <Select isMulti options={serviceOption} onChange={(e) => onChangeSelect(e, 'service')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select isMulti isDisabled={isEventFilter} options={serviceOption} onChange={(e) => onChangeSelect(e, 'service')} closeMenuOnSelect={false} hideSelectedOptions={false} />
           </div>
         </div>
       </div>
@@ -189,36 +217,36 @@ const Log = () => {
         <div className='flex flex-row'>
           <div className='basis-1/3 pr-1'>
             <p>VPC</p>
-            <Select isMulti options={vpcFrequentEventsOption} onChange={(e) => onChangeSelect(e, 'vpnFrequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select isMulti isDisabled={isFrequentEvents} options={vpcFrequentEventsOption} onChange={(e) => onChangeSelect(e, 'vpnFrequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
           </div>
           <div className='basis-1/3 px-1'>
             <p>EC2</p>
-            <Select isMulti options={ec2FrequentEventsOption} onChange={(e) => onChangeSelect(e, 'ec2Frequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select isMulti isDisabled={isFrequentEvents} options={ec2FrequentEventsOption} onChange={(e) => onChangeSelect(e, 'ec2Frequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
           </div>
           <div className='basis-1/3 pl-1'>
             <p>ELB</p>
-            <Select isMulti options={elbFrequentEventsOption} onChange={(e) => onChangeSelect(e, 'elbFrequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select isMulti isDisabled={isFrequentEvents} options={elbFrequentEventsOption} onChange={(e) => onChangeSelect(e, 'elbFrequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
           </div>
         </div>
         <div className='flex flex-row mt-3'>
           <div className='basis-1/3 pr-1'>
             <p>RDS</p>
-            <Select isMulti options={rdsFrequentEventsOption} onChange={(e) => onChangeSelect(e, 'rdsFrequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select isMulti isDisabled={isFrequentEvents} options={rdsFrequentEventsOption} onChange={(e) => onChangeSelect(e, 'rdsFrequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
           </div>
           <div className='basis-1/3 px-1'>
             <p>IAM</p>
-            <Select isMulti options={iamFrequentEventsOption} onChange={(e) => onChangeSelect(e, 'iamFrequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select isMulti isDisabled={isFrequentEvents} options={iamFrequentEventsOption} onChange={(e) => onChangeSelect(e, 'iamFrequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
           </div>
           <div className='basis-1/3 pl-1'>
             <p>S3</p>
-            <Select isMulti options={s3FrequentEventsOption} onChange={(e) => onChangeSelect(e, 's3Frequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select isMulti isDisabled={isFrequentEvents} options={s3FrequentEventsOption} onChange={(e) => onChangeSelect(e, 's3Frequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
           </div>
         </div>
       </div>
       <div className='panel mt-2'>
         <DataTable
           showSaveButton={false}
-          datas={mergedTableData}
+          datas={filteredData}
           columnDefs={columnDefs}
           defaultTableSetting={setDefaultTableSetting}
           tableHeight={tableOption.tableHeight}
