@@ -57,7 +57,24 @@ const Log = () => {
   //   options: serviceData[category].map((service: string) => ({ value: service, label: service })),
   // }));
 
-  const serviceOption = serviceCategoryValue !== undefined ? serviceData[serviceCategoryValue]?.map((service: string) => ({ value: service, label: service })) : [];
+  // const serviceOption = serviceCategoryValue !== undefined ? serviceData[serviceCategoryValue]?.map((service: string) => ({ value: service, label: service })) : [];
+  let serviceOption: { label: string; options: any }[] = [];
+
+  if (serviceCategoryValue !== undefined) {
+    serviceOption =
+      serviceData[serviceCategoryValue]?.map((service: string) => ({
+        value: service,
+        label: service,
+      })) || [];
+  } else {
+    serviceOption = Object.keys(serviceData).map((category) => ({
+      label: category,
+      options: serviceData[category].map((service: string) => ({
+        value: service,
+        label: service,
+      })),
+    }));
+  }
 
   const isFrequentEvents = regionValue.length > 0 || (serviceCategoryValue !== undefined && serviceCategoryValue !== '') || serviceValue.length > 0;
   const isEventFilter =
@@ -93,7 +110,11 @@ const Log = () => {
 
   const onChangeSelect = (selectOption, selectBoxId: string) => {
     if (selectBoxId === 'serviceCategory') {
-      setServiceCategoryValue(selectOption.value);
+      if (selectOption === null) {
+        setServiceCategoryValue(undefined);
+      } else {
+        setServiceCategoryValue(selectOption.value);
+      }
     } else {
       let options = selectOption ? selectOption.map((option) => option.value) : [];
 
@@ -130,7 +151,6 @@ const Log = () => {
     region: regionValue,
     fromDate: fromDateValue,
     toDate: toDateValue,
-    serviceCategory: serviceCategoryValue,
     service: serviceValue,
     vpc: vpcFrequentEventsValue,
     ec2: ec2FrequentEventsValue,
@@ -166,6 +186,7 @@ const Log = () => {
                     textField: {
                       size: 'small',
                     },
+                    actionBar: { actions: ['clear'] },
                   }}
                   showDaysOutsideCurrentMonth
                   format='YYYY-MM-DD'
@@ -204,7 +225,7 @@ const Log = () => {
         <div className='flex flex-row mt-3'>
           <div className='basis-1/2 pr-1'>
             <p>Service Category</p>
-            <Select isDisabled={isEventFilter} options={serviceCategoryOption} onChange={(e) => onChangeSelect(e, 'serviceCategory')} hideSelectedOptions={false} />
+            <Select isClearable isDisabled={isEventFilter} options={serviceCategoryOption} onChange={(e) => onChangeSelect(e, 'serviceCategory')} hideSelectedOptions={false} />
           </div>
           <div className='basis-1/2 pl-1'>
             <p>Service</p>
