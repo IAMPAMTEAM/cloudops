@@ -1,0 +1,193 @@
+{
+  "width": 800,
+  "height": 600,
+  "layout": {
+    "nodeType": "grid",
+    "row": 3,
+    "column": 1,
+    "gap": 0
+  },
+  "layouts": [
+    {
+      "groupName": "countries",
+      "row": 1,
+      "column": 1,
+      "width": 800,
+      "height": 100,
+      "color": "none"
+    },
+
+    {
+      "groupName": "elbs",
+      "row": 2,
+      "column": 1,
+      "width": 800,
+      "height": 300,
+      "color": "none"
+    },
+
+    {
+      "groupName": "subnets",
+      "row": 3,
+      "column": 1,
+      "width": 800,
+      "height": 200,
+      "color": "none"
+    }
+  ],
+  "backgroundUrl": "./img/800x600.jpg",
+  "groupList": {
+    "countries": [
+      {
+        "nodeType": "imageNode",
+        "nodeName": "China",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flag-china.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "South Korea",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flag-korea.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "Canada",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flag-canada.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "US",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/flag-us.svg"
+      }
+    ],
+    "elbs": [
+      {
+        "nodeType": "imageNode",
+        "nodeName": "elb-aiops",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/elb.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "elb-cloudops",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/elb.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "elb-zerotrust",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/elb.svg"
+      }
+    ],
+    "subnets": [
+      {
+        "nodeType": "imageNode",
+        "nodeName": "subnet-iampam-seoulA",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/subnet.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "subnet-zerotrust-seoulA",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/subnet.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "subnet-iampam-seoulB",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/subnet.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "subnet-zerotrust-seoulB",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/subnet.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "subnet-iampam-seoulC",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/subnet.svg"
+      }
+    ]
+  },
+  "groupLink": [
+    {
+      "fromNode": "China",
+      "toNode": "elb-aiops",
+      "linkType": "animate-draw",
+      "linkColor": "red"
+    },
+    {
+      "fromNode": "China",
+      "toNode": "elb-cloudops",
+      "linkType": "animate-draw",
+      "linkColor": "green"
+    },
+    {
+      "fromNode": "China",
+      "toNode": "elb-zerotrust",
+      "linkType": "animate-draw",
+      "linkColor": "green"
+    },
+    {
+      "fromNode": "Korea",
+      "toNode": "elb-cloudops",
+      "linkType": "animate-draw",
+      "linkColor": "green"
+    },
+    {
+      "fromNode": "Korea",
+      "toNode": "elb-aiops",
+      "linkType": "animate-draw",
+      "linkColor": "green"
+    },
+    {
+      "fromNode": "Korea",
+      "toNode": "elb-zerotrust",
+      "linkType": "animate-draw",
+      "linkColor": "green"
+    },
+    {
+      "fromNode": "US",
+      "toNode": "elb-aiops",
+      "linkType": "animate-draw",
+      "linkColor": "green"
+    },
+    {
+      "fromNode": "US",
+      "toNode": "elb-zerotrust",
+      "linkType": "animate-draw",
+      "linkColor": "green"
+    },
+    {
+      "fromNode": "Canada",
+      "toNode": "elb-zerotrust",
+      "linkType": "animate-draw",
+      "linkColor": "green"
+    },
+    {
+      "fromNode": "elb-cloudops",
+      "toNode": "subnet-iampam-seoulA",
+      "linkType": "curvedC",
+      "linkColor": "gray"
+    },
+    {
+      "fromNode": "elb-cloudops",
+      "toNode": "subnet-iampam-seoulB",
+      "linkType": "curvedC",
+      "linkColor": "gray"
+    },
+    {
+      "fromNode": "elb-zerotrust",
+      "toNode": "subnet-zerotrust-seoulA",
+      "linkType": "curvedC",
+      "linkColor": "gray"
+    },
+    {
+      "fromNode": "elb-zerotrust",
+      "toNode": "subnet-zerotrust-seoulB",
+      "linkType": "curvedC",
+      "linkColor": "gray"
+    },
+    {
+      "fromNode": "elb-aiops",
+      "toNode": "subnet-iampam-seoulC",
+      "linkType": "curvedC",
+      "linkColor": "gray"
+    }
+  ]
+}
