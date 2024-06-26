@@ -1,0 +1,370 @@
+[
+  {
+    "nodeIp": "10.1.1.55",
+    "nodeId": "i-eb2ee8b3bf",
+    "nodeName": "web01",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.1.0/24",
+    "cidrName": "subnet-iampam-seoulA"
+  },
+  {
+    "nodeIp": "10.1.1.246",
+    "nodeId": "i-39d9553e28",
+    "nodeName": "web02",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.1.0/24",
+    "cidrName": "subnet-iampam-seoulA"
+  },
+  {
+    "nodeIp": "10.1.1.77",
+    "nodeId": "i-0eaa59a4db",
+    "nodeName": "web03",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.1.0/24",
+    "cidrName": "subnet-iampam-seoulA"
+  },
+  {
+    "nodeIp": "10.1.2.102",
+    "nodeId": "i-d9fba95855",
+    "nodeName": "cache01",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.2.0/24",
+    "cidrName": "subnet-iampam-seoulB"
+  },
+  {
+    "nodeIp": "10.1.2.92",
+    "nodeId": "i-d3c73ab04d",
+    "nodeName": "cache02",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.2.0/24",
+    "cidrName": "subnet-iampam-seoulB"
+  },
+  {
+    "nodeIp": "10.1.2.51",
+    "nodeId": "i-8d65ce0057",
+    "nodeName": "cache03",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.2.0/24",
+    "cidrName": "subnet-iampam-seoulB"
+  },
+  {
+    "nodeIp": "10.1.2.109",
+    "nodeId": "i-66d8e8d83b",
+    "nodeName": "mail01",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.2.0/24",
+    "cidrName": "subnet-iampam-seoulB"
+  },
+  {
+    "nodeIp": "10.1.2.99",
+    "nodeId": "i-20166dbf26",
+    "nodeName": "auth01",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.2.0/24",
+    "cidrName": "subnet-iampam-seoulB"
+  },
+  {
+    "nodeIp": "10.1.2.214",
+    "nodeId": "i-5917dfc0af",
+    "nodeName": "auth02",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.2.0/24",
+    "cidrName": "subnet-iampam-seoulB"
+  },
+  {
+    "nodeIp": "10.1.2.142",
+    "nodeId": "i-196a7054eb",
+    "nodeName": "auth03",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.2.0/24",
+    "cidrName": "subnet-iampam-seoulB"
+  },
+  {
+    "nodeIp": "10.1.2.122",
+    "nodeId": "i-d4cad01198",
+    "nodeName": "log01",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.2.0/24",
+    "cidrName": "subnet-iampam-seoulB"
+  },
+  {
+    "nodeIp": "10.1.3.93",
+    "nodeId": "i-f867e6391c",
+    "nodeName": "backup01",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.3.0/24",
+    "cidrName": "subnet-zerotrust-seoulA"
+  },
+  {
+    "nodeIp": "10.1.3.178",
+    "nodeId": "i-b179fd85a7",
+    "nodeName": "backup02",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.3.0/24",
+    "cidrName": "subnet-zerotrust-seoulA"
+  },
+  {
+    "nodeIp": "10.1.3.171",
+    "nodeId": "i-5a85272be4",
+    "nodeName": "backup03",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.3.0/24",
+    "cidrName": "subnet-zerotrust-seoulA"
+  },
+  {
+    "nodeIp": "10.1.0.251",
+    "nodeId": "rds-24f452579d",
+    "nodeName": "rds-b7814",
+    "nodeType": "AWS RDS",
+    "cidr": "10.1.0.128/25",
+    "cidrName": "subnet-rds-1"
+  },
+  {
+    "nodeIp": "10.1.0.206",
+    "nodeId": "rds-656997ab91",
+    "nodeName": "rds-25a1f",
+    "nodeType": "AWS RDS",
+    "cidr": "10.1.0.128/25",
+    "cidrName": "subnet-rds-1"
+  },
+  {
+    "nodeIp": "10.1.0.205",
+    "nodeId": "rds-98c7906940",
+    "nodeName": "rds-99fbf",
+    "nodeType": "AWS RDS",
+    "cidr": "10.1.0.128/25",
+    "cidrName": "subnet-rds-1"
+  },
+  {
+    "nodeIp": "10.1.0.194",
+    "nodeId": "rds-ed88ef13c2",
+    "nodeName": "rds-33ed7",
+    "nodeType": "AWS RDS",
+    "cidr": "10.1.0.128/25",
+    "cidrName": "subnet-rds-1"
+  },
+  {
+    "nodeIp": "10.1.0.130",
+    "nodeId": "rds-e1c2c8e06e",
+    "nodeName": "rds-d212a",
+    "nodeType": "AWS RDS",
+    "cidr": "10.1.0.128/25",
+    "cidrName": "subnet-rds-1"
+  },
+  {
+    "nodeIp": "10.1.0.244",
+    "nodeId": "rds-20440d26ba",
+    "nodeName": "rds-8ce45",
+    "nodeType": "AWS RDS",
+    "cidr": "10.1.0.128/25",
+    "cidrName": "subnet-rds-1"
+  },
+  {
+    "nodeIp": "10.1.0.182",
+    "nodeId": "rds-cfc4b7412b",
+    "nodeName": "rds-4b3f7",
+    "nodeType": "AWS RDS",
+    "cidr": "10.1.0.128/25",
+    "cidrName": "subnet-rds-1"
+  },
+  {
+    "nodeIp": "10.1.5.80",
+    "nodeId": "rds-c8c368e6ca",
+    "nodeName": "rds-6b81b",
+    "nodeType": "AWS RDS",
+    "cidr": "10.1.5.0/25",
+    "cidrName": "subnet-rds-2"
+  },
+  {
+    "nodeIp": "10.1.5.24",
+    "nodeId": "rds-4f6e4b0fde",
+    "nodeName": "rds-2f6cb",
+    "nodeType": "AWS RDS",
+    "cidr": "10.1.5.0/25",
+    "cidrName": "subnet-rds-2"
+  },
+  {
+    "nodeIp": "10.1.5.127",
+    "nodeId": "rds-d614b19083",
+    "nodeName": "rds-3e90b",
+    "nodeType": "AWS RDS",
+    "cidr": "10.1.5.0/25",
+    "cidrName": "subnet-rds-2"
+  },
+  {
+    "nodeIp": "10.1.5.58",
+    "nodeId": "rds-458a2c8c57",
+    "nodeName": "rds-aef1c",
+    "nodeType": "AWS RDS",
+    "cidr": "10.1.5.0/25",
+    "cidrName": "subnet-rds-2"
+  },
+  {
+    "nodeIp": "10.1.100.110",
+    "nodeId": "i-d19475fe64",
+    "nodeName": "dev01",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.100.0/24",
+    "cidrName": "subnet-iampam-internal"
+  },
+  {
+    "nodeIp": "10.1.100.155",
+    "nodeId": "i-acfc4adc88",
+    "nodeName": "dev02",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.100.0/24",
+    "cidrName": "subnet-iampam-internal"
+  },
+  {
+    "nodeIp": "10.1.100.244",
+    "nodeId": "i-4ed29852c2",
+    "nodeName": "stage01",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.100.0/24",
+    "cidrName": "subnet-iampam-internal"
+  },
+  {
+    "nodeIp": "10.1.100.50",
+    "nodeId": "i-bd15c73be1",
+    "nodeName": "stage02",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.100.0/24",
+    "cidrName": "subnet-iampam-internal"
+  },
+  {
+    "nodeIp": "10.1.100.32",
+    "nodeId": "i-798a976229",
+    "nodeName": "user01",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.100.0/24",
+    "cidrName": "subnet-iampam-internal"
+  },
+  {
+    "nodeIp": "10.1.100.18",
+    "nodeId": "i-29e8dde1e9",
+    "nodeName": "admin01",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.100.0/24",
+    "cidrName": "subnet-iampam-internal"
+  },
+  {
+    "nodeIp": "10.1.100.154",
+    "nodeId": "i-dfa0c16672",
+    "nodeName": "admin02",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.100.0/24",
+    "cidrName": "subnet-iampam-internal"
+  },
+  {
+    "nodeIp": "10.1.100.179",
+    "nodeId": "i-002cb0e529",
+    "nodeName": "admin03",
+    "nodeType": "AWS EC2",
+    "cidr": "10.1.100.0/24",
+    "cidrName": "subnet-iampam-internal"
+  },
+  {
+    "nodeIp": "10.2.1.46",
+    "nodeId": "i-a217c15fc9",
+    "nodeName": "svc01",
+    "nodeType": "AWS EC2",
+    "cidr": "10.2.0.0/20",
+    "cidrName": "subnet-zerotrust-B"
+  },
+  {
+    "nodeIp": "10.2.14.204",
+    "nodeId": "i-e72191fc13",
+    "nodeName": "dns01",
+    "nodeType": "AWS EC2",
+    "cidr": "10.2.0.0/20",
+    "cidrName": "subnet-zerotrust-B"
+  },
+  {
+    "nodeIp": "10.2.9.159",
+    "nodeId": "i-e4a4532e6e",
+    "nodeName": "dns02",
+    "nodeType": "AWS EC2",
+    "cidr": "10.2.0.0/20",
+    "cidrName": "subnet-zerotrust-B"
+  },
+  {
+    "nodeIp": "10.2.14.122",
+    "nodeId": "i-3b36943624",
+    "nodeName": "dns03",
+    "nodeType": "AWS EC2",
+    "cidr": "10.2.0.0/20",
+    "cidrName": "subnet-zerotrust-B"
+  },
+  {
+    "nodeIp": "10.2.8.164",
+    "nodeId": "i-6131bf3ae8",
+    "nodeName": "appserver02",
+    "nodeType": "AWS EC2",
+    "cidr": "10.2.0.0/20",
+    "cidrName": "subnet-zerotrust-B"
+  },
+  {
+    "nodeIp": "10.2.5.151",
+    "nodeId": "i-9b0d38d409",
+    "nodeName": "fileserver03",
+    "nodeType": "AWS EC2",
+    "cidr": "10.2.0.0/20",
+    "cidrName": "subnet-zerotrust-B"
+  },
+  {
+    "nodeIp": "10.2.1.98",
+    "nodeId": "i-875e475596",
+    "nodeName": "ci01",
+    "nodeType": "AWS EC2",
+    "cidr": "10.2.0.0/20",
+    "cidrName": "subnet-zerotrust-B"
+  },
+  {
+    "nodeIp": "10.2.9.4",
+    "nodeId": "i-7ab7d9c8ac",
+    "nodeName": "build01",
+    "nodeType": "AWS EC2",
+    "cidr": "10.2.0.0/20",
+    "cidrName": "subnet-zerotrust-B"
+  },
+  {
+    "nodeIp": "10.2.2.12",
+    "nodeId": "i-b7727f6810",
+    "nodeName": "build05",
+    "nodeType": "AWS EC2",
+    "cidr": "10.2.48.0/20",
+    "cidrName": "subnet-zerotrust-A"
+  },
+  {
+    "nodeIp": "10.2.8.10",
+    "nodeId": "i-a5b0d9b89a",
+    "nodeName": "build06",
+    "nodeType": "AWS EC2",
+    "cidr": "10.2.48.0/20",
+    "cidrName": "subnet-zerotrust-A"
+  },
+  {
+    "nodeIp": "10.2.14.12",
+    "nodeId": "i-70d3f98334",
+    "nodeName": "build07",
+    "nodeType": "AWS EC2",
+    "cidr": "10.2.48.0/20",
+    "cidrName": "subnet-zerotrust-A"
+  },
+  {
+    "nodeIp": "10.10.1.114",
+    "nodeId": "i-b0c8b599f1",
+    "nodeName": "provider07",
+    "nodeType": "AWS EC2",
+    "cidr": "10.10.1.0/24",
+    "cidrName": "subnet-providerA"
+  },
+  {
+    "nodeIp": "10.10.1.50",
+    "nodeId": "i-2f3dd49a45",
+    "nodeName": "provider08",
+    "nodeType": "AWS EC2",
+    "cidr": "10.10.1.0/24",
+    "cidrName": "subnet-providerA"
+  }
+]

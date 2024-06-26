@@ -1,0 +1,55 @@
+.resources-box > svg {
+  width: 40vw;
+  height: 800px;
+}
+
+.resources-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.vpc-group {
+  stroke: rgb(131, 122, 122);
+  fill: none;
+}
+
+.vpc-label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.subnet-group {
+  stroke: rgb(45, 19, 107);
+  fill: none;
+}
+
+.subnet-label {
+  font-size: 12px;
+  text-anchor: middle;
+}
+
+.public {
+  fill: rgb(201, 148, 62);
+}
+
+.private {
+  fill: rgb(163, 201, 163);
+}
+
+.isolated {
+  fill: rgb(234, 231, 231);
+}
+
+.internal {
+  fill: rgb(173, 230, 179);
+}
+
+.tooltip {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  display: none;
+  font-size: 12px;
+}

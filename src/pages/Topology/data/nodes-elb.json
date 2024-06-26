@@ -1,0 +1,42 @@
+[
+  {
+    "nodeIp": "elb-61513.elb.amazonaws.com",
+    "nodeId": "elb-61513.elb.amazonaws.com",
+    "nodeName": "elb-cloudops",
+    "nodeType": "AWS ELB",
+    "cidr": "10.1.0.0/16",
+    "cidrName": "vpc-iampam-seoul"
+  },
+  {
+    "nodeIp": "elb-54426.elb.amazonaws.com",
+    "nodeId": "elb-54426.elb.amazonaws.com",
+    "nodeName": "elb-zerotrust",
+    "nodeType": "AWS ELB",
+    "cidr": "10.2.0.0/16",
+    "cidrName": "vpc-zerotrust-seoul"
+  },
+  {
+    "nodeIp": "elb-4a22b.elb.amazonaws.com",
+    "nodeId": "elb-4a22b.elb.amazonaws.com",
+    "nodeName": "elb-aiops",
+    "nodeType": "AWS ELB",
+    "cidr": "10.100.0.0/16",
+    "cidrName": "vpc-tenants"
+  },
+  {
+    "nodeIp": "elb-c78cc.elb.amazonaws.com",
+    "nodeId": "elb-c78cc.elb.amazonaws.com",
+    "nodeName": "elb-devops",
+    "nodeType": "AWS ELB",
+    "cidr": "10.10.0.0/16",
+    "cidrName": "vpc-provider"
+  },
+  {
+    "nodeIp": "elb-71f35.elb.amazonaws.com",
+    "nodeId": "elb-71f35.elb.amazonaws.com",
+    "nodeName": "elb-devsecops",
+    "nodeType": "AWS ELB",
+    "cidr": "10.10.0.0/16",
+    "cidrName": "vpc-provider"
+  }
+]

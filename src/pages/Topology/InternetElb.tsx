@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import elbJson from './data/elb.json';
+// import './css/elb.css';
 
 const InternetElb = () => {
   const svgns = 'http://www.w3.org/2000/svg';
@@ -169,7 +170,6 @@ const InternetElb = () => {
   useEffect(() => {
     const loadJson = async () => {
       try {
-        // const response = await fetch('./data/elb.json');
         const response = elbJson;
         const data = response;
 

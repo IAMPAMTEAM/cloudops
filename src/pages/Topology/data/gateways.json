@@ -1,0 +1,231 @@
+{
+  "width": 800,
+  "height": 600,
+  "layout": {
+    "nodeType": "grid",
+    "row": 3,
+    "column": 1,
+    "gap": 0
+  },
+  "layouts": [
+    {
+      "groupName": "networks",
+      "row": 1,
+      "column": 1,
+      "width": 800,
+      "height": 200,
+      "color": "none"
+    },
+
+    {
+      "groupName": "gateways",
+      "row": 2,
+      "column": 1,
+      "width": 800,
+      "height": 250,
+      "color": "none"
+    },
+
+    {
+      "groupName": "vpcs",
+      "row": 3,
+      "column": 1,
+      "width": 800,
+      "height": 250,
+      "color": "none"
+    }
+  ],
+  "backgroundUrl": "",
+  "groupList": {
+    "networks": [
+      {
+        "nodeType": "imageNode",
+        "nodeName": "INTERNET",
+        "imageUrl": "https://icons.terrastruct.com/essentials%2F140-internet.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "ON-PREMISES",
+        "imageUrl": "https://icons.terrastruct.com/azure%2FDatabases%20Service%20Color%2FVirtual%20Datacenter.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "AWS VPCs",
+        "imageUrl": "https://icons.terrastruct.com/aws%2FNetworking%20&%20Content%20Delivery%2FAmazon-VPC.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "AWS SERVICES",
+        "imageUrl": "https://icons.terrastruct.com/aws%2F_Group%20Icons%2FAWS-Cloud_light-bg.svg"
+      }
+    ],
+    "gateways": [
+      {
+        "nodeType": "imageNode",
+        "nodeName": "Internet Gateway",
+        "imageUrl": "https://icons.terrastruct.com/aws%2FNetworking%20&%20Content%20Delivery%2FAmazon-VPC_Internet-Gateway_light-bg.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "NAT Gateway",
+        "imageUrl": "https://icons.terrastruct.com/aws%2FNetworking%20&%20Content%20Delivery%2FAmazon-VPC_NAT-Gateway_light-bg.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "Virtual Private Gateway",
+        "imageUrl": "https://icons.terrastruct.com/aws%2FNetworking%20&%20Content%20Delivery%2FAmazon-VPC_Internet-Gateway_light-bg.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "Direct Connect",
+        "imageUrl": "https://icons.terrastruct.com/aws%2FNetworking%20&%20Content%20Delivery%2FAmazon-VPC_Internet-Gateway_light-bg.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "VPC Peering",
+        "imageUrl": "https://icons.terrastruct.com/aws%2FNetworking%20&%20Content%20Delivery%2FAWS-Transit-Gateway.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "Transit Gateway",
+        "imageUrl": "https://icons.terrastruct.com/aws%2FNetworking%20&%20Content%20Delivery%2FAWS-Transit-Gateway.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "Private Link",
+        "imageUrl": "https://icons.terrastruct.com/aws%2FNetworking%20&%20Content%20Delivery%2FAWS-PrivateLink.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "VPC Endpoint",
+        "imageUrl": "https://icons.terrastruct.com/aws%2FNetworking%20&%20Content%20Delivery%2FAmazon-VPC_Endpoints_light-bg.svg"
+      }
+    ],
+    "vpcs": [
+      {
+        "nodeType": "imageNode",
+        "nodeName": "vpc-seoul(10.1.0.0/16)",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/elb.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "vpc-zerotrust-seoul(10.2.0.0/16)",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/elb.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "vpc-provider(10.10.0.0/16)",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/elb.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "vpc-tenants(10.100.0.0/16)",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/elb.svg"
+      }
+    ]
+  },
+  "groupLink": [
+    {
+      "fromNode": "INTERNET",
+      "toNode": "Internet Gateway",
+      "linkType": "animated-fade",
+      "linkColor": "#000"
+    },
+    {
+      "fromNode": "INTERNET",
+      "toNode": "NAT Gateway",
+      "linkType": "animated-fade",
+      "linkColor": "#000"
+    },
+    {
+      "fromNode": "ON-PREMISES",
+      "toNode": "Virtual Private Gateway",
+      "linkType": "curvedQ-dash",
+      "linkColor": "gray"
+    },
+    {
+      "fromNode": "ON-PREMISES",
+      "toNode": "Direct Connect",
+      "linkType": "curvedQ-dash",
+      "linkColor": "gray"
+    },
+    {
+      "fromNode": "ON-PREMISES",
+      "toNode": "Transit Gateway",
+      "linkType": "curvedQ-dash",
+      "linkColor": "gray"
+    },
+    {
+      "fromNode": "AWS VPCs",
+      "toNode": "Transit Gateway",
+      "linkType": "curvedQ-dash",
+      "linkColor": "gray"
+    },
+    {
+      "fromNode": "AWS VPCs",
+      "toNode": "VPC Peering",
+      "linkType": "animated-fade",
+      "linkColor": "#000"
+    },
+    {
+      "fromNode": "AWS VPCs",
+      "toNode": "Private Link",
+      "linkType": "curvedQ-dash",
+      "linkColor": "gray"
+    },
+    {
+      "fromNode": "AWS SERVICES",
+      "toNode": "Private Link",
+      "linkType": "animated-fade",
+      "linkColor": "#000"
+    },
+    {
+      "fromNode": "AWS SERVICES",
+      "toNode": "VPC Endpoint",
+      "linkType": "animated-fade",
+      "linkColor": "#000"
+    },
+    {
+      "fromNode": "vpc-seoul(10.1.0.0/16)",
+      "toNode": "Internet Gateway",
+      "linkType": "animated-fade",
+      "linkColor": "#000"
+    },
+    {
+      "fromNode": "vpc-seoul(10.1.0.0/16)",
+      "toNode": "NAT Gateway",
+      "linkType": "animated-fade",
+      "linkColor": "#000"
+    },
+    {
+      "fromNode": "vpc-zerotrust-seoul(10.2.0.0/16)",
+      "toNode": "Internet Gateway",
+      "linkType": "animated-fade",
+      "linkColor": "#000"
+    },
+    {
+      "fromNode": "vpc-zerotrust-seoul(10.2.0.0/16)",
+      "toNode": "VPC Peering",
+      "linkType": "animated-fade",
+      "linkColor": "#000"
+    },
+    {
+      "fromNode": "vpc-provider(10.10.0.0/16)",
+      "toNode": "Private Link",
+      "linkType": "animated-fade",
+      "linkColor": "#000"
+    },
+    {
+      "fromNode": "vpc-provider(10.10.0.0/16)",
+      "toNode": "VPC Endpoint",
+      "linkType": "animated-fade",
+      "linkColor": "#000"
+    },
+    {
+      "fromNode": "vpc-tenants(10.100.0.0/16)",
+      "toNode": "VPC Peering",
+      "linkType": "animated-fade",
+      "linkColor": "#000"
+    }
+  ]
+}
