@@ -75,14 +75,14 @@ const EntryMenu = () => {
       path: '/compliance',
     },
     {
-      logo: IconMonitor,
-      menu: 'Monitor',
-      path: '/monitor',
-    },
-    {
       logo: IconLog,
       menu: 'Log',
       path: '/log',
+    },
+    {
+      logo: IconMonitor,
+      menu: 'Monitor',
+      path: '/monitor',
     },
     {
       logo: IconChatbot,

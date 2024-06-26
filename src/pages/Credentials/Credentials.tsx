@@ -41,7 +41,7 @@ const Credentials = () => {
           paginationPageSize={tableOption.paginationPageSize}
           paginationPageSizeSelector={tableOption.paginationPageSizeSelector}
         >
-          <p className='text-lg'>Credentials</p>
+          <p className='text-lg'></p>
         </CredentialsDataTable>
       </div>
     </>
