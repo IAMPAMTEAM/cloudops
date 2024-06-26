@@ -115,48 +115,51 @@ export default function FilterDataTable({
         {children}
         <div className='flex'>
           {showSaveButton && (
-            <button onClick={onBtnSave} className='bg-blue-500 font-bold text-white px-2 py-2 rounded-md mr-2'>
+            <button onClick={onBtnSave} className='bg-[#6667AB] font-bold text-white px-2 py-2 rounded-md mr-2'>
               Save
             </button>
           )}
-          <button onClick={onBtnCSVExport} className='bg-blue-500 font-bold text-white px-2 py-2 rounded-md mr-2'>
+          <button onClick={onBtnCSVExport} className='bg-[#6667AB] font-bold text-white px-2 py-2 rounded-md mr-2'>
             Export CSV
           </button>
-          <button onClick={onBtnExcelExport} className='bg-blue-500 font-bold text-white px-2 py-2 rounded-md'>
+          <button onClick={onBtnExcelExport} className='bg-[#6667AB] font-bold text-white px-2 py-2 rounded-md'>
             Export Excel
           </button>
         </div>
       </div>
       {/* TODO: 문구 변경 */}
-      <div className='flex gap-[4px] justify-start items-center mb-[8px]'>
-        <img src={IconFilter} className='w-[16px] h-[16px]' />
-        <p className='text-[1rem] font-[500]'> Filter</p>
-      </div>
-      <div className='flex flex-nowrap justify-between mb-[8px]'>
-        {result.policyResults.map((policy: any, index: number) => {
-          const key = Object.keys(policy)[0];
-          return (
-            <div key={index} className='inline-flex bg-[#f3f3f9] gap-[8px] px-[12px] py-[8px] pb-0 rounded-[20px] border-[1.2px] border-[#6667AB] border-dashed'>
-              <label className='relative flex rounded-full cursor-pointer' htmlFor={`check${index}`}>
-                <input
-                  type='checkbox'
-                  className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-[#6667AB] checked:bg-[#6667AB] checked:before:bg-gray-900 hover:before:opacity-10"
-                  id={`check${index}`}
-                  checked={checkedStates[index]}
-                  onChange={handleChange(index)}
-                />
-                <span className='absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100'>
-                  <svg xmlns='http://www.w3.org/2000/svg' className='h-3.5 w-3.5' viewBox='0 0 20 20' fill='currentColor' stroke='currentColor' strokeWidth='1'>
-                    <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd'></path>
-                  </svg>
-                </span>
-              </label>
-              <label className='cursor-pointer select-none' htmlFor={`check${index}`}>
-                {key}
-              </label>
-            </div>
-          );
-        })}
+      <div className='border-[1px] border-[#6667AB] bg-[#f3f3f9] p-[24px] pb-[4px] mb-[24px] rounded-[8px]'>
+        <div className='flex gap-[4px] justify-start items-center mb-[16px]'>
+          <img src={IconFilter} className='w-[16px] h-[16px]' />
+          <p className='text-[1rem] font-[500]'> Filter</p>
+        </div>
+        <div className='flex flex-nowrap justify-between mb-[8px]'>
+          {result.policyResults.map((policy: any, index: number) => {
+            const key = Object.keys(policy)[0];
+            return (
+              // bg-[#f3f3f9] px-[12px] py-[8px] pb-0 rounded-[20px] border-[1.2px] border-[#6667AB] border-dashed
+              <div key={index} className='inline-flex gap-[8px] '>
+                <label className='relative flex rounded-full cursor-pointer' htmlFor={`check${index}`}>
+                  <input
+                    type='checkbox'
+                    className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-[#ccc] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-[#6667AB] checked:bg-[#6667AB] checked:before:bg-gray-900 hover:before:opacity-10"
+                    id={`check${index}`}
+                    checked={checkedStates[index]}
+                    onChange={handleChange(index)}
+                  />
+                  <span className='absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100'>
+                    <svg xmlns='http://www.w3.org/2000/svg' className='h-3.5 w-3.5' viewBox='0 0 20 20' fill='currentColor' stroke='currentColor' strokeWidth='1'>
+                      <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd'></path>
+                    </svg>
+                  </span>
+                </label>
+                <label className='cursor-pointer select-none' htmlFor={`check${index}`}>
+                  {key}
+                </label>
+              </div>
+            );
+          })}
+        </div>
       </div>
       <div style={{ height: tableHeight }} className={'ag-theme-quartz'}>
         <AgGridReact

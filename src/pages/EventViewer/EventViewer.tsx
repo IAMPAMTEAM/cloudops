@@ -88,10 +88,10 @@ const EventViewer = () => {
     <>
       <p className='text-[1.2rem] font-semibold mb-[8px] text-[#333]'>Event Viewer</p>
       <hr className='mb-[8px] border-[1px] border-[#333]' />
-      <div className='panel mb-4'>
+      <div className='panel mb-[16px]'>
         <ColumnChart data={data} categories={categories} name='Events' />
       </div>
-      <div className='panel mb-4'>
+      <div className='panel mb-[16px]'>
         <EventViewerTable
           datas={mergedTableData}
           columnDefs={columnDefs}
