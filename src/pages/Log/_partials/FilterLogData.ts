@@ -20,6 +20,8 @@ export default function FilterLogData(props: Props) {
   const { region, fromDate, toDate, service, vpc, ec2, elb, rds, iam, s3, logData } = props;
   let filteredData = logData;
 
+  const normalizeString = (str: string) => str.toLowerCase().replace(/\s+/g, '');
+
   // Event Filter
   if (region.length > 0 || fromDate || toDate || service.length > 0) {
     filteredData = filteredData.filter((data: any) => {
@@ -42,9 +44,19 @@ export default function FilterLogData(props: Props) {
       }
 
       // Filter by service
-      // if (service.length > 0) {
-      //   matchesService = data.service === service;
-      // }
+      if (service.length > 0) {
+        matchesService =
+          Array.isArray(data.resourceType) &&
+          data.resourceType.some((resource: string) => {
+            if (resource && typeof resource === 'string') {
+              const resourceParts = resource.split('::');
+              const resourceService = normalizeString(resourceParts[1]);
+
+              return service.some((selectedService) => normalizeString(selectedService) === resourceService);
+            }
+            return false;
+          });
+      }
 
       return matchesRegion && matchesFromDate && matchesToDate && matchesService;
     });

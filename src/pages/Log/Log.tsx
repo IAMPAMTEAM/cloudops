@@ -192,8 +192,15 @@ const Log = () => {
         <div className='flex flex-row'>
           <div className='basis-1/2 pr-1'>
             <p>Region</p>
-
-            <Select isMulti options={regionOptions} onChange={(e) => onChangeSelect(e, 'region')} closeMenuOnSelect={false} hideSelectedOptions={false} styles={customStyles} />
+            <Select
+              isMulti
+              isDisabled={isEventFilter}
+              options={regionOptions}
+              onChange={(e) => onChangeSelect(e, 'region')}
+              closeMenuOnSelect={false}
+              hideSelectedOptions={false}
+              styles={customStyles}
+            />
           </div>
           <div className='basis-1/4 px-1'>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -255,7 +262,15 @@ const Log = () => {
           </div>
           <div className='basis-1/2 pl-1'>
             <p>Service</p>
-            <Select isMulti options={serviceOption} onChange={(e) => onChangeSelect(e, 'service')} closeMenuOnSelect={false} hideSelectedOptions={false} styles={customStyles} />
+            <Select
+              isMulti
+              isDisabled={isEventFilter}
+              options={serviceOption}
+              onChange={(e) => onChangeSelect(e, 'service')}
+              closeMenuOnSelect={false}
+              hideSelectedOptions={false}
+              styles={customStyles}
+            />
           </div>
         </div>
       </div>
