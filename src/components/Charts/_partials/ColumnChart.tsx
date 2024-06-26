@@ -31,7 +31,7 @@ export const ColumnChart = (props: Props) => {
       colors: ['#6667AB'],
       plotOptions: {
         bar: {
-          borderRadius: 10,
+          borderRadius: 0,
           dataLabels: {
             position: 'top', // top, center, bottom
           },
@@ -97,7 +97,7 @@ export const ColumnChart = (props: Props) => {
         },
       },
       grid: {
-        show: false,
+        show: true,
       },
     },
   });

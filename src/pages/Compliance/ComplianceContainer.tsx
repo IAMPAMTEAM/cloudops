@@ -26,10 +26,6 @@ const Compliance = () => {
   }, [reportHTML]);
 
   useEffect(() => {
-    console.log(convertedHTML?.querySelector('style'));
-  });
-
-  useEffect(() => {
     // 1st division (overview)
     setHeaderHTML(convertedHTML?.querySelector('header')?.innerHTML);
   }, [convertedHTML]);

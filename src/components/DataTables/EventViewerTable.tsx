@@ -76,10 +76,10 @@ export default function EventViewer({ children, datas, columnDefs, defaultTableS
       <div className='flex justify-between items-center mb-4'>
         {children}
         <div className='flex'>
-          <button onClick={onBtnCSVExport} className='bg-blue-500 font-bold text-white px-2 py-2 rounded-md mr-2'>
+          <button onClick={onBtnCSVExport} className='bg-[#6667AB] font-bold text-white px-2 py-2 rounded-md mr-2'>
             Download CSV
           </button>
-          <button onClick={onBtnExcelExport} className='bg-blue-500 font-bold text-white px-2 py-2 rounded-md'>
+          <button onClick={onBtnExcelExport} className='bg-[#6667AB] font-bold text-white px-2 py-2 rounded-md'>
             Download Excel
           </button>
         </div>

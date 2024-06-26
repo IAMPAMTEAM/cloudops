@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Select from 'react-select';
+import Select, { OptionProps } from 'react-select';
 import { Dayjs } from 'dayjs';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
@@ -48,7 +48,9 @@ const Log = () => {
   const [columnDefs, setColumnDefs] = useState<any[]>([]);
   const [mergedTableData, setMergedTableData] = useState<any[]>([]);
 
-  const regionOptions = regionData.Region.map((region: string) => ({ value: region, label: region }));
+  const regionOptions = regionData.Region.map((region: string) => {
+    return { value: region, label: region, color: '#6667AB' };
+  });
 
   const serviceCategoryOption = Object.keys(serviceData).map((serviceCategory: string) => ({ value: serviceCategory, label: serviceCategory }));
 
@@ -147,6 +149,26 @@ const Log = () => {
     }
   };
 
+  const customStyles = {
+    control: (base, state) => ({
+      ...base,
+      borderColor: state.isFocused ? '#6667AB' : '#ccc', // 포커스 여부에 따라 border 색상 변경
+      '&:hover': {
+        borderColor: state.isFocused ? '#6667AB' : '#ccc', // hover 상태일 때 border 색상 변경
+      },
+      boxShadow: 'none', // Optional: 그림자 제거
+    }),
+    option: (base, state) => ({
+      ...base,
+      backgroundColor: state.isSelected ? '#eee' : state.isFocused ? '#eee' : '#FFFFFF',
+      color: state.isSelected ? '#000000' : state.isFocused ? '#000000' : '#000000',
+      '&:hover': {
+        backgroundColor: state.isSelected ? '#f3f3f9' : '#f3f3f9', // 클릭 시 배경색 변경
+        color: '#000000', // 클릭 시 글자색 변경
+      },
+    }),
+  };
+
   const filteredData = FilterLogData({
     region: regionValue,
     fromDate: fromDateValue,
@@ -163,12 +185,15 @@ const Log = () => {
 
   return (
     <>
+      <p className='text-[1.2rem] font-semibold mb-[8px] text-[#333]'>Log</p>
+      <hr className='mb-[8px] border-[1px] border-[#333]' />
       <div className='panel'>
         <p className='text-lg pb-4'>Event Filter</p>
         <div className='flex flex-row'>
           <div className='basis-1/2 pr-1'>
             <p>Region</p>
-            <Select isDisabled={isEventFilter} isMulti options={regionOptions} onChange={(e) => onChangeSelect(e, 'region')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+
+            <Select isMulti options={regionOptions} onChange={(e) => onChangeSelect(e, 'region')} closeMenuOnSelect={false} hideSelectedOptions={false} styles={customStyles} />
           </div>
           <div className='basis-1/4 px-1'>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -226,46 +251,94 @@ const Log = () => {
         <div className='flex flex-row mt-3'>
           <div className='basis-1/2 pr-1'>
             <p>Service Category</p>
-            <Select isClearable isDisabled={isEventFilter} options={serviceCategoryOption} onChange={(e) => onChangeSelect(e, 'serviceCategory')} hideSelectedOptions={false} />
+            <Select isClearable isDisabled={isEventFilter} options={serviceCategoryOption} onChange={(e) => onChangeSelect(e, 'serviceCategory')} hideSelectedOptions={false} styles={customStyles} />
           </div>
           <div className='basis-1/2 pl-1'>
             <p>Service</p>
-            <Select isMulti isDisabled={isEventFilter} options={serviceOption} onChange={(e) => onChangeSelect(e, 'service')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select isMulti options={serviceOption} onChange={(e) => onChangeSelect(e, 'service')} closeMenuOnSelect={false} hideSelectedOptions={false} styles={customStyles} />
           </div>
         </div>
       </div>
-      <div className='panel mt-2'>
+      <div className='panel mt-[16px]'>
         <p className='text-lg pb-4'>Frequent Events</p>
         <div className='flex flex-row'>
           <div className='basis-1/3 pr-1'>
             <p>VPC</p>
-            <Select isMulti isDisabled={isFrequentEvents} options={vpcFrequentEventsOption} onChange={(e) => onChangeSelect(e, 'vpnFrequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select
+              isMulti
+              isDisabled={isFrequentEvents}
+              options={vpcFrequentEventsOption}
+              onChange={(e) => onChangeSelect(e, 'vpnFrequent')}
+              closeMenuOnSelect={false}
+              hideSelectedOptions={false}
+              styles={customStyles}
+            />
           </div>
           <div className='basis-1/3 px-1'>
             <p>EC2</p>
-            <Select isMulti isDisabled={isFrequentEvents} options={ec2FrequentEventsOption} onChange={(e) => onChangeSelect(e, 'ec2Frequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select
+              isMulti
+              isDisabled={isFrequentEvents}
+              options={ec2FrequentEventsOption}
+              onChange={(e) => onChangeSelect(e, 'ec2Frequent')}
+              closeMenuOnSelect={false}
+              hideSelectedOptions={false}
+              styles={customStyles}
+            />
           </div>
           <div className='basis-1/3 pl-1'>
             <p>ELB</p>
-            <Select isMulti isDisabled={isFrequentEvents} options={elbFrequentEventsOption} onChange={(e) => onChangeSelect(e, 'elbFrequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select
+              isMulti
+              isDisabled={isFrequentEvents}
+              options={elbFrequentEventsOption}
+              onChange={(e) => onChangeSelect(e, 'elbFrequent')}
+              closeMenuOnSelect={false}
+              hideSelectedOptions={false}
+              styles={customStyles}
+            />
           </div>
         </div>
         <div className='flex flex-row mt-3'>
           <div className='basis-1/3 pr-1'>
             <p>RDS</p>
-            <Select isMulti isDisabled={isFrequentEvents} options={rdsFrequentEventsOption} onChange={(e) => onChangeSelect(e, 'rdsFrequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select
+              isMulti
+              isDisabled={isFrequentEvents}
+              options={rdsFrequentEventsOption}
+              onChange={(e) => onChangeSelect(e, 'rdsFrequent')}
+              closeMenuOnSelect={false}
+              hideSelectedOptions={false}
+              styles={customStyles}
+            />
           </div>
           <div className='basis-1/3 px-1'>
             <p>IAM</p>
-            <Select isMulti isDisabled={isFrequentEvents} options={iamFrequentEventsOption} onChange={(e) => onChangeSelect(e, 'iamFrequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select
+              isMulti
+              isDisabled={isFrequentEvents}
+              options={iamFrequentEventsOption}
+              onChange={(e) => onChangeSelect(e, 'iamFrequent')}
+              closeMenuOnSelect={false}
+              hideSelectedOptions={false}
+              styles={customStyles}
+            />
           </div>
           <div className='basis-1/3 pl-1'>
             <p>S3</p>
-            <Select isMulti isDisabled={isFrequentEvents} options={s3FrequentEventsOption} onChange={(e) => onChangeSelect(e, 's3Frequent')} closeMenuOnSelect={false} hideSelectedOptions={false} />
+            <Select
+              isMulti
+              isDisabled={isFrequentEvents}
+              options={s3FrequentEventsOption}
+              onChange={(e) => onChangeSelect(e, 's3Frequent')}
+              closeMenuOnSelect={false}
+              hideSelectedOptions={false}
+              styles={customStyles}
+            />
           </div>
         </div>
       </div>
-      <div className='panel mt-2'>
+      <div className='panel mt-[16px]'>
         <DataTable
           showSaveButton={false}
           datas={filteredData}
