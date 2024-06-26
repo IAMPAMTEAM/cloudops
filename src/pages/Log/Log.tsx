@@ -180,7 +180,7 @@ const Log = () => {
               >
                 <DatePicker
                   label='From'
-                  disabled={isEventFilter}
+                  // disabled={isEventFilter}
                   sx={{ width: '100%' }}
                   slotProps={{
                     textField: {
@@ -206,12 +206,13 @@ const Log = () => {
               >
                 <DatePicker
                   label='To'
-                  disabled={isEventFilter}
+                  // disabled={isEventFilter}
                   sx={{ width: '100%' }}
                   slotProps={{
                     textField: {
                       size: 'small',
                     },
+                    actionBar: { actions: ['clear'] },
                   }}
                   showDaysOutsideCurrentMonth
                   format='YYYY-MM-DD'
