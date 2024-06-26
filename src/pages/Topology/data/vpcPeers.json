@@ -1,0 +1,124 @@
+{
+  "width": 800,
+  "height": 600,
+  "layout": {
+    "nodeType": "grid",
+    "row": 3,
+    "column": 1,
+    "gap": 0
+  },
+  "layouts": [
+    {
+      "groupName": "topic",
+      "row": 1,
+      "column": 1,
+      "width": 800,
+      "height": 100,
+      "color": "none"
+    },
+    {
+      "groupName": "Seoul",
+      "row": 2,
+      "column": 1,
+      "width": 800,
+      "height": 350,
+      "color": "none"
+    },
+    {
+      "groupName": "other-regions",
+      "row": 3,
+      "column": 1,
+      "width": 800,
+      "height": 150,
+      "color": "none"
+    }
+  ],
+  "backgroundUrl": "",
+  "groupList": {
+    "topic": [
+      {
+        "nodeType": "imageNode",
+        "nodeName": "Seoul",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/region.svg"
+      }
+    ],
+    "Seoul": [
+      {
+        "nodeType": "imageNode",
+        "nodeName": "vpc-seoul(10.1.0.0/16)",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/datacenter.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "vpc-zerotrust-seoul(10.2.0.0/16)",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/datacenter.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "vpc-provider(10.10.0.0/16)",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/datacenter.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "vpc-tenants(10.100.0.0/16)",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/datacenter.svg"
+      }
+    ],
+    "other-regions": [
+      {
+        "nodeType": "imageNode",
+        "nodeName": "Virginia",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/region.svg"
+      },
+      {
+        "nodeType": "imageNode",
+        "nodeName": "Singapore",
+        "imageUrl": "https://sy-workflow-demodata.s3.us-west-2.amazonaws.com/flow/region.svg"
+      }
+    ]
+  },
+  "groupLink": [
+    {
+      "fromNode": "vpc-seoul(10.1.0.0/16)",
+      "toNode": "vpc-provider(10.10.0.0/16)",
+      "linkType": "animated-fade",
+      "linkColor": "blue"
+    },
+    {
+      "fromNode": "vpc-seoul(10.1.0.0/16)",
+      "toNode": "vpc-tenants(10.100.0.0/16",
+      "linkType": "animated-fade",
+      "linkColor": "blue"
+    },
+    {
+      "fromNode": "vpc-provider(10.10.0.0/16)",
+      "toNode": "vpc-tenants(10.100.0.0/16)",
+      "linkType": "animated-fade",
+      "linkColor": "blue"
+    },
+    {
+      "fromNode": "vpc-seoul(10.1.0.0/16)",
+      "toNode": "Virginia",
+      "linkType": "animated-fade",
+      "linkColor": "orange"
+    },
+    {
+      "fromNode": "vpc-provider(10.10.0.0/16)",
+      "toNode": "Virginia",
+      "linkType": "animated-fade",
+      "linkColor": "orange"
+    },
+    {
+      "fromNode": "vpc-zerotrust-seoul(10.2.0.0/16)",
+      "toNode": "Virginia",
+      "linkType": "animated-fade",
+      "linkColor": "orange"
+    },
+    {
+      "fromNode": "vpc-provider(10.10.0.0/16)",
+      "toNode": "Singapore",
+      "linkType": "animated-fade",
+      "linkColor": "orange"
+    }
+  ]
+}

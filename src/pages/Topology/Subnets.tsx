@@ -46,13 +46,17 @@ const Subnets = () => {
       vpcGroup.setAttribute('transform', `translate(${vpcCol * (vpcWidth + padding) + padding}, ${vpcRow * (vpcHeight + padding) + padding})`);
 
       const vpcRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      // @ts-ignore
       vpcRect.setAttribute('width', vpcWidth);
+      // @ts-ignore
       vpcRect.setAttribute('height', vpcHeight);
       vpcGroup.appendChild(vpcRect);
 
       const vpcLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       vpcLabel.setAttribute('class', 'vpc-label');
+      // @ts-ignore
       vpcLabel.setAttribute('x', 5);
+      // @ts-ignore
       vpcLabel.setAttribute('y', 15);
       vpcLabel.textContent = `${vpc.vpcName} (${vpc.vpcCidr})`;
       vpcGroup.appendChild(vpcLabel);
@@ -85,21 +89,27 @@ const Subnets = () => {
         );
 
         const subnetRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+        // @ts-ignore
         subnetRect.setAttribute('width', subnetWidth);
+        // @ts-ignore
         subnetRect.setAttribute('height', subnetHeight);
         subnetRect.classList.add(subnet.connectivityType);
         subnetGroup.appendChild(subnetRect);
 
         const subnetLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         subnetLabel.setAttribute('class', 'subnet-label');
+        // @ts-ignore
         subnetLabel.setAttribute('x', subnetWidth / 2);
+        // @ts-ignore
         subnetLabel.setAttribute('y', subnetHeight / 2 - 5);
         subnetLabel.textContent = subnet.subnetName;
         subnetGroup.appendChild(subnetLabel);
 
         const subnetCidrLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         subnetCidrLabel.setAttribute('class', 'subnet-label');
+        // @ts-ignore
         subnetCidrLabel.setAttribute('x', subnetWidth / 2);
+        // @ts-ignore
         subnetCidrLabel.setAttribute('y', subnetHeight / 2 + 15);
         subnetCidrLabel.textContent = subnet.subnetCidr;
         subnetGroup.appendChild(subnetCidrLabel);
@@ -107,6 +117,7 @@ const Subnets = () => {
         vpcGroup.appendChild(subnetGroup);
       });
 
+      // @ts-ignore
       mainContainer.appendChild(vpcGroup);
     });
   });

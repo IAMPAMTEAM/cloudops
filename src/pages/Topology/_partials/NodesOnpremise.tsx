@@ -78,13 +78,17 @@ export const NodesOnpremise = () => {
       cidrGroup.setAttribute('transform', `translate(${cidrCol * (cidrWidth + padding) + padding}, ${cidrRow * (cidrHeight + padding) + padding})`);
 
       const cidrRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      // @ts-ignore
       cidrRect.setAttribute('width', cidrWidth);
+      // @ts-ignore
       cidrRect.setAttribute('height', cidrHeight);
       cidrGroup.appendChild(cidrRect);
 
       const cidrLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       cidrLabel.setAttribute('class', 'cidr-label nanum-bold');
+      // @ts-ignore
       cidrLabel.setAttribute('x', 5);
+      // @ts-ignore
       cidrLabel.setAttribute('y', 15);
       cidrLabel.textContent = `${cidrName} (${cidr})`;
       cidrGroup.appendChild(cidrLabel);
@@ -115,24 +119,33 @@ export const NodesOnpremise = () => {
 
         const nodeIcon = document.createElementNS('http://www.w3.org/2000/svg', 'image');
         nodeIcon.setAttribute('href', getNodeIcon(node.nodeType));
+        // @ts-ignore
         nodeIcon.setAttribute('width', nodeWidth);
+        // @ts-ignore
         nodeIcon.setAttribute('height', nodeHeight - 30);
         nodeIcon.addEventListener('mouseover', () => {
+          // @ts-ignore
           tooltip.style.display = 'block';
+          // @ts-ignore
           tooltip.textContent = node.nodeId;
         });
         nodeIcon.addEventListener('mouseout', () => {
+          // @ts-ignore
           tooltip.style.display = 'none';
         });
         nodeIcon.addEventListener('mousemove', (event) => {
+          // @ts-ignore
           tooltip.style.top = `${event.pageY + 5}px`;
+          // @ts-ignore
           tooltip.style.left = `${event.pageX + 5}px`;
         });
         nodeGroup.appendChild(nodeIcon);
 
         const nodeNameLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         nodeNameLabel.setAttribute('class', 'node-label nanum-bold');
+        // @ts-ignore
         nodeNameLabel.setAttribute('x', nodeWidth / 2);
+        // @ts-ignore
         nodeNameLabel.setAttribute('y', nodeHeight - 20);
         nodeNameLabel.setAttribute('text-anchor', 'middle');
         nodeNameLabel.textContent = node.nodeName;
@@ -140,7 +153,9 @@ export const NodesOnpremise = () => {
 
         const nodeIpLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         nodeIpLabel.setAttribute('class', 'node-label nanum-bold');
+        // @ts-ignore
         nodeIpLabel.setAttribute('x', nodeWidth / 2);
+        // @ts-ignore
         nodeIpLabel.setAttribute('y', nodeHeight - 10);
         nodeIpLabel.setAttribute('text-anchor', 'middle');
         nodeIpLabel.textContent = node.nodeIp;
@@ -149,6 +164,7 @@ export const NodesOnpremise = () => {
         cidrGroup.appendChild(nodeGroup);
       });
 
+      // @ts-ignore
       onpremiseContainer.appendChild(cidrGroup);
     });
   });

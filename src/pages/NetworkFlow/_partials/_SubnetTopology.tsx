@@ -27,6 +27,7 @@ interface Subnet {
   bytes: number;
 }
 
+// @ts-ignore
 const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetChange }) => {
   const [data, setData] = useState<NetworkData>({ nodes: [], links: [] });
   const [fetchData, setFetchData] = useState<Subnet[]>([]);
@@ -136,14 +137,17 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
           const groupedData = data.reduce((acc, item) => {
             const { toSubnet } = item;
 
+            // @ts-ignore
             if (selectedFromSubnet.slice(0, selectedFromSubnet.lastIndexOf('.') - 1) === toSubnet.slice(0, toSubnet.lastIndexOf('.') - 1) && selectedFromSubnet !== toSubnet) {
               if (!acc[toSubnet]) {
+                // @ts-ignore
                 acc[toSubnet] = {
                   fromSubnet: selectedFromSubnet,
                   toSubnet,
                   subnetInfo: [],
                 };
               }
+              // @ts-ignore
               acc[toSubnet].subnetInfo.push(item);
             }
             return acc;
@@ -167,6 +171,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
       }
     });
 
+    // @ts-ignore
     setFromSubnetList(uniqueFromSubnetList);
   }, [fromSubnetFilteredList]);
 
@@ -181,6 +186,7 @@ const SubnetTopology: React.FC = ({ onVpcChange, onFromSubnetChange, onToSubnetC
       }
     });
 
+    // @ts-ignore
     setToSubnetList(uniqueToSubnetList);
   }, [toSubnetFilteredList]);
 

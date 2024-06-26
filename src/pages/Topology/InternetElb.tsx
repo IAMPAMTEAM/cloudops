@@ -41,11 +41,15 @@ const InternetElb = () => {
     const g = createGroup(groupName, nodeName, x, y);
 
     const circle = document.createElementNS(svgns, 'circle');
+    // @ts-ignore
     circle.setAttribute('cx', 0);
+    // @ts-ignore
     circle.setAttribute('cy', 0);
+    // @ts-ignore
     circle.setAttribute('r', size / 2);
     circle.setAttribute('fill', fillColor);
     circle.setAttribute('stroke', 'black');
+    // @ts-ignore
     circle.setAttribute('stroke-width', 2);
 
     const text = createText(0, size / 2 + 20, nodeName, 'Nanum Square', textFontSize, 'black', 'middle');
@@ -60,12 +64,15 @@ const InternetElb = () => {
     const g = createGroup(groupName, nodeName, x, y);
 
     const rect = document.createElementNS(svgns, 'rect');
+    // @ts-ignore
     rect.setAttribute('x', -size / 2);
+    // @ts-ignore
     rect.setAttribute('y', -size / 2);
     rect.setAttribute('width', size);
     rect.setAttribute('height', size);
     rect.setAttribute('fill', fillColor);
     rect.setAttribute('stroke', 'black');
+    // @ts-ignore
     rect.setAttribute('stroke-width', 2);
 
     const text = createText(0, size / 2 + 20, nodeName, 'Nanum Square', textFontSize, 'black', 'middle');
@@ -80,7 +87,9 @@ const InternetElb = () => {
     const g = createGroup(groupName, nodeName, x, y);
 
     const image = document.createElementNS(svgns, 'image');
+    // @ts-ignore
     image.setAttribute('x', -size / 2);
+    // @ts-ignore
     image.setAttribute('y', -size / 2);
     image.setAttribute('width', size);
     image.setAttribute('height', size);
@@ -121,6 +130,7 @@ const InternetElb = () => {
     let xPos = startX;
 
     for (const node of groupNodes) {
+      // @ts-ignore
       positions.push({ x: xPos, y: yPos, size: nodeSize });
       xPos += nodeSize * 2.2; // node 간격을 조정
     }
@@ -149,6 +159,7 @@ const InternetElb = () => {
     path.setAttribute('d', pathData);
     path.setAttribute('stroke', linkColor);
     path.setAttribute('fill', 'transparent');
+    // @ts-ignore
     path.setAttribute('stroke-width', 2);
 
     if (linkType.includes('dash')) {
@@ -179,14 +190,19 @@ const InternetElb = () => {
           svgContainer.removeChild(svgContainer.firstChild);
         }
 
+        // @ts-ignore
         svgContainer.style.width = data.width + 'px';
+        // @ts-ignore
         svgContainer.style.height = data.height + 'px';
         // svgContainer.style.backgroundImage = `url(${data.backgroundUrl})`;
+        // @ts-ignore
         svgContainer.classList.add('svg-container');
 
         const svgNS = 'http://www.w3.org/2000/svg';
         const svg = document.createElementNS(svgNS, 'svg');
+        // @ts-ignore
         svg.setAttribute('width', data.width);
+        // @ts-ignore
         svg.setAttribute('height', data.height);
 
         // 링크를 담을 그룹을 먼저 추가 (노드 아래 레이어에 배치하기 위함)
@@ -223,13 +239,17 @@ const InternetElb = () => {
           group.setAttribute('transform', `translate(${x}, ${y})`);
 
           const rect = document.createElementNS(svgNS, 'rect');
+          // @ts-ignore
           rect.setAttribute('width', layout.width);
+          // @ts-ignore
           rect.setAttribute('height', layout.height);
           rect.setAttribute('fill', layout.color);
           group.appendChild(rect);
 
           const text = document.createElementNS(svgNS, 'text');
+          // @ts-ignore
           text.setAttribute('x', 5); // 왼쪽에서 약간 패딩
+          // @ts-ignore
           text.setAttribute('y', 15); // 위쪽에서 약간 패딩
           text.classList.add('group-name');
           text.textContent = layout.groupName;
@@ -242,26 +262,47 @@ const InternetElb = () => {
               const pos = positions[index];
               let nodeElement;
               const computedNode = {
+                // @ts-ignore
                 x: x + pos.x,
+                // @ts-ignore
                 y: y + pos.y,
                 fontSize: 12,
               };
               switch (node.nodeType) {
                 case 'circleNode':
-                  nodeElement = createCircleNode(layout.groupName, node.nodeName, pos.x, pos.y, pos.size, node.color || node.fillColor, 12);
+                  nodeElement = createCircleNode(
+                    layout.groupName,
+                    node.nodeName,
+                    // @ts-ignore
+                    pos.x,
+                    // @ts-ignore
+                    pos.y,
+                    // @ts-ignore
+                    pos.size,
+                    node.color || node.fillColor,
+                    12
+                  );
+                  // @ts-ignore
                   computedNode.radius = pos.size / 2;
                   break;
                 case 'rectNode':
+                  // @ts-ignore
                   nodeElement = createRectNode(layout.groupName, node.nodeName, pos.x, pos.y, pos.size, node.color || node.fillColor, 12);
+                  // @ts-ignore
                   computedNode.width = pos.size;
+                  // @ts-ignore
                   computedNode.height = pos.size;
                   break;
                 case 'imageNode':
+                  // @ts-ignore
                   nodeElement = createImageNode(layout.groupName, node.nodeName, pos.x, pos.y, node.imageUrl, pos.size, 12);
+                  // @ts-ignore
                   computedNode.width = pos.size;
+                  // @ts-ignore
                   computedNode.height = pos.size;
                   break;
                 case 'textNode':
+                  // @ts-ignore
                   nodeElement = createTextNode(layout.groupName, node.nodeName, pos.x, pos.y, node.text, 12, node.color);
                   break;
               }
@@ -270,8 +311,11 @@ const InternetElb = () => {
               // 노드 JSON에 계산된 속성 추가
               node.x = computedNode.x;
               node.y = computedNode.y;
+              // @ts-ignore
               if (computedNode.width) node.width = computedNode.width;
+              // @ts-ignore
               if (computedNode.height) node.height = computedNode.height;
+              // @ts-ignore
               if (computedNode.radius) node.radius = computedNode.radius;
               node.fontSize = computedNode.fontSize;
 
