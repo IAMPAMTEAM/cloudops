@@ -1,16 +1,22 @@
-import { TopologyRepeat } from '@/components/TopologyRepeat';
-import RegionalResourcesSeoul from '@/assets/images/regional-resources-seoul.svg';
-import RegionalResourcesVirginia from '@/assets/images/regional-resources-virginia.svg';
-import RegionalResourcesSingapore from '@/assets/images/regional-resources-singapore.svg';
-import RegionalResourcesOregon from '@/assets/images/regional-resources-oregon.svg';
+import { Resources } from './_partials/Resources';
+import { ResourcesVirginia } from './_partials/ResourcesVirginia';
+import { ResourcesSingapore } from './_partials/ResourcesSingapore';
 
 const RegionalResources = () => {
-    const images = [RegionalResourcesSeoul, RegionalResourcesVirginia, RegionalResourcesSingapore, RegionalResourcesOregon];
-    const titles = ['Seoul', 'Virginia', 'Singapore', 'Oregon'];
-    return (
-        <div>
-            <TopologyRepeat imageSrcs={images} title={titles} />
+  return (
+    <>
+      <div className='grid lg:grid-cols-2 gap-[16px]'>
+        <div className='panel lg:col-span-1'>
+          <Resources region='seoul' />
         </div>
-    );
+        <div className='panel lg:col-span-1'>
+          <ResourcesVirginia region='virginia' />
+        </div>
+        <div className='panel lg:col-span-1'>
+          <ResourcesSingapore region='singapore' />
+        </div>
+      </div>
+    </>
+  );
 };
 export default RegionalResources;

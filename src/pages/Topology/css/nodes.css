@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Square:wght@400;700&display=swap');
+
+.nodes-box > svg {
+  width: 1000px;
+  height: 600px;
+}
+
+.cidr-group {
+  stroke: black;
+  fill: none;
+}
+
+.cidr-label,
+.node-label {
+  font-family: 'Nanum Square', sans-serif;
+}
+
+.nanum-bold {
+  font-weight: bold;
+}
+
+.node-group {
+  stroke: black;
+  fill: none;
+}
+
+.node-label {
+  font-size: 10px;
+  text-anchor: middle;
+}
+
+.tooltip {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  display: none;
+  font-size: 12px;
+}
+
+/* Border types */
+.round {
+  stroke-linejoin: round;
+}
+.round-dash {
+  stroke-dasharray: 5, 5;
+  stroke-linejoin: round;
+}
+.line {
+  stroke-linejoin: miter;
+}
+.dash {
+  stroke-dasharray: 5, 5;
+  stroke-linejoin: miter;
+}
+.thick-line {
+  stroke-width: 3px;
+  stroke-linejoin: miter;
+}
+.thick-dash {
+  stroke-width: 3px;
+  stroke-dasharray: 5, 5;
+  stroke-linejoin: miter;
+}
+.thick-round {
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+/* Border colors */
+.black {
+  stroke: black;
+}
+.gray {
+  stroke: gray;
+}
+.blue {
+  stroke: blue;
+}
+.none {
+  stroke: none;
+}

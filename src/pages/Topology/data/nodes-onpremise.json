@@ -1,0 +1,162 @@
+[
+  {
+    "nodeIp": "192.168.10.66",
+    "nodeId": "02:00:00:34:8e:0d",
+    "nodeName": "network-pc-01",
+    "nodeType": "PC",
+    "cidr": "192.168.10.0/24",
+    "cidrName": "네트워크 운영팀"
+  },
+  {
+    "nodeIp": "192.168.10.120",
+    "nodeId": "02:00:00:c1:be:4a",
+    "nodeName": "network-pc-02",
+    "nodeType": "PC",
+    "cidr": "192.168.10.0/24",
+    "cidrName": "네트워크 운영팀"
+  },
+  {
+    "nodeIp": "192.168.10.67",
+    "nodeId": "02:00:00:8b:4d:19",
+    "nodeName": "network-pc-03",
+    "nodeType": "PC",
+    "cidr": "192.168.10.0/24",
+    "cidrName": "네트워크 운영팀"
+  },
+  {
+    "nodeIp": "192.168.10.76",
+    "nodeId": "02:00:00:9f:1f:33",
+    "nodeName": "network-pc-04",
+    "nodeType": "PC",
+    "cidr": "192.168.10.0/24",
+    "cidrName": "네트워크 운영팀"
+  },
+  {
+    "nodeIp": "192.168.10.140",
+    "nodeId": "02:00:00:cd:f3:16",
+    "nodeName": "network-pc-05",
+    "nodeType": "PC",
+    "cidr": "192.168.10.0/24",
+    "cidrName": "네트워크 운영팀"
+  },
+  {
+    "nodeIp": "192.168.11.75",
+    "nodeId": "02:00:00:c3:19",
+    "nodeName": "cloud-pc-01",
+    "nodeType": "PC",
+    "cidr": "192.168.11.0/24",
+    "cidrName": "클라우드 운영팀"
+  },
+  {
+    "nodeIp": "192.168.11.40",
+    "nodeId": "02:00:00:29:88:87",
+    "nodeName": "cloud-pc-02",
+    "nodeType": "PC",
+    "cidr": "192.168.11.0/24",
+    "cidrName": "클라우드 운영팀"
+  },
+  {
+    "nodeIp": "192.168.11.1",
+    "nodeId": "02:00:00:6d:49:45",
+    "nodeName": "cloud-pc-03",
+    "nodeType": "PC",
+    "cidr": "192.168.11.0/24",
+    "cidrName": "클라우드 운영팀"
+  },
+  {
+    "nodeIp": "192.168.11.127",
+    "nodeId": "02:00:00:fb:3f:96",
+    "nodeName": "cloud-pc-04",
+    "nodeType": "PC",
+    "cidr": "192.168.11.0/24",
+    "cidrName": "클라우드 운영팀"
+  },
+  {
+    "nodeIp": "192.168.11.217",
+    "nodeId": "02:00:00:b9:55",
+    "nodeName": "cloud-pc-05",
+    "nodeType": "PC",
+    "cidr": "192.168.11.0/24",
+    "cidrName": "클라우드 운영팀"
+  },
+  {
+    "nodeIp": "192.168.11.123",
+    "nodeId": "02:00:00:be:a0:35",
+    "nodeName": "cloud-pc-06",
+    "nodeType": "PC",
+    "cidr": "192.168.11.0/24",
+    "cidrName": "클라우드 운영팀"
+  },
+  {
+    "nodeIp": "192.168.11.210",
+    "nodeId": "02:00:00:27:21:4c",
+    "nodeName": "cloud-pc-07",
+    "nodeType": "PC",
+    "cidr": "192.168.11.0/24",
+    "cidrName": "클라우드 운영팀"
+  },
+  {
+    "nodeIp": "192.168.11.138",
+    "nodeId": "02:00:00:d9:fe:83",
+    "nodeName": "cloud-pc-08",
+    "nodeType": "PC",
+    "cidr": "192.168.11.0/24",
+    "cidrName": "클라우드 운영팀"
+  },
+  {
+    "nodeIp": "192.168.11.1",
+    "nodeId": "02:00:00:75:32",
+    "nodeName": "cloud-pc-09",
+    "nodeType": "PC",
+    "cidr": "192.168.11.0/24",
+    "cidrName": "클라우드 운영팀"
+  },
+  {
+    "nodeIp": "192.168.12.110",
+    "nodeId": "02:00:00:47:40",
+    "nodeName": "devops-macbook-01",
+    "nodeType": "PC",
+    "cidr": "192.168.12.0/24",
+    "cidrName": "DevOps 팀"
+  },
+  {
+    "nodeIp": "192.168.12.51",
+    "nodeId": "02:00:00:13:66:81",
+    "nodeName": "devops-macbook-02",
+    "nodeType": "PC",
+    "cidr": "192.168.12.0/24",
+    "cidrName": "DevOps 팀"
+  },
+  {
+    "nodeIp": "192.168.12.206",
+    "nodeId": "02:00:00:bb:a5:75",
+    "nodeName": "devops-macbook-03",
+    "nodeType": "PC",
+    "cidr": "192.168.12.0/24",
+    "cidrName": "DevOps 팀"
+  },
+  {
+    "nodeIp": "192.168.12.82",
+    "nodeId": "02:00:00:f1:be",
+    "nodeName": "devops-macbook-04",
+    "nodeType": "PC",
+    "cidr": "192.168.12.0/24",
+    "cidrName": "DevOps 팀"
+  },
+  {
+    "nodeIp": "192.168.12.170",
+    "nodeId": "02:00:00:1e:0d:2c",
+    "nodeName": "devops-macbook-05",
+    "nodeType": "PC",
+    "cidr": "192.168.12.0/24",
+    "cidrName": "DevOps 팀"
+  },
+  {
+    "nodeIp": "192.168.12.10",
+    "nodeId": "02:00:00:e9:8a",
+    "nodeName": "devops-macbook-06",
+    "nodeType": "PC",
+    "cidr": "192.168.12.0/24",
+    "cidrName": "DevOps 팀"
+  }
+]

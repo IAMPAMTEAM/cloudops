@@ -1,0 +1,116 @@
+[
+  {
+    "vpcCidr": "10.1.0.0/16",
+    "vpcName": "vpc-iampam-seoul",
+    "subnets": [
+      {
+        "subnetCidr": "10.1.1.0/24",
+        "subnetName": "subnet-iampam-seoulA",
+        "connectivityType": "public"
+      },
+      {
+        "subnetCidr": "10.1.2.0/24",
+        "subnetName": "subnet-iampam-seoulB",
+        "connectivityType": "public"
+      },
+      {
+        "subnetCidr": "10.1.3.0/24",
+        "subnetName": "subnet-zerotrust-seoulA",
+        "connectivityType": "private"
+      },
+      {
+        "subnetCidr": "10.1.4.0/24",
+        "subnetName": "subnet-zerotrust-seoulB",
+        "connectivityType": "private"
+      },
+      {
+        "subnetCidr": "10.1.0.128/25",
+        "subnetName": "subnet-rds-1",
+        "connectivityType": "private"
+      },
+      {
+        "subnetCidr": "10.1.5.0/25",
+        "subnetName": "subnet-rds-2",
+        "connectivityType": "private"
+      },
+      {
+        "subnetCidr": "10.1.50.0/24",
+        "subnetName": "subnet-iampam-private",
+        "connectivityType": "private"
+      },
+      {
+        "subnetCidr": "10.1.51.0/24",
+        "subnetName": "subnet-iampam-isolated",
+        "connectivityType": "isolated"
+      },
+      {
+        "subnetCidr": "10.1.100.0/24",
+        "subnetName": "subnet-iampam-internal",
+        "connectivityType": "internal"
+      }
+    ]
+  },
+  {
+    "vpcCidr": "10.2.0.0/16",
+    "vpcName": "vpc-zerotrust-seoul",
+    "subnets": [
+      {
+        "subnetCidr": "10.2.0.0/20",
+        "subnetName": "subnet-zerotrust-B",
+        "connectivityType": "private"
+      },
+      {
+        "subnetCidr": "10.2.32.0/20",
+        "subnetName": "subnet-zerotrust-C",
+        "connectivityType": "isolated"
+      },
+      {
+        "subnetCidr": "10.2.48.0/20",
+        "subnetName": "subnet-zerotrust-A",
+        "connectivityType": "private"
+      }
+    ]
+  },
+  {
+    "vpcCidr": "10.10.0.0/16",
+    "vpcName": "vpc-provider",
+    "subnets": [
+      {
+        "subnetCidr": "10.10.1.0/24",
+        "subnetName": "subnet-providerA",
+        "connectivityType": "private"
+      },
+      {
+        "subnetCidr": "10.10.2.0/24",
+        "subnetName": "subnet-providerB",
+        "connectivityType": "private"
+      }
+    ]
+  },
+  {
+    "vpcCidr": "192.168.0.0/16",
+    "vpcName": "운영팀 VPC",
+    "subnets": [
+      {
+        "subnetCidr": "192.168.10.0/24",
+        "subnetName": "네트워크 운영팀",
+        "connectivityType": "internal"
+      },
+      {
+        "subnetCidr": "192.168.11.0/24",
+        "subnetName": "네트워크 운영팀",
+        "connectivityType": "internal"
+      },
+      {
+        "subnetCidr": "192.168.12.0/24",
+        "subnetName": "DevOps 운영팀",
+        "connectivityType": "internal"
+      },
+      {
+        "subnetCidr": "192.168.13.0/24",
+        "subnetName": "보안 운영팀",
+        "connectivityType": "internal"
+      }
+    ]
+  }
+]

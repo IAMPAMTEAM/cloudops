@@ -1,0 +1,43 @@
+@import url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare.css');
+
+.subnet-box > svg {
+  width: 1100px;
+  height: 600px;
+  border: 1px solid black;
+}
+
+.vpc-group {
+  stroke: rgb(131, 122, 122);
+  fill: none;
+}
+
+.vpc-label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.subnet-group {
+  stroke: rgb(45, 19, 107);
+  fill: none;
+}
+
+.subnet-label {
+  font-size: 10px;
+  text-anchor: middle;
+}
+
+.public {
+  fill: rgb(201, 148, 62);
+}
+
+.private {
+  fill: rgb(163, 201, 163);
+}
+
+.isolated {
+  fill: rgb(234, 231, 231);
+}
+
+.internal {
+  fill: rgb(173, 230, 179);
+}

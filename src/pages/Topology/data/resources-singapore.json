@@ -1,0 +1,36 @@
+{
+  "regionName": "Singapore",
+  "regionIconUrl": "https://icons.terrastruct.com/essentials%2F214-worldwide.svg",
+  "resources": {
+    "Instances": {
+      "name": "EC2",
+      "iconUrl": "https://icons.terrastruct.com/aws%2FCompute%2F_Instance%2FAmazon-EC2_Instance_light-bg.svg",
+      "description": "total 8 running"
+    },
+    "Subnets": {
+      "name": "Subnets",
+      "iconUrl": "https://icons.terrastruct.com/essentials%2F092-network.svg",
+      "description": "total 2"
+    },
+    "VPC": {
+      "name": "VPC",
+      "iconUrl": "https://icons.terrastruct.com/azure%2FDatabases%20Service%20Color%2FVirtual%20Datacenter.svg",
+      "description": "total 1"
+    },
+    "Internet Gateways": {
+      "name": "Internet Gateway",
+      "iconUrl": "https://icons.terrastruct.com/aws%2FNetworking%20&%20Content%20Delivery%2FAmazon-VPC_Internet-Gateway_light-bg.svg",
+      "description": "total 1 attached"
+    },
+    "NAT Gateways": {
+      "name": "NAT Gateway",
+      "iconUrl": "https://icons.terrastruct.com/aws%2FNetworking%20&%20Content%20Delivery%2FAmazon-VPC_Internet-Gateway_light-bg.svg",
+      "description": "total 1"
+    },
+    "EIPs": {
+      "name": "Public IP",
+      "iconUrl": "https://icons.terrastruct.com/aws%2FCompute%2FAmazon-EC2_Elastic-IP-Address_light-bg.svg",
+      "description": "total 2 allocated"
+    }
+  }
+}
