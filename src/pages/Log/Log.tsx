@@ -10,6 +10,7 @@ import MergeTagData from '@/utils/MergeTagData';
 import SetColumnDefs from '@/utils/SetColumnDefs';
 import SetDefaultTableSetting from '@/utils/SetDefaultTableSetting';
 import DateFormatter from '@/pages/Log/_partials/DateFormatter';
+import FilterLogData from '@/pages/Log/_partials/FilterLogData';
 
 import SetFrequentOptions from '@/pages/Log/_partials/SetFrequentOptions';
 import SetLogData from '@/pages/Log/_partials/SetLogData';
@@ -34,7 +35,7 @@ const Log = () => {
   const [toDateValue, setToDataValue] = useState<Dayjs | null>(null);
 
   const [regionValue, setRegionValue] = useState<string[]>([]);
-  const [serviceCategoryValue, setServiceCategoryValue] = useState<string[]>([]);
+  const [serviceCategoryValue, setServiceCategoryValue] = useState<string | undefined>(undefined);
   const [serviceValue, setServiceValue] = useState<string[]>([]);
 
   const [vpcFrequentEventsValue, setVpcFrequentEventsValue] = useState<string[]>([]);
@@ -51,14 +52,23 @@ const Log = () => {
     return { value: region, label: region, color: '#6667AB' };
   });
 
-  const serviceCategoryOption = Object.values(serviceData)
-    .flat()
-    .map((serviceCategory: string) => ({ value: serviceCategory, label: serviceCategory }));
+  const serviceCategoryOption = Object.keys(serviceData).map((serviceCategory: string) => ({ value: serviceCategory, label: serviceCategory }));
 
-  const serviceOption = Object.keys(serviceData).map((category) => ({
-    label: category,
-    options: serviceData[category].map((service: string) => ({ value: service, label: service })),
-  }));
+  // const serviceOption = Object.keys(serviceData).map((category) => ({
+  //   label: category,
+  //   options: serviceData[category].map((service: string) => ({ value: service, label: service })),
+  // }));
+
+  const serviceOption = serviceCategoryValue !== undefined ? serviceData[serviceCategoryValue]?.map((service: string) => ({ value: service, label: service })) : [];
+
+  const isFrequentEvents = regionValue.length > 0 || (serviceCategoryValue !== undefined && serviceCategoryValue !== '') || serviceValue.length > 0;
+  const isEventFilter =
+    vpcFrequentEventsValue.length > 0 ||
+    ec2FrequentEventsValue.length > 0 ||
+    elbFrequentEventsValue.length > 0 ||
+    rdsFrequentEventsValue.length > 0 ||
+    iamFrequentEventsValue.length > 0 ||
+    s3FrequentEventsValue.length > 0;
 
   const vpcFrequentEventsOption = SetFrequentOptions(vpcFrequntData);
   const ec2FrequentEventsOption = SetFrequentOptions(ec2FrequntData);
@@ -84,36 +94,37 @@ const Log = () => {
   }, []);
 
   const onChangeSelect = (selectOption, selectBoxId: string) => {
-    let options = selectOption ? selectOption.map((option) => option.value) : [];
+    if (selectBoxId === 'serviceCategory') {
+      setServiceCategoryValue(selectOption.value);
+    } else {
+      let options = selectOption ? selectOption.map((option) => option.value) : [];
 
-    switch (selectBoxId) {
-      case 'region':
-        setRegionValue(options);
-        break;
-      case 'serviceCategory':
-        setServiceCategoryValue(options);
-        break;
-      case 'service':
-        setServiceValue(options);
-        break;
-      case 'vpnFrequent':
-        setVpcFrequentEventsValue(options);
-        break;
-      case 'ec2Frequent':
-        setEc2FrequentEventsValue(options);
-        break;
-      case 'elbFrequent':
-        setElbFrequentEventsValue(options);
-        break;
-      case 'rdsFrequent':
-        setRdsFrequentEventsValue(options);
-        break;
-      case 'iamFrequent':
-        setIamFrequentEventsValue(options);
-        break;
-      case 's3Frequent':
-        setS3FrequentEventsValue(options);
-        break;
+      switch (selectBoxId) {
+        case 'region':
+          setRegionValue(options);
+          break;
+        case 'service':
+          setServiceValue(options);
+          break;
+        case 'vpnFrequent':
+          setVpcFrequentEventsValue(options);
+          break;
+        case 'ec2Frequent':
+          setEc2FrequentEventsValue(options);
+          break;
+        case 'elbFrequent':
+          setElbFrequentEventsValue(options);
+          break;
+        case 'rdsFrequent':
+          setRdsFrequentEventsValue(options);
+          break;
+        case 'iamFrequent':
+          setIamFrequentEventsValue(options);
+          break;
+        case 's3Frequent':
+          setS3FrequentEventsValue(options);
+          break;
+      }
     }
   };
 
@@ -136,6 +147,20 @@ const Log = () => {
       },
     }),
   };
+  const filteredData = FilterLogData({
+    region: regionValue,
+    fromDate: fromDateValue,
+    toDate: toDateValue,
+    serviceCategory: serviceCategoryValue,
+    service: serviceValue,
+    vpc: vpcFrequentEventsValue,
+    ec2: ec2FrequentEventsValue,
+    elb: elbFrequentEventsValue,
+    rds: rdsFrequentEventsValue,
+    iam: iamFrequentEventsValue,
+    s3: s3FrequentEventsValue,
+    logData: mergedTableData,
+  });
 
   return (
     <>
@@ -159,6 +184,7 @@ const Log = () => {
               >
                 <DatePicker
                   label='From'
+                  disabled={isEventFilter}
                   sx={{ width: '100%' }}
                   slotProps={{
                     textField: {
@@ -183,6 +209,7 @@ const Log = () => {
               >
                 <DatePicker
                   label='To'
+                  disabled={isEventFilter}
                   sx={{ width: '100%' }}
                   slotProps={{
                     textField: {
@@ -243,7 +270,7 @@ const Log = () => {
       <div className='panel mt-[16px]'>
         <DataTable
           showSaveButton={false}
-          datas={mergedTableData}
+          datas={filteredData}
           columnDefs={columnDefs}
           defaultTableSetting={setDefaultTableSetting}
           tableHeight={tableOption.tableHeight}
